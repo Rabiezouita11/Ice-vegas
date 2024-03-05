@@ -42,4 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function suiviPointDeFidelites()
+    {
+        return $this->hasMany(Suivi_point_de_fidelite::class, 'users_id', 'id');
+    }
+    public function reponseQuizzes()
+    {
+        return $this->hasMany(Reponse_Quiz::class, 'users_id', 'id');
+    }
 }
