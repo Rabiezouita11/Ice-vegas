@@ -83,7 +83,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="fxt-content">
-                        <h2>Register for new account</h2>
+                        <h2>Créer un nouveau compte</h2>
                         <div class="fxt-form">
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
@@ -161,7 +161,7 @@
                         </div>
                         <div class="fxt-footer">
                             <div class="fxt-transformY-50 fxt-transition-delay-9">
-                                <p>Already have an account?<a href="{{route('login')}}" class="switcher-text2 inline-text">Log in</a></p>
+                                <p>Avez-vous déjà un compte ?<a href="{{route('login')}}" class="switcher-text2 inline-text">Log in</a></p>
                             </div>
                         </div>
                     </div>

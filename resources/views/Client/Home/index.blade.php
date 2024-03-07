@@ -1,3 +1,4 @@
+@endsection
 @extends('layouts.app')
 
 @section('content')
@@ -13,6 +14,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    
 
                     {{ __('Hello Client, You are logged in!') }}
                 </div>
@@ -20,4 +22,3 @@
         </div>
     </div>
 </div>
-@endsection
