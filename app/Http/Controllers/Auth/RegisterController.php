@@ -11,7 +11,9 @@ use Illuminate\Support\Facades\Validator;
 class RegisterController extends Controller
 {
     /*
-    |--------------------------------------------------------------------------
+    |---------
+
+    -----------------------------------------------------------------
     | Register Controller
     |--------------------------------------------------------------------------
     |
@@ -53,6 +55,7 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'telephone' => ['required', 'integer', 'digits:8'],
+            'role' => ['required', 'string', 'max:255'],
 
         ]);
     }
@@ -70,6 +73,8 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'telephone' => $data['telephone'],
             'password' => Hash::make($data['password']),
+            'role' => 'client', 
         ]);
     }
+    
 }
