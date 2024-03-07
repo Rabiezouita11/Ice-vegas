@@ -133,7 +133,7 @@
                                 </div>
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-2">
-                                        <input id="telephone" type="text" class="form-control" name="telephone" placeholder="votre telephone" required autocomplete="telephone">
+                                        <input id="telephone" type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" placeholder="votre telephone" required autocomplete="telephone">
                                         @error('telephone')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
