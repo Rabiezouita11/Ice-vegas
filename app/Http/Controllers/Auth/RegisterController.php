@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -30,8 +31,19 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
-
+    public function redirectTo() {
+        $role = Auth::user()->role; 
+        switch ($role) {
+          case 'admin':
+            return '/admin';
+            break;
+          case 'client':
+            return '/home';
+            break; 
+      
+        
+        }
+      }
     /**
      * Create a new controller instance.
      *
@@ -55,9 +67,9 @@ class RegisterController extends Controller
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'telephone' => ['required', 'integer', 'digits:8'],
-            'role' => ['required', 'string', 'max:255'],
+            // 'role' => ['required', 'string', 'max:255'],
 
-        ]);
+        ]); 
     }
 
     /**

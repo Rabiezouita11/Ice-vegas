@@ -1,4 +1,3 @@
-@endsection
 @extends('layouts.app')
 
 @section('content')
@@ -16,9 +15,10 @@
                     @endif
                     
 
-                    {{ __('Hello Client, You are logged in!') }}
+                    Hello  {{ Auth::user()->name }}, You are logged in! 
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection

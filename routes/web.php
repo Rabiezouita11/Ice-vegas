@@ -14,23 +14,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+// Authentification 
 Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
 
 // client 
 
-Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->name('home')->middleware('role:client');
 
 
 
 
 // admin 
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('role:admin');
