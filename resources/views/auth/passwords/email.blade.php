@@ -83,6 +83,11 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
+                @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     <div class="fxt-content">
                         <h2>Récupérer votre mot de passe</h2>
                         <div class="fxt-form">
