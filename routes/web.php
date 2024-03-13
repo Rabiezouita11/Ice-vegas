@@ -14,15 +14,13 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Authentification 
-Auth::routes();
+/*  Authentification */
+ Auth::routes();
 
-// client 
+/*  page affiche client */
 
 Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->name('home')->middleware('role:client');
 
 
-
-
-// admin 
+ /*  page affiche admin */ 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('role:admin');
