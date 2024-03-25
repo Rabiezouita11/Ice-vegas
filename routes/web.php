@@ -44,5 +44,18 @@ Route::post('/ModifierProfileAdmin', [App\Http\Controllers\AdminController::clas
 
 Route::post('/update-password', [App\Http\Controllers\AdminController::class, 'update_password'])->name('update_password')->middleware('role:admin');
 
+/*  page affiche Categories admin */ 
+Route::get('/AfficheCategories', [App\Http\Controllers\AdminController::class, 'showPageCategories'])->name('showPageCategories')->middleware('role:admin');
 
+/*  button ajouter Categories admin */ 
+
+Route::post('/addcategories', [App\Http\Controllers\AdminController::class, 'storeCategorie'])->name('storeCategorie')->middleware('role:admin');
+
+/*  button modifier Categories admin */ 
+
+Route::put('/categories/{category}', [App\Http\Controllers\AdminController::class, 'update'])->name('categories.update');
+
+/*  button supprimer Categories admin */ 
+
+Route::delete('/categories/{category}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('categories.destroy');
 

@@ -45,6 +45,9 @@
         <a href="index3.html" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{route('affichePageProfileAdmin')}}" class="nav-link">Profile</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
@@ -216,8 +219,23 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+
+               @php
+$currentRoute = Route::currentRouteName();
+@endphp
+
+<li class="nav-item">
+    <a href="{{ route('showPageCategories') }}" class="nav-link  {{ $currentRoute === 'showPageCategories' ? 'active' : '' }}">
+        <i class="nav-icon fas fa-folder"></i>
+        <p>
+            Categories
+            <span class="badge badge-info right">{{ $categoryCount }}</span>
+        </p>
+    </a>
+</li>
+
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -226,7 +244,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="./index.html" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
