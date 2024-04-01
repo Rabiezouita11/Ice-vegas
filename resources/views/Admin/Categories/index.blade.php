@@ -32,15 +32,10 @@
             Add Categorie
         </button>
               </div>
-              <!-- /.card-header -->
-              @if(session('success'))
-<div class="alert alert-success" role="alert">
-    {{ session('success') }}
-</div>
-@endif
-              <div class="card-body">
+     
+              <div class="card-body categoryTableContainer" >
                 
-              <table class="table table-bordered">
+              <table  id="categoryTable" class="table table-bordered">
     <thead>
         <tr>
             <th>ID</th>
@@ -56,24 +51,23 @@
             </tr>
         @else
         @foreach($categories as $index => $category)
-                    <tr>
-                <td>{{ $category->id }}</td>
-                <td>{{ $category->Nom }}</td>
-                <td><img src="{{ asset($category->Image) }}" alt="{{ $category->Nom }}" class="img-fluid rounded-circle" style="max-width: 60px ; max-height: 60px;"></td>
+<tr id="categoryRow_{{ $index }}">
+    <td>{{ $category->id }}</td>
+    <td>{{ $category->Nom }}</td>
+    <td><img src="{{ asset($category->Image) }}" alt="{{ $category->Nom }}" class="img-fluid rounded-circle" style="max-width: 60px ; max-height: 60px;"></td>
+    <td>
+        <!-- Edit Button with Icon -->
+        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCategoryModal_{{ $index }}">
+            <i class="fas fa-edit"></i>
+        </button>
+        <!-- Delete Button with Icon -->
+        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteCategoryModal_{{ $index }}">
+            <i class="fas fa-trash"></i>
+        </button>
+    </td>
+</tr>
+@endforeach
 
-                <td>
-    <!-- Edit Button with Icon -->
-    <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCategoryModal_{{ $index }}">
-        <i class="fas fa-edit"></i>
-    </button>
-    <!-- Delete Button with Icon -->
-    <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteCategoryModal_{{ $index }}">
-        <i class="fas fa-trash"></i>
-    </button>
-</td>
-
-            </tr>
-            @endforeach
         @endif
     </tbody>
 </table>
@@ -81,7 +75,7 @@
 
               </div>
               <!-- /.card-body -->
-              <div class="card-footer clearfix">
+              <div class="card-footer clearfix pagination-container">
         {{ $categories->links('vendor.pagination.bootstrap-4') }}
           </div>
             </div>
@@ -180,29 +174,26 @@
     </div>
 </div>
 @endforeach
-@foreach($categories as $index => $category)
+
 
 <!-- Delete Category Modal -->
-<div class="modal fade" id="deleteCategoryModal_{{ $index }}"  aria-labelledby="deleteCategoryModalLabel_{{ $index }}" aria-hidden="true">
+@foreach($categories as $index => $category)
+<div class="modal fade" id="deleteCategoryModal_{{ $index }}" aria-labelledby="deleteCategoryModalLabel_{{ $index }}" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="deleteCategoryModalLabel">Delete Category</h5>
+                <h5 class="modal-title" id="deleteCategoryModalLabel_{{ $index }}">Delete Category</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-            <p>Are you sure you want to delete the category "{{ $category->Nom }}"?</p>
+                <p>Are you sure you want to delete the category "{{ $category->Nom }}"?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <!-- Form for deleting a category -->
-                <form action="{{ route('categories.destroy', $category->id) }}" method="POST" >
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+                <!-- Button to trigger the delete process -->
+                <button type="button" class="btn btn-danger delete-button" onclick="deleteCategory({{ $category->id }}, {{ $index }})">Delete</button>
             </div>
         </div>
     </div>
@@ -210,6 +201,93 @@
 @endforeach
 
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+   function deleteCategory(categoryId, index) {
+        // This function will be called when the delete button inside the modal is clicked
+        fetch(`/categories/${categoryId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Show success toast
+            showToast('success', data.message);
+            
+            updateTableContent();
+
+            updatePagination();
+            // Remove the deleted category row from the table
+            // Hide the modal after deletion (optional)
+            $('#deleteCategoryModal_' + index).modal('hide');
+           
+        })
+        .catch(error => {
+            // Show error toast or handle error
+            showToast('error', 'An error occurred. Please try again later.');
+            console.error('There was an error!', error);
+        });
+    }
+
+     function updateTableContent() {
+        // Fetch the updated table content from the server
+        fetch('{{ route('showPageCategories') }}')
+            .then(response => response.text())
+            .then(html => {
+                // Replace the current table content with the updated one
+                $('#categoryTable').html($(html).find('#categoryTable').html());
+            })
+            .catch(error => {
+                console.error('Error updating table content:', error);
+            });
+    }
+    function updatePagination() {
+        // Fetch the updated pagination HTML from the server
+        fetch('{{ route('showPageCategories') }}')
+            .then(response => response.text())
+            .then(html => {
+                // Replace the current pagination HTML with the updated one
+                $('.pagination-container').html($(html).find('.pagination-container').html());
+            })
+            .catch(error => {
+                console.error('Error updating pagination:', error);
+            });
+    }
+    // Function to display toast notifications
+    function showToast(type, message) {
+        toastr.options = {
+            closeButton: true, // Add a close button
+            progressBar: true, // Show a progress bar
+            showMethod: 'slideDown', // Animation in
+            hideMethod: 'slideUp', // Animation out
+            timeOut: 5000, // Time before auto-dismiss
+        };
+
+        switch (type) {
+            case 'info':
+                toastr.info(message);
+                break;
+            case 'success':
+                toastr.success(message);
+                break;
+            case 'warning':
+                toastr.warning(message);
+                break;
+            case 'error':
+                toastr.error(message);
+                break;
+        }
+    }
+    </script>
 
 
 @endsection

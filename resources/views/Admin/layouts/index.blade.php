@@ -25,6 +25,9 @@
   <link rel="stylesheet" href="/AdminPublic/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/AdminPublic/plugins/summernote/summernote-bs4.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -925,5 +928,7 @@ $currentRoute = Route::currentRouteName();
 <script src="/AdminPublic/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/AdminPublic/dist/js/pages/dashboard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 </body>
 </html>

@@ -8,6 +8,7 @@ use App\Models\Categories;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str; // Import the Str class
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
@@ -106,6 +107,7 @@ public function storeCategorie(Request $request)
 
     // Save the category to the database
     $category->save();
+    Session::flash('toast', ['type' => 'success', 'message' => 'Category added successfully.']);
 
     // Redirect back or to a specific route after saving
     return redirect()->route('showPageCategories')->with('success', 'Category added successfully.');
@@ -126,7 +128,6 @@ public function update(Request $request, $id)
         return redirect()->back()->with('error', 'Category not found.');
     }
     $oldImage = $category->Image;
-dd($oldImage);
     // Update the category name
     $category->Nom = $validatedData['Nom'];
 
@@ -143,22 +144,29 @@ dd($oldImage);
 
     // Save the updated category to the database
     $category->save();
+    Session::flash('toast', ['type' => 'success', 'message' => 'Category updated successfully.']);
 
     // Redirect back or to a specific route after updating
-    return redirect()->route('showPageCategories')->with('success', 'Category updated successfully.');
+    return response()->json(['message' => 'Category updated successfully.']);
 }
 
 
 public function destroy(Categories $category)
 {
-    $category->delete();
-
-    // Optionally, you can add additional logic here
-
-  
-    return redirect()->route('showPageCategories')->with('success', 'Category deleted successfully.');
-
+    try {
+        $category->delete();
+        // Optionally, you can add additional logic here
+        $message = 'Category deleted successfully.';
+        // Return JSON response with the message
+        return response()->json(['message' => $message]);
+    } catch (\Exception $e) {
+        // Handle the exception
+        $errorMessage = 'An error occurred while deleting the category.';
+        // Return JSON response with the error message and status code 500 (Internal Server Error)
+        return response()->json(['error' => $errorMessage], 500);
+    }
 }
+
 
 
 }
