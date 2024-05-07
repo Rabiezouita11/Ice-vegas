@@ -33,7 +33,11 @@
                                     Add Categorie
                                 </button>
                             </div>
-
+                            @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
                             <div class="card-body categoryTableContainer">
 
                                 <table id="categoryTable" class="table table-bordered">
