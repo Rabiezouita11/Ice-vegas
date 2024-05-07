@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Categories;
+use App\Models\Produits;
+
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str; // Import the Str class
 use Illuminate\Support\Facades\Storage;
@@ -29,6 +31,30 @@ class AdminController extends Controller
     View::share('categoryCount', $categoryCount);
         return view('Admin.Home.index');
     }
+
+    public function storeProduit(Request $request)
+{
+    $request->validate([
+        'Nom' => 'required',
+        'Description' => 'required',
+        'Image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+        'Prix' => 'required|numeric',
+        'categorie_id' => 'required|exists:categories,id',
+    ]);
+
+    $imageName = time() . '.' . $request->Image->extension();
+    $request->Image->move(public_path('images'), $imageName);
+
+    Produits::create([
+        'Nom' => $request->Nom,
+        'Description' => $request->Description,
+        'Image' => 'images/' . $imageName,
+        'Prix' => $request->Prix,
+        'categorie_id' => $request->categorie_id,
+    ]);
+
+    return redirect()->back()->with('success', 'Product added successfully.');
+}
 
     public function affichePageProfileAdmin()
     {
@@ -79,11 +105,25 @@ public function showPageCategories()
 {
     $categories = Categories::paginate(4);  // Fetch all categories
     $categoryCount = Categories::count();
+    $ProduitsCount = Produits::count();
+
     View::share('categoryCount', $categoryCount);
 
-    return view('Admin.Categories.index', compact('categories', 'categoryCount')); // Pass categories and category count to the view
+    return view('Admin.Categories.index', compact('categories', 'categoryCount','ProduitsCount')); // Pass categories and category count to the view
 }
+public function showPageProduit ()
+{
+    $Produits = Produits::paginate(4);  // Fetch all categories
 
+    $categoryCount = Categories::count();
+    $ProduitsCount = Produits::count();
+    $categorie = Categories::all(); // Retrieve all categories from the database
+
+    View::share('categoryCount', $categoryCount);
+
+    return view('Admin.Produits.index', compact( 'categoryCount','ProduitsCount','Produits','categorie' )); // Pass categories and category count to the view
+ 
+}
 
 public function storeCategorie(Request $request)
 {
@@ -125,7 +165,7 @@ public function update(Request $request, $id)
     $category = Categories::find($id);
     if (!$category) {
         // Handle if the category is not found
-        return redirect()->back()->with('error', 'Category not found.');
+        return response()->json(['error' => 'Category not found.'], 404);
     }
     $oldImage = $category->Image;
     // Update the category name
@@ -144,11 +184,11 @@ public function update(Request $request, $id)
 
     // Save the updated category to the database
     $category->save();
-    Session::flash('toast', ['type' => 'success', 'message' => 'Category updated successfully.']);
 
-    // Redirect back or to a specific route after updating
+    // Return success message
     return response()->json(['message' => 'Category updated successfully.']);
 }
+
 
 
 public function destroy(Categories $category)
@@ -166,6 +206,24 @@ public function destroy(Categories $category)
         return response()->json(['error' => $errorMessage], 500);
     }
 }
+public function destroyProduits(Produits $produit)
+{
+    try {
+        $produit->delete();
+        // Optionally, you can add additional logic here
+        $message = 'Produit deleted successfully.';
+        // Return JSON response with the message
+        return response()->json(['message' => $message]);
+    } catch (\Exception $e) {
+        // Handle the exception and get the error message
+        $errorMessage = $e->getMessage();
+        // Return JSON response with the error message and status code 500 (Internal Server Error)
+        return response()->json(['error' => $errorMessage], 500);
+    }
+}
+
+
+
 
 
 

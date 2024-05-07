@@ -27,10 +27,10 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Liste des catégories</h3>
+                                <h3 class="card-title">Liste des Produits</h3>
                                 <button type="button" class="btn btn-primary float-right" data-toggle="modal"
-                                    data-target="#addCategoryModal">
-                                    Add Categorie
+                                    data-target="#addProduitModal">
+                                    Add Produits
                                 </button>
                             </div>
 
@@ -40,25 +40,35 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Nom catégorie</th>
+                                            <th>Nom Produit</th>
+                                            <th>Description</th>
                                             <th>Image</th>
+                                            <th>Prix</th>
+                                            <th>Nom categories</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @if ($categories->isEmpty())
+                                        @if ($Produits->isEmpty())
                                             <tr>
-                                                <td colspan="4" class="text-center">No categories found.</td>
+                                                <td colspan="7" class="text-center">No Produits found.</td>
                                             </tr>
                                         @else
-                                            @foreach ($categories as $index => $category)
+                                            @foreach ($Produits as $index => $Produit)
                                                 <tr id="categoryRow_{{ $index }}">
-                                                    <td>{{ $category->id }}</td>
-                                                    <td>{{ $category->Nom }}</td>
-                                                    <td><img src="{{ asset($category->Image) }}" alt="{{ $category->Nom }}"
+                                                    <td>{{ $Produit->id }}</td>
+                                                    <td>{{ $Produit->Nom }}</td>
+                                                    <td>{{ $Produit->Description }}</td>
+                                                    <td><img src="{{ asset($Produit->Image) }}" alt="{{ $Produit->Nom }}"
                                                             class="img-fluid rounded-circle"
                                                             style="max-width: 60px ; max-height: 60px;"></td>
+                                                    <td>{{ $Produit->Prix }}</td>
+                                                    <td>{{ $Produit->categorie->Nom }}</td>
                                                     <td>
+
+
+
+
                                                         <!-- Edit Button with Icon -->
                                                         <button type="button" class="btn btn-sm btn-primary"
                                                             data-toggle="modal"
@@ -68,7 +78,7 @@
                                                         <!-- Delete Button with Icon -->
                                                         <button type="button" class="btn btn-sm btn-danger"
                                                             data-toggle="modal"
-                                                            data-target="#deleteCategoryModal_{{ $index }}">
+                                                            data-target="#deleteProduitModal_{{ $index }}">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
                                                     </td>
@@ -82,7 +92,7 @@
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer clearfix pagination-container">
-                                {{ $categories->links('vendor.pagination.bootstrap-4') }}
+                                {{ $Produits->links('vendor.pagination.bootstrap-4') }}
                             </div>
                         </div>
                         <!-- /.card -->
@@ -110,11 +120,11 @@
     <!-- /.content-wrapper -->
 
     <!-- Add Category Modal -->
-    <div class="modal fade" id="addCategoryModal" tabindex="-1" aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addProduitModal" tabindex="-1" aria-labelledby="addProduitModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addCategoryModalLabel">Add Category</h5>
+                    <h5 class="modal-title" id="addProduitModalLabel">Add Product</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -131,16 +141,32 @@
                         </div>
                     @endif
 
-                    <!-- Form for adding a category -->
-                    <form action="{{ route('storeCategorie') }}" method="POST" enctype="multipart/form-data">
+                    <!-- Form for adding a product -->
+                    <form action="{{ route('storeProduit') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="categoryName">Nom catégorie</label>
-                            <input type="text" class="form-control" id="categoryName" name="Nom" required>
+                            <label for="produitName">Product Name</label>
+                            <input type="text" class="form-control" id="produitName" name="Nom" required>
                         </div>
                         <div class="form-group">
-                            <label for="categoryImage">Image</label>
-                            <input type="file" class="form-control-file" id="categoryImage" name="Image" required>
+                            <label for="produitDescription">Description</label>
+                            <textarea class="form-control" id="produitDescription" name="Description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="produitImage">Image</label>
+                            <input type="file" class="form-control-file" id="produitImage" name="Image" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="produitPrix">Price</label>
+                            <input type="text" class="form-control" id="produitPrix" name="Prix" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="produitCategorie">Category</label>
+                            <select class="form-control" id="produitCategorie" name="categorie_id" required>
+                                @foreach ($categorie as $category)
+                                    <option value="{{ $category->id }}">{{ $category->Nom }}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Add</button>
                     </form>
@@ -148,9 +174,10 @@
             </div>
         </div>
     </div>
+
     <!-- Edit Category Modal -->
     <!-- Edit Category Modals -->
-    @foreach ($categories as $index => $category)
+    @foreach ($Produits as $index => $category)
         <div class="modal fade" id="editCategoryModal_{{ $index }}"
             aria-labelledby="editCategoryModalLabel_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
@@ -188,25 +215,25 @@
 
 
     <!-- Delete Category Modal -->
-    @foreach ($categories as $index => $category)
-        <div class="modal fade" id="deleteCategoryModal_{{ $index }}"
-            aria-labelledby="deleteCategoryModalLabel_{{ $index }}" aria-hidden="true">
+    @foreach ($Produits as $index => $produit)
+        <div class="modal fade" id="deleteProduitModal_{{ $index }}"
+            aria-labelledby="deleteProduitModal_Label_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="deleteCategoryModalLabel_{{ $index }}">Delete Category</h5>
+                        <h5 class="modal-title" id="deleteProduitModal_Label_{{ $index }}">Delete Produit</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Are you sure you want to delete the category "{{ $category->Nom }}"?</p>
+                        <p>Are you sure you want to delete the Produit "{{ $produit->Nom }}"?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <!-- Button to trigger the delete process -->
-                        <button type="button" class="btn btn-danger delete-button"
-                            onclick="deleteCategory({{ $category->id }}, {{ $index }})">Delete</button>
+                        <button type="button" class="btn btn-danger delete-button"data-dismiss="modal"
+                            onclick="deleteProduit({{ $produit->id }}, {{ $index }})">Delete</button>
                     </div>
                 </div>
             </div>
@@ -216,46 +243,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+   
     <script>
-          function updateCategory(categoryId, index) {
-    // Get form data
-    let formData = new FormData();
-    formData.append('Nom', $('#editCategoryName').val());
-    formData.append('Image', $('#editCategoryImage')[0].files[0]); // Get the first file from input
-
-    fetch(`/categories/${categoryId}`, { // Correct the URL to point to the correct route
-        method: 'PUT',
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        },
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Show success toast
-        showToast('success', data.message);
-
-     
-        // Hide the modal after update (optional)
-        $('#editCategoryModal_' + index).modal('hide');
-    })
-    .catch(error => {
-        // Show error toast or handle error
-        showToast('error', 'An error occurred. Please try again later.');
-        console.error('There was an error!', error);
-    });
-}
-
-    </script>
-    <script>
-        function deleteCategory(categoryId, index) {
+        function deleteProduit(produitid, index) {
             // This function will be called when the delete button inside the modal is clicked
-            fetch(`/categories/${categoryId}`, {
+            fetch(`/Produits/${produitid}`, {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
@@ -287,14 +279,14 @@
                 });
         }
 
-      
+
 
 
 
 
         function updateTableContent() {
             // Fetch the updated table content from the server
-            fetch('{{ route('showPageCategories') }}')
+            fetch('{{ route('showPageProduit') }}')
                 .then(response => response.text())
                 .then(html => {
                     // Replace the current table content with the updated one
@@ -307,7 +299,7 @@
 
         function updatePagination() {
             // Fetch the updated pagination HTML from the server
-            fetch('{{ route('showPageCategories') }}')
+            fetch('{{ route('showPageProduit') }}')
                 .then(response => response.text())
                 .then(html => {
                     // Replace the current pagination HTML with the updated one

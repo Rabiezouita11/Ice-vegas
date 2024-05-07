@@ -59,3 +59,11 @@ Route::put('/categories/{category}', [App\Http\Controllers\AdminController::clas
 
 Route::delete('/categories/{category}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('categories.destroy');
 
+/*  page affiche Produits admin */ 
+Route::get('/AfficheProduit', [App\Http\Controllers\AdminController::class, 'showPageProduit'])->name('showPageProduit')->middleware('role:admin');
+
+/*  button ajouter Produits admin */ 
+
+Route::post('/storeProduit', [App\Http\Controllers\AdminController::class, 'storeProduit'])->name('storeProduit')->middleware('role:admin');
+/*  button supprimer Produits admin */ 
+Route::delete('/Produits/{produit}', [App\Http\Controllers\AdminController::class, 'destroyProduits'])->name('Produits.destroy')->middleware('role:admin');
