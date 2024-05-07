@@ -6,7 +6,14 @@
 /public/categories
 /public/storage
 /storage/*.key
-/vendor
+/vendor/*
+!/vendor/laravel/
+/vendor/laravel/*
+!/vendor/laravel/ui/
+/vendor/laravel/ui/*
+!/vendor/laravel/ui/auth-backend/
+/vendor/laravel/ui/auth-backend/*
+!vendor/laravel/ui/auth-backend/AuthenticatesUsers.php
 .env
 .env.backup
 .env.production

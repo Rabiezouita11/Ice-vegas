@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Auth;
 
 /*  page affiche client */
 
-Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->name('home')->middleware('role:client');
-
+Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->name('home');
+// ->middleware('role:client');
 
 
 /*  ADMIN */
