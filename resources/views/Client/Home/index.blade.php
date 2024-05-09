@@ -1214,8 +1214,12 @@
                     <!-- image -->
                     <img src="{{ $product->Image }}" alt="{{ $product->Nom }}" class="img-responsive"/>
                     <!-- date -->
-                    <div class="date"><span class="day">{{ $product->created_at->format('d') }}</span><span class="month">{{ $product->created_at->format('M') }}</span></div>
-                    <!-- caption -->
+                    <div class="date">
+                     <span class="day" style="background-color: white; color: black;">
+                         {{ $product->created_at->format('d') }}
+                     </span>
+                     <span class="month"  style="background-color: white; color: black;">{{ $product->created_at->format('M') }}</span>
+                 </div>                    <!-- caption -->
                     <div class="blog-caption">
                         <h5>{{ $product->Nom }}</h5>
                         <p>{{ $product->Description }}</p>
