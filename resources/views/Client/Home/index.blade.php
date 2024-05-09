@@ -35,68 +35,61 @@
       <link rel="shortcut icon" href="/ClientPublic/favicon.ico" type="image/x-icon">
    </head>
    <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-   
+   <style>
+    .navbar-nav a {
+        font-family: 'Anonymous Pro', monospace;
+    }
+</style>
       <!--============== Navbar Starts ==============-->
       <nav class="navbar navbar-custom navbar-fixed-top">
-         <!-- Brand and toggle get grouped for better mobile display -->
-         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
             <i class="fa fa-bars"></i>
-            </button>
-            <div class="navbar-brand-centered page-scroll">
-               <a href="#page-top"><img src="/ClientPublic/img/logo.png" class="img-responsive"  alt=""></a>
-            </div>
-         </div>
-         <!-- Collect the nav links, forms, and other content for toggling -->
-         <div class="collapse navbar-collapse" id="navbar-brand-centered">
-            <div class="container">
-               <ul class="nav navbar-nav page-scroll navbar-left">
-                  <li><a href="#page-top">Home</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#reviews">Reviews</a></li>
-                  <li><a href="#menu">Menu</a></li>
-               </ul>
-
-
-               <ul class="nav navbar-nav page-scroll navbar-right">
-
-              
-                  <li><a href="#catering">Catering</a></li>
-                  <li><a href="#gallery">Gallery</a></li>
-                  <li><a href="#team">Team</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  
-                  <!-- Dropdown -->
-                  
-                 
-                  @guest
-                  <li><a href="{{route('login')}}">Login</a></li>
-                  <li><a href="{{route('register')}}">Register</a></li>
-
-                  @else
-                  <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">  {{ Auth::user()->name }}<b class="caret"></b></a>
+        </button>
+        <div class="navbar-brand-centered page-scroll">
+            <a href="#page-top"><img src="/ClientPublic/img/logo.png" class="img-responsive"  alt=""></a>
+        </div>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-brand-centered">
+        <div class="container">
+            <ul class="nav navbar-nav page-scroll navbar-left">
+                <li><a href="#page-top" style=" font-family: 'Anonymous Pro';">Home</a></li>
+                <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
+                <li><a href="#about"  style=" font-family: 'Anonymous Pro';">About</a></li>
+                <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li>
+                <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Menu</a></li>
+            </ul>
+            <ul class="nav navbar-nav page-scroll navbar-right">
+                <li><a href="#catering" style=" font-family: 'Anonymous Pro';">Catering</a></li>
+                <li><a href="#gallery" style=" font-family: 'Anonymous Pro';">Gallery</a></li>
+                <li><a href="#team" style=" font-family: 'Anonymous Pro';">Team</a></li>
+                <li><a href="#contact" style=" font-family: 'Anonymous Pro';">Contact</a></li>
+                <!-- Dropdown -->
+                @guest
+                <li><a href="{{route('login')}}" style=" font-family: 'Anonymous Pro';">Login</a></li>
+                <li><a href="{{route('register')}}" style=" font-family: 'Anonymous Pro';">Register</a></li>
+                @else
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style=" font-family: 'Anonymous Pro';">{{ Auth::user()->name }}<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                          <li><a href="blog-single.html">Profile</a></li>
-                       <li><a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                      document.getElementById('logout-form').submit();">Déconnexion</a></li>
-                     
-                      
-                       <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                    </form>
+                        <li><a href="blog-single.html" style=" font-family: 'Anonymous Pro';">Profile</a></li>
+                        <li><a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();" style=" font-family: 'Anonymous Pro';">Déconnexion</a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </ul>
-                 </li>
-                  <!-- This will be visible when user is logged in -->
-                 
-                  @endguest
-               </ul>
-            </div>
-         </div>
-         <!-- /.navbar-collapse -->
-      </nav>
+                </li>
+                <!-- This will be visible when user is logged in -->
+                @endguest
+            </ul>
+        </div>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
        <!--============== // Navbar Ends ==============-->
 	   
       <!-- Preloader -->
