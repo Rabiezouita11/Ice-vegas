@@ -15,10 +15,11 @@ class Produits extends Model
         'Prix',
         'categorie_id'
     ];
+
     public function categorie()
     {
         return $this->belongsTo(Categories::class, 'categorie_id', 'id');
+        // Change 'categories_id' to 'categorie_id' if that's the correct foreign key
     }
-    
 
 }

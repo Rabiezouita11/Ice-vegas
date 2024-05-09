@@ -14,6 +14,7 @@ class Categories extends Model
     ];
     public function products()
     {
-        return $this->hasMany(Produits::class);
+        return $this->hasMany(Produits::class, 'categorie_id', 'id');
+        // Assuming 'categorie_id' is the foreign key in the produits table
     }
 }

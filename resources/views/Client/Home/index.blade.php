@@ -255,52 +255,22 @@
             <!-- /row -->
             <!-- carousel -->
             <div id="owl-icons" class="owl-carousel features-icon margin1 light-bg2">
-               <!-- item1 -->
-               <div class="media text-center">
-                  <i class="flaticon-birthday"></i>
-                  <div class="media-body">
-                     <h5>Birthday Parties</h5>
-                     <p>Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, adipisicing elit uasi quidem minus id omnis.
-                     </p>
-                  </div>
-               </div>
-               <!-- item2 -->
-               <div class="media text-center">
-                  <i class="flaticon-food-5"></i>
-                  <div class="media-body">
-                     <h5>Weddings</h5>
-                     <p>Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, adipisicing elit uasi quidem minus id omnis.
-                     </p>
-                  </div>
-               </div>
-               <!-- item3 -->
-               <div class="media text-center">
-                  <i class="flaticon-electric-mixer"></i>
-                  <div class="media-body">
-                     <h5>Event Catering</h5>
-                     <p>Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, adipisicing elit uasi quidem minus id omnis.
-                     </p>
-                  </div>
-               </div>
-               <!-- item4 -->
-               <div class="media text-center">
-                  <i class="flaticon-wheat"></i>
-                  <div class="media-body">
-                     <h5>Gluten Free</h5>
-                     <p>Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, adipisicing elit uasi quidem minus id omnis.
-                     </p>
-                  </div>
-               </div>
-               <!-- item5 -->
-               <div class="media text-center">
-                  <i class="flaticon-food-12"></i>
-                  <div class="media-body text-light">
-                     <h5>100% Homemade</h5>
-                     <p>Fusce mollis imperdiet interdum donec eget metus auguen unc vel mauris ultricies, vest ibulum orci eget, adipisicing elit uasi quidem minus id omnis.
-                     </p>
-                  </div>
-               </div>
-            </div>
+    @foreach($categories as $category)
+    <!-- Category Item -->
+    <div class="media text-center">
+        <img src="{{ $category->Image }}" alt="{{ $category->Nom }}" class="icon">
+        <div class="media-body">
+            <h5>{{ $category->Nom }}</h5>
+            <p>{{ $category->Description }}</p>
+            <!-- Product List -->
+           
+        </div>
+    </div>
+    <!-- /media -->
+    @endforeach
+</div>
+<!-- /owl-carousel -->
+
             <!--/owl-icons-->
          </div>
          <!-- /container -->
