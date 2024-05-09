@@ -1238,220 +1238,42 @@
       <!-- /Section -->
       <!-- ==== Blog preview ==== -->
       <section id="blog-preview">
-         <div class="container">
-            <!-- Section Heading -->
-            <div class="section-heading">
-               <h2>Latest Blog Posts</h2>
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="section-heading">
+            <h2>Latest Products</h2>
+        </div>
+        <div class="col-md-12">
+            <div id="owl-blog" class="owl-carousel">
+                @foreach($products as $product)
+                <!-- ==== Product {{$loop->iteration}} ==== -->
+                <div class="blog-prev border-dotted">
+                    <!-- image -->
+                    <img src="{{ $product->Image }}" alt="{{ $product->Nom }}" class="img-responsive"/>
+                    <!-- date -->
+                    <div class="date"><span class="day">{{ $product->created_at->format('d') }}</span><span class="month">{{ $product->created_at->format('M') }}</span></div>
+                    <!-- caption -->
+                    <div class="blog-caption">
+                        <h5>{{ $product->Nom }}</h5>
+                        <p>{{ $product->Description }}</p>
+                        <p>Price: {{ $product->Prix }} TND</p>
+                        <!-- Post Info -->
+                        
+                        <!-- /text-center -->
+                    </div>
+                    <!-- /blog-caption -->
+                </div>
+                <!--/blog-prev -->
+                @endforeach
             </div>
-            <div class="col-md-12">
-               <div id="owl-blog" class="owl-carousel">
-                  <!-- ==== Blog post 1 ==== -->
-                  <div class="blog-prev border-dotted">
-                     <!-- image -->
-                     <img src="/ClientPublic/img/blog/blogprev1.jpg" alt="" class="img-responsive"/>
-                     <!-- date -->
-                     <div class="date"><span class="day">22</span><span class="month">Jun</span></div>
-                     <!-- caption -->
-                     <div class="blog-caption">
-                        <a href="blog-single.html">
-                           <h5>We have the best Gluten Free cakes</h5>
-                        </a>
-                        <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam. Suspendisse molestie nibh at tempor mollis.
-                        </p>
-                        <!-- Post Info -->
-                        <div class="text-center">
-                           <div class="post-info">
-                              <p><i class="fa fa-user"></i>By <a href="#">Mary Jane</a></p>
-                              <p><i class="fa fa-comment"></i><a href="#">3 Comments</a></p>
-                           </div>
-                           <!-- read more button -->
-                           <a  href="blog-single.html">
-                              <div class="blob-btn" >
-                                 Read More
-                                 <span class="blob-btn__inner">
-                                 <span class="blob-btn__blobs">
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 </span>
-                                 </span>
-                              </div>
-                           </a>
-                        </div>
-                        <!-- /text-center -->
-                     </div>
-                     <!-- /blog-caption -->
-                  </div>
-                  <!--/blog-prev -->
-                  <!-- ==== Blog post 2 ==== -->
-                  <div class="blog-prev border-dotted">
-                     <!-- image -->
-                     <img src="/ClientPublic/img/blog/blogprev2.jpg" alt="" class="img-responsive"/>
-                     <!-- date -->
-                     <div class="date"><span class="day">01</span><span class="month">Jun</span></div>
-                     <!-- caption -->
-                     <div class="blog-caption">
-                        <a href="blog-single.html">
-                           <h5>Order Cupcakes for your party</h5>
-                        </a>
-                        <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam. Suspendisse molestie nibh at tempor mollis.
-                        </p>
-                        <!-- Post Info -->
-                        <div class="text-center">
-                           <div class="post-info">
-                              <p><i class="fa fa-user"></i>By <a href="#">Mary Jane</a></p>
-                              <p><i class="fa fa-comment"></i><a href="#">7 Comments</a></p>
-                           </div>
-                           <!-- read more button -->
-                           <a  href="blog-single.html">
-                              <div class="blob-btn" >
-                                 Read More
-                                 <span class="blob-btn__inner">
-                                 <span class="blob-btn__blobs">
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 </span>
-                                 </span>
-                              </div>
-                           </a>
-                        </div>
-                        <!-- /text-center -->
-                     </div>
-                     <!-- /blog-caption -->
-                  </div>
-                  <!--/blog-prev -->
-                  <!-- ==== Blog post 3 ==== -->
-                  <div class="blog-prev border-dotted">
-                     <!-- image -->
-                     <img src="/ClientPublic/img/blog/blogprev3.jpg" alt="" class="img-responsive"/>
-                     <!-- date -->
-                     <div class="date"><span class="day">18</span><span class="month">May</span></div>
-                     <!-- caption -->
-                     <div class="blog-caption">
-                        <a href="blog-single.html">
-                           <h5>Our Cake Pops Recipe revealed</h5>
-                        </a>
-                        <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam. Suspendisse molestie nibh at tempor mollis.
-                        </p>
-                        <!-- Post Info -->
-                        <div class="text-center">
-                           <div class="post-info">
-                              <p><i class="fa fa-user"></i>By <a href="#">Jonas Smith</a></p>
-                              <p><i class="fa fa-comment"></i><a href="#">10 Comments</a></p>
-                           </div>
-                           <!-- read more button -->
-                           <a  href="blog-single.html">
-                              <div class="blob-btn" >
-                                 Read More
-                                 <span class="blob-btn__inner">
-                                 <span class="blob-btn__blobs">
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 </span>
-                                 </span>
-                              </div>
-                           </a>
-                        </div>
-                        <!-- /text-center -->
-                     </div>
-                     <!-- /blog-caption -->
-                  </div>
-                  <!--/blog-prev -->
-                  <!-- ==== Blog post 4 ==== -->
-                  <div class="blog-prev border-dotted">
-                     <!-- image -->
-                     <img src="/ClientPublic/img/blog/blogprev4.jpg" alt="" class="img-responsive"/>
-                     <!-- date -->
-                     <div class="date"><span class="day">22</span><span class="month">Apr</span></div>
-                     <!-- caption -->
-                     <div class="blog-caption">
-                        <a href="blog-single.html">
-                           <h5>Try our classic pies with 10% off</h5>
-                        </a>
-                        <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam. Suspendisse molestie nibh at tempor mollis.
-                        </p>
-                        <!-- Post Info -->
-                        <div class="text-center">
-                           <div class="post-info">
-                              <p><i class="fa fa-user"></i>By <a href="#">Mary Jane</a></p>
-                              <p><i class="fa fa-comment"></i><a href="#">12 Comments</a></p>
-                           </div>
-                           <!-- read more button -->
-                           <a  href="blog-single.html">
-                              <div class="blob-btn" >
-                                 Read More
-                                 <span class="blob-btn__inner">
-                                 <span class="blob-btn__blobs">
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 </span>
-                                 </span>
-                              </div>
-                           </a>
-                        </div>
-                        <!-- /text-center -->
-                     </div>
-                     <!-- /blog-caption -->
-                  </div>
-                  <!--/blog-prev -->
-                  <!-- ==== Blog post 5 ==== -->
-                  <div class="blog-prev border-dotted">
-                     <!-- image -->
-                     <img src="/ClientPublic/img/blog/blogprev5.jpg" alt="" class="img-responsive"/>
-                     <!-- date -->
-                     <div class="date"><span class="day">01</span><span class="month">Apr</span></div>
-                     <!-- caption -->
-                     <div class="blog-caption">
-                        <a href="blog-single.html">
-                           <h5>Our finest French patisserie products</h5>
-                        </a>
-                        <p>
-                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam. Suspendisse molestie nibh at tempor mollis.
-                        </p>
-                        <!-- Post Info -->
-                        <div class="text-center">
-                           <div class="post-info">
-                              <p><i class="fa fa-user"></i>By <a href="#">Lucas Smith</a></p>
-                              <p><i class="fa fa-comment"></i><a href="#">3 Comments</a></p>
-                           </div>
-                           <!-- read more button -->
-                           <a  href="blog-single.html">
-                              <div class="blob-btn" >
-                                 Read More
-                                 <span class="blob-btn__inner">
-                                 <span class="blob-btn__blobs">
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 <span class="blob-btn__blob"></span>
-                                 </span>
-                                 </span>
-                              </div>
-                           </a>
-                        </div>
-                        <!-- /text-center -->
-                     </div>
-                     <!-- /blog-caption -->
-                  </div>
-                  <!--/blog-prev -->
-               </div>
-               <!--/owl-blog -->
-            </div>
-            <!--/col-md-12 -->
-         </div>
-         <!--/container -->
-      </section>
+            <!--/owl-blog -->
+        </div>
+        <!--/col-md-12 -->
+    </div>
+    <!--/container -->
+</section>
+
+
       <!--/section -->
       <!-- ==== Catering ==== -->
       <section id="catering" class="light-bg1" data-center="background-position: 0% 0px;"
