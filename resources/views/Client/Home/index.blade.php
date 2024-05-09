@@ -48,7 +48,7 @@
             <i class="fa fa-bars"></i>
         </button>
         <div class="navbar-brand-centered page-scroll">
-            <a href="#page-top"><img src="/ClientPublic/img/logo.png" class="img-responsive"  alt=""></a>
+            <a href="#page-top"><img src="logo.png" class="img-responsive"  alt=""></a>
         </div>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
