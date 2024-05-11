@@ -162,7 +162,7 @@
                         </div>
                         <div class="form-group">
                             <label for="produitPrix">Price</label>
-                            <input type="text" class="form-control" id="produitPrix" name="Prix" required>
+                            <input type="number" class="form-control" id="produitPrix" name="Prix" required>
                         </div>
                         <div class="form-group">
                             <label for="produitCategorie">Category</label>

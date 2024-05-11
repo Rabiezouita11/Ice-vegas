@@ -17,4 +17,12 @@ class ClientController extends Controller
         $products = Produits::all();
         return view('Client.Home.index', compact('products','categories')); 
        }
+
+       public function show($category)
+       {
+           $category = Categories::where('Nom', $category)->firstOrFail();
+           $products = $category->products;
+   
+           return view('Client.Categories.index', compact('category', 'products'));
+       }
 }
