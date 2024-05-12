@@ -22,7 +22,8 @@ class ClientController extends Controller
        {
            $category = Categories::where('Nom', $category)->firstOrFail();
            $products = $category->products;
-   
-           return view('Client.Categories.index', compact('category', 'products'));
+           $categories = Categories::with('products')->get();
+
+           return view('Client.Categories.index', compact('category', 'products','categories'));
        }
 }
