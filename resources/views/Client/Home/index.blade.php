@@ -269,8 +269,8 @@
             </div>
             <div id="owl-icons" class="owl-carousel features-icon margin1 light-bg2">
                 @foreach ($categories as $category)
-                    <a href="{{ route('categories.show', $category->Nom) }}" class="category-link">
-                        <div class="media text-center">
+                <a href="{{ route('categories.show', $category->Nom) }}" class="category-link" style="display: inline-block; height: 200px; width: 200px;">
+                    <div class="media text-center">
                             <img src="{{ $category->Image }}" alt="{{ $category->Nom }}" class="icon">
                             <div class="media-body">
                                 <h5>{{ $category->Nom }}</h5>
