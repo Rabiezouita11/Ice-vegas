@@ -73,7 +73,14 @@
                         </li>
 
                         <li><a href="#about" style=" font-family: 'Anonymous Pro';">Mieux nous connaitre </a></li>
-                        <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Rececette ice vegas</a></li>
+                      
+                       
+
+                    <!-- <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
+                    <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li> -->
+                </ul>
+                <ul class="nav navbar-nav page-scroll navbar-right">
+                <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Rececette ice vegas</a></li>
                         <li><a href="#contact" style=" font-family: 'Anonymous Pro';">contactez nous </a></li>
                         <li><a href="#"style=" font-family: 'Anonymous Pro';">Nos promos </a></li>
                         @guest
@@ -96,15 +103,6 @@
                         </li>
                         <!-- This will be visible when user is logged in -->
                     @endguest
-
-                    <!-- <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
-                    <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li> -->
-                </ul>
-                <ul class="nav navbar-nav page-scroll navbar-right">
-                    <!-- <li><a href="#catering" style=" font-family: 'Anonymous Pro';">Catering</a></li>
-                    <li><a href="#gallery" style=" font-family: 'Anonymous Pro';">Gallery</a></li>
-                    <li><a href="#team" style=" font-family: 'Anonymous Pro';">Team</a></li> -->
-                    <!-- Dropdown -->
                     
                 </ul>
             </div>
