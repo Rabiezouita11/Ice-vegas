@@ -196,7 +196,7 @@
             <!-- Slide 3 -->
             <div class="ls-slide" data-ls="duration:4000; transition2d:7; kenburnszoom:out; kenburnsscale:1.2;">
                 <!-- bg image  -->
-                <img src="3.jpg" class="ls-bg" alt="" />
+                <img src="2.jpg" class="ls-bg" alt="" />
                 <!-- text  -->
                 <div class="ls-l header-wrapper"
                     data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
