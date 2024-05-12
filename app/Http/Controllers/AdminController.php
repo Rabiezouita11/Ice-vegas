@@ -135,7 +135,7 @@ class AdminController extends Controller
         // Validate the incoming request data
         $validatedData = $request->validate([
             'Nom' => 'required|string|max:255',
-            'Image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'Image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
 
         // Create a new category instance
