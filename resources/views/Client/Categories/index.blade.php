@@ -48,21 +48,36 @@
         <div class="collapse navbar-collapse" id="navbar-brand-centered">
             <div class="container">
                 <ul class="nav navbar-nav page-scroll navbar-left">
-                    <li><a href="{{route('home')}}" style=" font-family: 'Anonymous Pro';">Home</a></li>
-                    <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
-                    <li><a href="#about" style=" font-family: 'Anonymous Pro';">About</a></li>
-                    <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li>
-                    <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Menu</a></li>
+                    <li><a href="{{ route('home') }}" style=" font-family: 'Anonymous Pro';">Acceuil</a></li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                            style=" font-family: 'Anonymous Pro';">NOs collection<b class="caret"></b></a>
+
+                        <ul class="dropdown-menu">
+
+                            @foreach ($categories as $category)
+                                <li><a href="{{ route('categories.show', $category->Nom) }}"
+                                        style=" font-family: 'Anonymous Pro';">{{ $category->Nom }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
+
+                    <li><a href="#about" style=" font-family: 'Anonymous Pro';">Mieux nous connaitre </a></li>
+
+
+
+                    <!-- <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
+                    <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li> -->
                 </ul>
                 <ul class="nav navbar-nav page-scroll navbar-right">
-                    <li><a href="#catering" style=" font-family: 'Anonymous Pro';">Catering</a></li>
-                    <li><a href="#gallery" style=" font-family: 'Anonymous Pro';">Gallery</a></li>
-                    <li><a href="#team" style=" font-family: 'Anonymous Pro';">Team</a></li>
-                    <li><a href="#contact" style=" font-family: 'Anonymous Pro';">Contact</a></li>
-                    <!-- Dropdown -->
+                    <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Rececette ice vegas</a></li>
+                    <li><a href="#contact" style=" font-family: 'Anonymous Pro';">contactez nous </a></li>
+                    <li><a href="#"style=" font-family: 'Anonymous Pro';">Nos promos </a></li>
                     @guest
-                        <li><a href="{{ route('login') }}" style=" font-family: 'Anonymous Pro';">Login</a></li>
-                        <li><a href="{{ route('register') }}" style=" font-family: 'Anonymous Pro';">Register</a></li>
+                        <li><a href="{{ route('login') }}" style="font-family: 'Anonymous Pro';"><i
+                                    class="fas fa-sign-in-alt"></i> </a></li>
+                        <li><a href="{{ route('register') }}" style="font-family: 'Anonymous Pro';"><i
+                                    class="fas fa-user-plus"></i> </a></li>
                     @else
                         <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -80,6 +95,7 @@
                         </li>
                         <!-- This will be visible when user is logged in -->
                     @endguest
+
                 </ul>
             </div>
         </div>
