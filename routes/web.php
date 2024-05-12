@@ -29,7 +29,7 @@ Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->na
 
  /*  page affiche categories and son produit */ 
 
-Route::get('/categories/{category}', [ClientController::class, 'show'])->name('categories.show');
+Route::get('/categories_{category}', [ClientController::class, 'show'])->name('categories.show');
 
 
 /*  ADMIN */

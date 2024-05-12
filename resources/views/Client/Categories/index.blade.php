@@ -9,7 +9,7 @@
       <meta name="description" content="">
       <meta name="author" content="">
       <!-- Page title -->
-      <title>Sweetness - HTML5 Template</title>
+      <title>{{ $category->Nom }}</title>
       <!--[if lt IE 9]>
       <script src="js/respond.js"></script>
       <![endif]-->
@@ -48,7 +48,7 @@
         <div class="collapse navbar-collapse" id="navbar-brand-centered">
             <div class="container">
                 <ul class="nav navbar-nav page-scroll navbar-left">
-                    <li><a href="#page-top" style=" font-family: 'Anonymous Pro';">Home</a></li>
+                    <li><a href="{{route('home')}}" style=" font-family: 'Anonymous Pro';">Home</a></li>
                     <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
                     <li><a href="#about" style=" font-family: 'Anonymous Pro';">About</a></li>
                     <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li>
