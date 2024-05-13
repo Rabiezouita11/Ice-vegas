@@ -115,7 +115,7 @@
       <!-- /preloader -->
       <!-- Section Blog -->
       <section id="blog-main">
-         <div class="jumbotron"></div>
+      <div class="jumbotron" style="background: url('{{ $category->Image }}') no-repeat; background-size: cover !important;"></div>
          <div class="page-title text-center">
             <h1 class="text-light" >{{ $category->Nom }}</h1>
             <!-- breadcrumb --> 
