@@ -44,14 +44,14 @@ Color Style: Main Colors */
     /* FF3.6-15 */
      background: -webkit-linear-gradient(bottom, rgba(250,102,120,1) 0%,rgba(250,102,120,0.99) 1%,rgba(255,255,255,0) 100%);
     /* Chrome10-25,Safari5.1-6 */
-     background: linear-gradient(to top, rgba(250,102,120,1) 0%,rgba(250,102,120,0.99) 1%,rgba(255,255,255,0) 100%);
+     background: linear-gradient(to top, rgba(250,102,120,1) 0%,rgba(50, 39, 41, 0.99) 1%,rgba(255,255,255,0) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 .section-heading h2 {
     text-shadow: 2px 0px 3px #FA6678;
 }
 .header-text h1{
- text-shadow: 2px 2px 0 #000, 4px 4px 0 #fa6678;
+ text-shadow: 2px 2px 0 #000, 4px 4px 0 #130e0f;
 }
 /*________ Light Pink ________ */
 

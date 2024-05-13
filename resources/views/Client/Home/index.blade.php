@@ -62,7 +62,7 @@
                     <li><a href="{{ route('home') }}" style=" font-family: 'Anonymous Pro';">Acceuil</a></li>
                     <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                            style=" font-family: 'Anonymous Pro';">NOs collection<b class="caret"></b></a>
+                            style=" font-family: 'Anonymous Pro';">Nos collection<b class="caret"></b></a>
 
                         <ul class="dropdown-menu">
 
@@ -137,15 +137,13 @@
                 <div class="ls-l header-wrapper"
                     data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
                     <div class="header-text">
-                        <h1>Welcome to Sweetness</h1>
-                        <p class="header-p">We have over 300 delicious flavours for you to choose, come and visit our
-                            shop today!
+                        <h1 style=" font-family: 'Anonymous Pro';">UNE NOUVELLE AVENTURE EN GLACE</h1>
+                        <p class="header-p" style=" font-family: 'Anonymous Pro'";>Embarquez pour une expérience dépaysante hors du quotidien…
                         </p>
                         <!-- Button -->
                         <a href="#contact">
                             <div class="blob-btn btn-lg">
-                                Contact Us
-                                <span class="blob-btn__inner">
+A props de nous                                 <span class="blob-btn__inner">
                                     <span class="blob-btn__blobs">
                                         <span class="blob-btn__blob"></span>
                                         <span class="blob-btn__blob"></span>
@@ -169,9 +167,8 @@
                 <div class="ls-l header-wrapper"
                     data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
                     <div class="header-text">
-                        <h1>Enjoy our Cakes!</h1>
-                        <p class="header-p">We have over 300 delicious flavours for you to choose, come and visit our
-                            shop today!
+                        <h1 style=" font-family: 'Anonymous Pro';">UNE NOUVELLE AVENTURE EN GLACE!</h1>
+                        <p class="header-p" style=" font-family: 'Anonymous Pro';"> Embarquez pour une expérience dépaysante hors du quotidien…
                         </p>
                         <!-- Button -->
                         <a href="#contact">
@@ -201,9 +198,8 @@
                 <div class="ls-l header-wrapper"
                     data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
                     <div class="header-text">
-                        <h1>Catering Services</h1>
-                        <p class="header-p">We have over 300 delicious flavours for you to choose, come and visit our
-                            shop today!
+                        <h1 style=" font-family: 'Anonymous Pro'; color:#E1C27F" >UNE NOUVELLE AVENTURE EN GLACE</h1>
+                        <p class="header-p" style=" font-family: 'Anonymous Pro';">Embarquez pour une expérience dépaysante hors du quotidien…
                         </p>
                         <!-- Button -->
                         <a href="#contact">
