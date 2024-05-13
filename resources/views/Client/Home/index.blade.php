@@ -31,9 +31,9 @@
     <!-- LayerSlider CSS -->
     <link rel="stylesheet" href="/ClientPublic/js/layerslider/css/layerslider.css">
     <!-- Favicons-->
-    <link rel="apple-touch-icon" sizes="72x72" href="/ClientPublic/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/ClientPublic/apple-icon-114x114.png">
-    <link rel="shortcut icon" href="/ClientPublic/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="114x114" href="logo.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="logo.png">
+    <link rel="shortcut icon"  sizes="114x114" href="logo.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
 </head>
