@@ -9,7 +9,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Dashboard</h1>
+          <h1 class="m-0">Ice vegas</h1>
         </div>
 
         <!-- /.col -->
@@ -20,7 +20,7 @@
               <a href="#">Home</a>
             </li>
 
-            <li class="breadcrumb-item active">Dashboard v1</li>
+            <li class="breadcrumb-item active">Dashboard </li>
           </ol>
         </div>
 
@@ -48,7 +48,7 @@
             <div class="inner">
               <h3> {{ $ProduitsCount}}</h3>
 
-              <p>totale  Produits</p>
+              <p>Produits</p>
             </div>
 
             <div class="icon">
@@ -59,7 +59,7 @@
               href="#"
               class="small-box-footer"
             >
-              More info
+             
 
               <i class="fas fa-arrow-circle-right"></i>
             </a>
@@ -79,7 +79,7 @@
                 
               </h3>
 
-              <p>totale  Categories</p>
+              <p> Categories</p>
             </div>
 
             <div class="icon">
@@ -90,7 +90,7 @@
               href="#"
               class="small-box-footer"
             >
-              More info
+              
 
               <i class="fas fa-arrow-circle-right"></i>
             </a>
@@ -106,7 +106,7 @@
             <div class="inner">
               <h3>{{$clientCount}}</h3>
 
-              <p>totale utilisateurs</p>
+              <p> utilisateurs</p>
             </div>
 
             <div class="icon">
@@ -117,7 +117,7 @@
               href="#"
               class="small-box-footer"
             >
-              More info
+              
 
               <i class="fas fa-arrow-circle-right"></i>
             </a>
@@ -156,3 +156,4 @@
 </div>
 
 @endsection
+

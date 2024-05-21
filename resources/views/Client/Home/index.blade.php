@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Page title -->
-    <title>Home</title>
+    <title>Acceuil</title>
     <!--[if lt IE 9]>
       <script src="js/respond.js"></script>
       <![endif]-->
@@ -82,7 +82,7 @@
                 </ul>
                 <ul class="nav navbar-nav page-scroll navbar-right">
                     <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Rececette ice vegas</a></li>
-                    <li><a href="#contact" style=" font-family: 'Anonymous Pro';">contactez nous </a></li>
+                    <li><a href="#contact" style=" font-family: 'Anonymous Pro';">Contactez nous </a></li>
                     <li><a href="#"style=" font-family: 'Anonymous Pro';">Nos promos </a></li>
                     @guest
                         <li><a href="{{ route('login') }}" style="font-family: 'Anonymous Pro';"><i
@@ -104,7 +104,6 @@
                                 </form>
                             </ul>
                         </li>
-                        <!-- This will be visible when user is logged in -->
                     @endguest
 
                 </ul>
@@ -132,7 +131,7 @@
             <!-- Slide 1 -->
             <div class="ls-slide" data-ls="duration:4000; transition2d:7; kenburnszoom:out; kenburnsscale:1.2;">
                 <!-- bg image  -->
-                <img src="home.png" class="ls-bg" alt="" />
+                <img src="3.png" class="ls-bg" alt="" />
                 <!-- text  -->
                 <div class="ls-l header-wrapper"
                     data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
@@ -142,7 +141,7 @@
                         </p>
                         <!-- Button -->
                         <a href="#contact">
-                            <div class="blob-btn btn-lg">
+                            <div class="blob-btn btn-lg"  style=" font-family: 'Anonymous Pro';">
 A props de nous                                 <span class="blob-btn__inner">
                                     <span class="blob-btn__blobs">
                                         <span class="blob-btn__blob"></span>
@@ -172,8 +171,9 @@ A props de nous                                 <span class="blob-btn__inner">
                         </p>
                         <!-- Button -->
                         <a href="#contact">
-                            <div class="blob-btn btn-lg">
-                                Contact Us
+                            
+                            <div class="blob-btn btn-lg"  style=" font-family: 'Anonymous Pro';">
+                                A propos de nous 
                                 <span class="blob-btn__inner">
                                     <span class="blob-btn__blobs">
                                         <span class="blob-btn__blob"></span>
@@ -182,6 +182,7 @@ A props de nous                                 <span class="blob-btn__inner">
                                         <span class="blob-btn__blob"></span>
                                     </span>
                                 </span>
+                                
                             </div>
                         </a>
                     </div>
@@ -193,7 +194,7 @@ A props de nous                                 <span class="blob-btn__inner">
             <!-- Slide 3 -->
             <div class="ls-slide" data-ls="duration:4000; transition2d:7; kenburnszoom:out; kenburnsscale:1.2;">
                 <!-- bg image  -->
-                <img src="2.jpg" class="ls-bg" alt="" />
+                <img src="3.png" class="ls-bg" alt="" />
                 <!-- text  -->
                 <div class="ls-l header-wrapper"
                     data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
@@ -203,8 +204,8 @@ A props de nous                                 <span class="blob-btn__inner">
                         </p>
                         <!-- Button -->
                         <a href="#contact">
-                            <div class="blob-btn btn-lg">
-                                Contact Us
+                            <div class="blob-btn btn-lg"  style=" font-family: 'Anonymous Pro';">
+                                A props de nous 
                                 <span class="blob-btn__inner">
                                     <span class="blob-btn__blobs">
                                         <span class="blob-btn__blob"></span>
@@ -238,29 +239,27 @@ A props de nous                                 <span class="blob-btn__inner">
             <div class="col-lg-12">
                 <!-- Section heading -->
                 <div class="section-heading">
-                    <h2>Our Services</h2>
+                    <h2  style=" font-family: 'Anonymous Pro' ">Ice vegas </h2>
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-responsive img-rounded" src="/ClientPublic/img/cakes.jpg" data-aos="fade-down"
+                    <img class="img-responsive img-rounded" src="o.jpg" data-aos="fade-down"
                         data-aos-duration="1500" alt="">
                 </div>
                 <!-- /col-md-4 -->
                 <div class="col-md-8 res-margin">
                     <h3>Baking is our Passion</h3>
-                    <p>Hinc dissentiet per ad, quando dolores has id vel mauris ultricies, vest ibulum orci eget Unc vel
-                        mauris ultricies, vest ibulum orci eget,Fusce mollis viverra elit liquam erat volut imperdiet
-                        interdum donec eget me</p>
-                    <p> Atomorum erroribus dissentiunt ex vel. Invenire hendrerit et vim, has solet adversarium ne, mea
-                        nisl postea principes at. Has primis vidisse instructior ad, id rebum eruditi sed. Hinc
-                        dissentiet per ad, quando dolores has id vel mauris ultricies, vest ibulum orci eget.
+                    <p>Ice vegas est une marque de creme glaceé preumiem lanceé en 2019 en Tunisie </p>
+                    <p> ses produit sont fabriques avec des ingredients naturels et de qualiteé premium la marque 
+                        mise sur l'appétence et la gourmandise , en mettant en avant des saveurs généeruses et des iningredients 
                     </p>
                     <!-- Button -->
                     <div class="page-scroll">
                         <a href="#contact">
                             <div class="blob-btn">
-                                Contact Us
+                                Contactez nous 
                                 <span class="blob-btn__inner">
                                     <span class="blob-btn__blobs">
                                         <span class="blob-btn__blob"></span>
@@ -279,7 +278,7 @@ A props de nous                                 <span class="blob-btn__inner">
             <!-- /row -->
             <!-- carousel -->
             <div class="section-heading">
-                <h2>Categories</h2>
+                <h2 style=" font-family: 'Anonymous Pro' " >Nos collection </h2>
             </div>
             <div id="owl-icons" class="owl-carousel features-icon margin1 light-bg2">
                 @foreach ($categories as $category)
@@ -311,7 +310,7 @@ A props de nous                                 <span class="blob-btn__inner">
                         alt="" />
                 </div>
                 <div class="col-lg-5">
-                    <h3 class="res-margin text-light">Join our Newsletter</h3>
+                    <h3 class="res-margin text-light"> Newsletter</h3>
                     <p class="text-light">We will send you news once a week</p>
                     <!-- Form -->
                     <div id="mc_embed_signup">
@@ -365,12 +364,12 @@ A props de nous                                 <span class="blob-btn__inner">
         <div class="container">
             <!-- Section Heading -->
             <div class="section-heading">
-                <h2>About Us</h2>
+                <h2 style=" font-family: 'sans-serif' " >About Us</h2>
             </div>
             <!-- Text -->
             <div class="row">
                 <div class="col-lg-7">
-                    <h3>Delicious cakes since 1990</h3>
+                    <h3>Ice vegas depuis 2019</h3>
                     <p>Placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen
                         unc vel mauris ultricies, vest ibulum orci eget,Fusce mollis imperdiet interdum donec eget metus
                         auguen unc vel lorem ispuet.</p>
@@ -379,7 +378,7 @@ A props de nous                                 <span class="blob-btn__inner">
                         adipisicing elit uasi quidem minus id omnis.
                     </p>
                     <ul class="custom">
-                        <li>We are a family owned Business</li>
+                        <li>La famille ice vegas</li>
                         <li>Vegan and Gluten free options always available</li>
                         <li>We use high quality fair trade Chocolate in our products</li>
                         <li>You can order your own custom cake with us</li>
@@ -437,7 +436,7 @@ A props de nous                                 <span class="blob-btn__inner">
     <!-- ==== Reviews ==== -->
     <section id="reviews" class="cake-ornament light-bg1 container-fluid">
         <div class="container">
-            <h3 class="text-center header-h3">Customer Reviews</h3>
+            <h3 class="text-center header-h3">Avis</h3> 
             <div class="col-md-12 margin1">
                 <!-- Carousel -->
                 <div id="owl-testimonial" class=" owl-carousel">
@@ -452,7 +451,7 @@ A props de nous                                 <span class="blob-btn__inner">
                                 Suspendisse molestie nibh at tempor mollis. Integer aliquet facilisis felis, ac porta
                                 est cursus et. Vestibulum sollicitudin nisl ut urna egestas faucibus.
                             </p>
-                            <h3 class="testimonial-title">Lana King</h3>
+                            <h3 class="testimonial-title">ice vegas </h3>
                             <small class="post">- TV Star</small>
                         </div>
                     </div>
