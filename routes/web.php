@@ -32,6 +32,10 @@ Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->na
 Route::get('/categories_{category}', [ClientController::class, 'show'])->name('categories.show');
 
 
+
+Route::get('/products_{id}', [ClientController::class, 'showproducts'])->name('products.show');
+
+
 /*  ADMIN */
 
 

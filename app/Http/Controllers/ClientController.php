@@ -13,11 +13,12 @@ class ClientController extends Controller
     public function index()
     {
         $categories = Categories::with('products')->get();
-
-        $products = Produits::all();
-        return view('Client.Home.index', compact('products','categories')); 
-       }
-
+    
+        // Ensure that each product is loaded with its category
+        $products = Produits::with('categorie')->get();
+    
+        return view('Client.Home.index', compact('products', 'categories'));
+    }
        public function show($category)
        {
            $category = Categories::where('Nom', $category)->firstOrFail();
@@ -25,5 +26,14 @@ class ClientController extends Controller
            $categories = Categories::with('products')->get();
 
            return view('Client.Categories.index', compact('category', 'products','categories'));
+       }
+
+       public function showproducts($id)
+       {
+           // Find the product by ID and load its category
+           $product = Produits::with('categorie')->findOrFail($id);
+   
+           // Return the product details view with the product data
+           return view('Client.Produit.show', compact('product'));
        }
 }

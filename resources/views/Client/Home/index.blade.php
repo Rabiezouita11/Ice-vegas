@@ -1,2029 +1,3130 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
     <meta charset="utf-8">
-    <!--[if IE]>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Orfarm - Multipurpose eCommerce HTML5 Template </title>
     <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Page title -->
-    <title>Acceuil</title>
-    <!--[if lt IE 9]>
-      <script src="js/respond.js"></script>
-      <![endif]-->
-    <!-- Bootstrap Core CSS -->
-    <link href="/ClientPublic/css/bootstrap.css" rel="stylesheet" type="text/css">
-    <!-- Icon fonts -->
-    <link href="/ClientPublic/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="/ClientPublic/fonts/flaticons/flaticon.css" rel="stylesheet" type="text/css">
-    <link href="/ClientPublic/fonts/glyphicons/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,600,700%7CCherry+Swash:400,700" rel="stylesheet">
-    <!-- Style CSS -->
-    <link href="/ClientPublic/css/style.css" rel="stylesheet">
-    <!-- Color Style CSS -->
-    <link href="/ClientPublic/styles/maincolors.css" rel="stylesheet">
-    <!-- CSS Plugins -->
-    <link rel="stylesheet" href="/ClientPublic/css/plugins.css">
-    <!-- LayerSlider CSS -->
-    <link rel="stylesheet" href="/ClientPublic/js/layerslider/css/layerslider.css">
-    <!-- Favicons-->
-    <link rel="apple-touch-icon" sizes="114x114" href="logo.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="logo.png">
-    <link rel="shortcut icon"  sizes="114x114" href="logo.png" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/spacing.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/icon-dukamarket.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-    <style>
-        .navbar-nav a {
-            font-family: 'Anonymous Pro', monospace;
-        }
-    </style>
-    <!--============== Navbar Starts ==============-->
-    <nav class="navbar navbar-custom navbar-fixed-top">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="navbar-brand-centered page-scroll">
-                <a href="#page-top"><img src="logo.png" class="img-responsive" alt=""></a>
-            </div>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-brand-centered">
+<body>
+
+
+    <!-- Scroll-top -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <i class="icon-chevrons-up"></i>
+    </button>
+    <!-- Scroll-top-end-->
+
+
+    <!-- header-area-start -->
+    <header>
+        <div class="header__top theme-bg-1 d-none d-md-block" style="background-color: white">
             <div class="container">
-                <ul class="nav navbar-nav page-scroll navbar-left">
-                    <li><a href="{{ route('home') }}" style=" font-family: 'Anonymous Pro';">Acceuil</a></li>
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                            style=" font-family: 'Anonymous Pro';">Nos collection<b class="caret"></b></a>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="header__top-left">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="header__top-right d-flex align-items-center">
 
-                        <ul class="dropdown-menu">
+                            <div class="header__lang">
+                                <span class="header__lang-select" style="color: black">English <i
+                                        class="far fa-angle-down"></i></span>
+                                <ul class="header__lang-submenu">
+                                    <li>
+                                        <a href="#">Australia</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Spain</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Brazil</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">English</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">France</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">United States</a>
+                                    </li>
+                                </ul>
+                            </div>
 
-                            @foreach ($categories as $category)
-                                <li><a href="{{ route('categories.show', $category->Nom) }}"
-                                        style=" font-family: 'Anonymous Pro';">{{ $category->Nom }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="header-sticky" class="header__main-area d-none d-xl-block">
+            <div class="container">
+                <div class="header__for-megamenu p-relative">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3">
+                            <div class="header__logo">
+                                <a href="index.html"><img height="100px" width="100px" src="logo.png"
+                                        alt="logo"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="header__menu main-menu text-center">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="{{route('home')}}">accueil</a></li>
 
-                    <li><a href="#about" style=" font-family: 'Anonymous Pro';">Mieux nous connaitre </a></li>
+                                        <li class="has-dropdown has-megamenu">
+                                            <a href="course-grid.html">Shop</a>
+                                            <ul class="sub-menu mega-menu"
+                                                data-background="assets/img/banner/mega-menu-shop-1.jpg">
+                                                <li>
+                                                    <a class="mega-menu-title">Shop layout</a>
+                                                    <ul>
+                                                        <li><a href="shop-left-sidebar.html">Shop With Banner </a></li>
+                                                        <li><a href="shop-3.html">Shop Without Banner</a></li>
+                                                        <li><a href="shop-2.html">Shop Version</a></li>
+                                                        <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                                                        <li><a href="shop-right-sidebar.html">Shop Right sidebar</a>
+                                                        </li>
+                                                        <li><a href="shop-list-view.html">Shop List view</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a class="mega-menu-title">Product layout</a>
+                                                    <ul>
+                                                        <li><a href="shop-details-3.html">Image scroll</a></li>
+                                                        <li><a href="shop-details-grid.html">Product grid</a></li>
+                                                        <li><a href="shop-details-top.html">Top Thumb Product</a></li>
+                                                        <li><a href="shop-details.html">Bottom Thumb Product</a></li>
+                                                        <li><a href="shop-details-4.html">Simple Product</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a class="mega-menu-title">Product type</a>
+                                                    <ul>
+                                                        <li><a href="shop-details.html">Products Simple</a></li>
+                                                        <li><a href="shop-details-grid.html">Products Group</a></li>
+                                                        <li><a href="shop-details-3.html">Products Variable</a></li>
+                                                        <li><a href="shop-details-3.html">Special</a></li>
+                                                        <li><a href="shop-details-4.html">Decoration</a></li>
+                                                        <li><a href="shop-details-top.html">Contruction</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a class="mega-menu-title">Product category</a>
+                                                    <ul>
+                                                        <li><a href="shop-details.html">Fresh bakery</a></li>
+                                                        <li><a href="shop-details-3.html">Fresh fruits</a></li>
+                                                        <li><a href="shop-details-4.html">Fresh meat</a></li>
+                                                        <li><a href="shop-details.html">Fruit drink</a></li>
+                                                        <li><a href="shop-details.html">Fresh bakery</a></li>
+                                                        <li><a href="shop-details-grid.html">Biscuits snack</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="blog.html">Blog</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="blog.html">Big image</a></li>
+                                                <li><a href="blog-right-sidebar.html">Right sidebar</a></li>
+                                                <li><a href="blog-left-sidebar.html">Left sidebar</a></li>
+                                                <li><a href="blog-details.html">Single Post</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="about.html">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="shop-location.html">Shop Location One</a></li>
+                                                <li><a href="shop-location-2.html">Shop Location Two</a></li>
+                                                <li><a href="faq.html">FAQs</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="cart.html">Cart Page</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="log-in.html">Sign In</a></li>
+                                                <li><a href="comming-soon.html">Coming soon</a></li>
+                                                <li><a href="404.html">Page 404</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="header__info d-flex align-items-center">
+                                <div class="header__info-search tpcolor__purple ml-10">
+                                    <button class="tp-search-toggle"><i class="icon-search"></i></button>
+                                </div>
+
+                                @guest
+                                    <div class="header__info-user tpcolor__yellow ml-10">
+                                        <a href="{{ route('login') }}"><i class="icon-user"></i></a>
+                                    </div>
+                                @else
+                                    <div class="col-xl-6">
+                                        <div class="header__menu main-menu text-center">
+                                            <nav id="mobile-menu">
+                                                <ul>
+                                                    <li class="has-dropdown">
+                                                        <a href="#">{{ Auth::user()->name }}</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="blog-single.html"
+                                                                    style=" font-family: 'Anonymous Pro';">Profile</a></li>
+                                                            <li><a href="{{ route('logout') }}"
+                                                                    onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"
+                                                                    style=" font-family: 'Anonymous Pro';">Déconnexion</a>
+                                                            </li>
+                                                            <form id="logout-form" action="{{ route('logout') }}"
+                                                                method="POST" class="d-none">
+                                                                @csrf
+                                                            </form>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
 
 
+                                @endguest
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                    <!-- <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
-                    <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li> -->
-                </ul>
-                <ul class="nav navbar-nav page-scroll navbar-right">
-                    <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Rececette ice vegas</a></li>
-                    <li><a href="#contact" style=" font-family: 'Anonymous Pro';">Contactez nous </a></li>
-                    <li><a href="#"style=" font-family: 'Anonymous Pro';">Nos promos </a></li>
-                    @guest
-                        <li><a href="{{ route('login') }}" style="font-family: 'Anonymous Pro';"><i
-                                    class="fas fa-sign-in-alt"></i> </a></li>
-                        <li><a href="{{ route('register') }}" style="font-family: 'Anonymous Pro';"><i
-                                    class="fas fa-user-plus"></i> </a></li>
-                    @else
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                style=" font-family: 'Anonymous Pro';">{{ Auth::user()->name }}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-single.html" style=" font-family: 'Anonymous Pro';">Profile</a></li>
-                                <li><a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();"
-                                        style=" font-family: 'Anonymous Pro';">Déconnexion</a></li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
+        <!-- header-search -->
+        <div class="tpsearchbar tp-sidebar-area">
+            <button class="tpsearchbar__close"><i class="icon-x"></i></button>
+            <div class="search-wrap text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-6 pt-100 pb-100">
+                            <h2 class="tpsearchbar__title">What Are You Looking For?</h2>
+                            <div class="tpsearchbar__form">
+                                <form action="#">
+                                    <input type="text" name="search" placeholder="Search Product...">
+                                    <button class="tpsearchbar__search-btn"><i class="icon-search"></i></button>
                                 </form>
-                            </ul>
-                        </li>
-                    @endguest
-
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
-    <!--============== // Navbar Ends ==============-->
-
-    <!-- Preloader -->
-    <div id="loading">
-        <div id="loading-center">
-            <div id="loading-center-absolute">
-                <div class="object-load" id="object_one"></div>
-                <div class="object-load" id="object_two"></div>
-                <div class="object-load" id="object_three"></div>
-            </div>
-        </div>
-    </div>
-    <!-- /preloader -->
-    <!-- ==== Slider ==== -->
-    <div class="container-fluid page-scroll">
-        <!-- ==== Slider ==== -->
-        <div id="slider" style="width:1200px;height:900px;margin:0 auto;margin-bottom: 0px;">
-            <!-- Slide 1 -->
-            <div class="ls-slide" data-ls="duration:4000; transition2d:7; kenburnszoom:out; kenburnsscale:1.2;">
-                <!-- bg image  -->
-                <img src="3.png" class="ls-bg" alt="" />
-                <!-- text  -->
-                <div class="ls-l header-wrapper"
-                    data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
-                    <div class="header-text">
-                        <h1 style=" font-family: 'Anonymous Pro';">UNE NOUVELLE AVENTURE EN GLACE</h1>
-                        <p class="header-p" style=" font-family: 'Anonymous Pro'";>Embarquez pour une expérience dépaysante hors du quotidien…
-                        </p>
-                        <!-- Button -->
-                        <a href="#contact">
-                            <div class="blob-btn btn-lg"  style=" font-family: 'Anonymous Pro';">
-A props de nous                                 <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- header-text  -->
-                </div>
-                <!-- ls-l  -->
-            </div>
-            <!-- ls-slide -->
-            <!-- Slide 2 -->
-            <div class="ls-slide" data-ls="duration:4000; transition2d:7; kenburnszoom:out; kenburnsscale:1.2;">
-                <!-- bg image  -->
-                <img src="1.jpg" class="ls-bg" alt="" />
-                <!-- text  -->
-                <div class="ls-l header-wrapper"
-                    data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
-                    <div class="header-text">
-                        <h1 style=" font-family: 'Anonymous Pro';">UNE NOUVELLE AVENTURE EN GLACE!</h1>
-                        <p class="header-p" style=" font-family: 'Anonymous Pro';"> Embarquez pour une expérience dépaysante hors du quotidien…
-                        </p>
-                        <!-- Button -->
-                        <a href="#contact">
-                            
-                            <div class="blob-btn btn-lg"  style=" font-family: 'Anonymous Pro';">
-                                A propos de nous 
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                                
-                            </div>
-                        </a>
-                    </div>
-                    <!-- header-text  -->
-                </div>
-                <!-- ls-l  -->
-            </div>
-            <!-- ls-slide -->
-            <!-- Slide 3 -->
-            <div class="ls-slide" data-ls="duration:4000; transition2d:7; kenburnszoom:out; kenburnsscale:1.2;">
-                <!-- bg image  -->
-                <img src="3.png" class="ls-bg" alt="" />
-                <!-- text  -->
-                <div class="ls-l header-wrapper"
-                    data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; offsetyout:600; durationout:400; parallaxlevel:0;">
-                    <div class="header-text">
-                        <h1 style=" font-family: 'Anonymous Pro'; color:#E1C27F" >UNE NOUVELLE AVENTURE EN GLACE</h1>
-                        <p class="header-p" style=" font-family: 'Anonymous Pro';">Embarquez pour une expérience dépaysante hors du quotidien…
-                        </p>
-                        <!-- Button -->
-                        <a href="#contact">
-                            <div class="blob-btn btn-lg"  style=" font-family: 'Anonymous Pro';">
-                                A props de nous 
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- header-text  -->
-                </div>
-                <!-- ls-l  -->
-            </div>
-            <!-- ls-slide -->
-        </div>
-        <!-- /slider -->
-    </div>
-    <!-- /container-fluid -->
-    <!-- curve up svg -->
-    <svg id="curveUp" class="hidden-xs hidden-sm" xmlns="http://www.w3.org/2000/svg" version="1.1"
-        width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z" />
-    </svg>
-    <!-- /curve up svg -->
-    <!-- ==== Services ==== -->
-    <section id="services" class="no-padding-top container-fluid" data-0="background-position:90% 100px;"
-        data-end="background-position:90% -300px;">
-        <div class="container">
-            <div class="col-lg-12">
-                <!-- Section heading -->
-                <div class="section-heading">
-                    <h2  style=" font-family: 'Anonymous Pro' ">Ice vegas </h2>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-4">
-                    <img class="img-responsive img-rounded" src="o.jpg" data-aos="fade-down"
-                        data-aos-duration="1500" alt="">
-                </div>
-                <!-- /col-md-4 -->
-                <div class="col-md-8 res-margin">
-                    <h3>Baking is our Passion</h3>
-                    <p>Ice vegas est une marque de creme glaceé preumiem lanceé en 2019 en Tunisie </p>
-                    <p> ses produit sont fabriques avec des ingredients naturels et de qualiteé premium la marque 
-                        mise sur l'appétence et la gourmandise , en mettant en avant des saveurs généeruses et des iningredients 
-                    </p>
-                    <!-- Button -->
-                    <div class="page-scroll">
-                        <a href="#contact">
-                            <div class="blob-btn">
-                                Contactez nous 
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- /page-scroll -->
-                </div>
-                <!-- /col-md-8 -->
-            </div>
-            <!-- /row -->
-            <!-- carousel -->
-            <div class="section-heading">
-                <h2 style=" font-family: 'Anonymous Pro' " >Nos collection </h2>
-            </div>
-            <div id="owl-icons" class="owl-carousel features-icon margin1 light-bg2">
-                @foreach ($categories as $category)
-                    <a href="{{ route('categories.show', $category->Nom) }}" class="category-link">
-                        <div class="media text-center">
-                            <img src="{{ $category->Image }}" alt="{{ $category->Nom }}" class="icon">
-                            <div class="media-body">
-                                <h5>{{ $category->Nom }}</h5>
-                                <p>{{ $category->Description }}</p>
                             </div>
                         </div>
-                    </a>
-                @endforeach
-            </div>
-            <!-- /owl-carousel -->
-
-            <!--/owl-icons-->
-        </div>
-        <!-- /container -->
-    </section>
-    <!-- /section-->
-    <!-- ==== Newsletter ==== -->
-    <section id="newsletter" class="container-fluid bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <!-- image  -->
-                    <img src="/ClientPublic/img/newsletter.png" class="img-responsive newsletter-img"
-                        alt="" />
+                    </div>
                 </div>
-                <div class="col-lg-5">
-                    <h3 class="res-margin text-light"> Newsletter</h3>
-                    <p class="text-light">We will send you news once a week</p>
-                    <!-- Form -->
-                    <div id="mc_embed_signup">
-                        <form
-                            action="http://yourlist.us12.list-manage.com/subscribe/post?u=04e646927a196552aaee78a7b&id=111"
-                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                            class="validate" target="_blank" novalidate>
-                            <div id="mc_embed_signup_scroll">
-                                <div class="mc-field-group">
-                                    <div class="input-group">
-                                        <input class="form-control input-lg required email" type="email"
-                                            value="" name="EMAIL" placeholder="Your email here"
-                                            id="mce-EMAIL">
-                                        <span class="input-group-btn">
-                                            <button class="blob-btn btn btn-lg" type="submit" value="Subscribe"
-                                                name="subscribe" id="mc-embedded-subscribe">
-                                                Subscribe
-                                                <span class="blob-btn__inner">
-                                                    <span class="blob-btn__blobs">
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                    </span>
-                                                </span>
-                                            </button>
+            </div>
+        </div>
+        <div class="search-body-overlay"></div>
+        <!-- header-search-end -->
+
+        <!-- header-cart-start -->
+        <div class="tpcartinfo tp-cart-info-area p-relative">
+            <button class="tpcart__close"><i class="icon-x"></i></button>
+            <div class="tpcart">
+                <h4 class="tpcart__title">Your Cart</h4>
+                <div class="tpcart__product">
+                    <div class="tpcart__product-list">
+                        <ul>
+                            <li>
+                                <div class="tpcart__item">
+                                    <div class="tpcart__img">
+                                        <img src="assets/img/product/products1-min.jpg" alt="">
+                                        <div class="tpcart__del">
+                                            <a href="#"><i class="icon-x-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpcart__content">
+                                        <span class="tpcart__content-title"><a href="shop-details.html">Stacy's Pita
+                                                Chips Parmesan Garlic & Herb From Nature</a>
                                         </span>
-                                    </div>
-                                    <!-- Subscription results -->
-                                    <div id="mce-responses" class="mailchimp">
-                                        <div class="alert alert-danger response" id="mce-error-response"></div>
-                                        <div class="alert alert-success response" id="mce-success-response"></div>
+                                        <div class="tpcart__cart-price">
+                                            <span class="quantity">1 x</span>
+                                            <span class="new-price">$162.80</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- /mc-fiel-group -->
+                            </li>
+                            <li>
+                                <div class="tpcart__item">
+                                    <div class="tpcart__img">
+                                        <img src="assets/img/product/products12-min.jpg" alt="">
+                                        <div class="tpcart__del">
+                                            <a href="#"><i class="icon-x-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpcart__content">
+                                        <span class="tpcart__content-title"><a href="shop-details.html">Banana,
+                                                Beautiful Skin, Good For Health 1Kg</a>
+                                        </span>
+                                        <div class="tpcart__cart-price">
+                                            <span class="quantity">1 x</span>
+                                            <span class="new-price">$138.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tpcart__item">
+                                    <div class="tpcart__img">
+                                        <img src="assets/img/product/products3-min.jpg" alt="">
+                                        <div class="tpcart__del">
+                                            <a href="#"><i class="icon-x-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpcart__content">
+                                        <span class="tpcart__content-title"><a href="shop-details.html">Quaker Popped
+                                                Rice Crisps Snacks Chocolate</a>
+                                        </span>
+                                        <div class="tpcart__cart-price">
+                                            <span class="quantity">1 x</span>
+                                            <span class="new-price">$162.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tpcart__checkout">
+                        <div class="tpcart__total-price d-flex justify-content-between align-items-center">
+                            <span> Subtotal:</span>
+                            <span class="heilight-price"> $300.00</span>
+                        </div>
+                        <div class="tpcart__checkout-btn">
+                            <a class="tpcart-btn mb-10" href="cart.html">View Cart</a>
+                            <a class="tpcheck-btn" href="checkout.html">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tpcart__free-shipping text-center">
+                    <span>Free shipping for orders <b>under 10km</b></span>
+                </div>
+            </div>
+        </div>
+        <div class="cartbody-overlay"></div>
+        <!-- header-cart-end -->
+
+        <!-- mobile-menu-area -->
+        <div id="header-sticky-2" class="tpmobile-menu d-xl-none">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-3 col-sm-3">
+                        <div class="mobile-menu-icon">
+                            <button class="tp-menu-toggle"><i class="icon-menu1"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-6 col-sm-4">
+                        <div class="header__logo text-center">
+                            <a href="index.html"><img height="100px" width="100px" src="logo.png"
+                                    alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-3 col-sm-5">
+                        <div class="header__info d-flex align-items-center">
+                            <div class="header__info-search tpcolor__purple ml-10 d-none d-sm-block">
+                                <button class="tp-search-toggle"><i class="icon-search"></i></button>
                             </div>
-                            <!-- /mc_embed_signup_scroll -->
-                        </form>
-                        <!-- /form ends -->
+                            <div class="header__info-user tpcolor__yellow ml-10 d-none d-sm-block">
+                                <a href="log-in.html"><i class="icon-user"></i></a>
+                            </div>
+
+                        </div>
                     </div>
-                    <!-- /mc_embed_signup -->
                 </div>
-                <!-- /col-lg -->
             </div>
-            <!-- /row -->
         </div>
-        <!-- /container -->
-    </section>
-    <!-- ==== About ==== -->
-    <section id="about" class="cake-ornament container-fluid">
-        <div class="container">
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <h2 style=" font-family: 'sans-serif' " >About Us</h2>
+        <div class="body-overlay"></div>
+        <!-- mobile-menu-area-end -->
+
+        <!-- sidebar-menu-area -->
+        <div class="tpsideinfo">
+            <button class="tpsideinfo__close">Close<i class="fal fa-times ml-10"></i></button>
+            <div class="tpsideinfo__search text-center pt-35">
+                <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
+                <form action="#">
+                    <input type="text" placeholder="Search Products...">
+                    <button><i class="icon-search"></i></button>
+                </form>
             </div>
-            <!-- Text -->
-            <div class="row">
-                <div class="col-lg-7">
-                    <h3>Ice vegas depuis 2019</h3>
-                    <p>Placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen
-                        unc vel mauris ultricies, vest ibulum orci eget,Fusce mollis imperdiet interdum donec eget metus
-                        auguen unc vel lorem ispuet.</p>
-                    <p>Placerat a ultricies a, posuere a nibh lorem ispuet Ibu lum orci eget.Ibu lum orci eget, viverra
-                        elit liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit uasi quidem minus id omnis.
-                    </p>
-                    <ul class="custom">
-                        <li>La famille ice vegas</li>
-                        <li>Vegan and Gluten free options always available</li>
-                        <li>We use high quality fair trade Chocolate in our products</li>
-                        <li>You can order your own custom cake with us</li>
-                    </ul>
-                </div>
-                <!-- /col-lg-7 -->
-                <div class="col-lg-5 res-margin">
-                    <div id="owl-about" class="owl-carousel">
-                        <div class="item">
-                            <img class="img-responsive img-rounded" src="/ClientPublic/img/about1.jpg"
-                                alt="">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive  img-rounded" src="/ClientPublic/img/about2.jpg"
-                                alt="">
-                        </div>
-                        <div class="item">
-                            <img class="img-responsive  img-rounded" src="/ClientPublic/img/about3.jpg"
-                                alt="">
-                        </div>
-                    </div>
-                    <!-- /owl-about -->
-                </div>
-                <!-- /col-lg-5 -->
-            </div>
-            <!-- /row -->
-            <div class="row">
-                <div class="col-md-7">
-                    <h4>Our Location</h4>
-                    <p>Placerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen
-                        unc vel mauris ultricies, vest ibulum orci eget,Fusce mollis imperdiet interdum donec eget metus
-                        auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac
-                        sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id omnis.
-                    </p>
-                </div>
-                <!-- /col-md-7 -->
-                <div class="col-md-5">
-                    <div class="alert alert-info col-md-12" data-aos="fade-up" data-aos-duration="1500">
-                        <h5>Order a custom cake</h5>
-                        <p class="text-light">
-                            Fusce mollis imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci
-                            eget, viverra elit liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet
-                            consectetur.
-                        </p>
-                    </div>
-                    <!-- /alert -->
-                </div>
-                <!-- /col-md-5 -->
-            </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-    </section>
-    <!--/section -->
-    <!-- ==== Reviews ==== -->
-    <section id="reviews" class="cake-ornament light-bg1 container-fluid">
-        <div class="container">
-            <h3 class="text-center header-h3">Avis</h3> 
-            <div class="col-md-12 margin1">
-                <!-- Carousel -->
-                <div id="owl-testimonial" class=" owl-carousel">
-                    <!-- Testimonial 1 -->
-                    <div class="testimonial">
-                        <div class="testimonial-pic">
-                            <img src="/ClientPublic/img/testimonial1.jpg" alt="" class="img-circle">
-                        </div>
-                        <div class="testimonial-content">
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam.
-                                Suspendisse molestie nibh at tempor mollis. Integer aliquet facilisis felis, ac porta
-                                est cursus et. Vestibulum sollicitudin nisl ut urna egestas faucibus.
-                            </p>
-                            <h3 class="testimonial-title">ice vegas </h3>
-                            <small class="post">- TV Star</small>
-                        </div>
-                    </div>
-                    <!-- Testimonial 2 -->
-                    <div class="testimonial">
-                        <div class="testimonial-pic">
-                            <img src="/ClientPublic/img/testimonial2.jpg" alt="" class="img-circle">
-                        </div>
-                        <div class="testimonial-content">
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam.
-                                Suspendisse molestie nibh at tempor mollis. Integer aliquet facilisis felis, ac porta
-                                est cursus et. Vestibulum sollicitudin nisl ut urna egestas faucibus.
-                            </p>
-                            <h3 class="testimonial-title">Jonas Smith</h3>
-                            <small class="post">- Chef</small>
-                        </div>
-                    </div>
-                    <!-- Testimonial 3 -->
-                    <div class="testimonial">
-                        <div class="testimonial-pic">
-                            <img src="/ClientPublic/img/testimonial3.jpg" alt="" class="img-circle">
-                        </div>
-                        <div class="testimonial-content">
-                            <p class="description">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed accumsan diam.
-                                Suspendisse molestie nibh at tempor mollis. Integer aliquet facilisis felis, ac porta
-                                est cursus et. Vestibulum sollicitudin nisl ut urna egestas faucibus.
-                            </p>
-                            <h3 class="testimonial-title">Maria Silva</h3>
-                            <small class="post">- Cake Specialist</small>
-                        </div>
-                    </div>
-                    <!-- /testimonial -->
-                </div>
-                <!--/owl-testimonials -->
-            </div>
-            <!-- /col-md-12 -->
-        </div>
-        <!-- /container-->
-    </section>
-    <!--/section -->
-    <!-- ==== Menu ==== -->
-    <section id="menu" class="light-bg1 container-fluid">
-        <div class="container">
-            <!-- Section heading -->
-            <div class="section-heading">
-                <h2>Our Menu</h2>
-            </div>
-            <div class="col-md-12">
-                <!-- nav pills -->
-                <ul class="nav nav-pills pills-custom nav-stacked col-lg-3" id="menu-nav">
-                    <li class="active"><a href="#tab_a" data-toggle="pill"><i
-                                class="icon flaticon-food-4"></i>Cakes & Pies</a></li>
-                    <li><a href="#tab_b" data-toggle="pill"><i class="icon flaticon-cupcake-2"></i>Cupcakes</a></li>
-                    <li><a href="#tab_c" data-toggle="pill"><i class="icon flaticon-cookies"></i>Cookies & Bars</a>
+            <div class="tpsideinfo__nabtab">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">Menu</button>
                     </li>
-                    <li><a href="#tab_d" data-toggle="pill"><i class="icon flaticon-croissant"></i>Pastries</a></li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">Categories</button>
+                    </li>
                 </ul>
-                <!-- Tab content -->
-                <div class="tab-content col-lg-9">
-                    <div class="tab-pane fade in active" id="tab_a">
-                        <div class="row">
-                            <!-- Menu: Cakes & Pies-->
-                            <h3 class="text-center">Cakes & Pies</h3>
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Chocolate Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Homemade Apple Pie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Special Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $12
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Boston Cream Pie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Brownie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $4
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Butter Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                        </div>
-                        <!-- /.row -->
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="mobile-menu"></div>
                     </div>
-                    <!-- /tab-pane  -->
-                    <div class="tab-pane fade" id="tab_b">
-                        <div class="row">
-                            <!-- Menu: Cupcakes-->
-                            <h3 class="text-center">Cupcakes</h3>
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Small Chocolate cupake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cupcake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Caramel Cupcake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $12
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake Cupcake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake cupcake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                set with 6 Cupcakes
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $41
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Boston Cream Pie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Brownie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $4
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Butter Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                        aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="tpsidebar-categories">
+                            <ul>
+                                <li><a href="shop-details.html">Dairy Farm</a></li>
+                                <li><a href="shop-details.html">Healthy Foods</a></li>
+                                <li><a href="shop-details.html">Lifestyle</a></li>
+                                <li><a href="shop-details.html">Organics</a></li>
+                                <li><a href="shop-details.html">Photography</a></li>
+                                <li><a href="shop-details.html">Shopping</a></li>
+                                <li><a href="shop-details.html">Tips & Tricks</a></li>
+                            </ul>
                         </div>
-                        <!-- /.row -->
                     </div>
-                    <!-- /tab-pane  -->
-                    <div class="tab-pane fade" id="tab_c">
-                        <div class="row">
-                            <!-- Menu: Cookies and Bars -->
-                            <h3 class="text-center">Cookies & Bars</h3>
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Small Chocolate cupake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cupcake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Special Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $12
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Boston Cream Pie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Brownie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $4
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Butter Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    <!-- /tab-pane  -->
-                    <div class="tab-pane fade" id="tab_d">
-                        <div class="row">
-                            <!-- Menu: Pastries -->
-                            <h3 class="text-center">Pastries</h3>
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Small Chocolate cupake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cupcake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Special Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $12
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                            <!-- column -->
-                            <div class="col-md-6">
-                                <div class="menu-body">
-                                    <div class="menu-section">
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                CheeseCake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $5.5
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Vanilla Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Forest Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Boston Cream Pie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $7
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Brownie
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $4
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                        <!-- Item starts -->
-                                        <div class="menu-item">
-                                            <div class="menu-item-name">
-                                                Butter Cake
-                                            </div>
-                                            <div class="menu-item-price">
-                                                $11
-                                            </div>
-                                            <div class="menu-item-description">
-                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                nonummy.
-                                            </div>
-                                        </div>
-                                        <!-- Item ends -->
-                                    </div>
-                                    <!--/ menu section -->
-                                </div>
-                                <!-- / menu body -->
-                            </div>
-                            <!-- /col-md-6 -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    <!-- /tab-pane  -->
                 </div>
-                <!-- tab content -->
             </div>
-            <!-- /col-md-12 -->
+            <div class="tpsideinfo__account-link">
+                <a href="log-in.html"><i class="icon-user icons"></i> Login / Register</a>
+            </div>
+            <div class="tpsideinfo__wishlist-link">
+                <a href="wishlist.html" target="_parent"><i class="icon-heart"></i> Wishlist</a>
+            </div>
         </div>
-        <!-- /container -->
-    </section>
-    <!-- /Section -->
-    <!-- ==== Blog preview ==== -->
-    <section id="blog-preview">
-        <div class="container">
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <h2>Latest Products</h2>
-            </div>
-            <div class="col-md-12">
-                <div id="owl-blog" class="owl-carousel">
-                    @foreach ($products as $product)
-                        <!-- ==== Product {{ $loop->iteration }} ==== -->
-                        <div class="blog-prev border-dotted">
-                            <!-- image -->
-                            <img src="{{ $product->Image }}" alt="{{ $product->Nom }}" class="img-responsive" />
-                            <!-- date -->
-                            <div class="date">
-                                <span class="day" style="background-color: white; color: black;">
-                                    {{ $product->created_at->format('d') }}
-                                </span>
-                                <span class="month"
-                                    style="background-color: white; color: black;">{{ $product->created_at->format('M') }}</span>
-                            </div> <!-- caption -->
-                            <div class="blog-caption">
-                                <h5>{{ $product->Nom }}</h5>
-                                <p>{{ $product->Description }}</p>
-                                <p>Price: {{ $product->Prix }} TND</p>
-                                <!-- Post Info -->
+        <!-- sidebar-menu-area-end -->
+    </header>
+    <!-- header-area-end -->
 
-                                <!-- /text-center -->
-                            </div>
-                            <!-- /blog-caption -->
-                        </div>
-                        <!--/blog-prev -->
-                    @endforeach
-                </div>
-                <!--/owl-blog -->
-            </div>
-            <!--/col-md-12 -->
-        </div>
-        <!--/container -->
-    </section>
+    <main>
 
+        <!-- slider-area-start -->
+        <section class="slider-area tpslider-delay">
+            <div class="swiper-container slider-active">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="assets/img/slider/shape-bg.jpg">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-xxl-5 col-lg-6 col-md-6 col-12 col-sm-6">
+                                        <div class="tpslider__content pt-20">
+                                            <span class="tpslider__sub-title mb-35">Top Seller In The Week</span>
+                                            <h2 class="tpslider__title mb-30">Choose Your Healthy Lifestyle.</h2>
+                                            <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
+                                                and taste even better</p>
+                                            <div class="tpslider__btn">
+                                                <a class="tp-btn" href="shop-2.html">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-7 col-lg-6 col-md-6 col-12 col-sm-6">
+                                        <div class="tpslider__thumb p-relative pt-15">
+                                            <img class="tpslider__thumb-img" src="assets/img/slider/slider-bg-1.png"
+                                                alt="slider-bg">
+                                            <div class="tpslider__shape d-none d-md-block">
+                                                <img class="tpslider__shape-one"
+                                                    src="assets/img/slider/slider-shape-1.png" alt="shape">
+                                                <img class="tpslider__shape-two"
+                                                    src="assets/img/slider/slider-shape-2.png" alt="shape">
+                                                <img class="tpslider__shape-three"
+                                                    src="assets/img/slider/slider-shape-3.png" alt="shape">
+                                                <img class="tpslider__shape-four"
+                                                    src="assets/img/slider/slider-shape-4.png" alt="shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="assets/img/slider/shape-bg.jpg">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-xxl-5 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tpslider__content pt-20">
+                                            <span class="tpslider__sub-title mb-35">Top Seller In The Week</span>
+                                            <h2 class="tpslider__title mb-30">Fresh Bread <br> Oatmeal Crumble. </h2>
+                                            <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
+                                                and taste even better</p>
+                                            <div class="tpslider__btn">
+                                                <a class="tp-btn" href="shop-2.html">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-7 col-lg-6  col-md-6 col-sm-6">
+                                        <div class="tpslider__thumb p-relative">
+                                            <img class="tpslider__thumb-img" src="assets/img/slider/slider-bg-2.png"
+                                                alt="slider-bg">
+                                            <div class="tpslider__shape d-none d-md-block">
+                                                <img class="tpslider__shape-one"
+                                                    src="assets/img/slider/slider-shape-1.png" alt="shape">
+                                                <img class="tpslider__shape-two"
+                                                    src="assets/img/slider/slider-shape-2.png" alt="shape">
+                                                <img class="tpslider__shape-three"
+                                                    src="assets/img/slider/slider-shape-3.png" alt="shape">
+                                                <img class="tpslider__shape-four"
+                                                    src="assets/img/slider/slider-shape-4.png" alt="shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="assets/img/slider/shape-bg.jpg">
+                            <div class="container">
+                                <div class="row align-items-center">
+                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tpslider__content pt-20">
+                                            <span class="tpslider__sub-title mb-35">Top Seller In The Week</span>
+                                            <h2 class="tpslider__title mb-30">The Best <br> Health Fresh.</h2>
+                                            <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
+                                                and taste even better</p>
+                                            <div class="tpslider__btn">
+                                                <a class="tp-btn" href="shop-2.html">Shop Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                        <div class="tpslider__thumb p-relative">
+                                            <img class="tpslider__thumb-img" src="assets/img/slider/slider-bg-3.png"
+                                                alt="slider-bg">
+                                            <div class="tpslider__shape d-none d-md-block">
+                                                <img class="tpslider__shape-one"
+                                                    src="assets/img/slider/slider-shape-1.png" alt="shape">
+                                                <img class="tpslider__shape-two"
+                                                    src="assets/img/slider/slider-shape-2.png" alt="shape">
+                                                <img class="tpslider__shape-three"
+                                                    src="assets/img/slider/slider-shape-3.png" alt="shape">
+                                                <img class="tpslider__shape-four"
+                                                    src="assets/img/slider/slider-shape-4.png" alt="shape">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tpslider__arrow d-none  d-xxl-block">
+                    <button class="tpsliderarrow tpslider__arrow-prv"><i class="icon-chevron-left"></i></button>
+                    <button class="tpsliderarrow tpslider__arrow-nxt"><i class="icon-chevron-right"></i></button>
+                </div>
+                <div class="slider-pagination d-xxl-none"></div>
+            </div>
+        </section>
+        <!-- slider-area-end -->
 
-    <!--/section -->
-    <!-- ==== Catering ==== -->
-    <section id="catering" class="light-bg1" data-center="background-position: 0% 0px;"
-        data-top-bottom="background-position: 0% -20px;" data-bottom-top="background-position: 0% -40px;">
-        <div class="container">
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <h2>Catering</h2>
-            </div>
-            <div class="col-md-12">
-                <!-- Pricing Container -->
-                <div class="pricing-container">
-                    <div class="row">
-                        <!-- Price table 1 -->
-                        <div class="col-md-4" data-aos="fade-up" data-aos-duration="800">
-                            <div class="pricing-table">
-                                <div class="pricing-inner color1">
-                                    <div class="plan-name">
-                                        <p><i class="flaticon-cupcake-2 text-light"></i></p>
-                                        <h4 class="text-light">Small Event</h4>
-                                        <small>Ideal for 10 guests</small>
-                                    </div>
-                                    <!-- /plan-name -->
-                                    <div class="plan-price-container">
-                                        <p class="plan-price">99<sup><small>$</small></sup></p>
-                                    </div>
-                                    <!-- /plan-price -->
-                                    <div class="plan-desc">
-                                        <p>1 Small Cake</p>
-                                        <p>10 Cupcakes</p>
-                                        <p>10 Brownies</p>
-                                        <p>10 Chocolate truffles</p>
-                                        <p>10 Desserts of choice</p>
-                                    </div>
-                                    <!-- /plan-desc -->
-                                    <!-- Button -->
-                                    <div class="page-scroll">
-                                        <a href="#contact">
-                                            <div class="blob-btn">
-                                                Contact Us
-                                                <span class="blob-btn__inner">
-                                                    <span class="blob-btn__blobs">
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <!-- /button ends -->
-                                    </div>
-                                    <!-- /page-scroll -->
+        <!-- category-area-start -->
+        <section class="category-area grey-bg pb-40">
+            <div class="container">
+                <div class="swiper-container category-active">
+                    <div class="swiper-wrapper">
+                        @foreach ($products as $product)
+
+                        <div class="swiper-slide">
+                            <div class="category__item mb-30">
+                                <div class="category__thumb fix mb-15">
+                                    <a href="{{ route('products.show', $product->id) }}"><img src="{{ $product->Image }}"
+                                        alt="{{ $product->Nom }}"></a>
                                 </div>
-                                <!-- /pricing-inner -->
-                            </div>
-                            <!-- /Pricing-table -->
-                        </div>
-                        <!-- /col-md-4 -->
-                        <!-- Price table 2 -->
-                        <div class="col-md-4 res-margin" data-aos="fade-up" data-aos-duration="1200">
-                            <div class="pricing-table">
-                                <div class="pricing-inner color2">
-                                    <div class="plan-name">
-                                        <p><i class="flaticon-birthday-cake-piece text-light"></i></p>
-                                        <h4 class="text-light">Medium Event</h4>
-                                        <small>Ideal for 20 guests</small>
-                                    </div>
-                                    <!-- /plan-name -->
-                                    <div class="plan-price-container">
-                                        <p class="plan-price">199<sup><small>$</small></sup></p>
-                                    </div>
-                                    <!-- /plan-price -->
-                                    <div class="plan-desc">
-                                        <p>1 Medium Cake</p>
-                                        <p>20 Cupcakes</p>
-                                        <p>20 Brownies</p>
-                                        <p>20 Chocolate truffles</p>
-                                        <p>20 Desserts of choice</p>
-                                    </div>
-                                    <!-- /plan-desc -->
-                                    <!-- Button -->
-                                    <div class="page-scroll">
-                                        <a href="#contact">
-                                            <div class="blob-btn">
-                                                Contact Us
-                                                <span class="blob-btn__inner">
-                                                    <span class="blob-btn__blobs">
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <!-- /button ends -->
-                                    </div>
-                                    <!-- /page-scroll -->
+                                <div class="category__content">
+                                    <h5 class="category__title"><a href="{{ route('products.show', $product->id) }}">{{ $product->Nom }}</a></h5>
+                                    <span class="category__count"><p>Categorie: {{ $product->categorie->Nom }}</p> <!-- Display category name -->
+                                    </span>
                                 </div>
-                                <!-- /pricing-inner -->
                             </div>
-                            <!-- /Pricing-table -->
                         </div>
-                        <!-- /col-md-4 -->
-                        <!-- Price table 3 -->
-                        <div class="col-md-4 res-margin" data-aos="fade-up" data-aos-duration="1500">
-                            <div class="pricing-table">
-                                <div class="pricing-inner bg-primary">
-                                    <div class="plan-name">
-                                        <p><i class="flaticon-birthday-cake-1 text-light"></i></p>
-                                        <h4 class="text-light">Big Event</h4>
-                                        <small>Ideal for 30+ guests</small>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- category-area-end -->
+
+        <!-- product-area-start -->
+        <section class="product-area grey-bg pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="tpsection mb-35">
+                            <h4 class="tpsection__sub-title">~ Special Products ~</h4>
+                            <h4 class="tpsection__title">Weekly Food Offers</h4>
+                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tpproduct__arrow p-relative">
+                    <div class="swiper-container tpproduct-active tpslider-bottom p-relative">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="tpproduct p-relative">
+                                    <div class="tpproduct__thumb p-relative text-center">
+                                        <a href="shop-details-4.html"><img src="assets/img/product/products21-min.jpg"
+                                                alt=""></a>
+                                        <a class="tpproduct__thumb-img" href="shop-details-4.html"><img
+                                                src="assets/img/product/products1-min.jpg" alt=""></a>
+                                        <div class="tpproduct__info bage">
+                                            <span class="tpproduct__info-discount bage__discount">-50%</span>
+                                            <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                        </div>
+                                        <div class="tpproduct__shopping">
+                                            <a class="tpproduct__shopping-wishlist" href="wishlist.html"><i
+                                                    class="icon-heart icons"></i></a>
+                                            <a class="tpproduct__shopping-wishlist" href="#"><i
+                                                    class="icon-layers"></i></a>
+                                            <a class="tpproduct__shopping-cart" href="#"><i
+                                                    class="icon-eye"></i></a>
+                                        </div>
                                     </div>
-                                    <!-- /Price-name -->
-                                    <div class="plan-price-container">
-                                        <p class="plan-price">299<sup><small>$</small></sup></p>
+                                    <div class="tpproduct__content">
+                                        <span class="tpproduct__content-weight">
+                                            <a href="shop-details-4.html">Fresh Fruits</a>,
+                                            <a href="shop-details-4.html">Vagetables</a>
+                                        </span>
+                                        <h4 class="tpproduct__title">
+                                            <a href="shop-details-4.html">Mangosteen Organic From VietNamese</a>
+                                        </h4>
+                                        <div class="tpproduct__rating mb-5">
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                        </div>
+                                        <div class="tpproduct__price">
+                                            <span>$56.00</span>
+                                            <del>$19.00</del>
+                                        </div>
                                     </div>
-                                    <!-- /plan-price -->
-                                    <div class="plan-desc">
-                                        <p>1 Big Cake</p>
-                                        <p>40 Cupcakes</p>
-                                        <p>40 Brownies</p>
-                                        <p>40 Chocolate truffles</p>
-                                        <p>40 Desserts of choice</p>
+                                    <div class="tpproduct__hover-text">
+                                        <div class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                            <a class="tp-btn-2" href="shop-details-4.html">Add to cart</a>
+                                        </div>
+                                        <div class="tpproduct__descrip">
+                                            <ul>
+                                                <li>Type: Organic</li>
+                                                <li>MFG: August 4.2021</li>
+                                                <li>LIFE: 60 days</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <!-- /plac desc -->
-                                    <!-- Button -->
-                                    <div class="page-scroll">
-                                        <a href="#contact">
-                                            <div class="blob-btn">
-                                                Contact Us
-                                                <span class="blob-btn__inner">
-                                                    <span class="blob-btn__blobs">
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                        <span class="blob-btn__blob"></span>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </a>
-                                        <!-- /button ends -->
-                                    </div>
-                                    <!-- /page-scroll -->
                                 </div>
-                                <!-- /pricing-inner -->
                             </div>
-                            <!-- /Pricing-table -->
+                            <div class="swiper-slide">
+                                <div class="tpproduct p-relative">
+                                    <div class="tpproduct__thumb p-relative text-center">
+                                        <a href="shop-details-4.html"><img src="assets/img/product/products22-min.jpg"
+                                                alt=""></a>
+                                        <a class="tpproduct__thumb-img" href="shop-details-4.html"><img
+                                                src="assets/img/product/products11-min.jpg" alt=""></a>
+                                        <div class="tpproduct__info bage">
+                                            <span class="tpproduct__info-discount bage__discount">-40%</span>
+                                        </div>
+                                        <div class="tpproduct__shopping">
+                                            <a class="tpproduct__shopping-wishlist" href="wishlist.html"><i
+                                                    class="icon-heart icons"></i></a>
+                                            <a class="tpproduct__shopping-wishlist" href="#"><i
+                                                    class="icon-layers"></i></a>
+                                            <a class="tpproduct__shopping-cart" href="#"><i
+                                                    class="icon-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__content">
+                                        <span class="tpproduct__content-weight">
+                                            <a href="shop-details-4.html">Fresh Fruits</a>
+                                        </span>
+                                        <h4 class="tpproduct__title">
+                                            <a href="shop-details-4.html">Soda Sparkling Water Maker (Rose Gold)</a>
+                                        </h4>
+                                        <div class="tpproduct__rating mb-5">
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                        </div>
+                                        <div class="tpproduct__price">
+                                            <span>$56.00</span>
+                                            <del>$19.00</del>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__hover-text">
+                                        <div class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                            <a class="tp-btn-2" href="shop-details-4.html">Add to cart</a>
+                                        </div>
+                                        <div class="tpproduct__descrip">
+                                            <ul>
+                                                <li>Type: Organic</li>
+                                                <li>MFG: August 4.2021</li>
+                                                <li>LIFE: 60 days</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tpproduct p-relative">
+                                    <div class="tpproduct__thumb p-relative text-center">
+                                        <a href="shop-details-4.html"><img src="assets/img/product/products4-min.jpg"
+                                                alt=""></a>
+                                        <a class="tpproduct__thumb-img" href="shop-details-4.html"><img
+                                                src="assets/img/product/products23-min.jpg" alt=""></a>
+                                        <div class="tpproduct__info bage">
+                                            <span class="tpproduct__info-discount bage__discount">-10%</span>
+                                        </div>
+                                        <div class="tpproduct__shopping">
+                                            <a class="tpproduct__shopping-wishlist" href="wishlist.html"><i
+                                                    class="icon-heart icons"></i></a>
+                                            <a class="tpproduct__shopping-wishlist" href="#"><i
+                                                    class="icon-layers"></i></a>
+                                            <a class="tpproduct__shopping-cart" href="#"><i
+                                                    class="icon-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__content">
+                                        <span class="tpproduct__content-weight">
+                                            <a href="shop-details-3.html">Vagetables</a>
+                                        </span>
+                                        <h4 class="tpproduct__title">
+                                            <a href="shop-details-4.html">HOT - Lettuce Fresh Produce Fruit
+                                                Vegetables</a>
+                                        </h4>
+                                        <div class="tpproduct__rating mb-5">
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                        </div>
+                                        <div class="tpproduct__price">
+                                            <span>$56.00</span>
+                                            <del>$19.00</del>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__hover-text">
+                                        <div class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                            <a class="tp-btn-2" href="shop-details-4.html">Add to cart</a>
+                                        </div>
+                                        <div class="tpproduct__descrip">
+                                            <ul>
+                                                <li>Type: Organic</li>
+                                                <li>MFG: August 4.2021</li>
+                                                <li>LIFE: 60 days</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tpproduct p-relative">
+                                    <div class="tpproduct__thumb p-relative text-center">
+                                        <a href="#"><img src="assets/img/product/products27-min.jpg"
+                                                alt=""></a>
+                                        <a class="tpproduct__thumb-img" href="shop-details.html"><img
+                                                src="assets/img/product/products14-min.jpg" alt=""></a>
+                                        <div class="tpproduct__info bage">
+                                            <span class="tpproduct__info-discount bage__discount">-90%</span>
+                                            <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                        </div>
+                                        <div class="tpproduct__shopping">
+                                            <a class="tpproduct__shopping-wishlist" href="wishlist.html"><i
+                                                    class="icon-heart icons"></i></a>
+                                            <a class="tpproduct__shopping-wishlist" href="#"><i
+                                                    class="icon-layers"></i></a>
+                                            <a class="tpproduct__shopping-cart" href="#"><i
+                                                    class="icon-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__content">
+                                        <span class="tpproduct__content-weight">
+                                            <a href="shop-details-4.html">Fresh Fruits</a>
+                                        </span>
+                                        <h4 class="tpproduct__title">
+                                            <a href="shop-details-4.html">Pure Irish Organic Beef Quarter Pounder
+                                                Burgers</a>
+                                        </h4>
+                                        <div class="tpproduct__rating mb-5">
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                        </div>
+                                        <div class="tpproduct__price">
+                                            <span>$56.00</span>
+                                            <del>$19.00</del>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__hover-text">
+                                        <div class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                            <a class="tp-btn-2" href="shop-details-4.html">Add to cart</a>
+                                        </div>
+                                        <div class="tpproduct__descrip">
+                                            <ul>
+                                                <li>Type: Organic</li>
+                                                <li>MFG: August 4.2021</li>
+                                                <li>LIFE: 60 days</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tpproduct p-relative">
+                                    <div class="tpproduct__thumb p-relative text-center">
+                                        <a href="#"><img src="assets/img/product/products16-min.jpg"
+                                                alt=""></a>
+                                        <a class="tpproduct__thumb-img" href="shop-details-grid.html"><img
+                                                src="assets/img/product/products11-min.jpg" alt=""></a>
+                                        <div class="tpproduct__info bage">
+                                            <span class="tpproduct__info-discount bage__discount">-50%</span>
+                                        </div>
+                                        <div class="tpproduct__shopping">
+                                            <a class="tpproduct__shopping-wishlist" href="wishlist.html"><i
+                                                    class="icon-heart icons"></i></a>
+                                            <a class="tpproduct__shopping-wishlist" href="#"><i
+                                                    class="icon-layers"></i></a>
+                                            <a class="tpproduct__shopping-cart" href="#"><i
+                                                    class="icon-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__content">
+                                        <span class="tpproduct__content-weight">
+                                            <a href="shop-details-4.html">Fresh Fruits</a>,
+                                            <a href="shop-details-3.html">Vagetables</a>
+                                        </span>
+                                        <h4 class="tpproduct__title">
+                                            <a href="shop-details-4.html">Ginger Fresh, Whole, Organic - 250gram</a>
+                                        </h4>
+                                        <div class="tpproduct__rating mb-5">
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                        </div>
+                                        <div class="tpproduct__price">
+                                            <span>$56.00</span>
+                                            <del>$19.00</del>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__hover-text">
+                                        <div class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                            <a class="tp-btn-2" href="shop-details-4.html">Add to cart</a>
+                                        </div>
+                                        <div class="tpproduct__descrip">
+                                            <ul>
+                                                <li>Type: Organic</li>
+                                                <li>MFG: August 4.2021</li>
+                                                <li>LIFE: 60 days</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="tpproduct p-relative">
+                                    <div class="tpproduct__thumb p-relative text-center">
+                                        <a href="#"><img src="assets/img/product/products17-min.jpg"
+                                                alt=""></a>
+                                        <a class="tpproduct__thumb-img" href="shop-details-grid.html"><img
+                                                src="assets/img/product/products37-min.jpg" alt=""></a>
+                                        <div class="tpproduct__info bage">
+                                            <span class="tpproduct__info-discount bage__discount">-40%</span>
+                                            <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                        </div>
+                                        <div class="tpproduct__shopping">
+                                            <a class="tpproduct__shopping-wishlist" href="wishlist.html"><i
+                                                    class="icon-heart icons"></i></a>
+                                            <a class="tpproduct__shopping-wishlist" href="#"><i
+                                                    class="icon-layers"></i></a>
+                                            <a class="tpproduct__shopping-cart" href="#"><i
+                                                    class="icon-eye"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__content">
+                                        <span class="tpproduct__content-weight">
+                                            <a href="shop-details-4.html">Fresh Fruits</a>
+                                        </span>
+                                        <h4 class="tpproduct__title">
+                                            <a href="shop-details-4.html">Laffy Taffy Laff Bites Gone Bananas - 4
+                                                Packs</a>
+                                        </h4>
+                                        <div class="tpproduct__rating mb-5">
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                            <a href="#"><i class="icon-star_outline1"></i></a>
+                                        </div>
+                                        <div class="tpproduct__price">
+                                            <span>$56.00</span>
+                                            <del>$19.00</del>
+                                        </div>
+                                    </div>
+                                    <div class="tpproduct__hover-text">
+                                        <div class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                            <a class="tp-btn-2" href="shop-details-4.html">Add to cart</a>
+                                        </div>
+                                        <div class="tpproduct__descrip">
+                                            <ul>
+                                                <li>Type: Organic</li>
+                                                <li>MFG: August 4.2021</li>
+                                                <li>LIFE: 60 days</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- /col-md-4 -->
                     </div>
-                    <!-- /row -->
+                    <div class="tpproduct-btn">
+                        <div class="tpprduct-arrow tpproduct-btn__prv"><a href="#"><i
+                                    class="icon-chevron-left"></i></a></div>
+                        <div class="tpprduct-arrow tpproduct-btn__nxt"><a href="#"><i
+                                    class="icon-chevron-right"></i></a></div>
+                    </div>
                 </div>
-                <!-- /pricing-container -->
             </div>
-            <!-- /col-md-12 -->
-        </div>
-        <!--/container -->
-    </section>
-    <!-- / section-->
-    <!-- ==== Counter ==== -->
-    <section id="counter-section" class="container-fluid border-shape bg-overlay">
-        <div class="container text-light">
-            <h3 class="text-center header-h3">Our Stats this Month</h3>
-            <div id="counter" class="row">
-                <!-- Counter -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter">
-                        <i class="counter-icon flaticon-gingerbread"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="250">0</div>
-                        <h5 class="title">Happy Customers</h5>
+        </section>
+        <!-- product-area-end -->
+
+        <!-- product-feature-area-start -->
+        <section class="product-feature-area product-feature grey-bg pt-80 pb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="tpfeature__thumb p-relative pb-40">
+                            <img src="assets/img/product/feature-thumb-1.png" alt="">
+                            <div class="tpfeature__shape d-none d-md-block">
+                                <img class="tpfeature__shape-one" src="assets/img/product/feature-shape-1.png"
+                                    alt="">
+                                <img class="tpfeature__shape-two" src="assets/img/product/feature-shape-2.png"
+                                    alt="">
+                            </div>
+                        </div>
                     </div>
-                    <!-- /counter -->
-                </div>
-                <!-- /col-lg -->
-                <!-- Counter -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter">
-                        <i class="counter-icon  flaticon-food-5"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="140">0</div>
-                        <h5 class="title">Cakes Made</h5>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="tpproduct-feature p-relative pt-45 pb-40">
+                            <div class="tpsection tpfeature__content mb-35">
+                                <h4 class="tpsection__sub-title mb-0">~ The Best For Your ~</h4>
+                                <h4 class="tpsection__title tpfeature__title mb-25">Organic Drinks <br> <span>Easy
+                                        Healthy</span> - Happy Life</h4>
+                                <p>The liber tempor cum soluta nobis eleifend option congue <br> doming quod mazim
+                                    placerat facer possim assum.</p>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="tpfeature__box">
+                                        <div class="tpfeature__product-item mb-25">
+                                            <h4 class="tpfeature__product-title">Fresh Fruits:</h4>
+                                            <span class="tpfeature__product-info">Apples, Berries & Cherries</span>
+                                        </div>
+                                        <div class="tpfeature__product-item mb-45">
+                                            <h4 class="tpfeature__product-title">Expiry Date:</h4>
+                                            <span class="tpfeature__product-">See on The Bottle Cap</span>
+                                        </div>
+                                        <div class="tpfeature__btn">
+                                            <a class="tp-btn-4" href="cart.html">Add To Cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="tpfeature__box">
+                                        <div class="tpfeature__product-item mb-25">
+                                            <h4 class="tpfeature__product-title">Ingredient:</h4>
+                                            <span class="tpfeature__product-info">Energy, Protein, Sugars</span>
+                                        </div>
+                                        <div class="tpfeature__product-item mb-45">
+                                            <h4 class="tpfeature__product-title">Bootle Size:</h4>
+                                            <span class="tpfeature__product-">500ml – 1000ml</span>
+                                        </div>
+                                        <div class="tpfeature__btn">
+                                            <a class="tp-btn-3" href="shop-2.html">View More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpfeature__shape d-none d-md-block">
+                                <img class="tpfeature__shape-three" src="assets/img/product/feature-shape-3.png"
+                                    alt="">
+                            </div>
+                        </div>
                     </div>
-                    <!-- /counter -->
                 </div>
-                <!-- /col-lg -->
-                <!-- Counter -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter">
-                        <i class="counter-icon flaticon-electric-mixer"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="14">0</div>
-                        <h5 class="title">Professionals</h5>
-                    </div>
-                    <!-- /counter -->
-                </div>
-                <!-- /col-lg -->
-                <!-- Counter -->
-                <div class="col-lg-3 col-md-6">
-                    <div class="counter">
-                        <i class="counter-icon flaticon-food-8"></i>
-                        <!-- insert your final value on data-count= -->
-                        <div class="counter-value" data-count="230">0</div>
-                        <h5 class="title">Cupcakes baked</h5>
-                    </div>
-                    <!-- /counter -->
-                </div>
-                <!-- /col-lg -->
             </div>
-            <!-- /row -->
-        </div>
-        <!-- /container -->
-    </section>
-    <!-- ==== Gallery ==== -->
-    <section id="gallery" class="light-bg2 cake-ornament container-fluid">
-        <!-- Section heading -->
-        <div class="section-heading">
-            <h2>Our Gallery</h2>
-        </div>
-        <div class="container">
-            <!-- Polaroids -->
-            <ul class="polaroids col-md-12">
-                <!-- image1 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid1.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid1.jpg" class="img-responsive" />
-                        <p>Delicious Cupcakes</p>
-                    </a>
-                </li>
-                <!-- image2 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid2.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid2.jpg" class="img-responsive" />
-                        <p>Our famous Petit four</p>
-                    </a>
-                </li>
-                <!-- image3 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid3.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid3.jpg" class="img-responsive" />
-                        <p>Birthday Cupcakes</p>
-                    </a>
-                </li>
-                <!-- image4 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid4.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid4.jpg" class="img-responsive" />
-                        <p>Classic Xmas Cake</p>
-                    </a>
-                </li>
-                <!-- image5 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid5.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid5.jpg" class="img-responsive" />
-                        <p>Wedding Cake</p>
-                    </a>
-                </li>
-                <!-- image6 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid6.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid6.jpg" class="img-responsive" />
-                        <p>Our popular Fruit cake</p>
-                    </a>
-                </li>
-                <!-- image7 -->
-                <li class="polaroid-item  col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid7.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid7.jpg" class="img-responsive" />
-                        <p>Finishing a cake for a Birthday</p>
-                    </a>
-                </li>
-                <!-- image8 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid8.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid8.jpg" class="img-responsive" />
-                        <p>Cake pops for a birthday</p>
-                    </a>
-                </li>
-                <!-- image9 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid9.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid9.jpg" class="img-responsive" />
-                        <p>Classic NY Cheesecake</p>
-                    </a>
-                </li>
-                <!-- image10 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid10.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid10.jpg" class="img-responsive" />
-                        <p>Birthday Cake</p>
-                    </a>
-                </li>
-                <!-- image11 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid11.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid11.jpg" class="img-responsive" />
-                        <p>Brownie and ice cream</p>
-                    </a>
-                </li>
-                <!-- image12 -->
-                <li class="polaroid-item col-lg-3 col-md-6 col-sm-6">
-                    <a href="/ClientPublic/img/polaroid12.jpg">
-                        <img alt="" src="/ClientPublic/img/polaroid12.jpg" class="img-responsive" />
-                        <p>Mini cream tarts with cherry</p>
-                    </a>
-                </li>
-            </ul>
-            <!-- /ul-polaroids -->
-        </div>
-        <!-- /container -->
-    </section>
-    <!-- /section -->
-    <!-- ==== Team ==== -->
-    <section id="team">
-        <div class="container">
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <h2>Our Team</h2>
+        </section>
+        <!-- product-feature-area-end -->
+
+        <!-- banner-area-start -->
+        <section class="banner-area pb-60 grey-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tpbanner__item mb-30">
+                            <a href="shop-3.html">
+                                <div class="tpbanner__content" data-background="assets/img/banner/banner-1.jpg">
+                                    <span class="tpbanner__sub-title mb-10">Top offers</span>
+                                    <h4 class="tpbanner__title mb-30">Eat Green <br> Best For Family</h4>
+                                    <p>Free Shipping 05km</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tpbanner__item mb-30">
+                            <a href="shop-3.html">
+                                <div class="tpbanner__content" data-background="assets/img/banner/banner-2.jpg">
+                                    <span class="tpbanner__sub-title tpbanner__white mb-10">Weekend Deals</span>
+                                    <h4 class="tpbanner__title mb-30">Fresh Food <br> Restore Health</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="tpbanner__item mb-30">
+                            <a href="shop-3.html">
+                                <div class="tpbanner__content" data-background="assets/img/banner/banner-3.jpg">
+                                    <span class="tpbanner__sub-title mb-10">Top seller</span>
+                                    <h4 class="tpbanner__title mb-30">Healthy <br> Fresh Free Bread</h4>
+                                    <p>Limited Time: Online Only!</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-7">
-                <h3>We make the magic happen</h3>
-                <p>lacerat a ultricies a, posuere a nibh. Fusce mollis imperdiet interdum donec eget metus auguen unc
-                    vel mauris ultricies, vest ibulum orci eget,Fusce mollis imperdiet interdum donec eget metus auguen
-                    unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac s Li
-                    Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica,
-                    sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li
-                    pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On
-                    refusa continuar payar custosi traductores. </p>
-            </div>
-            <!-- Parallax object -->
-            <div class="parallax-object hidden-sm hidden-xs hidden-md "
-                data-bottom-top="right:15%;margin-top:-100px;transform:rotate(-10deg);"
-                data-top="transform:rotate(0deg);">
-                <!-- Image -->
-                <img src="/ClientPublic/img/bgcake1.png" alt="">
-            </div>
-            <div id="owl-team" class="margin1 owl-carousel">
-                <div class="col-md-12">
-                    <!-- team member 1 -->
-                    <div class="our-team cake-ornament">
-                        <!-- picture -->
-                        <div class="pic">
-                            <img src="/ClientPublic/img/team1.jpg" alt="">
+        </section>
+        <!-- banner-area-end -->
+
+        <!-- product-area-start -->
+        <section class="weekly-product-area grey-bg pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="tpsection mb-20">
+                            <h4 class="tpsection__sub-title">~ Special Products ~</h4>
+                            <h4 class="tpsection__title">Weekly Food Offers</h4>
                         </div>
-                        <!-- member info -->
-                        <div class="team-content">
-                            <h3 class="title">Mary Jones</h3>
-                            <span class="post">Owner</span>
-                        </div>
-                        <!-- Social icons -->
-                        <ul class="social">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                        <!--/ul  -->
                     </div>
-                    <!-- /our-team -->
                 </div>
-                <!-- /col-md-12 -->
-                <div class="col-md-12">
-                    <!-- team member 2 -->
-                    <div class="our-team cake-ornament">
-                        <!-- picture -->
-                        <div class="pic">
-                            <img src="/ClientPublic/img/team2.jpg" alt="">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tpnavtab__area pb-40">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-all" type="button" role="tab"
+                                        aria-controls="nav-all" aria-selected="true">All Products</button>
+                                    <button class="nav-link" id="nav-meat-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-meat" type="button" role="tab"
+                                        aria-controls="nav-meat" aria-selected="false">Fresh Meat</button>
+                                    <button class="nav-link" id="nav-vegetables-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-vegetables" type="button" role="tab"
+                                        aria-controls="nav-vegetables" aria-selected="false">Fresh Vegetables</button>
+                                    <button class="nav-link" id="nav-snacks-tab" data-bs-toggle="tab"
+                                        data-bs-target="#nav-snacks" type="button" role="tab"
+                                        aria-controls="nav-snacks" aria-selected="false">Biscuits Snack</button>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-all" role="tabpanel"
+                                    aria-labelledby="nav-all-tab" tabindex="0">
+                                    <div class="tpproduct__arrow p-relative">
+                                        <div class="swiper-container tpproduct-active tpslider-bottom p-relative">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products29-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products30-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart" href="#"><i
+                                                                        class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Meat</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Mangosteen Organic From
+                                                                    VietNamese</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add to
+                                                                    cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products9-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products10-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart" href="#"><i
+                                                                        class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Meat</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Soda Sparkling Water
+                                                                    Maker (Rose Gold)</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products13-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products35-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-10%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">HOT - Lettuce Fresh
+                                                                    Produce Fruit Vegetables</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products27-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products14-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-90%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Pure Irish Organic Beef
+                                                                    Quarter Pounder Burgers</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products15-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products32-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Ginger Fresh, Whole,
+                                                                    Organic - 250gram</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products12-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products28-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Laffy Taffy Laff Bites
+                                                                    Gone Bananas - 4 Packs</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tpproduct-btn">
+                                            <div class="tpprduct-arrow tpproduct-btn__prv"><a href="#"><i
+                                                        class="icon-chevron-left"></i></a></div>
+                                            <div class="tpprduct-arrow tpproduct-btn__nxt"><a href="#"><i
+                                                        class="icon-chevron-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-meat" role="tabpanel"
+                                    aria-labelledby="nav-meat-tab" tabindex="0">
+                                    <div class="tpproduct__arrow p-relative">
+                                        <div class="swiper-container tpproduct-active tpslider-bottom p-relative">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products30-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products29-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details.html">Fresh Meat</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Mangosteen Organic From
+                                                                    VietNamese</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products10-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products9-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details.html">Fresh Meat</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Soda Sparkling Water
+                                                                    Maker (Rose Gold)</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products15-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products32-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Soda Sparkling Water
+                                                                    Maker (Rose Gold)</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products29-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products30-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details.html">Fresh Meat</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Mangosteen Organic From
+                                                                    VietNamese</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products9-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products10-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details.html">Fresh Meat</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Soda Sparkling Water
+                                                                    Maker (Rose Gold)</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products26-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products9-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>,
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Ginger Fresh, Whole,
+                                                                    Organic - 250gram</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tpproduct-btn">
+                                            <div class="tpprduct-arrow tpproduct-btn__prv"><a href="#"><i
+                                                        class="icon-chevron-left"></i></a></div>
+                                            <div class="tpprduct-arrow tpproduct-btn__nxt"><a href="#"><i
+                                                        class="icon-chevron-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-vegetables" role="tabpanel"
+                                    aria-labelledby="nav-vegetables-tab" tabindex="0">
+                                    <div class="tpproduct__arrow p-relative">
+                                        <div class="swiper-container tpproduct-active tpslider-bottom p-relative">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products21-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products1-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>,
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Mangosteen Organic From
+                                                                    VietNamese</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products22-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products11-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Soda Sparkling Water
+                                                                    Maker (Rose Gold)</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products4-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products23-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-10%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">HOT - Lettuce Fresh
+                                                                    Produce Fruit Vegetables</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products27-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products14-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-90%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Pure Irish Organic Beef
+                                                                    Quarter Pounder Burgers</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products16-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products11-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>,
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Ginger Fresh, Whole,
+                                                                    Organic - 250gram</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products17-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products37-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Laffy Taffy Laff Bites
+                                                                    Gone Bananas - 4 Packs</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tpproduct-btn">
+                                            <div class="tpprduct-arrow tpproduct-btn__prv"><a href="#"><i
+                                                        class="icon-chevron-left"></i></a></div>
+                                            <div class="tpprduct-arrow tpproduct-btn__nxt"><a href="#"><i
+                                                        class="icon-chevron-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-snacks" role="tabpanel"
+                                    aria-labelledby="nav-snacks-tab" tabindex="0">
+                                    <div class="tpproduct__arrow p-relative">
+                                        <div class="swiper-container tpproduct-active tpslider-bottom p-relative">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products21-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products1-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>,
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-3.html">Mangosteen Organic From
+                                                                    VietNamese</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products13-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products35-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-10%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">HOT - Lettuce Fresh
+                                                                    Produce Fruit Vegetables</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products27-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products14-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-90%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Pure Irish Organic Beef
+                                                                    Quarter Pounder Burgers</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products15-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products32-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-50%</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-3.html">Vagetables</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Ginger Fresh, Whole,
+                                                                    Organic - 250gram</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products12-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details.html"><img
+                                                                    src="assets/img/product/products28-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Laffy Taffy Laff Bites
+                                                                    Gone Bananas - 4 Packs</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="tpproduct p-relative">
+                                                        <div class="tpproduct__thumb p-relative text-center">
+                                                            <a href="#"><img
+                                                                    src="assets/img/product/products17-min.jpg"
+                                                                    alt=""></a>
+                                                            <a class="tpproduct__thumb-img"
+                                                                href="shop-details-grid.html"><img
+                                                                    src="assets/img/product/products37-min.jpg"
+                                                                    alt=""></a>
+                                                            <div class="tpproduct__info bage">
+                                                                <span
+                                                                    class="tpproduct__info-discount bage__discount">-40%</span>
+                                                                <span class="tpproduct__info-hot bage__hot">HOT</span>
+                                                            </div>
+                                                            <div class="tpproduct__shopping">
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="wishlist.html"><i
+                                                                        class="icon-heart icons"></i></a>
+                                                                <a class="tpproduct__shopping-wishlist"
+                                                                    href="#"><i class="icon-layers"></i></a>
+                                                                <a class="tpproduct__shopping-cart"
+                                                                    href="#"><i class="icon-eye"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__content">
+                                                            <span class="tpproduct__content-weight">
+                                                                <a href="shop-details-4.html">Fresh Fruits</a>
+                                                            </span>
+                                                            <h4 class="tpproduct__title">
+                                                                <a href="shop-details-4.html">Laffy Taffy Laff Bites
+                                                                    Gone Bananas - 4 Packs</a>
+                                                            </h4>
+                                                            <div class="tpproduct__rating mb-5">
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                                <a href="#"><i
+                                                                        class="icon-star_outline1"></i></a>
+                                                            </div>
+                                                            <div class="tpproduct__price">
+                                                                <span>$56.00</span>
+                                                                <del>$19.00</del>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tpproduct__hover-text">
+                                                            <div
+                                                                class="tpproduct__hover-btn d-flex justify-content-center mb-10">
+                                                                <a class="tp-btn-2" href="shop-details-4.html">Add
+                                                                    to cart</a>
+                                                            </div>
+                                                            <div class="tpproduct__descrip">
+                                                                <ul>
+                                                                    <li>Type: Organic</li>
+                                                                    <li>MFG: August 4.2021</li>
+                                                                    <li>LIFE: 60 days</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tpproduct-btn">
+                                            <div class="tpprduct-arrow tpproduct-btn__prv"><a href="#"><i
+                                                        class="icon-chevron-left"></i></a></div>
+                                            <div class="tpprduct-arrow tpproduct-btn__nxt"><a href="#"><i
+                                                        class="icon-chevron-right"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <!-- member info -->
-                        <div class="team-content">
-                            <h3 class="title">Lucas Jones</h3>
-                            <span class="post">Co-Owner</span>
-                        </div>
-                        <!-- Social icons -->
-                        <ul class="social">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                        <!--/ul  -->
                     </div>
-                    <!-- /our-team -->
                 </div>
-                <!-- /col-md-12 -->
-                <div class="col-md-12">
-                    <!-- team member 3 -->
-                    <div class="our-team cake-ornament">
-                        <!-- picture -->
-                        <div class="pic">
-                            <img src="/ClientPublic/img/team3.jpg" alt="">
-                        </div>
-                        <!-- member info -->
-                        <div class="team-content">
-                            <h3 class="title">Larissa Smith</h3>
-                            <span class="post">Master Baker</span>
-                        </div>
-                        <!-- Social icons -->
-                        <ul class="social">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                        <!--/ul  -->
-                    </div>
-                    <!-- /our-team -->
-                </div>
-                <!-- /col-md-12 -->
-                <div class="col-md-12">
-                    <!-- team member 4 -->
-                    <div class="our-team cake-ornament">
-                        <!-- picture -->
-                        <div class="pic">
-                            <img src="/ClientPublic/img/team4.jpg" alt="">
-                        </div>
-                        <!-- member info -->
-                        <div class="team-content">
-                            <h3 class="title">Ana Carter</h3>
-                            <span class="post">Baker</span>
-                        </div>
-                        <!-- Social icons -->
-                        <ul class="social">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                        <!--/ul  -->
-                    </div>
-                    <!-- /our-team -->
-                </div>
-                <!-- /col-md-12 -->
-                <div class="col-md-12">
-                    <!-- team member 5 -->
-                    <div class="our-team cake-ornament">
-                        <!-- picture -->
-                        <div class="pic">
-                            <img src="/ClientPublic/img/team5.jpg" alt="">
-                        </div>
-                        <!-- member info -->
-                        <div class="team-content">
-                            <h3 class="title">Mauris Smith</h3>
-                            <span class="post">Baker</span>
-                        </div>
-                        <!-- Social icons -->
-                        <ul class="social">
-                            <li><a href="#" class="fa fa-facebook"></a></li>
-                            <li><a href="#" class="fa fa-twitter"></a></li>
-                            <li><a href="#" class="fa fa-google-plus"></a></li>
-                            <li><a href="#" class="fa fa-linkedin"></a></li>
-                        </ul>
-                        <!--/ul  -->
-                    </div>
-                    <!-- /our-team -->
-                </div>
-                <!-- /col-md-12 -->
-            </div>
-            <!-- /owl-team -->
-        </div>
-        <!-- /container -->
-    </section>
-    <!--/ Section -->
-    <!-- ==== Call to Action ==== -->
-    <section id="call-to-action" class="border-shape container-fluid" data-0="background-position:100% 20px;"
-        data-end="background-position:100% -40px">
-        <div class="container">
-            <div class="col-md-6 col-sm-6 col-centered well text-center">
-                <h4>Visit us Today!</h4>
-                <p>Lotam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi Suspendisse
-                    a elementum anteu imperdiet et maecenas eu eros non nibh aliquet iaculis..</p>
-                <!-- Button -->
-                <div class="page-scroll">
-                    <a href="#contact">
-                        <div class="blob-btn no-margin-bottom">
-                            Contact Us
-                            <span class="blob-btn__inner">
-                                <span class="blob-btn__blobs">
-                                    <span class="blob-btn__blob"></span>
-                                    <span class="blob-btn__blob"></span>
-                                    <span class="blob-btn__blob"></span>
-                                    <span class="blob-btn__blob"></span>
-                                </span>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tpproduct__all-item text-center">
+                            <span>Discover thousands of other quality products.
+                                <a href="shop-3.html">Shop All Products <i class="icon-chevrons-right"></i></a>
                             </span>
                         </div>
-                    </a>
-                </div>
-                <!-- /page-scroll -->
-            </div>
-            <!-- /col-md-6 -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- / section-->
-    <!-- ==== Contact ==== -->
-    <section id="contact" class="container-fluid cake-ornament">
-        <div class="container">
-            <div class="col-lg-12">
-                <!-- Section heading -->
-                <div class="section-heading">
-                    <h2>Contact Us</h2>
-                </div>
-            </div>
-            <!-- Contact icons -->
-            <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="col-md-4">
-                        <div class="contact-icon res-margin">
-                            <!---icon-->
-                            <i class="fa fa-envelope top-icon"></i>
-                            <!-- contact-icon info-->
-                            <div class="contact-icon-info">
-                                <p class="subtitle">Send us a Message</p>
-                                <p>Email address: <br /><a href="mailto:email@yoursite.com">email@yoursite.com</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /contact-icon-->
-                    <div class="col-md-4">
-                        <div class="contact-icon res-margin">
-                            <!---icon-->
-                            <i class="fa fa-map-marker top-icon"></i>
-                            <!-- contact-icon info-->
-                            <div class="contact-icon-info">
-                                <p class="subtitle">Visit our Location</p>
-                                <p>St Anderson Street 123 <br /> New York</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /contact-icon-->
-                    <div class="col-md-4">
-                        <div class="contact-icon res-margin">
-                            <!---icon-->
-                            <i class="fa fa-phone top-icon"></i>
-                            <!-- contact-icon info-->
-                            <div class="contact-icon-info">
-                                <p class="subtitle">Call us</p>
-                                <p>Phone number: <br />(123) 456-789</p>
-                            </div>
-                        </div>
-                        <!-- /contact-icon-->
-                    </div>
-                    <!-- /col-md-4-->
-                </div>
-                <!-- /col-lg -->
-            </div>
-            <div class="row margin1">
-                <div class="col-md-5">
-                    <h4>Get in touch with us</h4>
-                    <p>Consectetur adipiscing elit Etiam porta sem malesuada magna mollis euismod. Nulla vitae elit
-                        libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia.</p>
-                    <div class="form-style" id="contact_form">
-                        <!-- Contact Form -->
-                        <!-- Form Starts -->
-                        <div class="form-group">
-                            <label>Name<span class="required">*</span></label>
-                            <input type="text" name="name" class="form-control input-field" placeholder=""
-                                required="">
-                            <label>Email<span class="required">*</span></label>
-                            <input type="email" name="email" class="form-control input-field" placeholder=""
-                                required="">
-                            <label>Subject</label>
-                            <input type="text" name="subject" class="form-control input-field" placeholder="">
-                            <label>Message<span class="required">*</span></label>
-                            <textarea name="message" id="message" class="textarea-field form-control" rows="4" placeholder=""
-                                required=""></textarea>
-                            <!-- Button -->
-                            <button class="blob-btn" id="submit_btn">
-                                Send Message
-                                <span class="blob-btn__inner">
-                                    <span class="blob-btn__blobs">
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                        <span class="blob-btn__blob"></span>
-                                    </span>
-                                </span>
-                            </button>
-                        </div>
-                        <!-- Contact results -->
-                        <div id="contact_results"></div>
-                    </div>
-                    <!--/Contact_form -->
-                </div>
-                <!-- / col-md-5-->
-                <!-- Map with Reveal Box -->
-                <div class="col-md-6 col-md-offset-1 revealedBox goLeft res-margin">
-                    <!-- Map -->
-                    <div class="contentBox" id="map-canvas"></div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <!--/col-lg-6  -->
-            </div>
-            <!--/row -->
-        </div>
-        <!-- /container-->
-    </section>
-    <!-- / section-->
-    <!--============== Footer Starts ==============-->
-    <svg id="curveUpColor" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%"
-        height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-        <path d="M0 100 C 20 0 50 0 100 100 Z" />
-    </svg>
-    <footer class="bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <!-- social media and logo -->
-                <div class="col-lg-4">
-                    <h6 class="text-light">Opening Times</h6>
-                    <ul class="ul-custom ul-no-margin text-light">
-                        <li>Mon - fri: 9am-6pm</li>
-                        <li>Weekends & Holidays: Closed</li>
-                    </ul>
-                </div>
-                <!-- /row -->
-                <div class="col-lg-4">
-                    <a href="#page-top"><img src="/ClientPublic/img/white-logo.png" alt=""
-                            class="img-responsive center-block"></a>
-                </div>
-                <div class="col-lg-4">
-                    <!-- social-icons -->
-                    <h6 class="text-light">Follow us</h6>
-                    <div class="social-media">
-                        <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                        <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                        <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                        <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                        <a href="#" title=""><i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
-                <!-- /col-lg-4 -->
             </div>
-            <!-- /row -->
-            <div class="row">
-                <div class="col-md-12 credits text-center">
-                    <p>Copyright © 2018 - Designed by <a href="http://www.ingridkuhn.com">Ingrid Kuhn</a></p>
-                    <!-- /container -->
-                    <!-- Go To Top Link -->
-                    <div class="page-scroll hidden-sm hidden-xs">
-                        <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-                    </div>
-                </div>
-                <!-- /col-md-12 -->
-            </div>
-            <!-- /row-->
-        </div>
-        <!-- /container -->
-    </footer>
-    <!--============== //Footer Ends ==============-->
+        </section>
+        <!-- product-area-end -->
 
-    <!-- Core JavaScript Files -->
-    <script src="/ClientPublic/js/jquery.min.js"></script>
-    <script src="/ClientPublic/js/bootstrap.min.js"></script>
-    <!-- Main Js -->
-    <script src="/ClientPublic/js/main.js"></script>
-    <!-- Open street maps -->
-    <script src="/ClientPublic/js/map.js"></script>
-    <!-- MailChimp Validator -->
-    <script src="/ClientPublic/js/mc-validate.js"></script>
-    <!-- GreenSock -->
-    <script src="/ClientPublic/js/layerslider/js/greensock.js"></script>
-    <!-- LayerSlider Script files -->
-    <script src="/ClientPublic/js/layerslider/js/layerslider.transitions.js"></script>
-    <script src="/ClientPublic/js/layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
-    <script src="/ClientPublic/js/layerslider/js/layerslider.load.js"></script>
-    <!-- Other Plugins -->
-    <script src="/ClientPublic/js/plugins.js"></script>
-    <!-- Prefix Free CSS -->
-    <script src="/ClientPublic/js/prefixfree.js"></script>
-    <!-- Counter -->
-    <script src="/ClientPublic/js/counter.js"></script>
+        <!-- product-coundown-area-start -->
+        <section class="product-coundown-area tpcoundown__bg grey-bg pb-25"
+            data-background="assets/img/banner/coundpwn-bg-1.png">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tpcoundown p-relative ml-175">
+                            <div class="section__content mb-35">
+                                <span class="section__sub-title mb-10">~ Deals Of The Day ~</span>
+                                <h2 class="section__title mb-25">Premium Drinks <br> Fresh Farm Product</h2>
+                                <p>The liber tempor cum soluta nobis eleifend option congue <br>
+                                    doming quod mazim placerat facere possum assam going through.</p>
+                            </div>
+                            <div class="tpcoundown__count">
+                                <h4 class="tpcoundown__count-title">hurry up! Offer End In:</h4>
+                                <div class="tpcoundown__countdown" data-countdown="2022/11/11"></div>
+                                <div class="tpcoundown__btn mt-50">
+                                    <a class="whight-btn" href="shop-details-grid.html">Shop Now</a>
+                                    <a class="whight-btn border-btn ml-15" href="shop-list-view.html">View Menu</a>
+                                </div>
+                            </div>
+                            <div class="tpcoundown__shape d-none d-lg-block">
+                                <img class="tpcoundown__shape-one" src="assets/img/shape/tree-leaf-1.svg"
+                                    alt="">
+                                <img class="tpcoundown__shape-two" src="assets/img/shape/tree-leaf-2.svg"
+                                    alt="">
+                                <img class="tpcoundown__shape-three" src="assets/img/shape/tree-leaf-3.svg"
+                                    alt="">
+                                <img class="tpcoundown__shape-four" src="assets/img/shape/fresh-shape-1.svg"
+                                    alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- product-coundown-area-end -->
+
+        <!-- blog-area-start -->
+        <section class="blog-area pt-100 pb-100 grey-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="tpsection mb-35">
+                            <h4 class="tpsection__sub-title">~ Read Our Blog ~</h4>
+                            <h4 class="tpsection__title">Our Latest Post</h4>
+                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-container tpblog-active">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-1.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">Avocado Grilled Salmon,
+                                            Rich In Nutrients For The Body</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i> </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-2.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="shop-details.html">Organics</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">The Best Great Benefits Of
+                                            Fresh Beef For Women's Health</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-3.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="shop-details.html">Organics</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">Ways To Choose Fruits &
+                                            Seafoods Good For Pregnancy</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-4.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="shop-details.html">Shopping</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">Summer Breakfast For The
+                                            Healthy Morning With Tomatoes</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-5.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="#">Foods</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">Popular Reasons You Must
+                                            Drinks Juice Everyday</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-6.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">Perfect Quality Reasonable
+                                            Price For Your Family</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-7.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="shop-details.html">Dairy Farm</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">Ways To Choose Fruits
+                                            Seafoods Good For Pregnancy</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="tpblog__item">
+                                <div class="tpblog__thumb fix">
+                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-8.jpg"
+                                            alt=""></a>
+                                </div>
+                                <div class="tpblog__wrapper">
+                                    <div class="tpblog__entry-wap">
+                                        <span class="cat-links"><a href="#">organis</a></span>
+                                        <span class="author-by"><a href="#">Admin</a></span>
+                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                    </div>
+                                    <h4 class="tpblog__title"><a href="blog-details.html">The Best Great Benefits Of
+                                            Fresh Beef For Women’s Health</a></h4>
+                                    <p>These are the people who make your life easier. Egestas is tristique
+                                        vestibulum...</p>
+                                    <div class="tpblog__details">
+                                        <a href="blog-details.html">Continue reading <i
+                                                class="icon-chevrons-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- blog-area-end -->
+
+        <!-- feature-area-start -->
+        <section class="feature-area mainfeature__bg grey-bg pt-50 pb-40"
+            data-background="assets/img/shape/footer-shape-1.svg">
+            <div class="container">
+                <div class="mainfeature__border pb-15">
+                    <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2">
+                        <div class="col">
+                            <div class="mainfeature__item text-center mb-30">
+                                <div class="mainfeature__icon">
+                                    <img src="assets/img/icon/feature-icon-1.svg" alt="">
+                                </div>
+                                <div class="mainfeature__content">
+                                    <h4 class="mainfeature__title">Fast Delivery</h4>
+                                    <p>Across West & East India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mainfeature__item text-center mb-30">
+                                <div class="mainfeature__icon">
+                                    <img src="assets/img/icon/feature-icon-2.svg" alt="">
+                                </div>
+                                <div class="mainfeature__content">
+                                    <h4 class="mainfeature__title">safe payment</h4>
+                                    <p>100% Secure Payment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mainfeature__item text-center mb-30">
+                                <div class="mainfeature__icon">
+                                    <img src="assets/img/icon/feature-icon-3.svg" alt="">
+                                </div>
+                                <div class="mainfeature__content">
+                                    <h4 class="mainfeature__title">Online Discount</h4>
+                                    <p>Add Multi-buy Discount </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mainfeature__item text-center mb-30">
+                                <div class="mainfeature__icon">
+                                    <img src="assets/img/icon/feature-icon-4.svg" alt="">
+                                </div>
+                                <div class="mainfeature__content">
+                                    <h4 class="mainfeature__title">Help Center</h4>
+                                    <p>Dedicated 24/7 Support </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="mainfeature__item text-center mb-30">
+                                <div class="mainfeature__icon">
+                                    <img src="assets/img/icon/feature-icon-5.svg" alt="">
+                                </div>
+                                <div class="mainfeature__content">
+                                    <h4 class="mainfeature__title">Curated items</h4>
+                                    <p>From Handpicked Sellers</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature-area-end -->
+
+    </main>
+
+    <!-- footer-area-start -->
+    <footer>
+        <div class="tpfooter__area theme-bg-2">
+            <div class="tpfooter__top pb-15">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="tpfooter__widget footer-col-1 mb-50">
+                                <h4 class="tpfooter__widget-title">Let Us Help You</h4>
+                                <p>If you have any question, please <br> contact us at:
+                                    <a href="mailto:support@example.com">support@example.com</a>
+                                </p>
+                                <div class="tpfooter__widget-social mt-45">
+                                    <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                    <a href="#"><i class="fab fa-skype"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                            <div class="tpfooter__widget footer-col-2 mb-50">
+                                <h4 class="tpfooter__widget-title">Looking for Orfarm?</h4>
+                                <p>68 St. Vicent Place, Glasgow, Greater <br> Newyork NH2012, UK.</p>
+                                <div class="tpfooter__widget-time-info mt-35">
+                                    <span>Monday – Friday: <b>8:10 AM – 6:10 PM</b></span>
+                                    <span>Saturday: <b>10:10 AM – 06:10 PM</b></span>
+                                    <span>Sunday: <b>Close</b></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-5">
+                            <div class="tpfooter__widget footer-col-3 mb-50">
+                                <h4 class="tpfooter__widget-title">HOT CATEGORIES</h4>
+                                <div class="tpfooter__widget-links">
+                                    <ul>
+                                        <li><a href="#">Fruits & Vegetables</a></li>
+                                        <li><a href="#">Dairy Products</a></li>
+                                        <li><a href="#">Package Foods</a></li>
+                                        <li><a href="#">Beverage</a></li>
+                                        <li><a href="#">Health & Wellness</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
+                            <div class="tpfooter__widget footer-col-4 mb-50">
+                                <h4 class="tpfooter__widget-title">Our newsletter</h4>
+                                <div class="tpfooter__widget-newsletter">
+                                    <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals &
+                                        other information.</p>
+                                    <form action="index.html">
+                                        <span><i><img src="assets/img/shape/message-1.svg"
+                                                    alt=""></i></span>
+                                        <input type="email" placeholder="Your email address...">
+                                        <button
+                                            class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                                    </form>
+                                    <div class="tpfooter__widget-newsletter-check mt-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                I accept terms & conditions & privacy policy.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tpfooter___bottom pt-40 pb-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-sm-12">
+                            <div class="tpfooter__copyright">
+                                <span class="tpfooter__copyright-text">Copyright © <a href="#">ORFARM</a> all
+                                    rights reserved. Powered by <a href="#">ThemePure</a>.</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-5 col-sm-12">
+                            <div class="tpfooter__copyright-thumb text-end">
+                                <img src="assets/img/shape/footer-payment.png " alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-area-end -->
+
+
+    <!-- JS here -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
