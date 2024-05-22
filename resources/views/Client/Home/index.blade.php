@@ -93,8 +93,8 @@
                                     <ul>
                                         <li><a href="{{route('home')}}">accueil</a></li>
 
-                                        <li class="has-dropdown has-megamenu">
-                                            <a href="course-grid.html">Shop</a>
+                                        {{-- <li class="has-dropdown has-megamenu">
+                                            <a href="course-grid.html">Ca</a>
                                             <ul class="sub-menu mega-menu"
                                                 data-background="assets/img/banner/mega-menu-shop-1.jpg">
                                                 <li>
@@ -142,15 +142,20 @@
                                                     </ul>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
+
+
                                         <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
+                                            <a href="blog.html">Categorie</a>
+                                          
+                                                
+                                           
                                             <ul class="sub-menu">
-                                                <li><a href="blog.html">Big image</a></li>
-                                                <li><a href="blog-right-sidebar.html">Right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Left sidebar</a></li>
-                                                <li><a href="blog-details.html">Single Post</a></li>
+                                                @foreach ($categoriesALL as $categorie )
+                                                <li><a href="blog.html">{{$categorie->Nom}}</a></li>
+                                                @endforeach
                                             </ul>
+                                          
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="about.html">Pages</a>

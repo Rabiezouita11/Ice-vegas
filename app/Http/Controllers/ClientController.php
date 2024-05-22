@@ -17,7 +17,9 @@ class ClientController extends Controller
         // Ensure that each product is loaded with its category
         $products = Produits::with('categorie')->get();
     
-        return view('Client.Home.index', compact('products', 'categories'));
+
+        $categoriesALL = Categories::all();
+        return view('Client.Home.index', compact('products', 'categories', 'categoriesALL'));
     }
        public function show($category)
        {
