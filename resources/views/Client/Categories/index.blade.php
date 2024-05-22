@@ -1,405 +1,1019 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
    <head>
       <meta charset="utf-8">
-      <!--[if IE]>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <![endif]-->
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Orfarm - Multipurpose eCommerce HTML5 Template </title>
       <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- Page title -->
-      <title>{{ $category->Nom }}</title>
-      <!--[if lt IE 9]>
-      <script src="js/respond.js"></script>
-      <![endif]-->
-      <!-- Bootstrap Core CSS -->
-      <link href="/ClientPublic/css/bootstrap.css" rel="stylesheet" type="text/css">
-      <!-- Icon fonts -->
-      <link href="/ClientPublic/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-      <link href="/ClientPublic/fonts/flaticons/flaticon.css" rel="stylesheet" type="text/css">
-      <link href="/ClientPublic/fonts/glyphicons/bootstrap-glyphicons.css" rel="stylesheet" type="text/css">
-      <!-- Google fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Karla:400,600,700%7CCherry+Swash:400,700" rel="stylesheet">
-      <!-- Style CSS -->
-      <link href="/ClientPublic/css/style.css" rel="stylesheet">
-      <!-- Color Style CSS -->
-      <link href="/ClientPublic/styles/maincolors.css" rel="stylesheet">
-      <!-- CSS Plugins -->
-      <link rel="stylesheet" href="/ClientPublic/css/plugins.css">
-      <!-- Favicons-->
-      <link rel="apple-touch-icon" sizes="72x72" href="/ClientPublic/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="/ClientPublic/apple-icon-114x114.png">
-      <link rel="shortcut icon" href="/ClientPublic/favicon.ico" type="image/x-icon">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Place favicon.ico in the root directory -->
+      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+
+      <!-- CSS here -->
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/animate.css">
+      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+      <link rel="stylesheet" href="assets/css/slick.css">
+      <link rel="stylesheet" href="assets/css/magnific-popup.css">
+      <link rel="stylesheet" href="assets/css/spacing.css">
+      <link rel="stylesheet" href="assets/css/meanmenu.css">
+      <link rel="stylesheet" href="assets/css/nice-select.css">
+      <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+      <link rel="stylesheet" href="assets/css/icon-dukamarket.css">
+      <link rel="stylesheet" href="assets/css/jquery-ui.css">
+      <link rel="stylesheet" href="assets/css/main.css">
    </head>
-   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-      <!-- Navbar -->
-      <nav class="navbar navbar-custom navbar-fixed-top">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-brand-centered">
-                <i class="fa fa-bars"></i>
-            </button>
-            <div class="navbar-brand-centered page-scroll">
-                <a href="#page-top"><img src="logo.png" class="img-responsive" alt=""></a>
-            </div>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-brand-centered">
+   <body>
+
+
+      <!-- Scroll-top -->
+      <button class="scroll-top scroll-to-target" data-target="html">
+         <i class="icon-chevrons-up"></i>
+      </button>
+      <!-- Scroll-top-end-->
+
+
+      <!-- header-area-start -->
+      <header>
+         <div class="header__top theme-bg-1 d-none d-md-block">
             <div class="container">
-                <ul class="nav navbar-nav page-scroll navbar-left">
-                    <li><a href="{{ route('home') }}" style=" font-family: 'Anonymous Pro';">Acceuil</a></li>
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                            style=" font-family: 'Anonymous Pro';">NOs collection<b class="caret"></b></a>
-
-                        <ul class="dropdown-menu">
-
-                            @foreach ($categories as $category)
-                                <li><a href="{{ route('categories.show', $category->Nom) }}"
-                                        style=" font-family: 'Anonymous Pro';">{{ $category->Nom }}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
-
-                    <li><a href="#about" style=" font-family: 'Anonymous Pro';">Mieux nous connaitre </a></li>
-
-
-
-                    <!-- <li><a href="#services"style=" font-family: 'Anonymous Pro';">Services</a></li>
-                    <li><a href="#reviews" style=" font-family: 'Anonymous Pro';">Reviews</a></li> -->
-                </ul>
-                <ul class="nav navbar-nav page-scroll navbar-right">
-                    <li><a href="#menu" style=" font-family: 'Anonymous Pro';">Rececette ice vegas</a></li>
-                    <li><a href="#contact" style=" font-family: 'Anonymous Pro';">contactez nous </a></li>
-                    <li><a href="#"style=" font-family: 'Anonymous Pro';">Nos promos </a></li>
-                    @guest
-                        <li><a href="{{ route('login') }}" style="font-family: 'Anonymous Pro';"><i
-                                    class="fas fa-sign-in-alt"></i> </a></li>
-                        <li><a href="{{ route('register') }}" style="font-family: 'Anonymous Pro';"><i
-                                    class="fas fa-user-plus"></i> </a></li>
-                    @else
-                        <li class="dropdown active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"
-                                style=" font-family: 'Anonymous Pro';">{{ Auth::user()->name }}<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="blog-single.html" style=" font-family: 'Anonymous Pro';">Profile</a></li>
-                                <li><a href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();"
-                                        style=" font-family: 'Anonymous Pro';">Déconnexion</a></li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </ul>
-                        </li>
-                        <!-- This will be visible when user is logged in -->
-                    @endguest
-
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </nav>
-      <!-- /navbar ends -->
-      <!-- Preloader -->
-      <div id="loading">
-         <div id="loading-center">
-            <div id="loading-center-absolute">
-               <div class="object-load" id="object_one"></div>
-               <div class="object-load" id="object_two"></div>
-               <div class="object-load" id="object_three"></div>
-            </div>
-         </div>
-      </div>
-      <!-- /preloader -->
-      <!-- Section Blog -->
-      <section id="blog-main">
-      <div class="jumbotron" style="background: url('{{ $category->Image }}') no-repeat; background-size: cover !important;"></div>
-         <div class="page-title text-center">
-            <h1 class="text-light" >{{ $category->Nom }}</h1>
-            <!-- breadcrumb --> 
-            <ul class="breadcrumb">
-               <li><a href="{{route('home')}}">Home</a> <span class="divider"></span></li>
-               <li class="active">{{ $category->Nom }}</li>
-            </ul>
-            <!-- /breadcrumb --> 
-         </div>
-		 <!-- /page-title --> 
-         <div class="container">
-            <div class="row">
-               <!-- Blog Home -->
-               <div class="col-md-8 ">
-                  <div class="row">
-                     <!-- Blog Post 1 -->
-                     @foreach($products as $product)
-
-                     <div class="blog-post col-md-12">
-                        <!-- blog image -->
-                        <div class="img-zoom">
-                            <a href="{{ route('categories.show', $category->Nom) }}">
-                                <img class="img-responsive" src="{{ asset($product->Image) }}" alt="{{ $product->Nom }}">
-                            </a>
-                        </div>
-                        <!-- post info -->
-                        <div class="post-review">
-                            <!-- Comments -->
-                            <ul class="post-comment">
-                                <li>{{ $product->created_at->format('d') }}<small>{{ $product->created_at->format('M') }}</small></li>
-                                <li><i class="fa fa-comments-o"></i><a href="#"><small>0</small></a></li>
-                            </ul>
-                            <!-- Title -->
-                            <h4 class="post-title">
-                                <a href="{{ route('categories.show', $category->Nom) }}">{{ $product->Nom }}</a>
-                            </h4>
-                            <!-- Description -->
-                            <p class="post-description">
-                                {{ $product->Description }}
-                            </p>
-                            <!-- Price -->
-                            <p class="post-price"><strong>Price:</strong> {{ $product->Prix }} TND</p>
-                            <!-- Button -->
-                            <a href="{{ route('categories.show', $category->Nom) }}">
-                                <div class="blob-btn">
-                                    Read more
-                                    <span class="blob-btn__inner">
-                                        <span class="blob-btn__blobs">
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                            <span class="blob-btn__blob"></span>
-                                        </span>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                        <!-- /Post-review -->
-                    </div>
-                    
-                     <!-- /blog-post-->
-                   
-                     @endforeach
-
-                  
-                  </div>
-                  <!-- /row-->                  
-               </div>
-               <!-- /col-md-8 -->
-               <!-- Sidebar Column -->
-               <div class="sidebar col-md-4">
-                  <!-- search -->
-                  <div class="well">
-                     <h5>Search</h5>
-                     <div class="input-group">
-                        <input class="form-control" type="text" value="" name="search">
-                        <span class="input-group-btn">
-                        <button class="blob-btn btn" type="submit" >
-                        <i class="fa fa-search"></i>
-                        <span class="blob-btn__inner">
-                        <span class="blob-btn__blobs">
-                        <span class="blob-btn__blob"></span>
-                        <span class="blob-btn__blob"></span>
-                        <span class="blob-btn__blob"></span>
-                        <span class="blob-btn__blob"></span>
-                        </span>
-                        </span>
-                        </button>
-                        </span>
+               <div class="row align-items-center">
+                  <div class="col-lg-6 col-md-12">
+                     <div class="header__top-left">
+                        <span>Due to the <strong>COVID-19</strong> epidemic, orders may be processed with a slight delay.</span>
                      </div>
                   </div>
-                  <!-- /well -->				 	  
-                  <!-- About us Widget -->
-                  <div class="well">
-                     <h5>About Us</h5>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium.</p>
-                     <!-- Social Media icons -->
-                     <div class="social-media smaller">
-                        <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                        <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                        <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                        <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                        <a href="#" title=""><i class="fa fa-instagram"></i></a>
-                     </div>
-                  </div>
-                  <!-- /well -->
-                  <!-- popular posts widget -->        
-                  <div class="well">
-                     <h5>Popular posts</h5>
-                     <div class="panel panel-default popular-posts">
-                        <div class="panel-body">
-                           <ul class="media-list">
-                              <!-- popular post 1 -->   
-                              <li class="media">
-                                 <div class="media-left">
-                                    <img src="/ClientPublic/img/blog/blogwidget1.jpg" class="img-responsive img-rounded" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <a href="blog-single.html">
-                                       <h6 class="media-heading">
-                                          these are our Best Cakes
-                                       </h6>
-                                    </a>
-                                    <small>
-                                    Posted on 13 september
-                                    </small>
-                                 </div>
+                  <div class="col-lg-6 col-md-12">
+                     <div class="header__top-right d-flex align-items-center">
+                        <div class="header__top-link">
+                           <a href="#">Store Location</a>
+                           <a href="#">Order Tracking</a>
+                           <a href="faq.html">FAQs</a>
+                        </div>
+                        <div class="header__lang">
+                           <span class="header__lang-select">English <i class="far fa-angle-down"></i></span>
+                           <ul class="header__lang-submenu">
+                              <li>
+                                 <a href="#">Australia</a>
                               </li>
-                              <!-- /media -->
-                              <!-- popular post 2 -->   
-                              <li class="media">
-                                 <div class="media-left">
-                                    <img src="/ClientPublic/img/blog/blogwidget2.jpg" class="img-responsive img-rounded" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <a href="blog-single.html">
-                                       <h6 class="media-heading">
-                                          We offer catering to any events!
-                                       </h6>
-                                    </a>
-                                    <small>
-                                    Posted on 02 september
-                                    </small>
-                                 </div>
+                              <li>
+                                 <a href="#">Spain</a>
                               </li>
-                              <!-- /media -->
-                              <!-- popular post 3 -->   
-                              <li class="media">
-                                 <div class="media-left">
-                                    <img src="/ClientPublic/img/blog/blogwidget3.jpg" class="img-responsive img-rounded" alt="">
-                                 </div>
-                                 <div class="media-body">
-                                    <a href="blog-single.html">
-                                       <h6 class="media-heading">
-                                          Baking the perfect Cupcake
-                                       </h6>
-                                    </a>
-                                    <small>
-                                    Posted on 22 August
-                                    </small>
-                                 </div>
+                              <li>
+                                 <a href="#">Brazil</a>
                               </li>
-                              <!-- /media -->
+                              <li>
+                                 <a href="#">English</a>
+                              </li>
+                              <li>
+                                 <a href="#">France</a>
+                              </li>
+                              <li>
+                                 <a href="#">United States</a>
+                              </li>
                            </ul>
-                           <!-- /media-list --> 
                         </div>
-                        <!-- /panel-body --> 
+                        <div class="header__top-price">
+                           <select>
+                              <option>USD</option>
+                              <option>ARS</option>
+                              <option>AUD</option>
+                              <option>BRL</option>
+                              <option>GBP</option>
+                              <option>DKK</option>
+                              <option>EUR</option>
+                           </select>
+                        </div>
                      </div>
-                     <!-- /panel --> 
                   </div>
-                  <!-- /well -->							  
-                  <!-- Blog Categories -->
-                  <div class="well">
-                     <h5>Categories</h5>
-                     <div class="row">
-                        <ul class="list-unstyled">
-                           <li><a href="#">Our Pastries</a>
-                           </li>
-                           <li><a href="#">Events and News</a>
-                           </li>
-                           <li><a href="#">Catering</a>
-                           </li>
-                           <li><a href="#">Updates</a>
-                           </li>
-                           <li><a href="#">Our Team</a>
-                           </li>
-                           <li><a href="#">Recipes</a>
-                           </li>
-                           <li><a href="#">Low Sugar Pastries</a>
-                           </li>
+               </div>
+            </div>
+         </div>
+         <div id="header-sticky" class="header__main-area d-none d-xl-block">
+            <div class="container">
+               <div class="header__for-megamenu p-relative">
+                  <div class="row align-items-center">
+                     <div class="col-xl-3">
+                        <div class="header__logo">
+                           <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                        </div>
+                     </div>
+                     <div class="col-xl-6">
+                        <div class="header__menu main-menu text-center">
+                           <nav id="mobile-menu">
+                              <ul>
+                                 <li class="has-dropdown has-homemenu">
+                                    <a href="index.html">Home</a>
+                                    <ul class="sub-menu home-menu-style">
+                                       <li>
+                                          <a href="index.html"><img src="assets/img//header/home1-1.jpg" alt=""> Home Page V1</a>
+                                       </li>
+                                       <li>
+                                          <a href="index-2.html"><img src="assets/img//header/home2-1.jpg" alt=""> Home Page V2</a>
+                                       </li>
+                                       <li>
+                                          <a href="index-3.html"><img src="assets/img//header/home3-1.jpg" alt=""> Home Page V3</a>
+                                       </li>
+                                       <li>
+                                          <a href="index-4.html"><img src="assets/img//header/home4-1.jpg" alt=""> Home Page V4</a>
+                                       </li>
+                                       <li>
+                                          <a href="index-5.html"><img src="assets/img//header/home5-1.jpg" alt=""> Home Page V5</a>
+                                       </li>
+                                       <li>
+                                          <a href="index-6.html"><img src="assets/img//header/home6-1.jpg" alt=""> Home Page V6</a>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-dropdown has-megamenu" >
+                                    <a href="course-grid.html">Shop</a>
+                                    <ul class="sub-menu mega-menu" data-background="assets/img/banner/mega-menu-shop-1.jpg">
+                                       <li>
+                                          <a  class="mega-menu-title">Shop layout</a>
+                                          <ul>
+                                             <li><a href="shop-left-sidebar.html">Shop With Banner </a></li>
+                                             <li><a href="shop-3.html">Shop Without Banner</a></li>
+                                             <li><a href="shop-2.html">Shop Version</a></li>
+                                             <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
+                                             <li><a href="shop-right-sidebar.html">Shop Right sidebar</a></li>
+                                             <li><a href="shop-list-view.html">Shop List view</a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a  class="mega-menu-title">Product layout</a>
+                                          <ul>
+                                             <li><a href="shop-details-3.html">Image scroll</a></li>
+                                             <li><a href="shop-details-grid.html">Product grid</a></li>
+                                             <li><a href="shop-details-top.html">Top Thumb Product</a></li>
+                                             <li><a href="shop-details.html">Bottom Thumb Product</a></li>
+                                             <li><a href="shop-details-4.html">Simple Product</a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a  class="mega-menu-title">Product type</a>
+                                          <ul>
+                                             <li><a href="shop-details.html">Products Simple</a></li>
+                                             <li><a href="shop-details-grid.html">Products Group</a></li>
+                                             <li><a href="shop-details-3.html">Products Variable</a></li>
+                                             <li><a href="shop-details-3.html">Special</a></li>
+                                             <li><a href="shop-details-4.html">Decoration</a></li>
+                                             <li><a href="shop-details-top.html">Contruction</a></li>
+                                          </ul>
+                                       </li>
+                                       <li>
+                                          <a  class="mega-menu-title">Product category</a>
+                                          <ul>
+                                             <li><a href="shop-details.html">Fresh bakery</a></li>
+                                             <li><a href="shop-details-3.html">Fresh fruits</a></li>
+                                             <li><a href="shop-details-4.html">Fresh meat</a></li>
+                                             <li><a href="shop-details.html">Fruit drink</a></li>
+                                             <li><a href="shop-details.html">Fresh bakery</a></li>
+                                             <li><a href="shop-details-grid.html">Biscuits snack</a></li>
+                                          </ul>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-dropdown">
+                                    <a href="blog.html">Blog</a>
+                                    <ul class="sub-menu">
+                                       <li><a href="blog.html">Big image</a></li>
+                                       <li><a href="blog-right-sidebar.html">Right sidebar</a></li>
+                                       <li><a href="blog-left-sidebar.html">Left sidebar</a></li>
+                                       <li><a href="blog-details.html">Single Post</a></li>
+                                    </ul>
+                                 </li>
+                                 <li class="has-dropdown">
+                                    <a href="about.html">Pages</a>
+                                    <ul class="sub-menu">
+                                       <li><a href="shop-location.html">Shop Location One</a></li>
+                                       <li><a href="shop-location-2.html">Shop Location Two</a></li>
+                                       <li><a href="faq.html">FAQs</a></li>
+                                       <li><a href="checkout.html">Checkout</a></li>
+                                       <li><a href="cart.html">Cart Page</a></li>
+                                       <li><a href="wishlist.html">Wishlist</a></li>
+                                       <li><a href="log-in.html">Sign In</a></li>
+                                       <li><a href="comming-soon.html">Coming soon</a></li>
+                                       <li><a href="404.html">Page 404</a></li>
+                                    </ul>
+                                 </li>
+                                 <li><a href="about.html">About Us</a></li>
+                                 <li><a href="contact.html">Contact Us</a></li>
+                              </ul>
+                           </nav>
+                        </div>
+                     </div>
+                     <div class="col-xl-3">
+                        <div class="header__info d-flex align-items-center">
+                           <div class="header__info-search tpcolor__purple ml-10">
+                              <button class="tp-search-toggle"><i class="icon-search"></i></button>
+                           </div>
+                           <div class="header__info-user tpcolor__yellow ml-10">
+                              <a href="log-in.html"><i class="icon-user"></i></a>
+                           </div>
+                           <div class="header__info-wishlist tpcolor__greenish ml-10">
+                              <a href="wishlist.html"><i class="icon-heart icons"></i></a>
+                           </div>
+                           <div class="header__info-cart tpcolor__oasis ml-10 tp-cart-toggle">
+                              <button><i><img src="assets/img/icon/cart-1.svg" alt=""></i>
+                                 <span>5</span>
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- header-search -->
+         <div class="tpsearchbar tp-sidebar-area">
+            <button class="tpsearchbar__close"><i class="icon-x"></i></button>
+            <div class="search-wrap text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-6 pt-100 pb-100">
+                            <h2 class="tpsearchbar__title">What Are You Looking For?</h2>
+                            <div class="tpsearchbar__form">
+                                <form action="#">
+                                    <input type="text" name="search" placeholder="Search Product...">
+                                    <button class="tpsearchbar__search-btn"><i class="icon-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div class="search-body-overlay"></div>
+         <!-- header-search-end -->
+
+         <!-- header-cart-start -->
+         <div class="tpcartinfo tp-cart-info-area p-relative">
+         <button class="tpcart__close"><i class="icon-x"></i></button>
+            <div class="tpcart">
+               <h4 class="tpcart__title">Your Cart</h4>
+               <div class="tpcart__product">
+                  <div class="tpcart__product-list">
+                     <ul>
+                        <li>
+                           <div class="tpcart__item">
+                              <div class="tpcart__img">
+                                 <img src="assets/img/product/products1-min.jpg" alt="">
+                                 <div class="tpcart__del">
+                                    <a href="#"><i class="icon-x-circle"></i></a>
+                                 </div>
+                              </div>
+                              <div class="tpcart__content">
+                                 <span class="tpcart__content-title"><a href="shop-details.html">Stacy's Pita Chips Parmesan Garlic & Herb From Nature</a>
+                                 </span>
+                                 <div class="tpcart__cart-price">
+                                    <span class="quantity">1 x</span>
+                                    <span class="new-price">$162.80</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="tpcart__item">
+                              <div class="tpcart__img">
+                                 <img src="assets/img/product/products12-min.jpg" alt="">
+                                 <div class="tpcart__del">
+                                    <a href="#"><i class="icon-x-circle"></i></a>
+                                 </div>
+                              </div>
+                              <div class="tpcart__content">
+                                 <span class="tpcart__content-title"><a href="shop-details.html">Banana, Beautiful Skin, Good For Health 1Kg</a>
+                                 </span>
+                                 <div class="tpcart__cart-price">
+                                    <span class="quantity">1 x</span>
+                                    <span class="new-price">$138.00</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        <li>
+                           <div class="tpcart__item">
+                              <div class="tpcart__img">
+                                 <img src="assets/img/product/products3-min.jpg" alt="">
+                                 <div class="tpcart__del">
+                                    <a href="#"><i class="icon-x-circle"></i></a>
+                                 </div>
+                              </div>
+                              <div class="tpcart__content">
+                                 <span class="tpcart__content-title"><a href="shop-details.html">Quaker Popped Rice Crisps Snacks Chocolate</a>
+                                 </span>
+                                 <div class="tpcart__cart-price">
+                                    <span class="quantity">1 x</span>
+                                    <span class="new-price">$162.8</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="tpcart__checkout">
+                     <div class="tpcart__total-price d-flex justify-content-between align-items-center">
+                        <span> Subtotal:</span>
+                        <span class="heilight-price"> $300.00</span>
+                     </div>
+                     <div class="tpcart__checkout-btn">
+                        <a class="tpcart-btn mb-10" href="cart.html">View Cart</a>
+                        <a class="tpcheck-btn" href="checkout.html">Checkout</a>
+                     </div>
+                  </div>
+               </div>
+               <div class="tpcart__free-shipping text-center">
+                  <span>Free shipping for orders <b>under 10km</b></span>
+               </div>
+            </div>
+         </div>
+         <div class="cartbody-overlay"></div>
+         <!-- header-cart-end -->
+
+         <!-- mobile-menu-area -->
+         <div id="header-sticky-2" class="tpmobile-menu d-xl-none">
+            <div class="container-fluid">
+               <div class="row align-items-center">
+                  <div class="col-lg-4 col-md-4 col-3 col-sm-3">
+                     <div class="mobile-menu-icon">
+                        <button class="tp-menu-toggle"><i class="icon-menu1"></i></button>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-6 col-sm-4">
+                     <div class="header__logo text-center">
+                        <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-3 col-sm-5">
+                     <div class="header__info d-flex align-items-center">
+                        <div class="header__info-search tpcolor__purple ml-10 d-none d-sm-block">
+                           <button class="tp-search-toggle"><i class="icon-search"></i></button>
+                        </div>
+                        <div class="header__info-user tpcolor__yellow ml-10 d-none d-sm-block">
+                           <a href="#"><i class="icon-user"></i></a>
+                        </div>
+                        <div class="header__info-wishlist tpcolor__greenish ml-10 d-none d-sm-block">
+                           <a href="#"><i class="icon-heart icons"></i></a>
+                        </div>
+                        <div class="header__info-cart tpcolor__oasis ml-10 tp-cart-toggle">
+                           <button><i><img src="assets/img/icon/cart-1.svg" alt=""></i>
+                              <span>5</span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="body-overlay"></div>
+         <!-- mobile-menu-area-end -->
+
+         <!-- sidebar-menu-area -->
+         <div class="tpsideinfo">
+            <button class="tpsideinfo__close">Close<i class="fal fa-times ml-10"></i></button>
+            <div class="tpsideinfo__search text-center pt-35">
+               <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
+               <form action="#">
+                  <input type="text" placeholder="Search Products...">
+                  <button><i class="icon-search"></i></button>
+               </form>
+            </div>
+            <div class="tpsideinfo__nabtab">
+               <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Menu</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Categories</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                     <div class="mobile-menu"></div>
+                  </div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                     <div class="tpsidebar-categories">
+                        <ul>
+                           <li><a href="shop-details.html">Dairy Farm</a></li>
+                           <li><a href="shop-details.html">Healthy Foods</a></li>
+                           <li><a href="shop-details.html">Lifestyle</a></li>
+                           <li><a href="shop-details.html">Organics</a></li>
+                           <li><a href="shop-details.html">Photography</a></li>
+                           <li><a href="shop-details.html">Shopping</a></li>
+                           <li><a href="shop-details.html">Tips & Tricks</a></li>
                         </ul>
                      </div>
                   </div>
-                  <!-- /well --> 
-                  <!-- Image Widget -->
-                  <div class="well">
-                     <h5>Super Sale</h5>
-                     <img src="/ClientPublic/img/blog/bannerblog.jpg" class="center-block img-rounded img-responsive" alt="">
-                  </div>
-                  <!-- /well -->				  
-                  <!-- Tags Widget -->
-                  <div class="well">
-                     <h5>Tags</h5>
-                     <div class="blog-tags">
-                        <a href="#">Cakes</a> <a href="#">Pastries</a> <a href="#">Apple Pie</a> <a href="#">Event</a> <a href="#">Free</a> <a href="#">Cupcake</a> <a href="#">Birthday</a>
+                </div>
+            </div>
+            <div class="tpsideinfo__account-link">							
+               <a href="log-in.html"><i class="icon-user icons"></i> Login / Register</a>
+            </div>
+            <div class="tpsideinfo__wishlist-link">
+               <a href="wishlist.html" target="_parent"><i class="icon-heart"></i> Wishlist</a>
+            </div>
+         </div> 
+         <!-- sidebar-menu-area-end -->
+      </header>
+      <!-- header-area-end -->
+
+      <main>
+
+         <!-- blog-area-start -->
+         <section class="blog-area pt-30">
+            <div class="container-fluid">
+               <div class="swiper-container blog-active-3">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="tpblog__single p-relative">
+                           <div class="tpblog__single-img">
+                              <img src="assets/img/blog/blog-single-1.jpg" alt="">
+                           </div>
+                           <div class="tpblog__single-text text-center">
+                              <div class="tpblog__entry-wap">
+                                 <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                 <span class="author-by"><a href="#">Admin</a></span>
+                                 <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                              </div>
+                              <h4 class="tpblog__single-title mb-20">
+                                 <a href="blog-details.html">Popular Reasons You Must Drinks <br> Juice Everyday</a>
+                              </h4>
+                              <a href="blog-details.html">Continue reading</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="tpblog__single p-relative">
+                           <div class="tpblog__single-img">
+                              <img src="assets/img/blog/blog-single-2.jpg" alt="">
+                           </div>
+                           <div class="tpblog__single-text text-center">
+                              <div class="tpblog__entry-wap">
+                                 <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                 <span class="author-by"><a href="#">Admin</a></span>
+                                 <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                              </div>
+                              <h4 class="tpblog__single-title mb-20">
+                                 <a href="blog-details.html">Popular Reasons You Must Drinks <br> Juice Everyday</a>
+                              </h4>
+                              <a href="blog-details.html">Continue reading</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="tpblog__single p-relative">
+                           <div class="tpblog__single-img">
+                              <img src="assets/img/blog/blog-single-3.jpg" alt="">
+                           </div>
+                           <div class="tpblog__single-text text-center">
+                              <div class="tpblog__entry-wap">
+                                 <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                 <span class="author-by"><a href="#">Admin</a></span>
+                                 <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                              </div>
+                              <h4 class="tpblog__single-title mb-20">
+                                 <a href="blog-details.html">Popular Reasons You Must Drinks <br> Juice Everyday</a>
+                              </h4>
+                              <a href="blog-details.html">Continue reading</a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="tpblog__single p-relative">
+                           <div class="tpblog__single-img">
+                              <img src="assets/img/blog/blog-single-1.jpg" alt="">
+                           </div>
+                           <div class="tpblog__single-text text-center">
+                              <div class="tpblog__entry-wap">
+                                 <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                 <span class="author-by"><a href="#">Admin</a></span>
+                                 <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                              </div>
+                              <h4 class="tpblog__single-title mb-20">
+                                 <a href="blog-details.html">Popular Reasons You Must Drinks <br> Juice Everyday</a>
+                              </h4>
+                              <a href="blog-details.html">Continue reading</a>
+                           </div>
+                        </div>
                      </div>
                   </div>
-                  <!-- /well -->
                </div>
-               <!-- /sidebar col-md-3 --> 
-               <!-- Pagination -->
-               <div class="text-center col-md-12">
-                  <ul class="pagination">
-                     <li  class="active"><a href="#">1</a></li>
-                     <li><a href="#">2</a></li>
-                     <li><a href="#">3</a></li>
-                     <li><a href="#">4</a></li>
-                     <li><a href="#">5</a></li>
-                  </ul>
-               </div>
-               <!-- /text-center --> 
             </div>
-            <!-- /row --> 
-         </div>
-         <!-- /container-->
-      </section>
-      <!-- /Section ends -->
-      <!-- footer starts -->
-      <svg id="curveUpColor" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none">
-         <path d="M0 100 C 20 0 50 0 100 100 Z" />
-      </svg>
-      <footer class="bg-primary">
-         <div class="container">
-            <div class="row text-center">
-               <!-- social media and logo -->
-               <div class="col-lg-4">
-                  <h6  class="text-light">Opening Times</h6>
-                  <ul class="ul-custom text-light">
-                     <li>Mon - fri: 9am-6pm</li>
-                     <li>Weekends & Holidays: Closed</li>
-                  </ul>
-               </div>
-               <!-- /row -->
-               <div class="col-lg-4">
-                  <a href="#page-top"><img src="/ClientPublic/img/white-logo.png"  alt="" class="img-responsive center-block"></a>
-               </div>
-               <div class="col-lg-4">
-                  <!-- social-icons -->	
-                  <h6  class="text-light">Follow us</h6>
-                  <div class="social-media">
-                     <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                     <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                     <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                     <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                     <a href="#" title=""><i class="fa fa-instagram"></i></a>
+         </section>
+         <!-- blog-area-end -->
+
+         <!-- blog-area-start -->
+         <section class="blog-area pt-80">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-10 col-lg-9">
+                     <div class="tpblog__left-wrapper">
+                        <div class="tpblog__left-item ">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-8.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">The Best Great Benefits Of Fresh Beef
+                                          For Women's Health</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-7.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Ways To Choose Fruits & Seafoods Good
+                                          For Pregnancy</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-6.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Perfect Quality Reasonable Price For Your 
+                                          Family</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-5.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Popular Reasons You Must Drinks Juice
+                                          Everyday</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Summer Breakfast For The Healthy 
+                                          Morning With Tomatoes</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Ways To Choose Fruits & Seafoods Good
+                                          For Pregnancy</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Perfect Quality Reasonable Price For Your 
+                                          Family</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 col-md-6">
+                                 <div class="tpblog__item tpblog__item-2 mb-20">
+                                    <div class="tpblog__thumb fix">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-bg-9.jpg" alt=""></a>
+                                    </div>
+                                    <div class="tpblog__wrapper">
+                                       <div class="tpblog__entry-wap">
+                                          <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
+                                          <span class="author-by"><a href="#">Admin</a></span>
+                                          <span class="post-data"><a href="#">SEP 15. 2022</a></span>
+                                       </div>
+                                       <h4 class="tpblog__title"><a href="blog-details.html">Transition Your Favorite Looks into Fall
+                                          France</a></h4>
+                                       <p>These are the people who make your life easier. Large tiles were 
+                                          arranged on the counter top plate near the window of the living room, they were connected to the kitchen...</p>
+                                       <div class="tpblog__details">
+                                          <a href="blog-details.html">Continue reading <i class="icon-chevrons-right"></i> </a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tpbasic__pagination pr-100">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="basic-pagination text-center mb-80">
+                                    <nav>
+                                       <ul>
+                                          <li>
+                                             <span class="current">1</span>
+                                          </li>
+                                          <li>
+                                             <a href="blog.html">2</a>
+                                          </li>
+                                          <li>
+                                             <a href="blog.html">3</a>
+                                          </li>
+                                          <li>
+                                             <a href="blog.html">
+                                                <i class="icon-chevrons-right"></i>
+                                             </a>
+                                          </li>
+                                       </ul>
+                                     </nav>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-2 col-lg-3">
+                     <div class="tpblog__right-item pb-50">
+                        <div class="sidebar__widget mb-30">
+                           <div class="sidebar__widget-content">
+                              <div class="sidebar__search">
+                                 <form action="#">
+                                    <div class="sidebar__search p-relative">
+                                       <input type="text" placeholder="Search">
+                                       <button type="submit"><i class="far fa-search"></i></button>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sidebar__widget mb-40">
+                           <h3 class="sidebar__widget-title mb-15">Blog Categories</h3>
+                           <div class="sidebar__widget-content">
+                              <ul>
+                                 <li><a href="blog-details.html">Healthy Foods <span>(15)</span></a></li>
+                                 <li><a href="blog-details.html">Dairy Farm <span>(12)</span></a></li>
+                                 <li><a href="blog-details.html">Lifestyle <span>(10)</span></a></li>
+                                 <li><a href="blog-details.html">Tips & Tricks <span>(15)</span></a></li>
+                                 <li><a href="blog-details.html">Shopping <span>(13)</span></a></li>
+                                 <li><a href="blog-details.html">Organics <span>(08)</span></a></li>
+                                 <li><a href="blog-details.html">Photography <span>(17)</span></a></li>
+                                 <li><a href="blog-details.html">Uncategorized <span>(02)</span></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="sidebar__widget mb-35">
+                           <h3 class="sidebar__widget-title mb-15">Recent Posts</h3>
+                           <div class="sidebar__widget-content">
+                              <div class="sidebar__post rc__post">
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-sm-1.png" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Avocado Grilled Salmon, Rich In Nutrients For The Body</a>
+                                       </h3>
+                                       <div class="rc__meta">
+                                          <span>SEP 15. 2022</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-sm-2.png" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Popular Reasons You Must Drinks Juice Everyday</a>
+                                       </h3>
+                                       <div class="rc__meta">
+                                          <span>12 February. 2022</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-sm-3.png" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Perfect Quality Reasonable Price For Your Family</a>
+                                       </h3>
+                                       <div class="rc__meta">
+                                          <span>14 January. 2022</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-sm-4.png" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">The Best Great Benefits Of Fresh Beef</a>
+                                       </h3>
+                                       <div class="rc__meta">
+                                          <span>30 June. 2022</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="rc__post mb-20 d-flex align-items-center">
+                                    <div class="rc__post-thumb">
+                                       <a href="blog-details.html"><img src="assets/img/blog/blog-sm-5.png" alt="blog-sidebar"></a>
+                                    </div>
+                                    <div class="rc__post-content">
+                                       <h3 class="rc__post-title">
+                                          <a href="blog-details.html">Ways To Choose Fruits & Seafoods Good</a>
+                                       </h3>
+                                       <div class="rc__meta">
+                                          <span>18 March. 2022</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="sidebar__widget mb-55">
+                           <h3 class="sidebar__widget-title mb-15">Tags</h3>
+                           <div class="sidebar__widget-content">
+                              <div class="tagcloud">
+                                 <a href="blog-details.html">healthy</a>
+                                 <a href="blog-details.html">natural</a>
+                                 <a href="blog-details.html">salad</a>
+                                 <a href="blog-details.html">foods</a>
+                                 <a href="blog-details.html">orfarm</a>
+                                 <a href="blog-details.html">meat</a>
+                                 <a href="blog-details.html">grocery </a>
+                                 <a href="blog-details.html">fresh</a>
+                                 <a href="blog-details.html">vegan</a>
+                                 <a href="blog-details.html">vegetables</a>
+                                 <a href="blog-details.html">seafoods</a>
+                                 <a href="blog-details.html">fruits</a>
+                                 <a href="blog-details.html">tomato</a>
+                                 <a href="blog-details.html">cooking</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
-               <!-- /col-lg-4 -->  			
             </div>
-            <!-- /row -->
-            <div class="row">
-               <div class="col-md-12 credits text-center">
-                  <p>Copyright © 2018 - Designed by  <a href="http://www.ingridkuhn.com">Ingrid Kuhn</a></p>
-                  <!-- /container -->
-                  <!-- Go To Top Link -->
-                  <div class="page-scroll hidden-sm hidden-xs">
-                     <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+         </section>
+         <!-- blog-area-end -->
+         
+         <!-- feature-area-start -->
+         <section class="feature-area mainfeature__bg pt-50 pb-40" data-background="assets/img/shape/footer-shape-1.svg">
+            <div class="container">
+               <div class="mainfeature__border pb-15">
+                  <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2">
+                     <div class="col">
+                        <div class="mainfeature__item text-center mb-30">
+                           <div class="mainfeature__icon">
+                              <img src="assets/img/icon/feature-icon-1.svg" alt="">
+                           </div>
+                           <div class="mainfeature__content">
+                              <h4 class="mainfeature__title">Fast Delivery</h4>
+                              <p>Across West & East India</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="mainfeature__item text-center mb-30">
+                           <div class="mainfeature__icon">
+                              <img src="assets/img/icon/feature-icon-2.svg" alt="">
+                           </div>
+                           <div class="mainfeature__content">
+                              <h4 class="mainfeature__title">safe payment</h4>
+                              <p>100% Secure Payment</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="mainfeature__item text-center mb-30">
+                           <div class="mainfeature__icon">
+                              <img src="assets/img/icon/feature-icon-3.svg" alt="">
+                           </div>
+                           <div class="mainfeature__content">
+                              <h4 class="mainfeature__title">Online Discount</h4>
+                              <p>Add Multi-buy Discount </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="mainfeature__item text-center mb-30">
+                           <div class="mainfeature__icon">
+                              <img src="assets/img/icon/feature-icon-4.svg" alt="">
+                           </div>
+                           <div class="mainfeature__content">
+                              <h4 class="mainfeature__title">Help Center</h4>
+                              <p>Dedicated 24/7 Support </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col">
+                        <div class="mainfeature__item text-center mb-30">
+                           <div class="mainfeature__icon">
+                              <img src="assets/img/icon/feature-icon-5.svg" alt="">
+                           </div>
+                           <div class="mainfeature__content">
+                              <h4 class="mainfeature__title">Curated items</h4>
+                              <p>From Handpicked Sellers</p>
+                           </div>
+                        </div>
+                     </div>
                   </div>
                </div>
-               <!-- /col-md-12 -->
             </div>
-            <!-- /row-->
+         </section>
+         <!-- feature-area-end -->
+
+      </main>
+
+      <!-- footer-area-start -->
+      <footer>
+         <div class="tpfooter__area theme-bg-2">
+            <div class="tpfooter__top pb-15">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="tpfooter__widget footer-col-1 mb-50">
+                           <h4 class="tpfooter__widget-title">Let Us Help You</h4>
+                           <p>If you have any question, please <br> contact us at: 
+                              <a href="mailto:support@example.com">support@example.com</a>
+                           </p>
+                           <div class="tpfooter__widget-social mt-45">
+                              <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
+                              <a href="#"><i class="fab fa-facebook-f"></i></a>
+                              <a href="#"><i class="fab fa-twitter"></i></a>
+                              <a href="#"><i class="fab fa-youtube"></i></a>
+                              <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                              <a href="#"><i class="fab fa-skype"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="tpfooter__widget footer-col-2 mb-50">
+                           <h4 class="tpfooter__widget-title">Looking for Orfarm?</h4>
+                           <p>68 St. Vicent Place, Glasgow, Greater <br> Newyork NH2012, UK.</p>
+                           <div class="tpfooter__widget-time-info mt-35">
+                              <span>Monday – Friday: <b>8:10 AM – 6:10 PM</b></span>
+                              <span>Saturday: <b>10:10 AM – 06:10 PM</b></span>
+                              <span>Sunday: <b>Close</b></span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-2 col-lg-4 col-md-4 col-sm-5">
+                        <div class="tpfooter__widget footer-col-3 mb-50">
+                           <h4 class="tpfooter__widget-title">HOT CATEGORIES</h4>
+                           <div class="tpfooter__widget-links">
+                              <ul>
+                                 <li><a href="#">Fruits & Vegetables</a></li>
+                                 <li><a href="#">Dairy Products</a></li>
+                                 <li><a href="#">Package Foods</a></li>
+                                 <li><a href="#">Beverage</a></li>
+                                 <li><a href="#">Health & Wellness</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
+                        <div class="tpfooter__widget footer-col-4 mb-50">
+                           <h4 class="tpfooter__widget-title">Our newsletter</h4>
+                           <div class="tpfooter__widget-newsletter">
+                              <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other information.</p>
+                              <form action="index.html">
+                                 <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
+                                 <input type="email" placeholder="Your email address...">
+                                 <button class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                              </form>
+                              <div class="tpfooter__widget-newsletter-check mt-10">
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                       I accept terms & conditions & privacy policy.
+                                    </label>
+                                  </div>                                  
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="tpfooter___bottom pt-40 pb-40">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-7 col-sm-12">
+                        <div class="tpfooter__copyright">
+                           <span class="tpfooter__copyright-text">Copyright © <a href="#">ORFARM</a> all rights reserved. Powered by <a href="#">ThemePure</a>.</span>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 col-md-5 col-sm-12">
+                        <div class="tpfooter__copyright-thumb text-end">
+                           <img src="assets/img/shape/footer-payment.png " alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
-         <!-- /container -->
       </footer>
-      <!-- /footer -->
-      <!-- Core JavaScript Files -->
-      <script src="/ClientPublic/js/jquery.min.js"></script>
-      <script src="/ClientPublic/js/bootstrap.min.js"></script>
-      <!-- Main Js -->
-      <script src="/ClientPublic/js/main.js"></script>
-      <!-- Other Plugins -->
-      <script src="/ClientPublic/js/plugins.js"></script>
-      <!-- Prefix free CSS -->
-      <script src="/ClientPublic/js/prefixfree.js"></script>	   	  
+      <!-- footer-area-end -->
+      
+
+      <!-- JS here -->
+      <script src="assets/js/jquery.js"></script>
+      <script src="assets/js/waypoints.js"></script>
+      <script src="assets/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/js/swiper-bundle.js"></script>
+      <script src="assets/js/nice-select.js"></script>
+      <script src="assets/js/slick.js"></script>
+      <script src="assets/js/magnific-popup.js"></script>
+      <script src="assets/js/counterup.js"></script>
+      <script src="assets/js/wow.js"></script>
+      <script src="assets/js/isotope-pkgd.js"></script>
+      <script src="assets/js/imagesloaded-pkgd.js"></script>
+      <script src="assets/js/countdown.js"></script>
+      <script src="assets/js/ajax-form.js"></script>
+      <script src="assets/js/jquery-ui.js"></script>
+      <script src="assets/js/meanmenu.js"></script>
+      <script src="assets/js/main.js"></script>
    </body>
 </html>
