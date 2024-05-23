@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Orfarm - Multipurpose eCommerce HTML5 Template </title>
+    <title>Ice Vegas </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" height="50px" width="50px" href="image.png">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -48,27 +48,19 @@
                         <div class="header__top-right d-flex align-items-center">
 
                             <div class="header__lang">
-                                <span class="header__lang-select" style="color: black">English <i
+                                <span class="header__lang-select" style="color: black">France <i
                                         class="far fa-angle-down"></i></span>
                                 <ul class="header__lang-submenu">
-                                    <li>
-                                        <a href="#">Australia</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Spain</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Brazil</a>
-                                    </li>
+                                    
+                                    
+                                    
                                     <li>
                                         <a href="#">English</a>
                                     </li>
                                     <li>
                                         <a href="#">France</a>
                                     </li>
-                                    <li>
-                                        <a href="#">United States</a>
-                                    </li>
+                                   
                                 </ul>
                             </div>
 
@@ -146,13 +138,13 @@
 
 
                                         <li class="has-dropdown">
-                                            <a href="blog.html">Categorie</a>
+                                            <a href="blog.html">Collection</a>
                                           
                                                 
                                            
                                             <ul class="sub-menu">
                                                 @foreach ($categoriesALL as $categorie )
-                                                <li><a href="blog.html">{{$categorie->Nom}}</a></li>
+                                                <li><a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a></li>
                                                 @endforeach
                                             </ul>
                                           
@@ -171,8 +163,8 @@
                                                 <li><a href="404.html">Page 404</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="about.html">Ice vegas</a></li>
+                                        <li><a href="contact.html">Contact </a></li>
 
                                     </ul>
                                 </nav>
@@ -425,7 +417,7 @@
             <div class="swiper-container slider-active">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide ">
-                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="assets/img/slider/shape-bg.jpg">
+                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="mongue.png">
                             <div class="container">
                                 <div class="row align-items-center">
                                     <div class="col-xxl-5 col-lg-6 col-md-6 col-12 col-sm-6">
@@ -435,100 +427,23 @@
                                             <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
                                                 and taste even better</p>
                                             <div class="tpslider__btn">
-                                                <a class="tp-btn" href="shop-2.html">Shop Now</a>
+                                                <a class="tp-btn" href="shop-2.html">Collection</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xxl-7 col-lg-6 col-md-6 col-12 col-sm-6">
                                         <div class="tpslider__thumb p-relative pt-15">
-                                            <img class="tpslider__thumb-img" src="assets/img/slider/slider-bg-1.png"
+                                            <img class="tpslider__thumb-img"  src="3.png"
                                                 alt="slider-bg">
-                                            <div class="tpslider__shape d-none d-md-block">
-                                                <img class="tpslider__shape-one"
-                                                    src="assets/img/slider/slider-shape-1.png" alt="shape">
-                                                <img class="tpslider__shape-two"
-                                                    src="assets/img/slider/slider-shape-2.png" alt="shape">
-                                                <img class="tpslider__shape-three"
-                                                    src="assets/img/slider/slider-shape-3.png" alt="shape">
-                                                <img class="tpslider__shape-four"
-                                                    src="assets/img/slider/slider-shape-4.png" alt="shape">
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="assets/img/slider/shape-bg.jpg">
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-xxl-5 col-lg-6 col-md-6 col-sm-6">
-                                        <div class="tpslider__content pt-20">
-                                            <span class="tpslider__sub-title mb-35">Top Seller In The Week</span>
-                                            <h2 class="tpslider__title mb-30">Fresh Bread <br> Oatmeal Crumble. </h2>
-                                            <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
-                                                and taste even better</p>
-                                            <div class="tpslider__btn">
-                                                <a class="tp-btn" href="shop-2.html">Shop Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xxl-7 col-lg-6  col-md-6 col-sm-6">
-                                        <div class="tpslider__thumb p-relative">
-                                            <img class="tpslider__thumb-img" src="assets/img/slider/slider-bg-2.png"
-                                                alt="slider-bg">
-                                            <div class="tpslider__shape d-none d-md-block">
-                                                <img class="tpslider__shape-one"
-                                                    src="assets/img/slider/slider-shape-1.png" alt="shape">
-                                                <img class="tpslider__shape-two"
-                                                    src="assets/img/slider/slider-shape-2.png" alt="shape">
-                                                <img class="tpslider__shape-three"
-                                                    src="assets/img/slider/slider-shape-3.png" alt="shape">
-                                                <img class="tpslider__shape-four"
-                                                    src="assets/img/slider/slider-shape-4.png" alt="shape">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="tpslider pt-90 pb-0 grey-bg" data-background="assets/img/slider/shape-bg.jpg">
-                            <div class="container">
-                                <div class="row align-items-center">
-                                    <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <div class="tpslider__content pt-20">
-                                            <span class="tpslider__sub-title mb-35">Top Seller In The Week</span>
-                                            <h2 class="tpslider__title mb-30">The Best <br> Health Fresh.</h2>
-                                            <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
-                                                and taste even better</p>
-                                            <div class="tpslider__btn">
-                                                <a class="tp-btn" href="shop-2.html">Shop Now</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                                        <div class="tpslider__thumb p-relative">
-                                            <img class="tpslider__thumb-img" src="assets/img/slider/slider-bg-3.png"
-                                                alt="slider-bg">
-                                            <div class="tpslider__shape d-none d-md-block">
-                                                <img class="tpslider__shape-one"
-                                                    src="assets/img/slider/slider-shape-1.png" alt="shape">
-                                                <img class="tpslider__shape-two"
-                                                    src="assets/img/slider/slider-shape-2.png" alt="shape">
-                                                <img class="tpslider__shape-three"
-                                                    src="assets/img/slider/slider-shape-3.png" alt="shape">
-                                                <img class="tpslider__shape-four"
-                                                    src="assets/img/slider/slider-shape-4.png" alt="shape">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              
+                
                 </div>
                 <div class="tpslider__arrow d-none  d-xxl-block">
                     <button class="tpsliderarrow tpslider__arrow-prv"><i class="icon-chevron-left"></i></button>

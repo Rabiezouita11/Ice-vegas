@@ -23,11 +23,18 @@ class ClientController extends Controller
     }
        public function show($category)
        {
+
+
+
            $category = Categories::where('Nom', $category)->firstOrFail();
            $products = $category->products;
            $categories = Categories::with('products')->get();
+           $categoriesALL = Categories::all();
 
-           return view('Client.Categories.index', compact('category', 'products','categories'));
+           foreach ($categoriesALL as $category) {
+            $category->products_count = Produits::where('categorie_id', $category->id)->count();
+        }
+           return view('Client.Categories.index', compact('categoriesALL','category', 'products','categories'));
        }
 
        public function showproducts($id)
