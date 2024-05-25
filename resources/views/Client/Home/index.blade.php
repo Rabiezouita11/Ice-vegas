@@ -547,38 +547,20 @@
         <section class="banner-area pb-60 grey-bg">
             <div class="container">
                 <div class="row">
+                  
+                    @foreach ($categoriesALL as $categorie )
                     <div class="col-lg-4 col-md-6">
                         <div class="tpbanner__item mb-30">
-                            <a href="shop-3.html">
-                                <div class="tpbanner__content" data-background="assets/img/banner/banner-1.jpg">
-                                    <span class="tpbanner__sub-title mb-10">Top offers</span>
-                                    <h4 class="tpbanner__title mb-30">Eat Green <br> Best For Family</h4>
-                                    <p>Free Shipping 05km</p>
+                            <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">
+                                <div class="tpbanner__content" data-background="{{ asset($categorie->Image) }}">
+                                    <h4 class="tpbanner__title mb-30">{{ $categorie->Nom }}</h4>
+                                   
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpbanner__item mb-30">
-                            <a href="shop-3.html">
-                                <div class="tpbanner__content" data-background="assets/img/banner/banner-2.jpg">
-                                    <span class="tpbanner__sub-title tpbanner__white mb-10">Weekend Deals</span>
-                                    <h4 class="tpbanner__title mb-30">Fresh Food <br> Restore Health</h4>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpbanner__item mb-30">
-                            <a href="shop-3.html">
-                                <div class="tpbanner__content" data-background="assets/img/banner/banner-3.jpg">
-                                    <span class="tpbanner__sub-title mb-10">Top seller</span>
-                                    <h4 class="tpbanner__title mb-30">Healthy <br> Fresh Free Bread</h4>
-                                    <p>Limited Time: Online Only!</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                     @endforeach
+                  
                 </div>
             </div>
         </section>
