@@ -427,11 +427,11 @@
                   <div class="col-lg-12">
                      <div class="tp-breadcrumb__content">
                         <div class="tp-breadcrumb__list">
-                           <span class="tp-breadcrumb__active"><a href="index.html">Home</a></span>
+                           <span class="tp-breadcrumb__active"><a  style="color:black" href="index.html">Home</a></span>
                            <span class="dvdr">/</span>
-                           <span class="tp-breadcrumb__active"><a href="index.html">{{ $product->categorie->Nom }}</a></span>
+                           <span class="tp-breadcrumb__active"><a  style="color:black" href="index.html">{{ $product->categorie->Nom }}</a></span>
                            <span class="dvdr">/</span>
-                           <span>{{ $product->Nom }}</span>
+                           <span  style="color:black" >{{ $product->Nom }}</span>
                         </div>
                      </div>
                   </div>
@@ -450,7 +450,6 @@
                            <div class="tpdetails__title-box">
                               <h3 class="tpdetails__title">{{ $product->Nom }}</h3>
                               <ul class="tpdetails__brand">
-                                 <li> Brands: <a href="#">ORFARM</a> </li>
                                  <li>
                                     <i class="icon-star_outline1"></i>
                                     <i class="icon-star_outline1"></i>
@@ -460,7 +459,6 @@
                                     <b>02 Reviews</b>
                                  </li>
                                  <li>
-                                    SKU: <span>ORFARMVE005</span>
                                  </li>
                               </ul>
                            </div>
@@ -477,89 +475,34 @@
                                  <div class="col-lg-6">
                                     <div class="product__details product__sticky">
                                        <div class="product__details-price-box">
-                                          <h5 class="product__details-price">$56.00</h5>
                                           <ul class="product__details-info-list">
                                              <li>Delicious non - dairy cheese sauce</li>
                                              <li>Vegan & Allergy friendly</li>
                                              <li>Smooth, velvety dairy free cheese sauce</li>
                                           </ul>
                                        </div>
-                                       <div class="product__color-switch mb-25">
-                                          <h4 class="product__color-title">Color: Select a color</h4>
-                                          <div class="tpshop__widget-color-box d-flex align-items-center">
-                                             <div class="form-check">
-                                                <input class="form-check-input black-input" type="checkbox" value="" id="flexCheckDefault12">
-                                                <label class="form-check-label" for="flexCheckDefault12">
-                                                </label>
-                                             </div>
-                                             <div class="form-check">
-                                                <input class="form-check-input blue-input" type="checkbox" value="" id="flexCheckChecked13">
-                                                <label class="form-check-label" for="flexCheckChecked13">
-                                                </label>
-                                             </div>
-                                             <div class="form-check">
-                                                <input class="form-check-input brown-input" type="checkbox" value="" id="flexCheckChecked18">
-                                                <label class="form-check-label" for="flexCheckChecked18">
-                                                </label>
-                                             </div>
-                                             <div class="form-check">
-                                                <input class="form-check-input grey-input" type="checkbox" value="" id="flexCheckChecked14">
-                                                <label class="form-check-label" for="flexCheckChecked14">
-                                                </label>
-                                             </div>
-                                             <div class="form-check">
-                                                <input class="form-check-input green-input" type="checkbox" value="" id="flexCheckChecked15">
-                                                <label class="form-check-label" for="flexCheckChecked15">
-                                                </label>
-                                             </div>
-                                             <div class="form-check">
-                                                <input class="form-check-input orange-input" type="checkbox" value="" id="flexCheckChecked16">
-                                                <label class="form-check-label" for="flexCheckChecked16">
-                                                </label>
-                                             </div>
-                                             <div class="form-check">
-                                                <input class="form-check-input red-input" type="checkbox" value="" id="flexCheckChecked17">
-                                                <label class="form-check-label" for="flexCheckChecked17">
-                                                </label>
-                                             </div>
-                                          </div>
+                                  
+                                       
+                                       <div class="product__details-stock mb-25">
+                                          <ul>
+                                             <li>Categories: <span>Vegetables, Meat & Eggs, Fruit Drink </span></li>
+                                             <li>Tags: <span>Chicken, Natural, Organic</span></li>
+                                          </ul>
                                        </div>
                                        <div class="product__details-cart">
-                                          <div class="product__details-quantity d-flex align-items-center mb-15"> 
-                                             <b>Qty:</b>
-                                             <div class="product__details-count mr-10">
-                                                <span class="cart-minus"><i class="far fa-minus"></i></span>
-                                                <input class="tp-cart-input" type="text" value="1">
-                                                <span class="cart-plus"><i class="far fa-plus"></i></span>
-                                             </div>
-                                             <div class="product__details-btn">
-                                                <a href="cart.html">add to cart</a>
-                                             </div>
-                                          </div>
+                                       
                                           <ul class="product__details-check">
                                              <li>
-                                                <a href="#"><i class="icon-heart icons"></i> add to wishlist</a>
                                              </li>
                                              <li>
-                                                <a href="#"><i class="icon-layers"></i> Add to Compare</a>
                                              </li>
                                              <li> 
                                                 <a href="#"><i class="icon-share-2"></i> Share</a>
                                              </li>
                                           </ul>
                                        </div>
-                                       <div class="product__details-stock mb-25">
-                                          <ul>
-                                             <li>Availability: <i>54 Instock</i></li>
-                                             <li>Categories: <span>Vegetables, Meat & Eggs, Fruit Drink </span></li>
-                                             <li>Tags: <span>Chicken, Natural, Organic</span></li>
-                                          </ul>
-                                       </div>
-                                       <div class="product__details-payment text-center">
-                                          <img src="assets/img/shape/payment-2.png" alt="">
-                                          <span>Guarantee safe & Secure checkout</span>
-                                       </div>
                                     </div>
+                                   
                                  </div>
                               </div>
                            </div>
