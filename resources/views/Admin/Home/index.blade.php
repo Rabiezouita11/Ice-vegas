@@ -44,16 +44,14 @@
         <div class="col-lg-3 col-6">
           <!-- small box -->
 
-          <div class="small-box bg-info">
+          <div class="small-box" style="background-color:white;; border: 2px solid #d1c192;">
             <div class="inner">
               <h3> {{ $ProduitsCount}}</h3>
 
               <p>Produits</p>
             </div>
 
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
+           
 
             <a
               href="#"
@@ -61,7 +59,7 @@
             >
              
 
-              <i class="fas fa-arrow-circle-right"></i>
+            
             </a>
           </div>
         </div>
@@ -70,8 +68,8 @@
 
         <div class="col-lg-3 col-6">
           <!-- small box -->
-
-          <div class="small-box bg-success">
+ 
+          <div class="small-box" style="background-color:white;; border: 2px solid #d1c192;">
             <div class="inner">
               <h3>
                {{ $categoryCount}}
@@ -82,9 +80,7 @@
               <p> Categories</p>
             </div>
 
-            <div class="icon">
-              <i class="ion ion-stats-bars"></i>
-            </div>
+         
 
             <a
               href="#"
@@ -92,7 +88,7 @@
             >
               
 
-              <i class="fas fa-arrow-circle-right"></i>
+            
             </a>
           </div>
         </div>
@@ -102,16 +98,14 @@
         <div class="col-lg-3 col-6">
           <!-- small box -->
 
-          <div class="small-box bg-warning">
+          <div class="small-box" style="background-color:white;; border: 2px solid #d1c192;">
             <div class="inner">
               <h3>{{$clientCount}}</h3>
 
               <p> utilisateurs</p>
             </div>
 
-            <div class="icon">
-              <i class="ion ion-person-add"></i>
-            </div>
+          
 
             <a
               href="#"
@@ -119,7 +113,7 @@
             >
               
 
-              <i class="fas fa-arrow-circle-right"></i>
+            
             </a>
           </div>
         </div>
