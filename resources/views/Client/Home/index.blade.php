@@ -422,12 +422,11 @@
                                 <div class="row align-items-center">
                                     <div class="col-xxl-5 col-lg-6 col-md-6 col-12 col-sm-6">
                                         <div class="tpslider__content pt-20">
-                                            <span class="tpslider__sub-title mb-35">Top Seller In The Week</span>
-                                            <h2 class="tpslider__title mb-30">Choose Your Healthy Lifestyle.</h2>
-                                            <p>Presentation matters. Our fresh Vietnamese vegetable rolls <br> look good
-                                                and taste even better</p>
+                                            <span class="tpslider__sub-title mb-35"    ></span>
+                                            <h2 class="tpslider__title mb-30"  >Savourez l'excellence glacée avec Ice Vegas.</h2>
+                                            <p>Un duel de saveurs délicieusement intense : pistache vs chocolat !<br> Quel sera votre coup de cœur?</p>
                                             <div class="tpslider__btn">
-                                                <a class="tp-btn" href="shop-2.html">Collection</a>
+                                                <a class="tp-btn" href="shop-2.html">Nos Collection</a>
                                             </div>
                                         </div>
                                     </div>
