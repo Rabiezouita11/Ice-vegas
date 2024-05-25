@@ -159,7 +159,7 @@
                                         <li><a href="about.html">Promo</a></li>
                                         <li><a href="about.html">Recette</a></li>
 
-                                        <li><a href="contact.html">Contact </a></li>
+                                        <li><a href="{{route('Contact')}}">Contact </a></li>
 
                                     </ul>
                                 </nav>
@@ -410,6 +410,12 @@
     .pt-20 {
     margin-left: 114px;
 }
+.pt-90{
+    padding-top :0px;
+}
+.pt-45{
+    padding-top: 145px;
+}
 </style>
         <!-- slider-area-start -->
         <section class="slider-area tpslider-delay">
@@ -485,9 +491,9 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="tpsection mb-35">
-                            <h4 class="tpsection__sub-title">~ Special Products ~</h4>
-                            <h4 class="tpsection__title">Weekly Food Offers</h4>
-                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                            <h4 class="tpsection__sub-title" >~Qui sommes nous~</h4>
+                            <h4 class="tpsection__title tpfeature__title mb-25" style="color: black;">Ice Vegas</h4>
+                            <p  style="color: black;font-size: 20px" >Un plaisir insatiable à chaque dégustation</p>
                         </div>
                     </div>
                 </div>
@@ -502,58 +508,32 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <div class="tpfeature__thumb p-relative pb-40">
-                            <img src="assets/img/product/feature-thumb-1.png" alt="">
-                            <div class="tpfeature__shape d-none d-md-block">
-                                <img class="tpfeature__shape-one" src="assets/img/product/feature-shape-1.png"
-                                    alt="">
-                                <img class="tpfeature__shape-two" src="assets/img/product/feature-shape-2.png"
-                                    alt="">
-                            </div>
+                            <img src="image3.jpg" alt="">
+                           
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="tpproduct-feature p-relative pt-45 pb-40">
                             <div class="tpsection tpfeature__content mb-35">
-                                <h4 class="tpsection__sub-title mb-0">~ The Best For Your ~</h4>
-                                <h4 class="tpsection__title tpfeature__title mb-25">Organic Drinks <br> <span>Easy
-                                        Healthy</span> - Happy Life</h4>
-                                <p>The liber tempor cum soluta nobis eleifend option congue <br> doming quod mazim
-                                    placerat facer possim assum.</p>
+                                <h4 class="tpsection__sub-title mb-0">~Qui sommes nous~</h4>
+                                <h4  style="color: black;" class="tpsection__title tpfeature__title mb-25">Ice Vegas <br> 
+                                        Un plaisir insatiable à chaque dégustation</h4>
+                                <p>Bienvenue chez Ice Vegas, votre destination ultime pour une expérience glacée incomparable. Nous sommes une marque premium de glaces industrielles, dédiés à offrir des moments de plaisir et de fraîcheur inégalés à chaque bouchée.</p>
                             </div>
                             <div class="row">
+                               
                                 <div class="col-lg-6 col-md-6">
                                     <div class="tpfeature__box">
-                                        <div class="tpfeature__product-item mb-25">
-                                            <h4 class="tpfeature__product-title">Fresh Fruits:</h4>
-                                            <span class="tpfeature__product-info">Apples, Berries & Cherries</span>
-                                        </div>
-                                        <div class="tpfeature__product-item mb-45">
-                                            <h4 class="tpfeature__product-title">Expiry Date:</h4>
-                                            <span class="tpfeature__product-">See on The Bottle Cap</span>
-                                        </div>
+                                       
+                                       
                                         <div class="tpfeature__btn">
-                                            <a class="tp-btn-4" href="cart.html">Add To Cart</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="tpfeature__box">
-                                        <div class="tpfeature__product-item mb-25">
-                                            <h4 class="tpfeature__product-title">Ingredient:</h4>
-                                            <span class="tpfeature__product-info">Energy, Protein, Sugars</span>
-                                        </div>
-                                        <div class="tpfeature__product-item mb-45">
-                                            <h4 class="tpfeature__product-title">Bootle Size:</h4>
-                                            <span class="tpfeature__product-">500ml – 1000ml</span>
-                                        </div>
-                                        <div class="tpfeature__btn">
-                                            <a class="tp-btn-3" href="shop-2.html">View More</a>
+                                            <a class="tp-btn-3" href="{{route('Apropos')}}">Ice vegas</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tpfeature__shape d-none d-md-block">
-                                <img class="tpfeature__shape-three" src="assets/img/product/feature-shape-3.png"
+                                <img class="tpfeature__shape-three" src=".jpg"
                                     alt="">
                             </div>
                         </div>

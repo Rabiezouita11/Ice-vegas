@@ -472,7 +472,54 @@
                                                     
                                     </div>
                                  </div>
-                                 <div class="col-lg-6">
+                                 <div class="col-lg-6 col-md-12">
+                                    <div class="tpproduct-feature p-relative pt-45 pb-40">
+                                        <div class="tpsection tpfeature__content mb-35">
+                                            <h4 class="tpsection__sub-title mb-0">~ The Best For Your ~</h4>
+                                            <h4 class="tpsection__title tpfeature__title mb-25">Organic Drinks <br> <span>Easy
+                                                    Healthy</span> - Happy Life</h4>
+                                            <p>The liber tempor cum soluta nobis eleifend option congue <br> doming quod mazim
+                                                placerat facer possim assum.</p>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tpfeature__box">
+                                                    <div class="tpfeature__product-item mb-25">
+                                                        <h4 class="tpfeature__product-title">Fresh Fruits:</h4>
+                                                        <span class="tpfeature__product-info">Apples, Berries & Cherries</span>
+                                                    </div>
+                                                    <div class="tpfeature__product-item mb-45">
+                                                        <h4 class="tpfeature__product-title">Expiry Date:</h4>
+                                                        <span class="tpfeature__product-">See on The Bottle Cap</span>
+                                                    </div>
+                                                   
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6">
+                                                <div class="tpfeature__box">
+                                                    <div class="tpfeature__product-item mb-25">
+                                                        <h4 class="tpfeature__product-title">Ingredient:</h4>
+                                                        <span class="tpfeature__product-info">Energy, Protein, Sugars</span>
+                                                    </div>
+                                                    <div class="tpfeature__product-item mb-45">
+                                                        <h4 class="tpfeature__product-title">Bootle Size:</h4>
+                                                        <span class="tpfeature__product-">500ml – 1000ml</span>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tpfeature__shape d-none d-md-block">
+                                            <img class="tpfeature__shape-three" src=".jpg"
+                                                alt="">
+                                        </div>
+                                        
+                                          <a href="#"><i class="icon-share-2"></i> Share</a>
+                                       
+                                    </div>
+                                </div>
+                               
+                                 {{-- <div class="col-lg-6">
                                     <div class="product__details product__sticky">
                                        <div class="product__details-price-box">
                                           <ul class="product__details-info-list">
@@ -503,7 +550,7 @@
                                        </div>
                                     </div>
                                    
-                                 </div>
+                                 </div> --}}
                               </div>
                            </div>
                         </div>

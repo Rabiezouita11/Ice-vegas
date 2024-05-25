@@ -31,6 +31,13 @@ Route::get('/home', [App\Http\Controllers\ClientController::class, 'index'])->na
 
 Route::get('/categories_{category}', [ClientController::class, 'show'])->name('categories.show');
 
+/*  page affiche a propos */
+
+Route::get('/Apropos', [App\Http\Controllers\ClientController::class, 'Apropos'])->name('Apropos');
+
+/*  page affiche Contact */
+
+Route::get('/Contact', [App\Http\Controllers\ClientController::class, 'Contact'])->name('Contact');
 
 
 Route::get('/products_{id}', [ClientController::class, 'showproducts'])->name('products.show');
