@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Categories;
 use App\Models\Produits;
+use App\Models\Jouer;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -11,6 +12,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;  // Import the Str class
+use Illuminate\Support\Facades\File;
 
 class AdminController extends Controller
 {
@@ -24,6 +26,7 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
     // function affiche home admin
+
 
     public function index()
     {
@@ -224,5 +227,107 @@ class AdminController extends Controller
             // Return JSON response with the error message and status code 500 (Internal Server Error)
             return response()->json(['error' => $errorMessage], 500);
         }
+    }
+
+
+    public function indexjouers()
+    {
+        $Produits = Produits::paginate(4);  // Fetch all categories
+
+        $categoryCount = Categories::count();
+        $ProduitsCount = Produits::count();
+        $jouerscount = Jouer::count();
+        $jouers = Jouer::all();
+        return view('Admin.jouers.index', compact('jouers','categoryCount' ,'ProduitsCount','jouerscount'));
+    }
+
+
+    public function createjouers()
+    {
+        $categoryCount = Categories::count();
+        $ProduitsCount = Produits::count();
+        $jouerscount = Jouer::count();
+        return view('Admin.jouers.create',compact('categoryCount','ProduitsCount','jouerscount'));
+    }
+
+    public function storejouers(Request $request)
+    {
+        // Validate the request
+        $validatedData = $request->validate([
+            'Image' => 'required|image|mimes:jpeg,png,jpg,gif', // Ensure it's an image file
+            'Reponse1' => 'required',
+            'Reponse2' => 'required',
+            'name' => 'required',
+            'Reponse3' => 'required',
+            'ReponseCorrect' => 'required',
+            'points_gained' => 'required|integer'
+        ]);
+    
+        // Store the uploaded file in the 'jouers' folder
+       // $imagePath = $request->file('Image')->store('jouers', 'public');
+       
+        // Create a new Jouer instance
+        $jouer = new Jouer();
+        if ($request->hasFile('Image')) {
+            $image = $request->file('Image');
+            $imageName = Str::random(20) . '.' . $image->getClientOriginalExtension();  // Generate a unique image name
+            $image->move(public_path('jouers'), $imageName);  // Move the uploaded image to the "categories" folder
+            $jouer->Image = 'jouers/' . $imageName;  // Store the image path in the database
+        }
+        $jouer->Reponse1 = $validatedData['Reponse1'];
+        $jouer->name = $validatedData['name'];
+        $jouer->Reponse2 = $validatedData['Reponse2'];
+        $jouer->Reponse3 = $validatedData['Reponse3'];
+        $jouer->ReponseCorrect = $validatedData['ReponseCorrect'];
+        $jouer->points_gained = $validatedData['points_gained'];
+    
+        // Save the jouer to the database
+        $jouer->save();
+    
+        return redirect()->route('jouers.index')->with('success', 'Jouer created successfully.');
+    }
+    public function editjouers(Jouer $jouer)
+    {
+        $categoryCount = Categories::count();
+        $ProduitsCount = Produits::count();
+        $jouerscount = Jouer::count();
+        return view('Admin.jouers.edit', compact('jouer','categoryCount','ProduitsCount','jouerscount'));
+    }
+
+    public function updatejouers(Request $request, Jouer $jouer)
+    {
+        // Validate the request
+        $validatedData = $request->validate([
+            'Reponse1' => 'required',
+            'Reponse2' => 'required',
+            'Reponse3' => 'required',
+            'ReponseCorrect' => 'required',
+            'points_gained' => 'required|integer'
+        ]);
+    
+        // Check if an image has been uploaded
+        if ($request->hasFile('Image')) {
+            $image = $request->file('Image');
+            $imageName = Str::random(20) . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('jouers'), $imageName);
+            // Delete the old image if it exists
+            if (File::exists(public_path($jouer->Image))) {
+                File::delete(public_path($jouer->Image));
+            }
+            // Update the image path in the database
+            $jouer->Image = 'jouers/' . $imageName;
+        }
+    
+        // Update other fields
+        $jouer->update($validatedData);
+    
+        return redirect()->route('jouers.index')->with('success', 'Jouer updated successfully.');
+    }
+    
+    public function destroyjouers(Jouer $jouer)
+    {
+        $jouer->delete();
+
+        return redirect()->route('jouers.index')->with('success', 'Jouer deleted successfully.');
     }
 }

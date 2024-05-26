@@ -85,3 +85,12 @@ Route::post('/storeProduit', [App\Http\Controllers\AdminController::class, 'stor
 Route::delete('/Produits/{produit}', [App\Http\Controllers\AdminController::class, 'destroyProduits'])->name('Produits.destroy')->middleware('role:admin');
 
 
+
+
+
+Route::get('/jouersss', [App\Http\Controllers\AdminController::class, 'indexjouers'])->name('jouers.index');
+Route::get('/jouers_create', [App\Http\Controllers\AdminController::class, 'createjouers'])->name('jouers.create');
+Route::post('/jouersss', [App\Http\Controllers\AdminController::class, 'storejouers'])->name('jouers.store');
+Route::get('/jouers_{jouer}_edit', [App\Http\Controllers\AdminController::class, 'editjouers'])->name('jouers.edit');
+Route::put('/jouers_{jouer}', [App\Http\Controllers\AdminController::class, 'updatejouers'])->name('jouers.update');
+Route::delete('/jouers_{jouer}', [App\Http\Controllers\AdminController::class, 'destroyjouers'])->name('jouers.destroy');

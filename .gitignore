@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/images
+/public/jouers
 /public/categories
 /public/storage
 /storage/*.key

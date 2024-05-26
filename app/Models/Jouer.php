@@ -14,6 +14,8 @@ class Jouer extends Model
         'Reponse2',
         'Reponse3',
         'ReponseCorrect',
+        'points_gained',
+        'name'
     ];
     public function reponseQuizzes()
     {

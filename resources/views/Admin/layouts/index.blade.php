@@ -152,7 +152,15 @@ $currentRoute = Route::currentRouteName();
         </p>
     </a>
 </li>
-
+<li class="nav-item">
+    <a href="{{ route('jouers.index') }}" class="nav-link  {{ $currentRoute === 'jouers.index' ? 'active' : '' }}">
+        
+        <p style="color:black">
+          Jouer
+            <span class="badge badge-info right">{{ $jouerscount }}</span>
+        </p>
+    </a>
+</li>
       
        
         
