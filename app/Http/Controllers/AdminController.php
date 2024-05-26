@@ -31,11 +31,11 @@ class AdminController extends Controller
     public function index()
     {
         $clientCount = User::where('role', 'client')->count();
-
+        $jouerscount = Jouer::count();
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         View::share('categoryCount', $categoryCount);
-        return view('Admin.Home.index', compact('ProduitsCount', 'clientCount'));
+        return view('Admin.Home.index', compact('ProduitsCount', 'clientCount','jouerscount'));
     }
 
     public function storeProduit(Request $request)
