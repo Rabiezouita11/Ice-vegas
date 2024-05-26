@@ -114,23 +114,23 @@ class AdminController extends Controller
         $categories = Categories::paginate(4);  // Fetch all categories
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
-
+        $jouerscount = Jouer::count();
         View::share('categoryCount', $categoryCount);
 
-        return view('Admin.Categories.index', compact('categories', 'categoryCount', 'ProduitsCount'));  // Pass categories and category count to the view
+        return view('Admin.Categories.index', compact('categories', 'categoryCount', 'ProduitsCount','jouerscount'));  // Pass categories and category count to the view
     }
 
     public function showPageProduit()
     {
         $Produits = Produits::paginate(4);  // Fetch all categories
-
+        $jouerscount = Jouer::count();
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         $categorie = Categories::all();  // Retrieve all categories from the database
 
         View::share('categoryCount', $categoryCount);
 
-        return view('Admin.Produits.index', compact('categoryCount', 'ProduitsCount', 'Produits', 'categorie'));  // Pass categories and category count to the view
+        return view('Admin.Produits.index', compact('categoryCount', 'ProduitsCount', 'Produits', 'categorie','jouerscount'));  // Pass categories and category count to the view
     }
 
     public function storeCategorie(Request $request)
