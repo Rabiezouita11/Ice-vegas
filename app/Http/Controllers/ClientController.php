@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Produits;
 use App\Models\Categories;
-
+use App\Models\Jouer;
 class ClientController extends Controller
 {
 
@@ -28,13 +28,14 @@ class ClientController extends Controller
     public function index()
     {
         $categories = Categories::with('products')->get();
+        $players = Jouer::all(); // Retrieve all players from the database
 
         // Ensure that each product is loaded with its category
         $products = Produits::with('categorie')->get();
 
 
         $categoriesALL = Categories::all();
-        return view('Client.Home.index', compact('products', 'categories', 'categoriesALL'));
+        return view('Client.Home.index', compact('products', 'categories', 'categoriesALL','players'));
     }
     public function show($category)
     {

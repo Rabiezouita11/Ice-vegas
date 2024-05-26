@@ -483,6 +483,40 @@
                 </div>
             </div>
         </section>
+
+
+
+
+        <section class="category-area grey-bg pb-40">
+            <div class="container">
+                <div class="swiper-container category-active">
+                    <div class="swiper-wrapper">
+                        @foreach ($players as $player)
+                        <div class="swiper-slide">
+                            <div class="category__item mb-30">
+                                <div class="category__thumb fix mb-15">
+                                    <!-- Assuming $player->Image is the field for player image -->
+                                    <a href="#"><img src="{{ $player->Image }}" alt="{{ $player->name }}"></a>
+                                </div>
+                                <div class="category__content">
+                                    <!-- Assuming $player->name is the field for player's name -->
+                                    <h5 class="category__title"><a href="#">{{ $player->name }}</a></h5>
+                                    <!-- You can display other player information here -->
+                                    <span class="category__count">
+                                        <!-- Display player category or any other relevant info -->
+                                        <p>Points Gained: {{ $player->points_gained }}</p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
         <!-- category-area-end -->
 
         <!-- product-area-start -->
