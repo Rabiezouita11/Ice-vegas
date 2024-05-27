@@ -543,11 +543,11 @@
             <div class="container">
                <div class="row gx-0">
                   <div class="col-lg-6 col-md-6 order-2 order-md-1">
-                  <div class="map mt-sm-0 mt-4">
-		<iframe src="https://maps.google.com/maps?q=benarous&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="600" height="450">
-		    allowfullscreen></iframe>
-	</div>
-                     
+          
+                     <div class="tpmap__wrapper">
+                     <iframe src="https://maps.google.com/maps?q=benarous&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+		    allowfullscreen></iframe>                     
+                        </div>
                   </div>
                   <div class="col-lg-6 col-md-6 order-1 order-md-2">
                      <div class="tpform__wrapper pt-120 pb-80 ml-60">
