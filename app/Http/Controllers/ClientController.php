@@ -13,8 +13,9 @@ class ClientController extends Controller
 
     //function affiche page Contact
     public function Contact()
-    {
-        return view('Client.Contact.index');
+    {        $categoriesALL = Categories::all();
+
+        return view('Client.Contact.index',compact('categoriesALL'));
     }
 
     //function affiche page Apropos
