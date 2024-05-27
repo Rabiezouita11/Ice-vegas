@@ -21,7 +21,8 @@ class ClientController extends Controller
     //function affiche page Apropos
     public function Apropos()
     {
-        return view('Client.Apropôs.index');
+        $categoriesALL = Categories::all();
+        return view('Client.Apropôs.index',compact('categoriesALL'));
     }
 
 
@@ -58,8 +59,9 @@ class ClientController extends Controller
     {
         // Find the product by ID and load its category
         $product = Produits::with('categorie')->findOrFail($id);
+        $categoriesALL = Categories::all();
 
         // Return the product details view with the product data
-        return view('Client.Produit.show', compact('product'));
+        return view('Client.Produit.show', compact('product','categoriesALL'));
     }
 }
