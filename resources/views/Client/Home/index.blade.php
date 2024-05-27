@@ -487,34 +487,7 @@
 
 
 
-        <section class="category-area grey-bg pb-40">
-            <div class="container">
-                <div class="swiper-container category-active">
-                    <div class="swiper-wrapper">
-                        @foreach ($players as $player)
-                        <div class="swiper-slide">
-                            <div class="category__item mb-30">
-                                <div class="category__thumb fix mb-15">
-                                    <!-- Assuming $player->Image is the field for player image -->
-                                    <a href="#"><img src="{{ $player->Image }}" alt="{{ $player->name }}"></a>
-                                </div>
-                                <div class="category__content">
-                                    <!-- Assuming $player->name is the field for player's name -->
-                                    <h5 class="category__title"><a href="#">{{ $player->name }}</a></h5>
-                                    <!-- You can display other player information here -->
-                                    <span class="category__count">
-                                        <!-- Display player category or any other relevant info -->
-                                        <p>Points Gained: {{ $player->points_gained }}</p>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+     
 
 
         <!-- category-area-end -->
@@ -2323,207 +2296,34 @@
         <!-- product-coundown-area-end -->
 
         <!-- blog-area-start -->
-        <section class="blog-area pt-100 pb-100 grey-bg">
+        <section class="category-area grey-bg pb-40">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <div class="tpsection mb-35">
-                            <h4 class="tpsection__sub-title">~ Read Our Blog ~</h4>
-                            <h4 class="tpsection__title">Our Latest Post</h4>
-                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-container tpblog-active">
+                <div class="swiper-container category-active">
                     <div class="swiper-wrapper">
+                        @foreach ($players as $player)
                         <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-1.jpg"
-                                            alt=""></a>
+                            <div class="category__item mb-30">
+                                <div class="category__thumb fix mb-15">
+                                    <!-- Assuming $player->Image is the field for player image -->
+                                    <a href="#"><img src="{{ $player->Image }}" alt="{{ $player->name }}"></a>
                                 </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">Avocado Grilled Salmon,
-                                            Rich In Nutrients For The Body</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i> </a>
-                                    </div>
+                                <div class="category__content">
+                                    <!-- Assuming $player->name is the field for player's name -->
+                                    <h5 class="category__title"><a href="#">{{ $player->name }}</a></h5>
+                                    <!-- You can display other player information here -->
+                                    <span class="category__count">
+                                        <!-- Display player category or any other relevant info -->
+                                        <p>Points Gained: {{ $player->points_gained }}</p>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-2.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="shop-details.html">Organics</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">The Best Great Benefits Of
-                                            Fresh Beef For Women's Health</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-3.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="shop-details.html">Organics</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">Ways To Choose Fruits &
-                                            Seafoods Good For Pregnancy</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-4.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="shop-details.html">Shopping</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">Summer Breakfast For The
-                                            Healthy Morning With Tomatoes</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-5.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="#">Foods</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">Popular Reasons You Must
-                                            Drinks Juice Everyday</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-6.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="shop-details.html">Lifestyle</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">Perfect Quality Reasonable
-                                            Price For Your Family</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-7.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="shop-details.html">Dairy Farm</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">Ways To Choose Fruits
-                                            Seafoods Good For Pregnancy</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tpblog__item">
-                                <div class="tpblog__thumb fix">
-                                    <a href="blog-details.html"><img src="assets/img/blog/blog-bg-8.jpg"
-                                            alt=""></a>
-                                </div>
-                                <div class="tpblog__wrapper">
-                                    <div class="tpblog__entry-wap">
-                                        <span class="cat-links"><a href="#">organis</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
-                                        <span class="post-data"><a href="#">SEP 15. 2022</a></span>
-                                    </div>
-                                    <h4 class="tpblog__title"><a href="blog-details.html">The Best Great Benefits Of
-                                            Fresh Beef For Women’s Health</a></h4>
-                                    <p>These are the people who make your life easier. Egestas is tristique
-                                        vestibulum...</p>
-                                    <div class="tpblog__details">
-                                        <a href="blog-details.html">Continue reading <i
-                                                class="icon-chevrons-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- blog-area-end -->
 
         <!-- feature-area-start -->
