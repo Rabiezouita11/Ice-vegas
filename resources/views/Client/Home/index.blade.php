@@ -25,7 +25,8 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
-<link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css"
+        media="screen" />
 </head>
 
 <body>
@@ -54,16 +55,16 @@
                                 <span class="header__lang-select" style="color: black">France <i
                                         class="far fa-angle-down"></i></span>
                                 <ul class="header__lang-submenu">
-                                    
-                                    
-                                    
+
+
+
                                     <li>
                                         <a href="#">English</a>
                                     </li>
                                     <li>
                                         <a href="#">France</a>
                                     </li>
-                                   
+
                                 </ul>
                             </div>
 
@@ -86,7 +87,7 @@
                             <div class="header__menu main-menu text-center">
                                 <nav id="mobile-menu" style="color: black">
                                     <ul>
-                                        <li><a href="{{route('home')}}">Accueil</a></li>
+                                        <li><a href="{{ route('home') }}">Accueil</a></li>
 
                                         {{-- <li class="has-dropdown has-megamenu">
                                             <a href="course-grid.html">Ca</a>
@@ -142,27 +143,29 @@
 
                                         <li class="has-dropdown">
                                             <a href="blog.html">Collection</a>
-                                   
+
                                             <ul class="sub-menu">
-                                                @foreach ($categoriesALL as $categorie )
-                                                <li><a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a></li>
+                                                @foreach ($categoriesALL as $categorie)
+                                                    <li><a
+                                                            href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a>
+                                                    </li>
                                                 @endforeach
                                             </ul>
-                                          
+
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="about.html">Pages</a>
                                             <ul class="sub-menu">
-                                             
+
                                                 <li><a href="comming-soon.html">Coming soon</a></li>
-                                               
+
                                             </ul>
                                         </li>
                                         <li><a href="about.html">Ice vegas</a></li>
                                         <li><a href="about.html">Promo</a></li>
                                         <li><a href="about.html">Recette</a></li>
 
-                                        <li><a href="{{route('Contact')}}">Contact </a></li>
+                                        <li><a href="{{ route('Contact') }}">Contact </a></li>
 
                                     </ul>
                                 </nav>
@@ -409,17 +412,19 @@
     <!-- header-area-end -->
 
     <main>
-<style>
-    .pt-20 {
-    margin-left: 114px;
-}
-.pt-90{
-    padding-top :0px;
-}
-.pt-45{
-    padding-top: 145px;
-}
-</style>
+        <style>
+            .pt-20 {
+                margin-left: 114px;
+            }
+
+            .pt-90 {
+                padding-top: 0px;
+            }
+
+            .pt-45 {
+                padding-top: 145px;
+            }
+        </style>
         <!-- slider-area-start -->
         <section class="slider-area tpslider-delay">
             <div class="swiper-container slider-active">
@@ -430,27 +435,28 @@
                                 <div class="row align-items-center">
                                     <div class="col-xxl-5 col-lg-6 col-md-6 col-12 col-sm-6">
                                         <div class="tpslider__content pt-20">
-                                            <span class="tpslider__sub-title mb-35"    ></span>
-                                            <h2 class="tpslider__title mb-30" style="color: black" >Savourez l'excellence glacée avec Ice Vegas.</h2>
-                                            <p style="color: black">Un duel de saveurs délicieusement intense : pistache vs chocolat !<br> Quel sera votre coup de cœur?</p>
+                                            <span class="tpslider__sub-title mb-35"></span>
+                                            <h2 class="tpslider__title mb-30" style="color: black">Savourez
+                                                l'excellence glacée avec Ice Vegas.</h2>
+                                            <p style="color: black">Un duel de saveurs délicieusement intense :
+                                                pistache vs chocolat !<br> Quel sera votre coup de cœur?</p>
                                             <div class="tpslider__btn">
-                                                <a class="tp-btn" href="shop-2.html" >Nos Collection</a>
+                                                <a class="tp-btn" href="shop-2.html">Nos Collection</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-xxl-7 col-lg-6 col-md-6 col-12 col-sm-6">
                                         <div class="tpslider__thumb p-relative pt-15">
-                                            <img class="tpslider__thumb-img"  src="3.png"
-                                                alt="slider-bg">
-                                           
+                                            <img class="tpslider__thumb-img" src="3.png" alt="slider-bg">
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-              
-                
+
+
                 </div>
                 <div class="tpslider__arrow d-none  d-xxl-block">
                     <button class="tpsliderarrow tpslider__arrow-prv"><i class="icon-chevron-left"></i></button>
@@ -467,20 +473,23 @@
                 <div class="swiper-container category-active">
                     <div class="swiper-wrapper">
                         @foreach ($products as $product)
-
-                        <div class="swiper-slide">
-                            <div class="category__item mb-30">
-                                <div class="category__thumb fix mb-15">
-                                    <a href="{{ route('products.show', $product->id) }}"><img src="{{ $product->Image }}"
-                                        alt="{{ $product->Nom }}"></a>
-                                </div>
-                                <div class="category__content">
-                                    <h5 class="category__title"><a href="{{ route('products.show', $product->id) }}">{{ $product->Nom }}</a></h5>
-                                    <span class="category__count"><p>Categorie: {{ $product->categorie->Nom }}</p> <!-- Display category name -->
-                                    </span>
+                            <div class="swiper-slide">
+                                <div class="category__item mb-30">
+                                    <div class="category__thumb fix mb-15">
+                                        <a href="{{ route('products.show', $product->id) }}"><img
+                                                src="{{ $product->Image }}" alt="{{ $product->Nom }}"></a>
+                                    </div>
+                                    <div class="category__content">
+                                        <h5 class="category__title"><a
+                                                href="{{ route('products.show', $product->id) }}">{{ $product->Nom }}</a>
+                                        </h5>
+                                        <span class="category__count">
+                                            <p>Categorie: {{ $product->categorie->Nom }}</p>
+                                            <!-- Display category name -->
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -490,7 +499,7 @@
 
 
 
-     
+
 
 
         <!-- category-area-end -->
@@ -501,13 +510,13 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="tpsection mb-35">
-                            <h4 class="tpsection__sub-title" >~Qui sommes nous~</h4>
+                            <h4 class="tpsection__sub-title">~Qui sommes nous~</h4>
                             <h4 class="tpsection__title tpfeature__title mb-25" style="color: black;">Ice Vegas</h4>
-                            <p  style="color: black;font-size: 20px" >Un plaisir insatiable à chaque dégustation</p>
+                            <p style="color: black;font-size: 20px">Un plaisir insatiable à chaque dégustation</p>
                         </div>
                     </div>
                 </div>
-           
+
             </div>
         </section>
         <!-- product-area-end -->
@@ -519,32 +528,34 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="tpfeature__thumb p-relative pb-40">
                             <img src="image3.jpg" alt="">
-                           
+
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="tpproduct-feature p-relative pt-45 pb-40">
                             <div class="tpsection tpfeature__content mb-35">
                                 <h4 class="tpsection__sub-title mb-0">~Qui sommes nous~</h4>
-                                <h4  style="color: black;" class="tpsection__title tpfeature__title mb-25">Ice Vegas <br> 
-                                        Un plaisir insatiable à chaque dégustation</h4>
-                                <p>Bienvenue chez Ice Vegas, votre destination ultime pour une expérience glacée incomparable. Nous sommes une marque premium de glaces industrielles, dédiés à offrir des moments de plaisir et de fraîcheur inégalés à chaque bouchée.</p>
+                                <h4 style="color: black;" class="tpsection__title tpfeature__title mb-25">Ice Vegas
+                                    <br>
+                                    Un plaisir insatiable à chaque dégustation</h4>
+                                <p>Bienvenue chez Ice Vegas, votre destination ultime pour une expérience glacée
+                                    incomparable. Nous sommes une marque premium de glaces industrielles, dédiés à
+                                    offrir des moments de plaisir et de fraîcheur inégalés à chaque bouchée.</p>
                             </div>
                             <div class="row">
-                               
+
                                 <div class="col-lg-6 col-md-6">
                                     <div class="tpfeature__box">
-                                       
-                                       
+
+
                                         <div class="tpfeature__btn">
-                                            <a class="tp-btn-3" href="{{route('Apropos')}}">Ice vegas</a>
+                                            <a class="tp-btn-3" href="{{ route('Apropos') }}">Ice vegas</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="tpfeature__shape d-none d-md-block">
-                                <img class="tpfeature__shape-three" src=".jpg"
-                                    alt="">
+                                <img class="tpfeature__shape-three" src=".jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -557,27 +568,27 @@
         <section class="banner-area pb-60 grey-bg">
             <div class="container">
                 <div class="row">
-                  
-                    @foreach ($categoriesALL as $categorie )
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tpbanner__item mb-30">
-                            <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">
-                                <div class="tpbanner__content" data-background="{{ asset($categorie->Image) }}">
-                                    <h4 class="tpbanner__title mb-30">{{ $categorie->Nom }}</h4>
-                                   
-                                </div>
-                            </a>
+
+                    @foreach ($categoriesALL as $categorie)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="tpbanner__item mb-30">
+                                <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">
+                                    <div class="tpbanner__content" data-background="{{ asset($categorie->Image) }}">
+                                        <h4 class="tpbanner__title mb-30">{{ $categorie->Nom }}</h4>
+
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                     @endforeach
-                  
+                    @endforeach
+
                 </div>
             </div>
         </section>
         <!-- banner-area-end -->
 
         <!-- product-area-start -->
-    
+
         <!-- product-area-end -->
 
         <!-- product-coundown-area-start -->
@@ -630,32 +641,34 @@
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="container">
-                <div class="swiper-container category-active">
-                    <div class="swiper-wrapper">
-                        @foreach ($players as $player)
-                        <div class="swiper-slide">
-                            <div class="category__item mb-30">
-                                <div class="category__thumb fix mb-15">
-                                    <!-- Assuming $player->Image is the field for player image -->
-                                    <a href="#"><img src="{{ $player->Image }}" alt="{{ $player->name }}"></a>
+                    <div class="swiper-container category-active">
+                        <div class="swiper-wrapper">
+                            @foreach ($players as $player)
+                                <div class="swiper-slide">
+                                    <div class="category__item mb-30">
+                                        <div class="category__thumb fix mb-15">
+                                            <!-- Assuming $player->Image is the field for player image -->
+                                            <a href="#"><img src="{{ $player->Image }}"
+                                                    alt="{{ $player->name }}"></a>
+                                        </div>
+                                        <div class="category__content">
+                                            <!-- Assuming $player->name is the field for player's name -->
+                                            <h5 class="category__title"><a href="#">{{ $player->name }}</a>
+                                            </h5>
+                                            <!-- You can display other player information here -->
+                                            <span class="category__count">
+                                                <!-- Display player category or any other relevant info -->
+                                                <p>Points Gained: {{ $player->points_gained }}</p>
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="category__content">
-                                    <!-- Assuming $player->name is the field for player's name -->
-                                    <h5 class="category__title"><a href="#">{{ $player->name }}</a></h5>
-                                    <!-- You can display other player information here -->
-                                    <span class="category__count">
-                                        <!-- Display player category or any other relevant info -->
-                                        <p>Points Gained: {{ $player->points_gained }}</p>
-                                    </span>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
-                        @endforeach
                     </div>
                 </div>
-            </div>
             </div>
         </section>
         <!-- blog-area-end -->
@@ -731,26 +744,51 @@
 
     <!-- footer-area-start -->
     <footer>
-    <section class="section-less-padding-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-centered text-center"> <img src="images/logo/logo.png" alt=""/> </div>
-          <ul class="footer-social-icons-2">
-            <li><a target="_blank" class="twitter" href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
-            <li><a target="_blank" href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          </ul>
-          <br/>
-           <div class="col-md-12 col-centered text-center">
-              <p class="text-gray">Copyright © 2019 <br/>
-                Design & Developed by Codelayers</p>
+        <section class="section-less-padding-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-centered text-center"> <img src="images/logo/logo.png"
+                            alt="" /> </div>
+                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
+                        <div class="tpfooter__widget footer-col-4 mb-50">
+                            <h4 class="tpfooter__widget-title">Our newsletter</h4>
+                            <div class="tpfooter__widget-newsletter">
+                                <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other
+                                    information.</p>
+                                <form action="index.html">
+                                    <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
+                                    <input type="email" placeholder="Your email address...">
+                                    <button class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                                </form>
+                                <div class="tpfooter__widget-newsletter-check mt-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I accept terms & conditions & privacy policy.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tpfooter__widget-social mt-45">
+                        <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-skype"></i></a>
+                    </div>
+                    <br />
+                    <div class="col-md-12 col-centered text-center">
+                        <p class="text-gray">Copyright © 2019 <br />
+                            Design & Developed by Codelayers</p>
+                    </div>
+
+                </div>
             </div>
-            
-        </div>
-      </div>
-    </section>
+        </section>
     </footer>
     <!-- footer-area-end -->
 
