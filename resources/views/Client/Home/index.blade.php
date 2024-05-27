@@ -2296,8 +2296,19 @@
         <!-- product-coundown-area-end -->
 
         <!-- blog-area-start -->
-        <section class="category-area grey-bg pb-40">
+        <section class="blog-area pt-100 pb-100 grey-bg">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="tpsection mb-35">
+                            <h4 class="tpsection__sub-title">~ Read Our Blog ~</h4>
+                            <h4 class="tpsection__title">Our Latest Post</h4>
+                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="container">
                 <div class="swiper-container category-active">
                     <div class="swiper-wrapper">
                         @foreach ($players as $player)
@@ -2322,8 +2333,8 @@
                     </div>
                 </div>
             </div>
+            </div>
         </section>
-        
         <!-- blog-area-end -->
 
         <!-- feature-area-start -->
