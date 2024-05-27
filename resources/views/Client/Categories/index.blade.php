@@ -38,105 +38,56 @@
 
     <!-- header-area-start -->
     <header>
-        <div class="header__top theme-bg-1 d-none d-md-block">
+        <div class="header__top theme-bg-1 d-none d-md-block" style="background-color: white">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-12">
                         <div class="header__top-left">
-                            <span>Due to the <strong>COVID-19</strong> epidemic, orders may be processed with a slight
-                                delay.</span>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
                         <div class="header__top-right d-flex align-items-center">
-                            <div class="header__top-link">
-                                <a href="#">Store Location</a>
-                                <a href="#">Order Tracking</a>
-                                <a href="faq.html">FAQs</a>
-                            </div>
+
                             <div class="header__lang">
-                                <span class="header__lang-select">English <i class="far fa-angle-down"></i></span>
+                                <span class="header__lang-select" style="color: black">France <i
+                                        class="far fa-angle-down"></i></span>
                                 <ul class="header__lang-submenu">
-                                    <li>
-                                        <a href="#">Australia</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Spain</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Brazil</a>
-                                    </li>
+
+
+
                                     <li>
                                         <a href="#">English</a>
                                     </li>
                                     <li>
                                         <a href="#">France</a>
                                     </li>
-                                    <li>
-                                        <a href="#">United States</a>
-                                    </li>
+
                                 </ul>
                             </div>
-                            <div class="header__top-price">
-                                <select>
-                                    <option>USD</option>
-                                    <option>ARS</option>
-                                    <option>AUD</option>
-                                    <option>BRL</option>
-                                    <option>GBP</option>
-                                    <option>DKK</option>
-                                    <option>EUR</option>
-                                </select>
-                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="header-sticky" class="header__main-area d-none d-xl-block">
+        <div id="header-sticky" class="header__main-area d-none d-xl-block" style="margin-bottom: 0;">
             <div class="container">
                 <div class="header__for-megamenu p-relative">
                     <div class="row align-items-center">
                         <div class="col-xl-3">
                             <div class="header__logo">
-                                <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                                <a href="index.html"><img height="100px" width="100px" src="logo.png"
+                                        alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-xl-6">
                             <div class="header__menu main-menu text-center">
-                                <nav id="mobile-menu">
+                                <nav id="mobile-menu" style="color: black">
                                     <ul>
-                                        <li class="has-dropdown has-homemenu">
-                                            <a href="index.html">Home</a>
-                                            <ul class="sub-menu home-menu-style">
-                                                <li>
-                                                    <a href="index.html"><img src="assets/img//header/home1-1.jpg"
-                                                            alt=""> Home Page V1</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-2.html"><img src="assets/img//header/home2-1.jpg"
-                                                            alt=""> Home Page V2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-3.html"><img src="assets/img//header/home3-1.jpg"
-                                                            alt=""> Home Page V3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-4.html"><img src="assets/img//header/home4-1.jpg"
-                                                            alt=""> Home Page V4</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-5.html"><img src="assets/img//header/home5-1.jpg"
-                                                            alt=""> Home Page V5</a>
-                                                </li>
-                                                <li>
-                                                    <a href="index-6.html"><img src="assets/img//header/home6-1.jpg"
-                                                            alt=""> Home Page V6</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown has-megamenu">
-                                            <a href="course-grid.html">Shop</a>
+                                        <li><a href="{{ route('home') }}">Accueil</a></li>
+
+                                        {{-- <li class="has-dropdown has-megamenu">
+                                            <a href="course-grid.html">Ca</a>
                                             <ul class="sub-menu mega-menu"
                                                 data-background="assets/img/banner/mega-menu-shop-1.jpg">
                                                 <li>
@@ -184,32 +135,35 @@
                                                     </ul>
                                                 </li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
+
+
                                         <li class="has-dropdown">
-                                            <a href="blog.html">Blog</a>
+                                            <a href="blog.html">Collection</a>
+
                                             <ul class="sub-menu">
-                                                <li><a href="blog.html">Big image</a></li>
-                                                <li><a href="blog-right-sidebar.html">Right sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Left sidebar</a></li>
-                                                <li><a href="blog-details.html">Single Post</a></li>
+                                                @foreach ($categoriesALL as $categorie)
+                                                    <li><a
+                                                            href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a>
+                                                    </li>
+                                                @endforeach
                                             </ul>
+
                                         </li>
                                         <li class="has-dropdown">
                                             <a href="about.html">Pages</a>
                                             <ul class="sub-menu">
-                                                <li><a href="shop-location.html">Shop Location One</a></li>
-                                                <li><a href="shop-location-2.html">Shop Location Two</a></li>
-                                                <li><a href="faq.html">FAQs</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                                <li><a href="cart.html">Cart Page</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="log-in.html">Sign In</a></li>
+
                                                 <li><a href="comming-soon.html">Coming soon</a></li>
-                                                <li><a href="404.html">Page 404</a></li>
+
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="about.html">Ice vegas</a></li>
+                                        <li><a href="about.html">Promo</a></li>
+                                        <li><a href="about.html">Recette</a></li>
+
+                                        <li><a href="{{ route('Contact') }}">Contact </a></li>
+
                                     </ul>
                                 </nav>
                             </div>
@@ -219,17 +173,39 @@
                                 <div class="header__info-search tpcolor__purple ml-10">
                                     <button class="tp-search-toggle"><i class="icon-search"></i></button>
                                 </div>
-                                <div class="header__info-user tpcolor__yellow ml-10">
-                                    <a href="log-in.html"><i class="icon-user"></i></a>
-                                </div>
-                                <div class="header__info-wishlist tpcolor__greenish ml-10">
-                                    <a href="wishlist.html"><i class="icon-heart icons"></i></a>
-                                </div>
-                                <div class="header__info-cart tpcolor__oasis ml-10 tp-cart-toggle">
-                                    <button><i><img src="assets/img/icon/cart-1.svg" alt=""></i>
-                                        <span>5</span>
-                                    </button>
-                                </div>
+
+                                @guest
+                                    <div class="header__info-user tpcolor__yellow ml-10">
+                                        <a href="{{ route('login') }}"><i class="icon-user"></i></a>
+                                    </div>
+                                @else
+                                    <div class="col-xl-6">
+                                        <div class="header__menu main-menu text-center">
+                                            <nav id="mobile-menu">
+                                                <ul>
+                                                    <li class="has-dropdown">
+                                                        <a href="#">{{ Auth::user()->name }}</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="blog-single.html"
+                                                                    style=" font-family: 'Anonymous Pro';">Profile</a></li>
+                                                            <li><a href="{{ route('logout') }}"
+                                                                    onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();"
+                                                                    style=" font-family: 'Anonymous Pro';">Déconnexion</a>
+                                                            </li>
+                                                            <form id="logout-form" action="{{ route('logout') }}"
+                                                                method="POST" class="d-none">
+                                                                @csrf
+                                                            </form>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+
+
+                                @endguest
                             </div>
                         </div>
                     </div>
@@ -356,7 +332,8 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-6 col-sm-4">
                         <div class="header__logo text-center">
-                            <a href="index.html"><img src="assets/img/logo/logo.png" alt="logo"></a>
+                            <a href="index.html"><img height="100px" width="100px" src="logo.png"
+                                    alt="logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-3 col-sm-5">
@@ -365,16 +342,9 @@
                                 <button class="tp-search-toggle"><i class="icon-search"></i></button>
                             </div>
                             <div class="header__info-user tpcolor__yellow ml-10 d-none d-sm-block">
-                                <a href="#"><i class="icon-user"></i></a>
+                                <a href="log-in.html"><i class="icon-user"></i></a>
                             </div>
-                            <div class="header__info-wishlist tpcolor__greenish ml-10 d-none d-sm-block">
-                                <a href="#"><i class="icon-heart icons"></i></a>
-                            </div>
-                            <div class="header__info-cart tpcolor__oasis ml-10 tp-cart-toggle">
-                                <button><i><img src="assets/img/icon/cart-1.svg" alt=""></i>
-                                    <span>5</span>
-                                </button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -678,166 +648,58 @@
         <!-- blog-area-end -->
 
         <!-- feature-area-start -->
-        <section class="feature-area mainfeature__bg pt-50 pb-40"
-            data-background="assets/img/shape/footer-shape-1.svg">
-            <div class="container">
-                <div class="mainfeature__border pb-15">
-                    <div class="row row-cols-lg-5 row-cols-md-3 row-cols-2">
-                        <div class="col">
-                            <div class="mainfeature__item text-center mb-30">
-                                <div class="mainfeature__icon">
-                                    <img src="assets/img/icon/feature-icon-1.svg" alt="">
-                                </div>
-                                <div class="mainfeature__content">
-                                    <h4 class="mainfeature__title">Fast Delivery</h4>
-                                    <p>Across West & East India</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mainfeature__item text-center mb-30">
-                                <div class="mainfeature__icon">
-                                    <img src="assets/img/icon/feature-icon-2.svg" alt="">
-                                </div>
-                                <div class="mainfeature__content">
-                                    <h4 class="mainfeature__title">safe payment</h4>
-                                    <p>100% Secure Payment</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mainfeature__item text-center mb-30">
-                                <div class="mainfeature__icon">
-                                    <img src="assets/img/icon/feature-icon-3.svg" alt="">
-                                </div>
-                                <div class="mainfeature__content">
-                                    <h4 class="mainfeature__title">Online Discount</h4>
-                                    <p>Add Multi-buy Discount </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mainfeature__item text-center mb-30">
-                                <div class="mainfeature__icon">
-                                    <img src="assets/img/icon/feature-icon-4.svg" alt="">
-                                </div>
-                                <div class="mainfeature__content">
-                                    <h4 class="mainfeature__title">Help Center</h4>
-                                    <p>Dedicated 24/7 Support </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="mainfeature__item text-center mb-30">
-                                <div class="mainfeature__icon">
-                                    <img src="assets/img/icon/feature-icon-5.svg" alt="">
-                                </div>
-                                <div class="mainfeature__content">
-                                    <h4 class="mainfeature__title">Curated items</h4>
-                                    <p>From Handpicked Sellers</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      
         <!-- feature-area-end -->
 
     </main>
 
     <!-- footer-area-start -->
     <footer>
-        <div class="tpfooter__area theme-bg-2">
-            <div class="tpfooter__top pb-15">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="tpfooter__widget footer-col-1 mb-50">
-                                <h4 class="tpfooter__widget-title">Let Us Help You</h4>
-                                <p>If you have any question, please <br> contact us at:
-                                    <a href="mailto:support@example.com">support@example.com</a>
-                                </p>
-                                <div class="tpfooter__widget-social mt-45">
-                                    <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="#"><i class="fab fa-youtube"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    <a href="#"><i class="fab fa-skype"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="tpfooter__widget footer-col-2 mb-50">
-                                <h4 class="tpfooter__widget-title">Looking for Orfarm?</h4>
-                                <p>68 St. Vicent Place, Glasgow, Greater <br> Newyork NH2012, UK.</p>
-                                <div class="tpfooter__widget-time-info mt-35">
-                                    <span>Monday – Friday: <b>8:10 AM – 6:10 PM</b></span>
-                                    <span>Saturday: <b>10:10 AM – 06:10 PM</b></span>
-                                    <span>Sunday: <b>Close</b></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-4 col-md-4 col-sm-5">
-                            <div class="tpfooter__widget footer-col-3 mb-50">
-                                <h4 class="tpfooter__widget-title">HOT CATEGORIES</h4>
-                                <div class="tpfooter__widget-links">
-                                    <ul>
-                                        <li><a href="#">Fruits & Vegetables</a></li>
-                                        <li><a href="#">Dairy Products</a></li>
-                                        <li><a href="#">Package Foods</a></li>
-                                        <li><a href="#">Beverage</a></li>
-                                        <li><a href="#">Health & Wellness</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
-                            <div class="tpfooter__widget footer-col-4 mb-50">
-                                <h4 class="tpfooter__widget-title">Our newsletter</h4>
-                                <div class="tpfooter__widget-newsletter">
-                                    <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals &
-                                        other information.</p>
-                                    <form action="index.html">
-                                        <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
-                                        <input type="email" placeholder="Your email address...">
-                                        <button
-                                            class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
-                                    </form>
-                                    <div class="tpfooter__widget-newsletter-check mt-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value=""
-                                                id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">
-                                                I accept terms & conditions & privacy policy.
-                                            </label>
-                                        </div>
+        <section class="section-less-padding-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-centered text-center"> <img src="images/logo/logo.png"
+                            alt="" /> </div>
+                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
+                        <div class="tpfooter__widget footer-col-4 mb-50">
+                            <h4 class="tpfooter__widget-title">Our newsletter</h4>
+                            <div class="tpfooter__widget-newsletter">
+                                <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other
+                                    information.</p>
+                                <form action="index.html">
+                                    <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
+                                    <input type="email" placeholder="Your email address...">
+                                    <button class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                                </form>
+                                <div class="tpfooter__widget-newsletter-check mt-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I accept terms & conditions & privacy policy.
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="tpfooter___bottom pt-40 pb-40">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-7 col-sm-12">
-                            <div class="tpfooter__copyright">
-                                <span class="tpfooter__copyright-text">Copyright © <a href="#">ORFARM</a> all
-                                    rights reserved. Powered by <a href="#">ThemePure</a>.</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-5 col-sm-12">
-                            <div class="tpfooter__copyright-thumb text-end">
-                                <img src="assets/img/shape/footer-payment.png " alt="">
-                            </div>
-                        </div>
+                    <div class="tpfooter__widget-social mt-45">
+                        <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-skype"></i></a>
                     </div>
+                    <br />
+                    <div class="col-md-12 col-centered text-center">
+                        <p class="text-gray">Copyright © 2019 <br />
+                            Design & Developed by Codelayers</p>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </section>
     </footer>
     <!-- footer-area-end -->
 
