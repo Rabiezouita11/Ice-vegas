@@ -156,7 +156,7 @@
 
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">Ice vegas</a></li>
+                                        <li><a href="{{route('Apropos')}}">Ice vegas</a></li>
                                         <li><a href="about.html">Promo</a></li>
                                         <li><a href="about.html">Recette</a></li>
 
