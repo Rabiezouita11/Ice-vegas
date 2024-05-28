@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use App\Models\Suivi_point_de_fidelite;
 
 class RegisterController extends Controller
 {
@@ -78,15 +79,25 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
-    {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'telephone' => $data['telephone'],
-            'password' => Hash::make($data['password']),
-            'role' => 'client', 
-        ]);
-    }
+   
+     protected function create(array $data)
+     {
+         $user = User::create([
+             'name' => $data['name'],
+             'email' => $data['email'],
+             'telephone' => $data['telephone'],
+             'password' => Hash::make($data['password']),
+             'role' => 'client', 
+         ]);
+ 
+         // Create a record in the Suivi_point_de_fidelite table
+         Suivi_point_de_fidelite::create([
+             'Totale_point' => 50,
+             
+             'users_id' => $user->id,
+         ]);
+ 
+         return $user;
+     }
     
 }
