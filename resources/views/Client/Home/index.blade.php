@@ -466,9 +466,9 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="tpsection mb-35">
-                            <h4 class="tpsection__sub-title">~ Read Our Blog ~</h4>
-                            <h4 class="tpsection__title">Our Latest Post</h4>
-                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                           
+                            <h4 class="tpsection__title" style="color: black">Produits Ice Vegas</h4>
+                            <p style="color: black">"Découvrez notre sélection exclusive de produits pour répondre à tous vos besoins"</p>
                         </div>
                     </div>
                 </div>

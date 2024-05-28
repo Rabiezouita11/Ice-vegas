@@ -660,127 +660,14 @@
                   </div>
                   <div class="col-lg-2 col-md-12">
                      <div class="tpsidebar pb-30">
-                        <div class="tpsidebar__warning mb-30">
-                           <ul>
-                              <li>
-                                 <div class="tpsidebar__warning-item">
-                                    <div class="tpsidebar__warning-icon">
-                                       <i class="icon-package"></i>
-                                    </div>
-                                    <div class="tpsidebar__warning-text">
-                                       <p>Free shipping apply to all <br> orders over $90</p>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="tpsidebar__warning-item">
-                                    <div class="tpsidebar__warning-icon">
-                                       <i class="icon-shield"></i>
-                                    </div>
-                                    <div class="tpsidebar__warning-text">
-                                       <p>Guaranteed 100% Organic <br>  from nature farms</p>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="tpsidebar__warning-item">
-                                    <div class="tpsidebar__warning-icon">
-                                       <i class="icon-package"></i>
-                                    </div>
-                                    <div class="tpsidebar__warning-text">
-                                       <p>60 days returns if you change <br> your mind</p>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
+                     
+                        <div class="tpsidebar__banner mb-30">
+                           <img src="quiz1.jpg" alt="">
                         </div>
                         <div class="tpsidebar__banner mb-30">
-                           <img src="assets/img/shape/sidebar-product-1.png" alt="">
+                           <img src="quiz2.jpg" alt="">
                         </div>
-                        <div class="tpsidebar__product">
-                           <h4 class="tpsidebar__title mb-15">Recent Products</h4>
-                           <div class="tpsidebar__product-item">
-                              <div class="tpsidebar__product-thumb p-relative">
-                                 <img src="assets/img/product/sidebar-pro-1.jpg" alt="">
-                                 <div class="tpsidebar__info bage">
-                                    <span class="tpproduct__info-hot bage__hot">HOT</span>
-                                 </div>
-                              </div>
-                              <div class="tpsidebar__product-content">
-                                 <span class="tpproduct__product-category">
-                                    <a href="shop-details-3.html">Fresh Fruits</a>
-                                 </span>
-                                 <h4 class="tpsidebar__product-title">
-                                    <a href="shop-details-grid.html">Fresh Mangosteen 100% Organic From VietNamese</a>
-                                 </h4>
-                                 <div class="tpproduct__rating mb-5">
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                 </div>
-                                 <div class="tpproduct__price">
-                                    <span>$56.00</span>
-                                    <del>$19.00</del>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="tpsidebar__product-item">
-                              <div class="tpsidebar__product-thumb p-relative">
-                                 <img src="assets/img/product/sidebar-pro-2.jpg" alt="">
-                                 <div class="tpsidebar__info bage">
-                                    <span class="tpproduct__info-hot bage__hot">HOT</span>
-                                 </div>
-                              </div>
-                              <div class="tpsidebar__product-content">
-                                 <span class="tpproduct__product-category">
-                                    <a href="shop-details-3.html">Fresh Fruits</a>
-                                 </span>
-                                 <h4 class="tpsidebar__product-title">
-                                    <a href="shop-details-4.html">Fresh Mangosteen 100% Organic From VietNamese</a>
-                                 </h4>
-                                 <div class="tpproduct__rating mb-5">
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                 </div>
-                                 <div class="tpproduct__price">
-                                    <span>$56.00</span>
-                                    <del>$19.00</del>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="tpsidebar__product-item">
-                              <div class="tpsidebar__product-thumb p-relative">
-                                 <img src="assets/img/product/sidebar-pro-3.jpg" alt="">
-                                 <div class="tpsidebar__info bage">
-                                    <span class="tpproduct__info-hot bage__hot">HOT</span>
-                                 </div>
-                              </div>
-                              <div class="tpsidebar__product-content">
-                                 <span class="tpproduct__product-category">
-                                    <a href="shop-details-3.html">Fresh Fruits</a>
-                                 </span>
-                                 <h4 class="tpsidebar__product-title">
-                                    <a href="shop-details-3.html">Fresh Mangosteen 100% Organic From VietNamese</a>
-                                 </h4>
-                                 <div class="tpproduct__rating mb-5">
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                    <a href="#"><i class="icon-star_outline1"></i></a>
-                                 </div>
-                                 <div class="tpproduct__price">
-                                    <span>$56.00</span>
-                                    <del>$19.00</del>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                     
                      </div>
                   </div>
                </div>
