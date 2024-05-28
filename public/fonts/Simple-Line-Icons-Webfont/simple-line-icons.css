@@ -96,7 +96,7 @@ you can use the generic selector below, but it's slower:
 	content: "\e026";
 }
 .icon-user:before {
-	content: "\e005";
+
 }
 .icon-speedometer:before {
 	content: "\e007";
