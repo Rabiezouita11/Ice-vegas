@@ -467,7 +467,7 @@
                     <div class="col-lg-12 text-center">
                         <div class="tpsection mb-35">
                            
-                            <h4 class="tpsection__title" style="color: black">Produits Ice Vegas</h4>
+                            <h4 class="tpsection__title" style="color: black">Produits Ice Vegas </h4>
                             <p style="color: black">"Découvrez notre sélection exclusive de produits pour répondre à tous vos besoins"</p>
                         </div>
                     </div>

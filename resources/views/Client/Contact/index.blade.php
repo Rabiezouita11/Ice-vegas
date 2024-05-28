@@ -427,115 +427,7 @@
          <!-- breadcrumb-area-end -->
 
          <!-- contact-area-start -->
-         <section class="contact-area mb-45">
-            <div class="container">
-               <div class="row justify-content-center">
-                  <div class="col-lg-6">
-                     <div class="tpcontact-inner text-center mt-20 mb-40">
-                        <div class="tpcontact-inner-text">
-                           <h5 class="tpcontact-inner-sub-title">Contact us</h5>
-                           <h5 class="tpcontact-inner-title mb-20">Looking For Orfarm?</h5>
-                           <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                     <div class="tpcontact mb-30">
-                        <div class="tpcontact__img mb-15 w-img">
-                           <img src="assets/img/banner/contact-big-bg1.jpg" alt="">
-                        </div>
-                        <div class="tplocation__text">
-                           <h4 class="tplocation__text-title">Rue Pelleport - Paris</h4>
-                           <div class="tplocation__content tplocation__content-two">
-                              <ul>
-                                 <li>
-                                    <a href="#">Add: Heaven Stress, Beverly Melbourne                                       </a>
-                                 </li>
-                                 <li>
-                                    <a href="tel:012345678">Phone: (+100) 123 456 7890</a>
-                                 </li>
-                                 <li>
-                                    <a href="mailto:orfarm@google.com">Email: Orfarm@google.com</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <div class="tpcontact mb-30">
-                        <div class="tpcontact__img mb-15 w-img">
-                           <img src="assets/img/banner/contact-big-bg2.jpg" alt="">
-                        </div>
-                        <div class="tplocation__text">
-                           <h4 class="tplocation__text-title">Prospect - New York</h4>
-                           <div class="tplocation__content tplocation__content-two">
-                              <ul>
-                                 <li>
-                                    <a href="#">Add: Heaven Stress, Beverly Melbourne                                       </a>
-                                 </li>
-                                 <li>
-                                    <a href="tel:012345678">Phone: (+100) 123 456 7890</a>
-                                 </li>
-                                 <li>
-                                    <a href="mailto:orfarm@google.com">Email: Orfarm@google.com</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <div class="tpcontact mb-30">
-                        <div class="tpcontact__img mb-15 w-img">
-                           <img src="assets/img/banner/contact-big-bg3.jpg" alt="">
-                        </div>
-                        <div class="tplocation__text">
-                           <h4 class="tplocation__text-title">Budapest - Hungary</h4>
-                           <div class="tplocation__content tplocation__content-two">
-                              <ul>
-                                 <li>
-                                    <a href="#">Add: Heaven Stress, Beverly Melbourne                                       </a>
-                                 </li>
-                                 <li>
-                                    <a href="tel:012345678">Phone: (+100) 123 456 7890</a>
-                                 </li>
-                                 <li>
-                                    <a href="mailto:orfarm@google.com">Email: Orfarm@google.com</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                     <div class="tpcontact mb-30 w-img">
-                        <div class="tpcontact__img mb-15">
-                           <img src="assets/img/banner/contact-big-bg4.jpg" alt="">
-                        </div>
-                        <div class="tplocation__text">
-                           <h4 class="tplocation__text-title">Kastrup - Denmark</h4>
-                           <div class="tplocation__content tplocation__content-two">
-                              <ul>
-                                 <li>
-                                    <a href="#">Add: Heaven Stress, Beverly Melbourne                                       </a>
-                                 </li>
-                                 <li>
-                                    <a href="tel:012345678">Phone: (+100) 123 456 7890</a>
-                                 </li>
-                                 <li>
-                                    <a href="mailto:orfarm@google.com">Email: Orfarm@google.com</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+      
          <!-- contact-area-end -->
 
          <!-- map-area-start -->
@@ -557,23 +449,34 @@
                            <form action="#">
                               <div class="row gx-7">
                                  <div class="col-lg-6">
-                                    <div class="tpform__input mb-20">
-                                       <input type="text" placeholder="Your Name *">
+                                   
+                                    <div class="form-group">
+                                        <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                            <input id="email"  placeholder="Your Name *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                           
+                                        </div>
                                     </div>
                                  </div>
                                  <div class="col-lg-6">
-                                    <div class="tpform__input mb-20">
-                                       <input type="email" placeholder="Your Email *">
+                                    
+                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                        <input id="email"  placeholder="Your Email *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                       
                                     </div>
                                  </div>
                                  <div class="col-lg-6">
-                                    <div class="tpform__input mb-20">
-                                       <input type="text" placeholder="Subject *">
+
+                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                        <input id="email"  placeholder="Your Subject *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                       
                                     </div>
+                                    
                                  </div>
                                  <div class="col-lg-6">
-                                    <div class="tpform__input mb-20">
-                                       <input type="text" placeholder="Phone">
+                                   
+                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                        <input id="email"  placeholder="Your Phone *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                       
                                     </div>
                                  </div>
                                  <div class="col-lg-12">
