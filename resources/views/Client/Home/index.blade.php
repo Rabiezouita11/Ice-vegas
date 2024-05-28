@@ -463,6 +463,15 @@
         <!-- category-area-start -->
         <section class="category-area grey-bg pb-40">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <div class="tpsection mb-35">
+                            <h4 class="tpsection__sub-title">~ Read Our Blog ~</h4>
+                            <h4 class="tpsection__title">Our Latest Post</h4>
+                            <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="swiper-container category-active">
                     <div class="swiper-wrapper">
                         @foreach ($products as $product)
