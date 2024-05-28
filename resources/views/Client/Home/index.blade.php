@@ -558,26 +558,32 @@
         <!-- product-feature-area-end -->
 
         <!-- banner-area-start -->
-        <section class="banner-area pb-60 grey-bg">
+        <section class="category-area grey-bg pb-40">
             <div class="container">
-                <div class="row">
-
+                <div class="swiper-container category-active">
+                    <div class="swiper-wrapper">
                     @foreach ($categoriesALL as $categorie)
-                        <div class="col-lg-4 col-md-6">
-                            <div class="tpbanner__item mb-30">
-                                <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">
-                                    <div class="tpbanner__content" data-background="{{ asset($categorie->Image) }}">
-                                        <h4 class="tpbanner__title mb-30">{{ $categorie->Nom }}</h4>
-
+                            <div class="swiper-slide">
+                                <div class="category__item mb-30">
+                                    <div class="category__thumb fix mb-15">
+                                        <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}"><img
+                                                src="{{ asset($categorie->Image) }}" alt="{{ $categorie->Nom }}"></a>
                                     </div>
-                                </a>
+                                    <div class="category__content">
+                                        <h5 class="category__title"><a
+                                                href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a>
+                                        </h5>
+                                    
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    @endforeach
-
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </section>
+
+       
         <!-- banner-area-end -->
 
         <!-- product-area-start -->
