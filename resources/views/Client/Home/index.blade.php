@@ -153,14 +153,7 @@
                                             </ul>
 
                                         </li>
-                                        <li class="has-dropdown">
-                                            <a href="about.html">Pages</a>
-                                            <ul class="sub-menu">
-
-                                                <li><a href="comming-soon.html">Coming soon</a></li>
-
-                                            </ul>
-                                        </li>
+                                       
                                         <li><a href="{{route('Apropos')}}">Ice vegas</a></li>
                                         <li><a href="about.html">Promo</a></li>
                                         <li><a href="about.html">Recette</a></li>

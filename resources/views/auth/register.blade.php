@@ -90,7 +90,7 @@
 
                                 <div class="form-group">
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="votre nom" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="votre nom" name="name" value="{{ old('name') }}"  autocomplete="name" autofocus>
 
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">
