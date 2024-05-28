@@ -431,7 +431,7 @@
                <div class="row align-items-center">
                   <div class="col-lg-6">
                      <div class="tpabout__inner-thumb-2 p-relative mb-30">
-                        <img src="logo.png" alt=""Height="750px" width="750px">
+                        <img src="logo.png" alt=""Height="500px" width="500px">
                         <div class="tpabout__inner-thumb-shape d-none d-md-block">
                            
                        
