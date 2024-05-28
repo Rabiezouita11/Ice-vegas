@@ -623,20 +623,24 @@
                                 <h3 class="sidebar__widget-title mb-15">Tags</h3>
                                 <div class="sidebar__widget-content">
                                     <div class="tagcloud">
-                                        <a href="blog-details.html">healthy</a>
+                                        <a href="blog-details.html">Ice vegas</a>
                                         <a href="blog-details.html">natural</a>
-                                        <a href="blog-details.html">salad</a>
+                                        
                                         <a href="blog-details.html">foods</a>
-                                        <a href="blog-details.html">orfarm</a>
-                                        <a href="blog-details.html">meat</a>
-                                        <a href="blog-details.html">grocery </a>
+                                        <a href="blog-details.html">#AlimentationSaine
+                                        </a>
+                                        <a href="blog-details.html">#Sorbet
+                                        </a>
+                                        <a href="blog-details.html">ParfumsGlace </a>
                                         <a href="blog-details.html">fresh</a>
                                         <a href="blog-details.html">vegan</a>
-                                        <a href="blog-details.html">vegetables</a>
-                                        <a href="blog-details.html">seafoods</a>
+                                        <a href="blog-details.html">#GlaceChocolat
+                                        </a>
+                                        <a href="blog-details.html">#GlaceBio
+                                        </a>
                                         <a href="blog-details.html">fruits</a>
-                                        <a href="blog-details.html">tomato</a>
-                                        <a href="blog-details.html">cooking</a>
+                                        <a href="blog-details.html">DélicesGivrés</a>
+                                        <a href="blog-details.html">Tunis</a>
                                     </div>
                                 </div>
                             </div>

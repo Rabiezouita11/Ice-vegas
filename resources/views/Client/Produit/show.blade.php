@@ -463,22 +463,22 @@
                                  <div class="col-lg-6 col-md-12">
                                     <div class="tpproduct-feature p-relative pt-45 pb-40">
                                         <div class="tpsection tpfeature__content mb-35">
-                                            <h4 class="tpsection__sub-title mb-0">~ The Best For Your ~</h4>
-                                            <h4 class="tpsection__title tpfeature__title mb-25">Organic Drinks <br> <span>Easy
-                                                    Healthy</span> - Happy Life</h4>
-                                            <p>The liber tempor cum soluta nobis eleifend option congue <br> doming quod mazim
+                                            <h4 class="tpsection__sub-title mb-0"></h4>
+                                            <h4 class="tpsection__title tpfeature__title mb-25" style="color: black">Ice Vegas Saveur Vanille Light
+                                             <br> <span></span> </h4>
+                                            <p style="color: black">TL'Ice Vegas Saveur Vanille Light est une crème glacée délicieuse et légère, parfaite pour ceux qui souhaitent se faire plaisir sans culpabilité <br> doming quod mazim
                                                 placerat facer possim assum.</p>
                                         </div>
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="tpfeature__box">
                                                     <div class="tpfeature__product-item mb-25">
-                                                        <h4 class="tpfeature__product-title">Fresh Fruits:</h4>
-                                                        <span class="tpfeature__product-info">Apples, Berries & Cherries</span>
+                                                        <h4 class="tpfeature__product-title" style="color: black">Fresh </h4>
+                                                        <span class="tpfeature__product-info" style="color: black>chocolat , vanille</span>
                                                     </div>
                                                     <div class="tpfeature__product-item mb-45">
-                                                        <h4 class="tpfeature__product-title">Expiry Date:</h4>
-                                                        <span class="tpfeature__product-">See on The Bottle Cap</span>
+                                                        <h4 class="tpfeature__product-title" style="color: black"> 100% Organic</h4>
+                                                        <span class="tpfeature__product-" style="color: black"></span>
                                                     </div>
                                                    
                                                 </div>
@@ -486,12 +486,12 @@
                                             <div class="col-lg-6 col-md-6">
                                                 <div class="tpfeature__box">
                                                     <div class="tpfeature__product-item mb-25">
-                                                        <h4 class="tpfeature__product-title">Ingredient:</h4>
-                                                        <span class="tpfeature__product-info">Energy, Protein, Sugars</span>
+                                                        <h4 class="tpfeature__product-title" style="color: black">Ingrédient</h4>
+                                                        <span class="tpfeature__product-info" style="color: black">Énergie, Protéines, 0 % Sucres</span>
                                                     </div>
                                                     <div class="tpfeature__product-item mb-45">
-                                                        <h4 class="tpfeature__product-title">Bootle Size:</h4>
-                                                        <span class="tpfeature__product-">500ml – 1000ml</span>
+                                                        <h4 class="tpfeature__product-title" style="color: black">Taille de la botte :</h4>
+                                                        <span class="tpfeature__product-" style="color: black"> 1000ml</span>
                                                     </div>
 
                                                 </div>
@@ -582,7 +582,7 @@
                                  </div>
                                  <div class="tpdescription__video">
                                     <h5 class="tpdescription__product-title">PRODUCT DETAILS</h5>
-                                    <p>Form is an armless modern chair with a minimalistic expression. With a simple and contemporary design Form Chair has a soft and welcoming ilhouette and a distinctly residential look. The legs appear almost as if they are growing out of the shell. This gives the design flexibility and makes it possible to vary the frame. Unika is a mouth blown series of small, glass pendant lamps, originally designed for the Restaurant Gronbech. Est eum itaque maiores qui blanditiis architecto. Eligendi saepe rem ut. Cumque quia earum eligendi. </p>
+                                    <p> </p>
                                  </div>
                               </div>
 
@@ -591,7 +591,7 @@
 
                               <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab" tabindex="0">
                                  <div class="tpreview__wrapper">
-                                    <h4 class="tpreview__wrapper-title">1 review for Cheap and delicious fresh chicken</h4>
+                                    <h4 class="tpreview__wrapper-title"></h4>
                                     <div class="tpreview__comment">
                                        <div class="tpreview__comment-img mr-20">
                                           <img src="assets/img/testimonial/test-avata-1.png" alt="">

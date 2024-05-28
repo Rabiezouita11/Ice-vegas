@@ -534,7 +534,7 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="tpproduct-feature p-relative pt-45 pb-40">
                             <div class="tpsection tpfeature__content mb-35">
-                                <h4 class="tpsection__sub-title mb-0">~Qui sommes nous~</h4>
+                                <h4 class="tpsection__sub-title mb-0"></h4>
                                 <h4 style="color: black;" class="tpsection__title tpfeature__title mb-25">Ice Vegas
                                     <br>
                                     Un plaisir insatiable à chaque dégustation</h4>
