@@ -1,6 +1,6 @@
-@extends('Client.Layouts.index')
+<!doctype html>
+<html class="no-js" lang="zxx">
 
-<<<<<<< HEAD
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/icon-dukamarket.css">
     <link rel="stylesheet" href="assets/css/main.css">
+
 
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css"
@@ -153,8 +154,8 @@
                                             </ul>
 
                                         </li>
-                                       
-                                        <li><a href="{{route('Apropos')}}">Ice vegas</a></li>
+
+                                        <li><a href="{{ route('Apropos') }}">Ice vegas</a></li>
                                         <li><a href="about.html">Promo</a></li>
                                         <li><a href="about.html">Recette</a></li>
 
@@ -216,7 +217,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-6 pt-100 pb-100">
-                            <h2 class="tpsearchbar__title"> Que cherchez-vous ?
+                            <h2 class="tpsearchbar__title">Que cherchez-vous ?
                             </h2>
                             <div class="tpsearchbar__form">
                                 <form action="#">
@@ -255,244 +256,271 @@
                                         <div class="tpcart__cart-price">
                                             <span class="quantity">1 x</span>
                                             <span class="new-price">$162.80</span>
-=======
-@section('content')
-    <!-- slider-area-start -->
-    <section class="slider-area tpslider-delay">
-        <div class="swiper-container slider-active">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide ">
-                    <div class="tpslider pt-90 pb-0 grey-bg" data-background="mongue.png">
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-xxl-5 col-lg-6 col-md-6 col-12 col-sm-6">
-                                    <div class="tpslider__content pt-20">
-                                        <span class="tpslider__sub-title mb-35"></span>
-                                        <h2 class="tpslider__title mb-30" style="color: black">Savourez
-                                            l'excellence glacée avec Ice Vegas.</h2>
-                                        <p style="color: black">Un duel de saveurs délicieusement intense :
-                                            pistache vs chocolat !<br> Quel sera votre coup de cœur?</p>
-                                        <div class="tpslider__btn">
-                                            <a class="tp-btn" href="shop-2.html">Nos Collection</a>
->>>>>>> 27a969314a458ade99f3cfc668bdd4fc19a15dc3
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xxl-7 col-lg-6 col-md-6 col-12 col-sm-6">
-                                    <div class="tpslider__thumb p-relative pt-15">
-                                        <img class="tpslider__thumb-img" src="3.png" alt="slider-bg">
+                            </li>
+                            <li>
+                                <div class="tpcart__item">
+                                    <div class="tpcart__img">
+                                        <img src="assets/img/product/products12-min.jpg" alt="">
+                                        <div class="tpcart__del">
+                                            <a href="#"><i class="icon-x-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpcart__content">
+                                        <span class="tpcart__content-title"><a href="shop-details.html">Banana,
+                                                Beautiful Skin, Good For Health 1Kg</a>
+                                        </span>
+                                        <div class="tpcart__cart-price">
+                                            <span class="quantity">1 x</span>
+                                            <span class="new-price">$138.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="tpcart__item">
+                                    <div class="tpcart__img">
+                                        <img src="assets/img/product/products3-min.jpg" alt="">
+                                        <div class="tpcart__del">
+                                            <a href="#"><i class="icon-x-circle"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="tpcart__content">
+                                        <span class="tpcart__content-title"><a href="shop-details.html">Quaker Popped
+                                                Rice Crisps Snacks Chocolate</a>
+                                        </span>
+                                        <div class="tpcart__cart-price">
+                                            <span class="quantity">1 x</span>
+                                            <span class="new-price">$162.8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tpcart__checkout">
+                        <div class="tpcart__total-price d-flex justify-content-between align-items-center">
+                            <span> Subtotal:</span>
+                            <span class="heilight-price"> $300.00</span>
+                        </div>
+                        <div class="tpcart__checkout-btn">
+                            <a class="tpcart-btn mb-10" href="cart.html">View Cart</a>
+                            <a class="tpcheck-btn" href="checkout.html">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tpcart__free-shipping text-center">
+                    <span>Free shipping for orders <b>under 10km</b></span>
+                </div>
+            </div>
+        </div>
+        <div class="cartbody-overlay"></div>
+        <!-- header-cart-end -->
 
+        <!-- mobile-menu-area -->
+        <div id="header-sticky-2" class="tpmobile-menu d-xl-none">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-4 col-3 col-sm-3">
+                        <div class="mobile-menu-icon">
+                            <button class="tp-menu-toggle"><i class="icon-menu1"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-6 col-sm-4">
+                        <div class="header__logo text-center">
+                            <a href="index.html"><img height="100px" width="100px" src="logo.png"
+                                    alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-3 col-sm-5">
+                        <div class="header__info d-flex align-items-center">
+                            <div class="header__info-search tpcolor__purple ml-10 d-none d-sm-block">
+                                <button class="tp-search-toggle"><i class="icon-search"></i></button>
+                            </div>
+                            <div class="header__info-user tpcolor__yellow ml-10 d-none d-sm-block">
+                                <a href="log-in.html"><i class="icon-user"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="body-overlay"></div>
+        <!-- mobile-menu-area-end -->
+
+        <!-- sidebar-menu-area -->
+        <div class="tpsideinfo">
+            <button class="tpsideinfo__close">Close<i class="fal fa-times ml-10"></i></button>
+            <div class="tpsideinfo__search text-center pt-35">
+                <span class="tpsideinfo__search-title mb-20">What Are You Looking For?</span>
+                <form action="#">
+                    <input type="text" placeholder="Search Products...">
+                    <button><i class="icon-search"></i></button>
+                </form>
+            </div>
+            <div class="tpsideinfo__nabtab">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">Menu</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab"
+                            aria-controls="pills-profile" aria-selected="false">Categories</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab" tabindex="0">
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                        aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="tpsidebar-categories">
+                            <ul>
+                                <li><a href="shop-details.html">Dairy Farm</a></li>
+                                <li><a href="shop-details.html">Healthy Foods</a></li>
+                                <li><a href="shop-details.html">Lifestyle</a></li>
+                                <li><a href="shop-details.html">Organics</a></li>
+                                <li><a href="shop-details.html">Photography</a></li>
+                                <li><a href="shop-details.html">Shopping</a></li>
+                                <li><a href="shop-details.html">Tips & Tricks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tpsideinfo__account-link">
+                <a href="log-in.html"><i class="icon-user icons"></i> Login / Register</a>
+            </div>
+            <div class="tpsideinfo__wishlist-link">
+                <a href="wishlist.html" target="_parent"><i class="icon-heart"></i> Wishlist</a>
+            </div>
+        </div>
+        <!-- sidebar-menu-area-end -->
+    </header>
+    <!-- header-area-end -->
+    <style>
+        .pt-20 {
+            margin-left: 114px;
+        }
+
+        .pt-90 {
+            padding-top: 0px;
+        }
+
+        .pt-45 {
+            padding-top: 145px;
+        }
+    </style>
+
+    <main>
+
+        @yield('content')
+
+
+
+
+
+    </main>
+
+
+    <!-- footer-area-start -->
+    <footer>
+        <section class="section-less-padding-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-centered text-center"> <img src="images/logo/logo.png"
+                            alt="" /> </div>
+                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
+                        <div class="tpfooter__widget footer-col-4 mb-50">
+                            <h4 class="tpfooter__widget-title">Our newsletter</h4>
+                            <div class="tpfooter__widget-newsletter">
+                                <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other
+                                    information.</p>
+                                <form action="{{ route('newsletter.subscribe') }}" method="POST">
+                                    @csrf
+
+                                    <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        required>
+                                    <button type="submit"
+                                        class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+
+
+                                </form>
+                                <div class="tpfooter__widget-newsletter-check mt-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I accept terms & conditions & privacy policy.
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="tpfooter__widget-social mt-45">
+                        <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-skype"></i></a>
+                    </div>
+                    <br />
+                    <div class="col-md-12 col-centered text-center">
+                        <p class="text-gray">Copyright © 2019 <br />
+                            Design & Developed by Codelayers</p>
+                    </div>
+
                 </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer-area-end -->
 
 
-            </div>
-            <div class="tpslider__arrow d-none  d-xxl-block">
-                <button class="tpsliderarrow tpslider__arrow-prv"><i class="icon-chevron-left"></i></button>
-                <button class="tpsliderarrow tpslider__arrow-nxt"><i class="icon-chevron-right"></i></button>
-            </div>
-            <div class="slider-pagination d-xxl-none"></div>
-        </div>
-    </section>
-    <!-- slider-area-end -->
-    {{-- @if (session('success'))
-            <div class="alert alert-success mt-2 text-center">
-                {{ session('success') }}
-            </div>
+    <!-- JS here -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/waypoints.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/swiper-bundle.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/magnific-popup.js"></script>
+    <script src="assets/js/counterup.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/isotope-pkgd.js"></script>
+    <script src="assets/js/imagesloaded-pkgd.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/ajax-form.js"></script>
+    <script src="assets/js/meanmenu.js"></script>
+    <script src="assets/js/main.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if (session('success'))
+            toastr.success("{{ session('success') }}", 'Success', {
+                timeOut: 5000
+            });
         @endif
 
         @if ($errors->any())
-            <div class="alert alert-danger mt-2 text-center">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif --}}
-    <!-- category-area-start -->
-    <section class="category-area grey-bg pb-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="tpsection mb-35">
+            @foreach ($errors->all() as $error)
+                toastr.error("{{ $error }}", 'Error', {
+                    timeOut: 5000
+                });
+            @endforeach
+        @endif
+    </script>
+</body>
 
-                        <h4 class="tpsection__title" style="color: black">Produits Ice Vegas </h4>
-                        <p style="color: black">"Découvrez notre sélection exclusive de produits pour répondre à
-                            tous vos besoins"</p>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-container category-active">
-                <div class="swiper-wrapper">
-                    @foreach ($products as $product)
-                        <div class="swiper-slide">
-                            <div class="category__item mb-30">
-                                <div class="category__thumb fix mb-15">
-                                    <a href="{{ route('products.show', $product->id) }}"><img src="{{ $product->Image }}"
-                                            alt="{{ $product->Nom }}"></a>
-                                </div>
-                                <div class="category__content">
-                                    <h5 class="category__title"><a
-                                            href="{{ route('products.show', $product->id) }}">{{ $product->Nom }}</a>
-                                    </h5>
-                                    <span class="category__count">
-                                        <p>Categorie: {{ $product->categorie->Nom }}</p>
-                                        <!-- Display category name -->
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-    <!-- category-area-end -->
-
-    <!-- product-area-start -->
-    <section class="product-area grey-bg pb-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="tpsection mb-35">
-                        <h4 class="tpsection__sub-title">~Qui sommes nous~</h4>
-                        <h4 class="tpsection__title tpfeature__title mb-25" style="color: black;">Ice Vegas</h4>
-                        <p style="color: black;font-size: 20px">Un plaisir insatiable à chaque dégustation</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- product-area-end -->
-
-    <!-- product-feature-area-start -->
-    <section class="product-feature-area product-feature grey-bg pt-80 pb-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12">
-                    <div class="tpfeature__thumb p-relative pb-40">
-                        <img src="image3.jpg" alt="">
-
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="tpproduct-feature p-relative pt-45 pb-40">
-                        <div class="tpsection tpfeature__content mb-35">
-                            <h4 class="tpsection__sub-title mb-0"></h4>
-                            <h4 style="color: black;" class="tpsection__title tpfeature__title mb-25">Ice Vegas
-                                <br>
-                                Un plaisir insatiable à chaque dégustation
-                            </h4>
-                            <p>Bienvenue chez Ice Vegas, votre destination ultime pour une expérience glacée
-                                incomparable. Nous sommes une marque premium de glaces industrielles, dédiés à
-                                offrir des moments de plaisir et de fraîcheur inégalés à chaque bouchée.</p>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-lg-6 col-md-6">
-                                <div class="tpfeature__box">
-
-
-                                    <div class="tpfeature__btn">
-                                        <a class="tp-btn-3" href="{{ route('Apropos') }}">Ice vegas</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tpfeature__shape d-none d-md-block">
-                            <img class="tpfeature__shape-three" src=".jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- product-feature-area-end -->
-
-    <!-- banner-area-start -->
-    <section class="category-area grey-bg pb-40">
-        <div class="container">
-            <div class="swiper-container category-active">
-                <div class="swiper-wrapper">
-                    @foreach ($categoriesALL as $categorie)
-                        <div class="swiper-slide">
-                            <div class="category__item mb-30">
-                                <div class="category__thumb fix mb-15">
-                                    <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}"><img
-                                            src="{{ asset($categorie->Image) }}" alt="{{ $categorie->Nom }}"></a>
-                                </div>
-                                <div class="category__content">
-                                    <h5 class="category__title"><a
-                                            href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a>
-                                    </h5>
-
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- banner-area-end -->
-
-    <!-- product-area-start -->
-
-    <!-- product-area-end -->
-
-    <!-- product-coundown-area-start -->
-    <section class="product-coundown-area tpcoundown__bg grey-bg pb-25"
-        data-background="assets/img/banner/coundpwn-bg-1.png">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tpcoundown p-relative ml-175">
-                        <div class="section__content mb-35">
-                            <span class="section__sub-title mb-10">~ Deals Of The Day ~</span>
-                            <h2 class="section__title mb-25">Premium Drinks <br> Fresh Farm Product</h2>
-                            <p>The liber tempor cum soluta nobis eleifend option congue <br>
-                                doming quod mazim placerat facere possum assam going through.</p>
-                        </div>
-                        <div class="tpcoundown__count">
-                            <h4 class="tpcoundown__count-title">hurry up! Offer End In:</h4>
-                            <div class="tpcoundown__countdown" data-countdown="2022/11/11"></div>
-                            <div class="tpcoundown__btn mt-50">
-                                <a class="whight-btn" href="shop-details-grid.html">Shop Now</a>
-                                <a class="whight-btn border-btn ml-15" href="shop-list-view.html">View Menu</a>
-                            </div>
-                        </div>
-                        <div class="tpcoundown__shape d-none d-lg-block">
-                            <img class="tpcoundown__shape-one" src="assets/img/shape/tree-leaf-1.svg" alt="">
-                            <img class="tpcoundown__shape-two" src="assets/img/shape/tree-leaf-2.svg" alt="">
-                            <img class="tpcoundown__shape-three" src="assets/img/shape/tree-leaf-3.svg" alt="">
-                            <img class="tpcoundown__shape-four" src="assets/img/shape/fresh-shape-1.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- product-coundown-area-end -->
-
- 
-    <!-- blog-area-end -->
-
-    <!-- feature-area-start -->
-
-    <!-- feature-area-end -->
-@endsection
+</html>

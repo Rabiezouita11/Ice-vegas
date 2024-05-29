@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html class="no-js" lang="zxx">
    <head>
@@ -6,135 +7,36 @@
       <title>Ice Vegas 2  </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+=======
+@extends('Client.Layouts.index')
+>>>>>>> 27a969314a458ade99f3cfc668bdd4fc19a15dc3
 
-      <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+@section('content')
+<main>
 
-      <!-- CSS here -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/animate.css">
-      <link rel="stylesheet" href="assets/css/swiper-bundle.css">
-      <link rel="stylesheet" href="assets/css/slick.css">
-      <link rel="stylesheet" href="assets/css/magnific-popup.css">
-      <link rel="stylesheet" href="assets/css/spacing.css">
-      <link rel="stylesheet" href="assets/css/meanmenu.css">
-      <link rel="stylesheet" href="assets/css/nice-select.css">
-      <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-      <link rel="stylesheet" href="assets/css/icon-dukamarket.css">
-      <link rel="stylesheet" href="assets/css/jquery-ui.css">
-      <link rel="stylesheet" href="assets/css/main.css">
-   </head>
-   <body>
-
-
-      <!-- Scroll-top -->
-      <button class="scroll-top scroll-to-target" data-target="html">
-         <i class="icon-chevrons-up"></i>
-      </button>
-      <!-- Scroll-top-end-->
-
-
-      <!-- header-area-start -->
-      <header>
-        <div class="header__top theme-bg-1 d-none d-md-block" style="background-color: white">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="header__top-left">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12">
-                        <div class="header__top-right d-flex align-items-center">
-
-                            <div class="header__lang">
-                                <span class="header__lang-select" style="color: black">France <i
-                                        class="far fa-angle-down"></i></span>
-                                <ul class="header__lang-submenu">
-
-
-
-                                    <li>
-                                        <a href="#">English</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">France</a>
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
+    <!-- breadcrumb-area-start -->
+    <div class="breadcrumb__area pt-5 pb-5">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-12">
+                <div class="tp-breadcrumb__content">
+                   <div class="tp-breadcrumb__list">
+                      <span class="tp-breadcrumb__active"><a href="index.html">Home</a></span>
+                      <span class="dvdr">/</span>
+                      <span>Contact Us</span>
+                   </div>
                 </div>
-            </div>
-        </div>
-        <div id="header-sticky" class="header__main-area d-none d-xl-block" style="margin-bottom: 0;">
-            <div class="container">
-                <div class="header__for-megamenu p-relative">
-                    <div class="row align-items-center">
-                        <div class="col-xl-3">
-                            <div class="header__logo">
-                                <a href="index.html"><img height="100px" width="100px" src="logo.png"
-                                        alt="logo"></a>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="header__menu main-menu text-center">
-                                <nav id="mobile-menu" style="color: black">
-                                    <ul>
-                                        <li><a href="{{ route('home') }}">Accueil</a></li>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- breadcrumb-area-end -->
 
-                                        {{-- <li class="has-dropdown has-megamenu">
-                                            <a href="course-grid.html">Ca</a>
-                                            <ul class="sub-menu mega-menu"
-                                                data-background="assets/img/banner/mega-menu-shop-1.jpg">
-                                                <li>
-                                                    <a class="mega-menu-title">Shop layout</a>
-                                                    <ul>
-                                                        <li><a href="shop-left-sidebar.html">Shop With Banner </a></li>
-                                                        <li><a href="shop-3.html">Shop Without Banner</a></li>
-                                                        <li><a href="shop-2.html">Shop Version</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
-                                                        <li><a href="shop-right-sidebar.html">Shop Right sidebar</a>
-                                                        </li>
-                                                        <li><a href="shop-list-view.html">Shop List view</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a class="mega-menu-title">Product layout</a>
-                                                    <ul>
-                                                        <li><a href="shop-details-3.html">Image scroll</a></li>
-                                                        <li><a href="shop-details-grid.html">Product grid</a></li>
-                                                        <li><a href="shop-details-top.html">Top Thumb Product</a></li>
-                                                        <li><a href="shop-details.html">Bottom Thumb Product</a></li>
-                                                        <li><a href="shop-details-4.html">Simple Product</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a class="mega-menu-title">Product type</a>
-                                                    <ul>
-                                                        <li><a href="shop-details.html">Products Simple</a></li>
-                                                        <li><a href="shop-details-grid.html">Products Group</a></li>
-                                                        <li><a href="shop-details-3.html">Products Variable</a></li>
-                                                        <li><a href="shop-details-3.html">Special</a></li>
-                                                        <li><a href="shop-details-4.html">Decoration</a></li>
-                                                        <li><a href="shop-details-top.html">Contruction</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a class="mega-menu-title">Product category</a>
-                                                    <ul>
-                                                        <li><a href="shop-details.html">Fresh bakery</a></li>
-                                                        <li><a href="shop-details-3.html">Fresh fruits</a></li>
-                                                        <li><a href="shop-details-4.html">Fresh meat</a></li>
-                                                        <li><a href="shop-details.html">Fruit drink</a></li>
-                                                        <li><a href="shop-details.html">Fresh bakery</a></li>
-                                                        <li><a href="shop-details-grid.html">Biscuits snack</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li> --}}
+    <!-- contact-area-start -->
+ 
+    <!-- contact-area-end -->
 
+<<<<<<< HEAD
 
                                         <li class="has-dropdown">
                                             <a href="blog.html">Collection</a>
@@ -506,78 +408,85 @@
 
          
          <!-- feature-area-start -->
+=======
+    <!-- map-area-start -->
+    <section class="map-area tpmap__box">
+       <div class="container">
+          <div class="row gx-0">
+             <div class="col-lg-6 col-md-6 order-2 order-md-1">
+>>>>>>> 27a969314a458ade99f3cfc668bdd4fc19a15dc3
      
-         <!-- feature-area-end -->
-
-      </main>
-
-      <!-- footer-area-start -->
-      <footer>
-        <section class="section-less-padding-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-centered text-center"> <img src="images/logo/logo.png"
-                            alt="" /> </div>
-                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
-                        <div class="tpfooter__widget footer-col-4 mb-50">
-                            <h4 class="tpfooter__widget-title">Our newsletter</h4>
-                            <div class="tpfooter__widget-newsletter">
-                                <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other
-                                    information.</p>
-                                <form action="index.html">
-                                    <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
-                                    <input type="email" placeholder="Your email address...">
-                                    <button class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
-                                </form>
-                                <div class="tpfooter__widget-newsletter-check mt-10">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            I accept terms & conditions & privacy policy.
-                                        </label>
-                                    </div>
-                                </div>
+                <div class="tpmap__wrapper">
+                <iframe src="https://maps.google.com/maps?q=benarous&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+       allowfullscreen></iframe>                     
+                   </div>
+             </div>
+             <div class="col-lg-6 col-md-6 order-1 order-md-2">
+                <div class="tpform__wrapper pt-120 pb-80 ml-60">
+                   <h4 class="tpform__title">LEAVE A REPLY</h4>
+                   <p>Your email address will not be published. Required fields are marked *</p>
+                   <div class="tpform__box">
+                      <form action="#">
+                         <div class="row gx-7">
+                            <div class="col-lg-6">
+                              
+                               <div class="form-group">
+                                   <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                       <input id="email"  placeholder="Your Name *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                      
+                                   </div>
+                               </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tpfooter__widget-social mt-45">
-                        <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-skype"></i></a>
-                    </div>
-                    <br />
-                    <div class="col-md-12 col-centered text-center">
-                        <p class="text-gray">Copyright © 2019 <br />
-                            Design & Developed by Codelayers</p>
-                    </div>
+                            <div class="col-lg-6">
+                               
+                               <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                   <input id="email"  placeholder="Your Email *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                  
+                               </div>
+                            </div>
+                            <div class="col-lg-6">
 
+                               <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                   <input id="email"  placeholder="Your Subject *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                  
+                               </div>
+                               
+                            </div>
+                            <div class="col-lg-6">
+                              
+                               <div class="fxt-transformY-50 fxt-transition-delay-1">
+                                   <input id="email"  placeholder="Your Phone *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                  
+                               </div>
+                            </div>
+                            <div class="col-lg-12">
+                               <div class="tpform__textarea">
+                                  <textarea name="message" placeholder="Message"></textarea>
+                                  <div class="tpform__textarea-check mt-20 mb-25">
+                                     <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault01">
+                                        <label class="form-check-label" for="flexCheckDefault01">
+                                           I am bound by the terms of the <a href="#">Service I accept Privacy Policy.</a>
+                                        </label>
+                                      </div>                                  
+                                  </div>
+                                  <button>Send message</button>
+                               </div>
+                            </div>
+                         </div>
+                      </form>
+                   </div>
                 </div>
-            </div>
-        </section>
-    </footer>
-      <!-- footer-area-end -->
-      
+             </div>
+          </div>
+       </div>
+    </section>
+    <!-- map-area-end -->
 
-      <!-- JS here -->
-      <script src="assets/js/jquery.js"></script>
-      <script src="assets/js/waypoints.js"></script>
-      <script src="assets/js/bootstrap.bundle.min.js"></script>
-      <script src="assets/js/swiper-bundle.js"></script>
-      <script src="assets/js/nice-select.js"></script>
-      <script src="assets/js/slick.js"></script>
-      <script src="assets/js/magnific-popup.js"></script>
-      <script src="assets/js/counterup.js"></script>
-      <script src="assets/js/wow.js"></script>
-      <script src="assets/js/isotope-pkgd.js"></script>
-      <script src="assets/js/imagesloaded-pkgd.js"></script>
-      <script src="assets/js/countdown.js"></script>
-      <script src="assets/js/ajax-form.js"></script>
-      <script src="assets/js/jquery-ui.js"></script>
-      <script src="assets/js/meanmenu.js"></script>
-      <script src="assets/js/main.js"></script>
-   </body>
-</html>
+    
+    <!-- feature-area-start -->
+
+    <!-- feature-area-end -->
+
+ </main>
+ @endsection

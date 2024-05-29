@@ -17,6 +17,15 @@
                         </ol>
                     </div>
                 </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <form action="{{ route('searchProduit') }}" method="GET" class="form-inline float-right">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                                name="query" value="{{ request('query') }}">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
             </div><!-- /.container-fluid -->
         </section>
 
@@ -33,13 +42,17 @@
                                     Add Produits
                                 </button>
                             </div>
-                            @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="card-body categoryTableContainer">
-
+                                @if (request('query'))
+                                    <div class="alert alert-info">
+                                        {{ $Produits->total() }} results found for "{{ request('query') }}"
+                                    </div>
+                                @endif
                                 <table id="categoryTable" class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -65,18 +78,14 @@
                                                     <td>{{ $Produit->Description }}</td>
                                                     <td><img src="{{ asset($Produit->Image) }}" alt="{{ $Produit->Nom }}"
                                                             class="img-fluid rounded-circle"
-                                                            style="max-width: 60px ; max-height: 60px;"></td>
+                                                            style="max-width: 60px; max-height: 60px;"></td>
                                                     <td>{{ $Produit->Prix }}</td>
                                                     <td>{{ $Produit->categorie->Nom }}</td>
                                                     <td>
-
-
-
-
                                                         <!-- Edit Button with Icon -->
                                                         <button type="button" class="btn btn-sm btn-primary"
                                                             data-toggle="modal"
-                                                            data-target="#editCategoryModal_{{ $index }}">
+                                                            data-target="#editProduitModal_{{ $index }}">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
                                                         <!-- Delete Button with Icon -->
@@ -91,8 +100,6 @@
                                         @endif
                                     </tbody>
                                 </table>
-
-
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer clearfix pagination-container">
@@ -100,22 +107,9 @@
                             </div>
                         </div>
                         <!-- /.card -->
-
-
-                        <!-- /.card -->
                     </div>
                     <!-- /.col -->
-
-                    <!-- /.col -->
                 </div>
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
         </section>
@@ -179,43 +173,59 @@
         </div>
     </div>
 
-    <!-- Edit Category Modal -->
-    <!-- Edit Category Modals -->
-    @foreach ($Produits as $index => $category)
-        <div class="modal fade" id="editCategoryModal_{{ $index }}"
-            aria-labelledby="editCategoryModalLabel_{{ $index }}" aria-hidden="true">
+    <!-- Edit Product Modals -->
+    @foreach ($Produits as $index => $produit)
+        <div class="modal fade" id="editProduitModal_{{ $index }}"
+            aria-labelledby="editProduitModalLabel_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editCategoryModalLabel_{{ $index }}">Edit Category</h5>
+                        <h5 class="modal-title" id="editProduitModalLabel_{{ $index }}">Edit Product</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- Form for editing a category -->
-                        <form action="{{ route('categories.update', $category->id) }}" method="POST"
+                        <!-- Form for editing a product -->
+                        <form action="{{ route('updateProduit', $produit->id) }}" method="POST"
                             enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="editCategoryName">Nom catégorie</label>
-                                <input type="text" class="form-control" id="editCategoryName" name="Nom"
-                                    value="{{ $category->Nom }}" required>
+                                <label for="editProduitName">Product Name</label>
+                                <input type="text" class="form-control" id="editProduitName" name="Nom"
+                                    value="{{ $produit->Nom }}" required>
                             </div>
                             <div class="form-group">
-                                <label for="editCategoryImage">Image</label>
-                                <input type="file" class="form-control-file" id="editCategoryImage" name="Image">
+                                <label for="editProduitDescription">Description</label>
+                                <textarea class="form-control" id="editProduitDescription" name="Description" required>{{ $produit->Description }}</textarea>
                             </div>
-                            <button type="button" class="btn btn-danger delete-button"
-                                onclick="updateCategory({{ $category->id }}, {{ $index }})">Save Changes</button>
+                            <div class="form-group">
+                                <label for="editProduitImage">Image</label>
+                                <input type="file" class="form-control-file" id="editProduitImage" name="Image">
+                            </div>
+                            <div class="form-group">
+                                <label for="editProduitPrix">Price</label>
+                                <input type="number" class="form-control" id="editProduitPrix" name="Prix"
+                                    value="{{ $produit->Prix }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editProduitCategorie">Category</label>
+                                <select class="form-control" id="editProduitCategorie" name="categorie_id" required>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ $category->id == $produit->categorie_id ? 'selected' : '' }}>
+                                            {{ $category->Nom }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
-
 
 
     <!-- Delete Category Modal -->
@@ -236,7 +246,7 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <!-- Button to trigger the delete process -->
-                        <button type="button" class="btn btn-danger delete-button"data-dismiss="modal"
+                        <button type="button" class="btn btn-danger delete-button" data-dismiss="modal"
                             onclick="deleteProduit({{ $produit->id }}, {{ $index }})">Delete</button>
                     </div>
                 </div>
@@ -244,13 +254,10 @@
         </div>
     @endforeach
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-   
     <script>
         function deleteProduit(produitid, index) {
-            // This function will be called when the delete button inside the modal is clicked
             fetch(`/Produits/${produitid}`, {
                     method: 'DELETE',
                     headers: {
@@ -265,35 +272,21 @@
                     return response.json();
                 })
                 .then(data => {
-                    // Show success toast
                     showToast('success', data.message);
-
                     updateTableContent();
-
                     updatePagination();
-                    // Remove the deleted category row from the table
-                    // Hide the modal after deletion (optional)
                     $('#deleteCategoryModal_' + index).modal('hide');
-
                 })
                 .catch(error => {
-                    // Show error toast or handle error
                     showToast('error', 'An error occurred. Please try again later.');
                     console.error('There was an error!', error);
                 });
         }
 
-
-
-
-
-
         function updateTableContent() {
-            // Fetch the updated table content from the server
             fetch('{{ route('showPageProduit') }}')
                 .then(response => response.text())
                 .then(html => {
-                    // Replace the current table content with the updated one
                     $('#categoryTable').html($(html).find('#categoryTable').html());
                 })
                 .catch(error => {
@@ -302,25 +295,23 @@
         }
 
         function updatePagination() {
-            // Fetch the updated pagination HTML from the server
             fetch('{{ route('showPageProduit') }}')
                 .then(response => response.text())
                 .then(html => {
-                    // Replace the current pagination HTML with the updated one
                     $('.pagination-container').html($(html).find('.pagination-container').html());
                 })
                 .catch(error => {
                     console.error('Error updating pagination:', error);
                 });
         }
-        // Function to display toast notifications
+
         function showToast(type, message) {
             toastr.options = {
-                closeButton: true, // Add a close button
-                progressBar: true, // Show a progress bar
-                showMethod: 'slideDown', // Animation in
-                hideMethod: 'slideUp', // Animation out
-                timeOut: 5000, // Time before auto-dismiss
+                closeButton: true,
+                progressBar: true,
+                showMethod: 'slideDown',
+                hideMethod: 'slideUp',
+                timeOut: 5000,
             };
 
             switch (type) {
@@ -339,6 +330,5 @@
             }
         }
     </script>
-
 
 @endsection

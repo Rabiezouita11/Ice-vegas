@@ -161,7 +161,15 @@ $currentRoute = Route::currentRouteName();
         </p>
     </a>
 </li>
+<li class="nav-item">
+  <a href="{{ route('newsletters.create') }}" class="nav-link  {{ $currentRoute === 'newsletters.create' ? 'active' : '' }}">
       
+      <p style="color:black">
+        Newsletter
+        
+      </p>
+  </a>
+</li>
        
         
         
