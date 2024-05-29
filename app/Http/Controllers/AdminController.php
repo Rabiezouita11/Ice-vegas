@@ -31,6 +31,38 @@ class AdminController extends Controller
     // function affiche home admin
 
 
+
+    public function updateProduit(Request $request, Produits $produit)
+    {
+        // Validate the incoming request
+        $request->validate([
+            'Nom' => 'required|string|max:255',
+            'Description' => 'required|string',
+            'Image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'Prix' => 'required|numeric',
+            'categorie_id' => 'required|exists:categories,id',
+        ]);
+
+        // Update the product with the new data
+        $produit->update([
+            'Nom' => $request->Nom,
+            'Description' => $request->Description,
+            'Prix' => $request->Prix,
+            'categorie_id' => $request->categorie_id,
+        ]);
+
+        // Handle image upload if provided
+        if ($request->hasFile('Image')) {
+            $image = $request->file('Image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $image->move(public_path('images'), $imageName);
+            // Update the product's image field
+            $produit->update(['Image' => 'images/' . $imageName]);
+        }
+
+        // Redirect back with a success message
+        return redirect()->back()->with('success', 'Product updated successfully.');
+    }
     public function index()
     {
         $clientCount = User::where('role', 'client')->count();
@@ -143,15 +175,18 @@ class AdminController extends Controller
 
     public function showPageProduit()
     {
+
+        
         $Produits = Produits::paginate(4);  // Fetch all categories
         $jouerscount = Jouer::count();
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         $categorie = Categories::all();  // Retrieve all categories from the database
+        $categories = Categories::all();  // Retrieve all categories from the database
 
         View::share('categoryCount', $categoryCount);
 
-        return view('Admin.Produits.index', compact('categoryCount', 'ProduitsCount', 'Produits', 'categorie', 'jouerscount'));  // Pass categories and category count to the view
+        return view('Admin.Produits.index', compact('categoryCount', 'ProduitsCount', 'Produits', 'categorie','categories', 'jouerscount'));  // Pass categories and category count to the view
     }
 
     public function storeCategorie(Request $request)

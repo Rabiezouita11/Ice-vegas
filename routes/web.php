@@ -61,6 +61,7 @@ Route::get('/jouer/{id}', [App\Http\Controllers\ClientController::class, 'showJo
 
 /*  ADMIN */
 
+Route::put('/update-produit/{produit}', [App\Http\Controllers\AdminController::class, 'updateProduit'])->name('updateProduit')->middleware('role:admin');
 
 
 Route::post('/check-response', [ClientController::class, 'checkResponse']);

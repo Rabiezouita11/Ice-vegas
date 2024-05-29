@@ -20,7 +20,8 @@
                 <div class="row mb-2">
                     <div class="col-md-12">
                         <form action="{{ route('searchProduit') }}" method="GET" class="form-inline float-right">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" value="{{ request('query') }}">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                                name="query" value="{{ request('query') }}">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         </form>
                     </div>
@@ -36,21 +37,22 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Liste des Produits</h3>
-                                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addProduitModal">
+                                <button type="button" class="btn btn-primary float-right" data-toggle="modal"
+                                    data-target="#addProduitModal">
                                     Add Produits
                                 </button>
                             </div>
-                            @if(session('success'))
+                            @if (session('success'))
                                 <div class="alert alert-success">
                                     {{ session('success') }}
                                 </div>
                             @endif
                             <div class="card-body categoryTableContainer">
-                                @if(request('query'))
-                                <div class="alert alert-info">
-                                    {{ $Produits->total() }} results found for "{{ request('query') }}"
-                                </div>
-                            @endif
+                                @if (request('query'))
+                                    <div class="alert alert-info">
+                                        {{ $Produits->total() }} results found for "{{ request('query') }}"
+                                    </div>
+                                @endif
                                 <table id="categoryTable" class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -74,16 +76,22 @@
                                                     <td>{{ $Produit->id }}</td>
                                                     <td>{{ $Produit->Nom }}</td>
                                                     <td>{{ $Produit->Description }}</td>
-                                                    <td><img src="{{ asset($Produit->Image) }}" alt="{{ $Produit->Nom }}" class="img-fluid rounded-circle" style="max-width: 60px; max-height: 60px;"></td>
+                                                    <td><img src="{{ asset($Produit->Image) }}" alt="{{ $Produit->Nom }}"
+                                                            class="img-fluid rounded-circle"
+                                                            style="max-width: 60px; max-height: 60px;"></td>
                                                     <td>{{ $Produit->Prix }}</td>
                                                     <td>{{ $Produit->categorie->Nom }}</td>
                                                     <td>
                                                         <!-- Edit Button with Icon -->
-                                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCategoryModal_{{ $index }}">
+                                                        <button type="button" class="btn btn-sm btn-primary"
+                                                            data-toggle="modal"
+                                                            data-target="#editProduitModal_{{ $index }}">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
                                                         <!-- Delete Button with Icon -->
-                                                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteProduitModal_{{ $index }}">
+                                                        <button type="button" class="btn btn-sm btn-danger"
+                                                            data-toggle="modal"
+                                                            data-target="#deleteProduitModal_{{ $index }}">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
                                                     </td>
@@ -165,31 +173,53 @@
         </div>
     </div>
 
-    <!-- Edit Category Modals -->
-    @foreach ($Produits as $index => $category)
-        <div class="modal fade" id="editCategoryModal_{{ $index }}" aria-labelledby="editCategoryModalLabel_{{ $index }}" aria-hidden="true">
+    <!-- Edit Product Modals -->
+    @foreach ($Produits as $index => $produit)
+        <div class="modal fade" id="editProduitModal_{{ $index }}"
+            aria-labelledby="editProduitModalLabel_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editCategoryModalLabel_{{ $index }}">Edit Category</h5>
+                        <h5 class="modal-title" id="editProduitModalLabel_{{ $index }}">Edit Product</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <!-- Form for editing a category -->
-                        <form action="{{ route('categories.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+                        <!-- Form for editing a product -->
+                        <form action="{{ route('updateProduit', $produit->id) }}" method="POST"
+                            enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
-                                <label for="editCategoryName">Nom catégorie</label>
-                                <input type="text" class="form-control" id="editCategoryName" name="Nom" value="{{ $category->Nom }}" required>
+                                <label for="editProduitName">Product Name</label>
+                                <input type="text" class="form-control" id="editProduitName" name="Nom"
+                                    value="{{ $produit->Nom }}" required>
                             </div>
                             <div class="form-group">
-                                <label for="editCategoryImage">Image</label>
-                                <input type="file" class="form-control-file" id="editCategoryImage" name="Image">
+                                <label for="editProduitDescription">Description</label>
+                                <textarea class="form-control" id="editProduitDescription" name="Description" required>{{ $produit->Description }}</textarea>
                             </div>
-                            <button type="button" class="btn btn-danger delete-button" onclick="updateCategory({{ $category->id }}, {{ $index }})">Save Changes</button>
+                            <div class="form-group">
+                                <label for="editProduitImage">Image</label>
+                                <input type="file" class="form-control-file" id="editProduitImage" name="Image">
+                            </div>
+                            <div class="form-group">
+                                <label for="editProduitPrix">Price</label>
+                                <input type="number" class="form-control" id="editProduitPrix" name="Prix"
+                                    value="{{ $produit->Prix }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="editProduitCategorie">Category</label>
+                                <select class="form-control" id="editProduitCategorie" name="categorie_id" required>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}"
+                                            {{ $category->id == $produit->categorie_id ? 'selected' : '' }}>
+                                            {{ $category->Nom }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
                         </form>
                     </div>
                 </div>
@@ -197,9 +227,11 @@
         </div>
     @endforeach
 
+
     <!-- Delete Category Modal -->
     @foreach ($Produits as $index => $produit)
-        <div class="modal fade" id="deleteProduitModal_{{ $index }}" aria-labelledby="deleteProduitModal_Label_{{ $index }}" aria-hidden="true">
+        <div class="modal fade" id="deleteProduitModal_{{ $index }}"
+            aria-labelledby="deleteProduitModal_Label_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -214,7 +246,8 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <!-- Button to trigger the delete process -->
-                        <button type="button" class="btn btn-danger delete-button" data-dismiss="modal" onclick="deleteProduit({{ $produit->id }}, {{ $index }})">Delete</button>
+                        <button type="button" class="btn btn-danger delete-button" data-dismiss="modal"
+                            onclick="deleteProduit({{ $produit->id }}, {{ $index }})">Delete</button>
                     </div>
                 </div>
             </div>
@@ -226,50 +259,50 @@
     <script>
         function deleteProduit(produitid, index) {
             fetch(`/Produits/${produitid}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                }
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                showToast('success', data.message);
-                updateTableContent();
-                updatePagination();
-                $('#deleteCategoryModal_' + index).modal('hide');
-            })
-            .catch(error => {
-                showToast('error', 'An error occurred. Please try again later.');
-                console.error('There was an error!', error);
-            });
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    showToast('success', data.message);
+                    updateTableContent();
+                    updatePagination();
+                    $('#deleteCategoryModal_' + index).modal('hide');
+                })
+                .catch(error => {
+                    showToast('error', 'An error occurred. Please try again later.');
+                    console.error('There was an error!', error);
+                });
         }
 
         function updateTableContent() {
             fetch('{{ route('showPageProduit') }}')
-            .then(response => response.text())
-            .then(html => {
-                $('#categoryTable').html($(html).find('#categoryTable').html());
-            })
-            .catch(error => {
-                console.error('Error updating table content:', error);
-            });
+                .then(response => response.text())
+                .then(html => {
+                    $('#categoryTable').html($(html).find('#categoryTable').html());
+                })
+                .catch(error => {
+                    console.error('Error updating table content:', error);
+                });
         }
 
         function updatePagination() {
             fetch('{{ route('showPageProduit') }}')
-            .then(response => response.text())
-            .then(html => {
-                $('.pagination-container').html($(html).find('.pagination-container').html());
-            })
-            .catch(error => {
-                console.error('Error updating pagination:', error);
-            });
+                .then(response => response.text())
+                .then(html => {
+                    $('.pagination-container').html($(html).find('.pagination-container').html());
+                })
+                .catch(error => {
+                    console.error('Error updating pagination:', error);
+                });
         }
 
         function showToast(type, message) {

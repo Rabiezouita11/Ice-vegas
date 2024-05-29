@@ -33,11 +33,11 @@
                                     Add Categorie
                                 </button>
                             </div>
-                            @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="card-body categoryTableContainer">
 
                                 <table id="categoryTable" class="table table-bordered">
@@ -167,8 +167,8 @@
                     </div>
                     <div class="modal-body">
                         <!-- Form for editing a category -->
-                        <form action="{{ route('categories.update', $category->id) }}" method="POST"
-                            enctype="multipart/form-data">
+                        <form id="editCategoryForm_{{ $index }}" action="{{ route('categories.update', $category->id) }}" method="POST" enctype="multipart/form-data">
+                          
                             @csrf
                             @method('PUT')
                             <div class="form-group">
@@ -218,44 +218,63 @@
     @endforeach
 
 
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
     <script>
-          function updateCategory(categoryId, index) {
-    // Get form data
-    let formData = new FormData();
-    formData.append('Nom', $('#editCategoryName').val());
-    formData.append('Image', $('#editCategoryImage')[0].files[0]); // Get the first file from input
-
-    fetch(`/categories/${categoryId}`, { // Correct the URL to point to the correct route
-        method: 'PUT',
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        },
-        body: formData
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+        function updateCategory(categoryId, index) {
+            // Serialize form data
+            let formData = $('#editCategoryForm_' + index).serialize();
+    
+            // If the 'Nom' field is not empty, proceed with the AJAX request
+            if ($('#editCategoryName').val().trim() !== '') {
+                $.ajax({
+                    url: `/categories/${categoryId}`,
+                    method: 'PUT',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    data: formData,
+                    success: function(data) {
+                        // Show success toast
+                        showToast('success', data.message);
+    
+                        // Hide the modal after update (optional)
+                        $('#editCategoryModal_' + index).modal('hide');
+    
+                        // Refresh the table content
+                        updateTableContent();
+                    },
+                    error: function(xhr, status, error) {
+                        // Show error toast or handle error
+                        showToast('error', error);
+                        console.error('There was an error!', error);
+                    }
+                });
+            } else {
+                // Show an error toast if the 'Nom' field is empty
+                showToast('error', 'Le champ nom est obligatoire.');
+            }
         }
-        return response.json();
-    })
-    .then(data => {
-        // Show success toast
-        showToast('success', data.message);
-
-     
-        // Hide the modal after update (optional)
-        $('#editCategoryModal_' + index).modal('hide');
-    })
-    .catch(error => {
-        // Show error toast or handle error
-        showToast('error', 'An error occurred. Please try again later.');
-        console.error('There was an error!', error);
-    });
-}
-
+    
+        function updateTableContent() {
+            // Fetch the updated table content from the server
+            $.ajax({
+                url: '{{ route('showPageCategories') }}',
+                method: 'GET',
+                success: function(html) {
+                    // Replace the current table content with the updated one
+                    $('#categoryTable').html($(html).find('#categoryTable').html());
+                },
+                error: function(xhr, status, error) {
+                    console.error('Error updating table content:', error);
+                }
+            });
+        }
     </script>
+    
+    
+
+
     <script>
         function deleteCategory(categoryId, index) {
             // This function will be called when the delete button inside the modal is clicked
@@ -291,7 +310,7 @@
                 });
         }
 
-      
+
 
 
 
