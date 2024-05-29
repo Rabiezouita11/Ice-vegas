@@ -48,9 +48,24 @@ Route::get('/products_{id}', [ClientController::class, 'showproducts'])->name('p
 
 Route::post('/subscribe', [ClientController::class, 'subscribe'])->name('newsletter.subscribe');
 
+/*  page affiche quiz  */
+
+
+Route::get('/jeux', [App\Http\Controllers\ClientController::class, 'jeux'])->name('jeux');
+
+
+
+Route::get('/jouer/{id}', [App\Http\Controllers\ClientController::class, 'showJouer'])->name('jouer.show');
+
+
 
 /*  ADMIN */
 
+
+
+Route::post('/check-response', [ClientController::class, 'checkResponse']);
+
+Route::post('/verify-response', [App\Http\Controllers\ClientController::class, 'saveResponse'])->name('response.save');
 
  /*  page affiche admin */ 
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('role:admin');

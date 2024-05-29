@@ -32,31 +32,52 @@
                                 @csrf
                                 <div class="form-group">
                                     <label for="name">Nom</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
+                                    @error('name')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="Image">Image</label>
                                     <input type="file" class="form-control" id="Image" name="Image">
+                                    @error('Image')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="Reponse1">Reponse1</label>
-                                    <input type="text" class="form-control" id="Reponse1" name="Reponse1">
+                                    <input type="text" class="form-control" id="Reponse1" name="Reponse1" value="{{ old('Reponse1') }}">
+                                    @error('Reponse1')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="Reponse2">Reponse2</label>
-                                    <input type="text" class="form-control" id="Reponse2" name="Reponse2">
+                                    <input type="text" class="form-control" id="Reponse2" name="Reponse2" value="{{ old('Reponse2') }}">
+                                    @error('Reponse2')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="Reponse3">Reponse3</label>
-                                    <input type="text" class="form-control" id="Reponse3" name="Reponse3">
+                                    <input type="text" class="form-control" id="Reponse3" name="Reponse3" value="{{ old('Reponse3') }}">
+                                    @error('Reponse3')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="ReponseCorrect">Reponse Correct</label>
-                                    <input type="text" class="form-control" id="ReponseCorrect" name="ReponseCorrect">
+                                    <input type="text" class="form-control" id="ReponseCorrect" name="ReponseCorrect" value="{{ old('ReponseCorrect') }}">
+                                    @error('ReponseCorrect')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="points_gained">Points Gained</label>
-                                    <input type="number" class="form-control" id="points_gained" name="points_gained">
+                                    <input type="number" class="form-control" id="points_gained" name="points_gained" value="{{ old('points_gained') }}">
+                                    @error('points_gained')
+                                        <p class="text-danger">{{ $message }}</p>
+                                    @enderror
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
