@@ -46,6 +46,11 @@
                                 </div>
                             @endif
                             <div class="card-body categoryTableContainer">
+                                @if(request('query'))
+                                <div class="alert alert-info">
+                                    {{ $Produits->total() }} results found for "{{ request('query') }}"
+                                </div>
+                            @endif
                                 <table id="categoryTable" class="table table-bordered">
                                     <thead>
                                         <tr>
