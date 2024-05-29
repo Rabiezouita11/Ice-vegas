@@ -216,7 +216,7 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-6 pt-100 pb-100">
-                            <h2 class="tpsearchbar__title">Que cherchez-vous ?
+                            <h2 class="tpsearchbar__title"> Que cherchez-vous ?
                             </h2>
                             <div class="tpsearchbar__form">
                                 <form action="#">

@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Orfarm - Multipurpose eCommerce HTML5 Template </title>
+      <title>Ice Vegas 2  </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -415,9 +415,9 @@
                   <div class="col-lg-12">
                      <div class="tp-breadcrumb__content">
                         <div class="tp-breadcrumb__list">
-                           <span class="tp-breadcrumb__active"><a href="index.html">Home</a></span>
+                           <span class="tp-breadcrumb__active"><a href="index.html">Acceuil</a></span>
                            <span class="dvdr">/</span>
-                           <span>Contact Us</span>
+                           <span style="color: black">Contact</span>
                         </div>
                      </div>
                   </div>
@@ -443,39 +443,42 @@
                   </div>
                   <div class="col-lg-6 col-md-6 order-1 order-md-2">
                      <div class="tpform__wrapper pt-120 pb-80 ml-60">
-                        <h4 class="tpform__title">LEAVE A REPLY</h4>
-                        <p>Your email address will not be published. Required fields are marked *</p>
+                        <h4 class="tpform__title" style="color: black">Contactez Nous </h4>
+                        <p style="color: black">Vous avez une question, un commentaire ou une suggestion ? Contactez-nous et nous vous répondrons dans les plus brefs délais.
+                            *</p>
                         <div class="tpform__box">
-                           <form action="#">
+                           <form action="#" style="color: black">
                               <div class="row gx-7">
                                  <div class="col-lg-6">
                                    
                                     <div class="form-group">
                                         <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                            <input id="email"  placeholder="Your Name *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                            <input id="email"  placeholder=" prenom :"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                            
                                         </div>
+                                        <br>
                                     </div>
                                  </div>
                                  <div class="col-lg-6">
                                     
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input id="email"  placeholder="Your Email *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input id="email"  placeholder="Nom : "  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                        
                                     </div>
                                  </div>
                                  <div class="col-lg-6">
 
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input id="email"  placeholder="Your Subject *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input id="email"  placeholder="Votre sujet"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                        
                                     </div>
+                                    <br>
                                     
                                  </div>
                                  <div class="col-lg-6">
                                    
                                     <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input id="email"  placeholder="Your Phone *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                        <input id="email"  placeholder="Téléphone : "  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                        
                                     </div>
                                  </div>
@@ -484,9 +487,7 @@
                                        <textarea name="message" placeholder="Message"></textarea>
                                        <div class="tpform__textarea-check mt-20 mb-25">
                                           <div class="form-check">
-                                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault01">
                                              <label class="form-check-label" for="flexCheckDefault01">
-                                                I am bound by the terms of the <a href="#">Service I accept Privacy Policy.</a>
                                              </label>
                                            </div>                                  
                                        </div>
