@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\NewsletterMail;
 use App\Models\Categories;
 use App\Models\Produits;
 use App\Models\Jouer;
+use App\Models\Newsletters;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;  // Import the Str class
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
@@ -35,7 +38,7 @@ class AdminController extends Controller
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         View::share('categoryCount', $categoryCount);
-        return view('Admin.Home.index', compact('ProduitsCount', 'clientCount','jouerscount'));
+        return view('Admin.Home.index', compact('ProduitsCount', 'clientCount', 'jouerscount'));
     }
 
     public function storeProduit(Request $request)
@@ -135,7 +138,7 @@ class AdminController extends Controller
         $jouerscount = Jouer::count();
         View::share('categoryCount', $categoryCount);
 
-        return view('Admin.Categories.index', compact('categories', 'categoryCount', 'ProduitsCount','jouerscount'));  // Pass categories and category count to the view
+        return view('Admin.Categories.index', compact('categories', 'categoryCount', 'ProduitsCount', 'jouerscount'));  // Pass categories and category count to the view
     }
 
     public function showPageProduit()
@@ -148,7 +151,7 @@ class AdminController extends Controller
 
         View::share('categoryCount', $categoryCount);
 
-        return view('Admin.Produits.index', compact('categoryCount', 'ProduitsCount', 'Produits', 'categorie','jouerscount'));  // Pass categories and category count to the view
+        return view('Admin.Produits.index', compact('categoryCount', 'ProduitsCount', 'Produits', 'categorie', 'jouerscount'));  // Pass categories and category count to the view
     }
 
     public function storeCategorie(Request $request)
@@ -256,7 +259,7 @@ class AdminController extends Controller
         $ProduitsCount = Produits::count();
         $jouerscount = Jouer::count();
         $jouers = Jouer::all();
-        return view('Admin.jouers.index', compact('jouers','categoryCount' ,'ProduitsCount','jouerscount'));
+        return view('Admin.jouers.index', compact('jouers', 'categoryCount', 'ProduitsCount', 'jouerscount'));
     }
 
 
@@ -265,7 +268,7 @@ class AdminController extends Controller
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         $jouerscount = Jouer::count();
-        return view('Admin.jouers.create',compact('categoryCount','ProduitsCount','jouerscount'));
+        return view('Admin.jouers.create', compact('categoryCount', 'ProduitsCount', 'jouerscount'));
     }
 
     public function storejouers(Request $request)
@@ -280,10 +283,10 @@ class AdminController extends Controller
             'ReponseCorrect' => 'required',
             'points_gained' => 'required|integer'
         ]);
-    
+
         // Store the uploaded file in the 'jouers' folder
-       // $imagePath = $request->file('Image')->store('jouers', 'public');
-       
+        // $imagePath = $request->file('Image')->store('jouers', 'public');
+
         // Create a new Jouer instance
         $jouer = new Jouer();
         if ($request->hasFile('Image')) {
@@ -298,10 +301,10 @@ class AdminController extends Controller
         $jouer->Reponse3 = $validatedData['Reponse3'];
         $jouer->ReponseCorrect = $validatedData['ReponseCorrect'];
         $jouer->points_gained = $validatedData['points_gained'];
-    
+
         // Save the jouer to the database
         $jouer->save();
-    
+
         return redirect()->route('jouers.index')->with('success', 'Jouer created successfully.');
     }
     public function editjouers(Jouer $jouer)
@@ -309,7 +312,7 @@ class AdminController extends Controller
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         $jouerscount = Jouer::count();
-        return view('Admin.jouers.edit', compact('jouer','categoryCount','ProduitsCount','jouerscount'));
+        return view('Admin.jouers.edit', compact('jouer', 'categoryCount', 'ProduitsCount', 'jouerscount'));
     }
 
     public function updatejouers(Request $request, Jouer $jouer)
@@ -322,7 +325,7 @@ class AdminController extends Controller
             'ReponseCorrect' => 'required',
             'points_gained' => 'required|integer'
         ]);
-    
+
         // Check if an image has been uploaded
         if ($request->hasFile('Image')) {
             $image = $request->file('Image');
@@ -335,17 +338,44 @@ class AdminController extends Controller
             // Update the image path in the database
             $jouer->Image = 'jouers/' . $imageName;
         }
-    
+
         // Update other fields
         $jouer->update($validatedData);
-    
+
         return redirect()->route('jouers.index')->with('success', 'Jouer updated successfully.');
     }
-    
+
     public function destroyjouers(Jouer $jouer)
     {
         $jouer->delete();
 
         return redirect()->route('jouers.index')->with('success', 'Jouer deleted successfully.');
+    }
+
+
+    public function create()
+    {
+        $categoryCount = Categories::count();
+        $ProduitsCount = Produits::count();
+        $jouerscount = Jouer::count();
+        $products = Produits::all();
+        return view('Admin.Newsletter.index', compact('products','categoryCount','ProduitsCount','jouerscount'));
+    }
+    public function send(Request $request)
+    {
+        $request->validate([
+            'subject' => 'required|string|max:255',
+            'content' => 'required|string',
+            'products' => 'required|array',
+        ]);
+
+        $products = Produits::whereIn('id', $request->products)->get();
+        $subscribers = Newsletters::all();
+
+        foreach ($subscribers as $subscriber) {
+            Mail::to($subscriber->email)->send(new NewsletterMail($request->subject, $request->content, $products));
+        }
+
+        return redirect()->route('newsletters.create')->with('success', 'Newsletter sent successfully.');
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -43,6 +44,11 @@ Route::get('/Contact', [App\Http\Controllers\ClientController::class, 'Contact']
 Route::get('/products_{id}', [ClientController::class, 'showproducts'])->name('products.show');
 
 
+/*  page subscribe  */
+
+Route::post('/subscribe', [ClientController::class, 'subscribe'])->name('newsletter.subscribe');
+
+
 /*  ADMIN */
 
 
@@ -84,6 +90,7 @@ Route::post('/storeProduit', [App\Http\Controllers\AdminController::class, 'stor
 /*  button supprimer Produits admin */ 
 Route::delete('/Produits/{produit}', [App\Http\Controllers\AdminController::class, 'destroyProduits'])->name('Produits.destroy')->middleware('role:admin');
 
+/*  button recherche Produits admin */ 
 
 Route::get('/admin_Produits_search', [App\Http\Controllers\AdminController::class, 'search'])->name('searchProduit');
 
@@ -97,3 +104,10 @@ Route::post('/jouersss', [App\Http\Controllers\AdminController::class, 'storejou
 Route::get('/jouers_{jouer}_edit', [App\Http\Controllers\AdminController::class, 'editjouers'])->name('jouers.edit');
 Route::put('/jouers_{jouer}', [App\Http\Controllers\AdminController::class, 'updatejouers'])->name('jouers.update');
 Route::delete('/jouers_{jouer}', [App\Http\Controllers\AdminController::class, 'destroyjouers'])->name('jouers.destroy');
+
+
+
+
+Route::get('/newsletters_create', [AdminController::class, 'create'])->name('newsletters.create');
+Route::post('/newsletters/send', [AdminController::class, 'send'])->name('newsletters.send');
+

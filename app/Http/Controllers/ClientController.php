@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Produits;
 use App\Models\Categories;
 use App\Models\Jouer;
+use App\Models\Newsletters;
+
 class ClientController extends Controller
 {
 
@@ -64,4 +66,21 @@ class ClientController extends Controller
         // Return the product details view with the product data
         return view('Client.Produit.show', compact('product','categoriesALL'));
     }
+
+    public function subscribe(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|unique:newsletters,email',
+        ]);
+
+        $newsletter = new Newsletters();
+        $newsletter->email = $request->email;
+        $newsletter->save();
+
+        return redirect()->back()->with('success', 'Thank you for subscribing to our newsletter!');
+    }
+
+
+
+    
 }

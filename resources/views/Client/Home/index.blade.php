@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/icon-dukamarket.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
+
     <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css"
         media="screen" />
@@ -153,8 +154,8 @@
                                             </ul>
 
                                         </li>
-                                       
-                                        <li><a href="{{route('Apropos')}}">Ice vegas</a></li>
+
+                                        <li><a href="{{ route('Apropos') }}">Ice vegas</a></li>
                                         <li><a href="about.html">Promo</a></li>
                                         <li><a href="about.html">Recette</a></li>
 
@@ -460,16 +461,31 @@
             </div>
         </section>
         <!-- slider-area-end -->
+        {{-- @if (session('success'))
+            <div class="alert alert-success mt-2 text-center">
+                {{ session('success') }}
+            </div>
+        @endif
 
+        @if ($errors->any())
+            <div class="alert alert-danger mt-2 text-center">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif --}}
         <!-- category-area-start -->
         <section class="category-area grey-bg pb-40">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="tpsection mb-35">
-                           
+
                             <h4 class="tpsection__title" style="color: black">Produits Ice Vegas </h4>
-                            <p style="color: black">"Découvrez notre sélection exclusive de produits pour répondre à tous vos besoins"</p>
+                            <p style="color: black">"Découvrez notre sélection exclusive de produits pour répondre à
+                                tous vos besoins"</p>
                         </div>
                     </div>
                 </div>
@@ -540,7 +556,8 @@
                                 <h4 class="tpsection__sub-title mb-0"></h4>
                                 <h4 style="color: black;" class="tpsection__title tpfeature__title mb-25">Ice Vegas
                                     <br>
-                                    Un plaisir insatiable à chaque dégustation</h4>
+                                    Un plaisir insatiable à chaque dégustation
+                                </h4>
                                 <p>Bienvenue chez Ice Vegas, votre destination ultime pour une expérience glacée
                                     incomparable. Nous sommes une marque premium de glaces industrielles, dédiés à
                                     offrir des moments de plaisir et de fraîcheur inégalés à chaque bouchée.</p>
@@ -572,18 +589,19 @@
             <div class="container">
                 <div class="swiper-container category-active">
                     <div class="swiper-wrapper">
-                    @foreach ($categoriesALL as $categorie)
+                        @foreach ($categoriesALL as $categorie)
                             <div class="swiper-slide">
                                 <div class="category__item mb-30">
                                     <div class="category__thumb fix mb-15">
                                         <a href="{{ route('categories.show', ['category' => $categorie->Nom]) }}"><img
-                                                src="{{ asset($categorie->Image) }}" alt="{{ $categorie->Nom }}"></a>
+                                                src="{{ asset($categorie->Image) }}"
+                                                alt="{{ $categorie->Nom }}"></a>
                                     </div>
                                     <div class="category__content">
                                         <h5 class="category__title"><a
                                                 href="{{ route('categories.show', ['category' => $categorie->Nom]) }}">{{ $categorie->Nom }}</a>
                                         </h5>
-                                    
+
                                     </div>
                                 </div>
                             </div>
@@ -593,7 +611,7 @@
             </div>
         </section>
 
-       
+
         <!-- banner-area-end -->
 
         <!-- product-area-start -->
@@ -683,7 +701,7 @@
         <!-- blog-area-end -->
 
         <!-- feature-area-start -->
-     
+
         <!-- feature-area-end -->
 
     </main>
@@ -701,10 +719,16 @@
                             <div class="tpfooter__widget-newsletter">
                                 <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other
                                     information.</p>
-                                <form action="index.html">
+                                <form action="{{ route('newsletter.subscribe') }}" method="POST">
+                                    @csrf
+
                                     <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
-                                    <input type="email" placeholder="Your email address...">
-                                    <button class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        required>
+                                    <button type="submit"
+                                        class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+
+
                                 </form>
                                 <div class="tpfooter__widget-newsletter-check mt-10">
                                     <div class="form-check">
@@ -755,6 +779,20 @@
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/meanmenu.js"></script>
     <script src="assets/js/main.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        @if (session('success'))
+            toastr.success("{{ session('success') }}", 'Success', { timeOut: 5000 });
+        @endif
+
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                toastr.error("{{ $error }}", 'Error', { timeOut: 5000 });
+            @endforeach
+        @endif
+    </script>
 </body>
 
 </html>
