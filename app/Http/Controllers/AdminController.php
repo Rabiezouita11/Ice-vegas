@@ -67,9 +67,27 @@ class AdminController extends Controller
         $categoryCount = Categories::count();
         $ProduitsCount = Produits::count();
         View::share('ProduitsCount', $ProduitsCount);
-
         View::share('categoryCount', $categoryCount);
         return view('Admin.Profile.index');
+    }
+    public function search(Request $request)
+    {
+        $jouerscount = Jouer::count();
+        $categoryCount = Categories::count();
+        $ProduitsCount = Produits::count();
+        View::share('ProduitsCount', $ProduitsCount);
+        View::share('jouerscount', $jouerscount);
+        View::share('categoryCount', $categoryCount);
+        $query = $request->input('query');
+        $Produits = Produits::where('Nom', 'like', "%$query%")
+            ->orWhere('Description', 'like', "%$query%")
+            ->orWhereHas('categorie', function ($q) use ($query) {
+                $q->where('Nom', 'like', "%$query%");
+            })
+            ->paginate(10);
+
+        $categorie = Categories::all();
+        return view('Admin.Produits.index', compact('Produits', 'categorie'));
     }
 
     public function ModifierProfileAdmin(Request $request)

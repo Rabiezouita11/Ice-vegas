@@ -85,6 +85,9 @@ Route::post('/storeProduit', [App\Http\Controllers\AdminController::class, 'stor
 Route::delete('/Produits/{produit}', [App\Http\Controllers\AdminController::class, 'destroyProduits'])->name('Produits.destroy')->middleware('role:admin');
 
 
+Route::get('/admin_Produits_search', [App\Http\Controllers\AdminController::class, 'search'])->name('searchProduit');
+
+
 
 
 

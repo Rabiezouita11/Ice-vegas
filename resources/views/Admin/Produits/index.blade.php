@@ -17,6 +17,14 @@
                         </ol>
                     </div>
                 </div>
+                <div class="row mb-2">
+                    <div class="col-md-12">
+                        <form action="{{ route('searchProduit') }}" method="GET" class="form-inline float-right">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query" value="{{ request('query') }}">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
             </div><!-- /.container-fluid -->
         </section>
 
@@ -28,18 +36,16 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">Liste des Produits</h3>
-                                <button type="button" class="btn btn-primary float-right" data-toggle="modal"
-                                    data-target="#addProduitModal">
+                                <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addProduitModal">
                                     Add Produits
                                 </button>
                             </div>
                             @if(session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                             <div class="card-body categoryTableContainer">
-
                                 <table id="categoryTable" class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -63,26 +69,16 @@
                                                     <td>{{ $Produit->id }}</td>
                                                     <td>{{ $Produit->Nom }}</td>
                                                     <td>{{ $Produit->Description }}</td>
-                                                    <td><img src="{{ asset($Produit->Image) }}" alt="{{ $Produit->Nom }}"
-                                                            class="img-fluid rounded-circle"
-                                                            style="max-width: 60px ; max-height: 60px;"></td>
+                                                    <td><img src="{{ asset($Produit->Image) }}" alt="{{ $Produit->Nom }}" class="img-fluid rounded-circle" style="max-width: 60px; max-height: 60px;"></td>
                                                     <td>{{ $Produit->Prix }}</td>
                                                     <td>{{ $Produit->categorie->Nom }}</td>
                                                     <td>
-
-
-
-
                                                         <!-- Edit Button with Icon -->
-                                                        <button type="button" class="btn btn-sm btn-primary"
-                                                            data-toggle="modal"
-                                                            data-target="#editCategoryModal_{{ $index }}">
+                                                        <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editCategoryModal_{{ $index }}">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
                                                         <!-- Delete Button with Icon -->
-                                                        <button type="button" class="btn btn-sm btn-danger"
-                                                            data-toggle="modal"
-                                                            data-target="#deleteProduitModal_{{ $index }}">
+                                                        <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#deleteProduitModal_{{ $index }}">
                                                             <i class="fas fa-trash"></i>
                                                         </button>
                                                     </td>
@@ -91,8 +87,6 @@
                                         @endif
                                     </tbody>
                                 </table>
-
-
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer clearfix pagination-container">
@@ -100,22 +94,9 @@
                             </div>
                         </div>
                         <!-- /.card -->
-
-
-                        <!-- /.card -->
                     </div>
                     <!-- /.col -->
-
-                    <!-- /.col -->
                 </div>
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
-                <!-- /.row -->
-
                 <!-- /.row -->
             </div><!-- /.container-fluid -->
         </section>
@@ -179,11 +160,9 @@
         </div>
     </div>
 
-    <!-- Edit Category Modal -->
     <!-- Edit Category Modals -->
     @foreach ($Produits as $index => $category)
-        <div class="modal fade" id="editCategoryModal_{{ $index }}"
-            aria-labelledby="editCategoryModalLabel_{{ $index }}" aria-hidden="true">
+        <div class="modal fade" id="editCategoryModal_{{ $index }}" aria-labelledby="editCategoryModalLabel_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -194,21 +173,18 @@
                     </div>
                     <div class="modal-body">
                         <!-- Form for editing a category -->
-                        <form action="{{ route('categories.update', $category->id) }}" method="POST"
-                            enctype="multipart/form-data">
+                        <form action="{{ route('categories.update', $category->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group">
                                 <label for="editCategoryName">Nom catégorie</label>
-                                <input type="text" class="form-control" id="editCategoryName" name="Nom"
-                                    value="{{ $category->Nom }}" required>
+                                <input type="text" class="form-control" id="editCategoryName" name="Nom" value="{{ $category->Nom }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="editCategoryImage">Image</label>
                                 <input type="file" class="form-control-file" id="editCategoryImage" name="Image">
                             </div>
-                            <button type="button" class="btn btn-danger delete-button"
-                                onclick="updateCategory({{ $category->id }}, {{ $index }})">Save Changes</button>
+                            <button type="button" class="btn btn-danger delete-button" onclick="updateCategory({{ $category->id }}, {{ $index }})">Save Changes</button>
                         </form>
                     </div>
                 </div>
@@ -216,12 +192,9 @@
         </div>
     @endforeach
 
-
-
     <!-- Delete Category Modal -->
     @foreach ($Produits as $index => $produit)
-        <div class="modal fade" id="deleteProduitModal_{{ $index }}"
-            aria-labelledby="deleteProduitModal_Label_{{ $index }}" aria-hidden="true">
+        <div class="modal fade" id="deleteProduitModal_{{ $index }}" aria-labelledby="deleteProduitModal_Label_{{ $index }}" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -236,91 +209,71 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <!-- Button to trigger the delete process -->
-                        <button type="button" class="btn btn-danger delete-button"data-dismiss="modal"
-                            onclick="deleteProduit({{ $produit->id }}, {{ $index }})">Delete</button>
+                        <button type="button" class="btn btn-danger delete-button" data-dismiss="modal" onclick="deleteProduit({{ $produit->id }}, {{ $index }})">Delete</button>
                     </div>
                 </div>
             </div>
         </div>
     @endforeach
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-   
     <script>
         function deleteProduit(produitid, index) {
-            // This function will be called when the delete button inside the modal is clicked
             fetch(`/Produits/${produitid}`, {
-                    method: 'DELETE',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                    }
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    // Show success toast
-                    showToast('success', data.message);
-
-                    updateTableContent();
-
-                    updatePagination();
-                    // Remove the deleted category row from the table
-                    // Hide the modal after deletion (optional)
-                    $('#deleteCategoryModal_' + index).modal('hide');
-
-                })
-                .catch(error => {
-                    // Show error toast or handle error
-                    showToast('error', 'An error occurred. Please try again later.');
-                    console.error('There was an error!', error);
-                });
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                showToast('success', data.message);
+                updateTableContent();
+                updatePagination();
+                $('#deleteCategoryModal_' + index).modal('hide');
+            })
+            .catch(error => {
+                showToast('error', 'An error occurred. Please try again later.');
+                console.error('There was an error!', error);
+            });
         }
 
-
-
-
-
-
         function updateTableContent() {
-            // Fetch the updated table content from the server
             fetch('{{ route('showPageProduit') }}')
-                .then(response => response.text())
-                .then(html => {
-                    // Replace the current table content with the updated one
-                    $('#categoryTable').html($(html).find('#categoryTable').html());
-                })
-                .catch(error => {
-                    console.error('Error updating table content:', error);
-                });
+            .then(response => response.text())
+            .then(html => {
+                $('#categoryTable').html($(html).find('#categoryTable').html());
+            })
+            .catch(error => {
+                console.error('Error updating table content:', error);
+            });
         }
 
         function updatePagination() {
-            // Fetch the updated pagination HTML from the server
             fetch('{{ route('showPageProduit') }}')
-                .then(response => response.text())
-                .then(html => {
-                    // Replace the current pagination HTML with the updated one
-                    $('.pagination-container').html($(html).find('.pagination-container').html());
-                })
-                .catch(error => {
-                    console.error('Error updating pagination:', error);
-                });
+            .then(response => response.text())
+            .then(html => {
+                $('.pagination-container').html($(html).find('.pagination-container').html());
+            })
+            .catch(error => {
+                console.error('Error updating pagination:', error);
+            });
         }
-        // Function to display toast notifications
+
         function showToast(type, message) {
             toastr.options = {
-                closeButton: true, // Add a close button
-                progressBar: true, // Show a progress bar
-                showMethod: 'slideDown', // Animation in
-                hideMethod: 'slideUp', // Animation out
-                timeOut: 5000, // Time before auto-dismiss
+                closeButton: true,
+                progressBar: true,
+                showMethod: 'slideDown',
+                hideMethod: 'slideUp',
+                timeOut: 5000,
             };
 
             switch (type) {
@@ -339,6 +292,5 @@
             }
         }
     </script>
-
 
 @endsection
