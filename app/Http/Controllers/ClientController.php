@@ -9,9 +9,22 @@ use App\Models\Jouer;
 use App\Models\Newsletters;
 use App\Models\Reponse_Quiz;
 use App\Models\Suivi_point_de_fidelite;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
+
+
+    public function profileClient()
+    {
+
+        $categoriesALL = Categories::all();
+
+        $user = Auth::user();
+        $loyaltyPoints = Suivi_point_de_fidelite::where('users_id', $user->id)->first();
+
+        return view('Client.Profile.index', compact('user', 'loyaltyPoints','categoriesALL'));
+    }
 
     public function checkResponse(Request $request)
     {

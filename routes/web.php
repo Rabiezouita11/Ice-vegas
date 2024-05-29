@@ -58,6 +58,8 @@ Route::get('/jeux', [App\Http\Controllers\ClientController::class, 'jeux'])->nam
 Route::get('/jouer/{id}', [App\Http\Controllers\ClientController::class, 'showJouer'])->name('jouer.show');
 
 
+Route::get('/profileClient', [ClientController::class, 'profileClient'])->name('profile.show');
+
 
 /*  ADMIN */
 
