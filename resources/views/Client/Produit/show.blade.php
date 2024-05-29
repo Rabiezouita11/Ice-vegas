@@ -257,9 +257,12 @@
             <div class="col-lg-2 col-md-12">
                <div class="tpsidebar pb-30">
                
-                  <div class="tpsidebar__banner mb-30">
-                     <img src="quiz1.jpg" alt="">
-                  </div>
+               <div class="tpsidebar__banner mb-30">
+    <a href="{{route('jeux')}}">
+        <img src="quiz1.jpg" alt="Quiz Image">
+    </a>
+</div>
+
                   <div class="tpsidebar__banner mb-30">
                      <img src="quiz2.jpg" alt="">
                   </div>
