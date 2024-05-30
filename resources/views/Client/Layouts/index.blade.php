@@ -156,8 +156,8 @@
                                         </li>
 
                                         <li><a href="{{ route('Apropos') }}">Ice vegas</a></li>
-                                        <li><a href="about.html">Promo</a></li>
-                                        <li><a href="about.html">Recette</a></li>
+                                        <li><a href="{{ route('comming_soon') }}">Promo</a></li>
+                                        <li><a href="{{ route('comming_soon') }}">Recette</a></li>
 
                                         <li><a href="{{ route('Contact') }}">Contact </a></li>
 

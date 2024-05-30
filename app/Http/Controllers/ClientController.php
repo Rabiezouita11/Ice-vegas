@@ -13,6 +13,14 @@ use App\Models\Suivi_point_de_fidelite;
 class ClientController extends Controller
 {
 
+
+
+    public function comming_soon()
+    {
+        return view('comming-soon.index');
+    }
+
+
     public function checkResponse(Request $request)
     {
         // Validate the request data

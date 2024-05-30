@@ -57,7 +57,9 @@ Route::get('/jeux', [App\Http\Controllers\ClientController::class, 'jeux'])->nam
 
 Route::get('/jouer/{id}', [App\Http\Controllers\ClientController::class, 'showJouer'])->name('jouer.show');
 
+/*  page affiche comming-soon  */
 
+Route::get('/comming_soon', [App\Http\Controllers\ClientController::class, 'comming_soon'])->name('comming_soon');
 
 /*  ADMIN */
 
