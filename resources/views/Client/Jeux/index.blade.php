@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-
+                <br>
                 @if (count($players) > 0)
                     <div class="container">
                         <div class="swiper-container category-active">

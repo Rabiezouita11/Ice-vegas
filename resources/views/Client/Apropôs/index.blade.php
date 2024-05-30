@@ -41,7 +41,7 @@
                       <span class="active"></span>
                       <span>Ice vegas</span>
                    </div>
-                   <h3 class="tpabout__inner-title-2 mb-25">Savourez l'excellence glacée avec Ice Vegas
+                   <h3 class="tpabout__inner-title-2 mb-25" style="color:#96AE00 ">Savourez l'excellence glacée avec Ice Vegas
                       </h3>
                    <p>Plongez dans l'univers d'Ice Vegas et laissez-vous séduire par nos créations glacées. Que ce soit pour une pause gourmande, une célébration ou simplement pour le plaisir, Ice Vegas vous promet une expérience unique à chaque dégustation.
 

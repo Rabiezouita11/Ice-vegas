@@ -10,9 +10,9 @@
              <div class="col-lg-12">
                 <div class="tp-breadcrumb__content">
                    <div class="tp-breadcrumb__list">
-                      <span class="tp-breadcrumb__active"><a href="index.html">Home</a></span>
+                      <span class="tp-breadcrumb__active"><a href="index.html">Acceuil</a></span>
                       <span class="dvdr">/</span>
-                      <span>Contact Us</span>
+                      <span>Contactez Nous</span>
                    </div>
                 </div>
              </div>
@@ -38,8 +38,8 @@
              </div>
              <div class="col-lg-6 col-md-6 order-1 order-md-2">
                 <div class="tpform__wrapper pt-120 pb-80 ml-60">
-                   <h4 class="tpform__title">LEAVE A REPLY</h4>
-                   <p>Your email address will not be published. Required fields are marked *</p>
+                   <h4 class="tpform__title" style="color: black">Contactez Ice Vegas</h4>
+                   <p>Nous sommes ravis d'entendre parler de vous ! Que vous ayez des questions, des commentaires ou des préoccupations, notre équipe est là pour vous aider.</p>
                    <div class="tpform__box">
                       <form action="#">
                          <div class="row gx-7">
@@ -47,30 +47,33 @@
                               
                                <div class="form-group">
                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                       <input id="email"  placeholder="Your Name *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                       <input id="email"  placeholder="Nom*"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                       
                                    </div>
+
                                </div>
                             </div>
+                            <br>
                             <div class="col-lg-6">
                                
                                <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                   <input id="email"  placeholder="Your Email *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                   <input id="email"  placeholder="Email *"  type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                   
                                </div>
+<br>
                             </div>
                             <div class="col-lg-6">
 
                                <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                   <input id="email"  placeholder="Your Subject *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                   <input id="email"  placeholder="Votre sujet *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                   
                                </div>
-                               
+                              <br> 
                             </div>
                             <div class="col-lg-6">
                               
                                <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                   <input id="email"  placeholder="Your Phone *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                   <input id="email"  placeholder="Télephone *"  type="Subject" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                   
                                </div>
                             </div>
@@ -79,9 +82,7 @@
                                   <textarea name="message" placeholder="Message"></textarea>
                                   <div class="tpform__textarea-check mt-20 mb-25">
                                      <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault01">
                                         <label class="form-check-label" for="flexCheckDefault01">
-                                           I am bound by the terms of the <a href="#">Service I accept Privacy Policy.</a>
                                         </label>
                                       </div>                                  
                                   </div>

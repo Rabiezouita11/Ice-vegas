@@ -166,9 +166,13 @@
     <!-- product-feature-area-end -->
 
     <!-- banner-area-start -->
+
     <section class="category-area grey-bg pb-40">
         <div class="container">
+            <h4 style="color:#96AE00 "> Explorez dès maintenant notre collection </h4>
+
             <div class="swiper-container category-active">
+
                 <div class="swiper-wrapper">
                     @foreach ($categoriesALL as $categorie)
                         <div class="swiper-slide">
