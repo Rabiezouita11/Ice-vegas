@@ -14,16 +14,6 @@ use Illuminate\Support\Facades\Auth;
 class ClientController extends Controller
 {
 
-
-<<<<<<< HEAD
-
-    public function comming_soon()
-    {
-        return view('comming-soon.index');
-    }
-
-
-=======
     public function profileClient()
     {
 
@@ -35,7 +25,12 @@ class ClientController extends Controller
         return view('Client.Profile.index', compact('user', 'loyaltyPoints','categoriesALL'));
     }
 
->>>>>>> 0f1f40c433ff2e640615aaf43257a0c1db4d047c
+    public function comming_soon()
+    {
+        return view('comming-soon.index');
+    }
+
+
     public function checkResponse(Request $request)
     {
         // Validate the request data
