@@ -183,7 +183,7 @@
                                                     <li class="has-dropdown">
                                                         <a href="#">{{ Auth::user()->name }}</a>
                                                         <ul class="sub-menu">
-                                                            <li><a href="blog-single.html"
+                                                            <li><a href="{{route('profile.show')}}"
                                                                     style=" font-family: 'Anonymous Pro';">Profile</a></li>
                                                             <li><a href="{{ route('logout') }}"
                                                                     onclick="event.preventDefault();

@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Suivi_point_de_fidelite;
+use App\Mail\WelcomeMail;
+use Illuminate\Support\Facades\Mail; // Import the Mail facade
 
 class RegisterController extends Controller
 {
@@ -89,14 +91,16 @@ class RegisterController extends Controller
              'password' => Hash::make($data['password']),
              'role' => 'client', 
          ]);
- 
+         $totalPoints = 50;
+
          // Create a record in the Suivi_point_de_fidelite table
          Suivi_point_de_fidelite::create([
-             'Totale_point' => 50,
+            'Totale_point' => $totalPoints,
              
              'users_id' => $user->id,
          ]);
- 
+         Mail::to($user->email)->send(new WelcomeMail($user, $totalPoints));
+
          return $user;
      }
     

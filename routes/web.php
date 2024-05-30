@@ -59,7 +59,12 @@ Route::get('/jouer/{id}', [App\Http\Controllers\ClientController::class, 'showJo
 
 /*  page affiche comming-soon  */
 
+<<<<<<< HEAD
 Route::get('/comming_soon', [App\Http\Controllers\ClientController::class, 'comming_soon'])->name('comming_soon');
+=======
+Route::get('/profileClient', [ClientController::class, 'profileClient'])->name('profile.show');
+
+>>>>>>> 0f1f40c433ff2e640615aaf43257a0c1db4d047c
 
 /*  ADMIN */
 
