@@ -14,6 +14,19 @@ use Illuminate\Support\Facades\Auth;
 class ClientController extends Controller
 {
 
+    public function searchProduit(Request $request)
+    {
+        $query = $request->input('search');
+        $categoriesALL = Categories::all();
+
+        // Adjust this query as needed to match your database structure
+        $products = Produits::where('Nom', 'LIKE', "%{$query}%")
+                            ->orWhere('Description', 'LIKE', "%{$query}%")
+                            ->get();
+
+        return view('Client.Search.index', compact('products', 'query','categoriesALL'));
+    }
+
     public function profileClient()
     {
 

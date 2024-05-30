@@ -217,10 +217,9 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-6 pt-100 pb-100">
-                            <h2 class="tpsearchbar__title">Que cherchez-vous ?
-                            </h2>
+                            <h2 class="tpsearchbar__title">Que cherchez-vous ?</h2>
                             <div class="tpsearchbar__form">
-                                <form action="#">
+                                <form action="{{ route('products.search') }}" method="GET">
                                     <input type="text" name="search" placeholder="Search Product...">
                                     <button class="tpsearchbar__search-btn"><i class="icon-search"></i></button>
                                 </form>
@@ -230,6 +229,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="search-body-overlay"></div>
         <!-- header-search-end -->
 

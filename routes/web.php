@@ -60,7 +60,13 @@ Route::get('/jouer/{id}', [App\Http\Controllers\ClientController::class, 'showJo
 /*  page affiche comming-soon  */
 
 Route::get('/comming_soon', [App\Http\Controllers\ClientController::class, 'comming_soon'])->name('comming_soon');
+
+/*  page affiche Profile  */
 Route::get('/profileClient', [ClientController::class, 'profileClient'])->name('profile.show');
+
+
+Route::get('/searchProduit', [ClientController::class, 'searchProduit'])->name('products.search');
+
 
 
 /*  ADMIN */
