@@ -183,7 +183,7 @@
                                                     <li class="has-dropdown">
                                                         <a href="#">{{ Auth::user()->name }}</a>
                                                         <ul class="sub-menu">
-                                                            <li><a href="{{route('profile.show')}}"
+                                                            <li><a href="{{ route('profile.show') }}"
                                                                     style=" font-family: 'Anonymous Pro';">Profile</a></li>
                                                             <li><a href="{{ route('logout') }}"
                                                                     onclick="event.preventDefault();
@@ -229,7 +229,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="search-body-overlay"></div>
         <!-- header-search-end -->
 
@@ -434,56 +434,61 @@
     <footer>
         <section class="section-less-padding-2">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12 col-centered text-center"> <img src="images/logo/logo.png"
-                            alt="" /> </div>
-                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-7">
-                        <div class="tpfooter__widget footer-col-4 mb-50">
-                            <h4 class="tpfooter__widget-title">Our newsletter</h4>
-                            <div class="tpfooter__widget-newsletter">
-                                <p>Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other
-                                    information.</p>
-                                <form action="{{ route('newsletter.subscribe') }}" method="POST">
-                                    @csrf
+                <div class="row justify-content-center text-center">
+                    <div class="col-md-12 mb-4">
+                        <img src="logo.png" alt="Logo" height="200px" width="200px" />
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10">
 
-                                    <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
-                                    <input type="email" class="form-control" id="email" name="email"
-                                        required>
-                                    <button type="submit"
-                                        class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
-
-
-                                </form>
-                                <div class="tpfooter__widget-newsletter-check mt-10">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value=""
-                                            id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
-                                            I accept terms & conditions & privacy policy.
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
+                        <h4 class="tpfooter__widget-title" style="color: black">Our newsletter</h4>
+                        <div class="tpfooter__widget-newsletter">
+                            <p style="color: black">Subscribe to the Orfarm mailing list to receive updates <br> on new
+                                arrivals & other information.</p>
+                            <form action="{{ route('newsletter.subscribe') }}" method="POST">
+                                @csrf
+                                <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
+                                <input type="email" class="form-control" placeholder="Entrez votre adresse email"
+                                    id="email" name="email" required>
+                                <button type="submit"
+                                    class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                            </form>
                         </div>
-                    </div>
-                    <div class="tpfooter__widget-social mt-45">
-                        <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#"><i class="fab fa-skype"></i></a>
-                    </div>
-                    <br />
-                    <div class="col-md-12 col-centered text-center">
-                        <p class="text-gray">Copyright © 2019 <br />
-                            Design & Developed by Codelayers</p>
-                    </div>
 
+                    </div>
+                    <div class="col-12 mt-4">
+                        <div class="tpfooter__widget-social mt-45">
+                            <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
+                            <a href="https://www.facebook.com/IceVegas.officielle/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/icevegas.officiel/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            {{-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-skype"></i></a>
+                  --}}
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 mt-4">
+                        <p class="text-gray">Copyright © 2024 <br />
+                           </p>
+                    </div>
                 </div>
             </div>
         </section>
     </footer>
+    <style>
+        /* Add this CSS to your stylesheet */
+        .social-icon i {
+            color: black;
+        }
+
+        /* Optionally, change the hover color */
+        .social-icon i:hover {
+            color: #555;
+            /* Dark gray or any other color you prefer */
+        }
+    </style>
     <!-- footer-area-end -->
 
 
