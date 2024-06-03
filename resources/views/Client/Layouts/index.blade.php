@@ -220,7 +220,7 @@
                             <h2 class="tpsearchbar__title">Que cherchez-vous ?</h2>
                             <div class="tpsearchbar__form">
                                 <form action="{{ route('products.search') }}" method="GET">
-                                    <input type="text" name="search" placeholder="Search Product...">
+                                    <input type="text" name="search" placeholder="Search Product..." required>
                                     <button class="tpsearchbar__search-btn"><i class="icon-search"></i></button>
                                 </form>
                             </div>
