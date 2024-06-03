@@ -3,12 +3,12 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Orfarm - Multipurpose eCommerce HTML5 Template </title>
+      <title>Ice Vegas </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Place favicon.ico in the root directory -->
-      <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+      <link rel="shortcut icon" type="image/x-icon" href="logo.png">
 
       <!-- CSS here -->
       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -43,45 +43,38 @@
                   <div class="col-lg-5 col-md-6">
                      <div class="tpsoon">
                         <h4 class="tpsoon__sub-title mb-15">Coming soon</h4>
-                        <h2 class="tpsoon__title mb-30">Our New Website <br> Will Be Available Soon</h2>
-                        <p>We are currently working on an awesome new site. Your personal details <br>
-                           are strictly for our use, and you can unsubscribe at any time.</p>
+                        <h2 class="tpsoon__title mb-30" style="color: black" > Notre nouvelle rebrique <br>Sera bientôt disponible</h2>
+                        <p style="color: black">Vos coordonnées personnelles sont strictement réservées à notre usage et vous pouvez vous désabonner à tout moment.</p>
                         <div class="tpsoon__submit-form  mb-50">
                             <form action="{{ route('newsletter.subscribe') }}" method="POST">
                                 @csrf
                               <div class="tpsoon__submit-wrapper">
                                  <div class="tpsoon__input mb-10 mr-10">
-                                    <input type="email" required  name="email" placeholder="Your email address...">
-                                    <span><img src="assets/img/shape/message-1.svg" alt=""></span>
+                                    <input type="email" required  name="email" placeholder="contactez nous">
                                  </div>
                                  <div class="tpsoon__submit">
-                                    <button class="tp-btn-3" type="submit">Subscribe</button>
+                                    <br>
+
+                                    <button class="tp-btn-3" type="submit">S'inscrire</button>
+                                    <br> <br>
                                  </div>
                               </div>
                            </form>
                         </div>   
                         <div class="rainbow__social mb-15">
-                           <a href="#"><i class="fab fa-twitter"></i></a>
                            <a class="rainbow__facebook" href="#"><i class="fab fa-facebook-f"></i></a>
-                           <a class="rainbow__pin" href="#"><i class="fab fa-pinterest-p"></i></a>
-                           <a class="rainbow__skype" href="#"><i class="fab fa-skype"></i></a>
-                           <a class="rainbow__youtube" href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                         <div class="tpsoon__copyright">
-                           <span>Copyright <a href="index.html">© ORFARM</a> all rights reserved. Powered by <a href="#">Theme_pure</a>.</span>
+                           <span>Copyright <a href="index.html">© Ice Vegas</a> <a href="#"></a>.</span>
                         </div>
                      </div>
                   </div>
                   <div class="col-lg-7 col-md-6">
                      <div class="tpsoon__thumb p-relative w-img">
-                        <img src="assets/img/banner/comming-soon-banner.png" alt="">
+                        <img src="recctte.jpg" alt="">
                         <div class="tpsoon__shape d-none d-md-block">
-                           <div class="tpsoon__shape-one">
-                              <img src="assets/img/shape/comming-shae-1.png" alt="">
-                           </div>
-                           <div class="tpsoon__shape-two">
-                              <img src="assets/img/shape/comming-shae-2.png" alt="">
-                           </div>
+                         
+                         
                         </div>
                      </div>
                   </div>

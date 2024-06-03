@@ -47,7 +47,7 @@
 
                        Merci de choisir Ice Vegas, où chaque glace est une aventure délicieuse.</p>
                   
-                      <h3 class="tpabout__inner-title-2 mb-25">Nos Valeurs
+                      <h3 class="tpabout__inner-title-2 mb-25" style="color: black">Nos Valeurs
                      </h3>
                       <div class="tpabout__inner-list">
                       <ul>
@@ -86,9 +86,8 @@
           <div class="row">
              <div class="col-lg-12 text-center">
                 <div class="tpsection mb-35">
-                   <h4 class="tpsection__sub-title">~ Good Performance ~</h4>
-                   <h4 class="tpsection__title">Our Working Ability</h4>
-                   <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                   <h4 class="tpsection__sub-title"></h4>
+                   <h4 class="tpsection__title"></h4>
                 </div>
              </div>
           </div>
@@ -141,7 +140,7 @@
                    <div class="tpchoose__content">
                       <h4 class="tpchoose__title">100% Fresh Food</h4>
                       <p>Adjust global theme options and see design changes in real-time.</p>
-                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center">learn more<i class="icon-chevrons-right"></i></a>
+                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
              </div>
@@ -153,7 +152,7 @@
                    <div class="tpchoose__content">
                       <h4 class="tpchoose__title">Premium Quality</h4>
                       <p>Adjust global theme options and see design changes in real-time.</p>
-                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center">learn more<i class="icon-chevrons-right"></i></a>
+                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
              </div>
@@ -165,7 +164,7 @@
                    <div class="tpchoose__content">
                       <h4 class="tpchoose__title">100% Natural</h4>
                       <p>Adjust global theme options and see design changes in real-time.</p>
-                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center">learn more<i class="icon-chevrons-right"></i></a>
+                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
              </div>
@@ -177,7 +176,7 @@
                    <div class="tpchoose__content">
                       <h4 class="tpchoose__title">100% Organic Goods</h4>
                       <p>Adjust global theme options and see design changes in real-time.</p>
-                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center">learn more<i class="icon-chevrons-right"></i></a>
+                      <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
              </div>
@@ -185,8 +184,8 @@
           <div class="row">
              <div class="col-lg-12">
                 <div class="tpproduct__all-item text-center pt-15">
-                   <span>Our nearly 1.4K committed staff members are ready to help. 
-                      <a href="#">Help Center <i class="icon-chevrons-right"></i></a>
+                   <span> 
+                      <a href="#"> <i class="icon-chevrons-right"></i></a>
                    </span>
                 </div>
              </div>

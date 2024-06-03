@@ -80,7 +80,7 @@
                     <div class="row align-items-center">
                         <div class="col-xl-3">
                             <div class="header__logo">
-                                <a href="index.html"><img height="100px" width="100px" src="logo.png"
+                                <a href="{{route('home')}}"><img height="100px" width="100px" src="logo.png"
                                         alt="logo"></a>
                             </div>
                         </div>
@@ -143,7 +143,7 @@
 
 
                                         <li class="has-dropdown">
-                                            <a href="blog.html">Collection</a>
+                                            <a href="#">Collection</a>
 
                                             <ul class="sub-menu">
                                                 @foreach ($categoriesALL as $categorie)
@@ -156,7 +156,7 @@
                                         </li>
 
                                         <li><a href="{{ route('Apropos') }}">Ice vegas</a></li>
-                                        <li><a href="{{ route('comming_soon') }}">Promo</a></li>
+                                        <li><a href="{{ route('jeux') }}">Promo</a></li>
                                         <li><a href="{{ route('comming_soon') }}">Recette</a></li>
 
                                         <li><a href="{{ route('Contact') }}">Contact </a></li>
@@ -431,52 +431,44 @@
 
 
     <!-- footer-area-start -->
+    <br>
+    <br>
     <footer>
         <section class="section-less-padding-2">
             <div class="container">
                 <div class="row justify-content-center text-center">
-                    <div class="col-md-12 mb-4">
-                        <img src="logo.png" alt="Logo" height="200px" width="200px" />
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-8 col-sm-10">
-
+                    <div class="col-md-6 mb-4">
                         <h4 class="tpfooter__widget-title" style="color: black">Our newsletter</h4>
                         <div class="tpfooter__widget-newsletter">
-                            <p style="color: black">Subscribe to the Orfarm mailing list to receive updates <br> on new
-                                arrivals & other information.</p>
+                            <p style="color: black">Subscribe to the Orfarm mailing list to receive updates <br> on new arrivals & other information.</p>
                             <form action="{{ route('newsletter.subscribe') }}" method="POST">
                                 @csrf
                                 <span><i><img src="assets/img/shape/message-1.svg" alt=""></i></span>
-                                <input type="email" class="form-control" placeholder="Entrez votre adresse email"
-                                    id="email" name="email" required>
-                                <button type="submit"
-                                    class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
+                                <input type="email" class="form-control" placeholder="Entrez votre adresse email" id="email" name="email" required>
+                                <button type="submit" class="tpfooter__widget-newsletter-submit tp-news-btn">Subscribe</button>
                             </form>
                         </div>
-
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="logo.png" alt="Logo" height="200px" width="200px" class="mx-auto d-block" />
                     </div>
                     <div class="col-12 mt-4">
                         <div class="tpfooter__widget-social mt-45">
                             <span class="tpfooter__widget-social-title mb-5">Social Media:</span>
                             <a href="https://www.facebook.com/IceVegas.officielle/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://www.instagram.com/icevegas.officiel/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            {{-- <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
-                            <a href="#" class="social-icon"><i class="fab fa-skype"></i></a>
-                  --}}
-
                         </div>
-
                     </div>
                     <div class="col-md-12 mt-4">
                         <p class="text-gray">Copyright © 2024 <br />
-                           </p>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </footer>
+    
+    
     <style>
         /* Add this CSS to your stylesheet */
         .social-icon i {

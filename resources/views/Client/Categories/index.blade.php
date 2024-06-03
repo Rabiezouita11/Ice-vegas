@@ -20,7 +20,6 @@
                                     <div class="tpblog__entry-wap">
                                         <span class="cat-links"><a
                                                 href="{{ route('categories.show', ['category' => $category->id]) }}">{{ $category->Nom }}</a></span>
-                                        <span class="author-by"><a href="#">Admin</a></span>
                                         <span class="post-data"><a
                                                 href="#">{{ $category->created_at->format('M d, Y') }}</a></span>
                                     </div>
@@ -53,13 +52,8 @@
                                                     alt="{{ $product->name }}">
                                             </div>
                                             <div class="tpblog__wrapper">
-                                                <div class="tpblog__entry-wap">
-                                                    <span class="cat-links"><a
-                                                            href="shop-details.html">Lifestyle</a></span>
-                                                    <span class="author-by"><a href="#">Admin</a></span>
-                                                    <span class="post-data"><a href="#">SEP 15.
-                                                            2022</a></span>
-                                                </div>
+                                                
+                                               
 
 
                                                 <h4 class="tpblog__title"><a
@@ -67,8 +61,8 @@
                                                 </h4>
                                                 <p>{{ $product->Description }}</p>
                                                 <div class="tpblog__details">
-                                                    <a href="{{ route('products.show', $product->id) }}">Continue
-                                                        reading <i class="icon-chevrons-right"></i> </a>
+                                                    <a href="{{ route('products.show', $product->id) }}">voir
+                                                        plus <i class="icon-chevrons-right"></i> </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -122,11 +116,11 @@
                             <h3 class="sidebar__widget-title mb-15">Blog Categories</h3>
                             <div class="sidebar__widget-content">
                                 <ul>
-                                    @foreach ($categories as $category)
+                                    @foreach ($categoriesALL as $category)
                                         <li>
-                                         <a href="{{ route('categories.show', ['category' => $category->Nom]) }}">
-                                            {{ $category->Nom }} <span>({{ $category->products_count }})</span>
-                                        </a>
+                                            <a href="{{ route('categories.show', ['category' => $category->Nom]) }}">
+                                                {{ $category->Nom }} <span>({{ $category->products_count }})</span>
+                                            </a>
                                         </li>
                                     @endforeach
                                 </ul>

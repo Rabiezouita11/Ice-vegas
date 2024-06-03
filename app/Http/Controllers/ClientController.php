@@ -46,6 +46,9 @@ class ClientController extends Controller
 
     public function checkResponse(Request $request)
     {
+        if (!Auth::check()) {
+            return response()->json(['error' => 'You must be logged in to play the quiz.'], 401);
+        }
         // Validate the request data
         $request->validate([
             'jouerId' => 'required|exists:jouers,id',
@@ -62,7 +65,7 @@ class ClientController extends Controller
             ->exists();
 
         if ($existingResponse) {
-            return response()->json(['error' => 'You have already played this quiz.']);
+            return response()->json(['error' => 'Vous avez déjà joué à ce quiz.']);
         }
 
         // Continue with the quiz verification process
@@ -166,19 +169,27 @@ class ClientController extends Controller
     }
     public function show($category)
     {
-
-
-
+        // Fetch the specific category to be shown
         $category = Categories::where('Nom', $category)->firstOrFail();
         $products = $category->products;
-        $categories = Categories::with('products')->get();
+    
+        // Fetch all categories
+        $categories = Categories::all();
         $categoriesALL = Categories::all();
-
-        foreach ($categoriesALL as $category) {
-            $category->products_count = Produits::where('categorie_id', $category->id)->count();
+    
+        // Calculate the product count for each category
+        foreach ($categoriesALL as $cat) {
+            $cat->products_count = Produits::where('categorie_id', $cat->id)->count();
         }
+    
+        // Calculate the product count for each category in the $categories collection
+        foreach ($categories as $cat) {
+            $cat->products_count = Produits::where('categorie_id', $cat->id)->count();
+        }
+    
         return view('Client.Categories.index', compact('categoriesALL', 'category', 'products', 'categories'));
     }
+    
 
     public function showproducts($id)
     {

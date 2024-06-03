@@ -37,7 +37,7 @@
                                                 <!-- You can display other player information here -->
                                                 <span class="category__count">
                                                     <!-- Display player category or any other relevant info -->
-                                                    <p>Points Gained: {{ $player->points_gained }}</p>
+                                                    <p>Points ganiés : {{ $player->points_gained }}</p>
                                                 </span>
                                             </div>
                                         </div>
@@ -48,7 +48,7 @@
                     </div>
                 @else
                     <div class="text-center">
-                        <p>No games found.</p>
+                        <p>Aucun jeu trouvé.</p>
                     </div>
                 @endif
             </div>
@@ -84,167 +84,96 @@
             $('.category__title a').click(function(e) {
                 e.preventDefault();
                 var jouerId = $(this).data('jouer-id');
-                var csrfToken = $(
-                        'meta[name="csrf-token"]')
-                    .attr(
-                        'content');
+                var csrfToken = $('meta[name="csrf-token"]').attr('content');
+    
                 $.ajax({
                     type: 'POST',
                     url: '/check-response',
-                    data: {
-                        jouerId: jouerId
-                    },
-                    headers: {
-                        'X-CSRF-TOKEN': csrfToken
-                    },
+                    data: { jouerId: jouerId },
+                    headers: { 'X-CSRF-TOKEN': csrfToken },
                     success: function(response) {
                         if (response.error) {
-                            // Show toastr message indicating the user has already played the quiz
-                            toastr.error(response.error, 'Error', {
-                                timeOut: 5000
-                            });
+                            toastr.error(response.error, 'Erreur', { timeOut: 5000 });
                         } else {
-                            // Proceed to display the quiz modal
                             $.ajax({
                                 type: 'GET',
                                 url: '/jouer/' + jouerId,
                                 success: function(response) {
-                                    var gameDetails = '<h5>' + response.name +
-                                        '</h5>';
+                                    var gameDetails = '<h5>' + response.name + '</h5>';
+                                    gameDetails += '<img src="' + response.Image + '" alt="Image du Quiz" style="width:300px; height:auto; display:block; margin:auto;">';
                                     gameDetails += '<form id="quizForm">';
-                                    gameDetails +=
-                                        '<input type="hidden" name="jouerId" value="' +
-                                        jouerId +
-                                        '">';
-                                    gameDetails +=
-                                        '<p><input type="radio" name="response" value="' +
-                                        response.Reponse1 +
-                                        '">' +
-                                        response.Reponse1 + '</p>';
-                                    gameDetails +=
-                                        '<p><input type="radio" name="response"  value="' +
-                                        response.Reponse2 +
-                                        '">' +
-                                        response.Reponse2 + '</p>';
-                                    gameDetails +=
-                                        '<p><input type="radio" name="response"  value="' +
-                                        response.Reponse3 +
-                                        '">' +
-                                        response.Reponse3 + '</p>';
-                                    gameDetails +=
-                                        '<button type="button" class="form-control" id="verifyBtn">Verify</button>';
+                                    gameDetails += '<input type="hidden" name="jouerId" value="' + jouerId + '">';
+                                    gameDetails += '<p><input type="radio" name="response" value="' + response.Reponse1 + '">' + response.Reponse1 + '</p>';
+                                    gameDetails += '<p><input type="radio" name="response" value="' + response.Reponse2 + '">' + response.Reponse2 + '</p>';
+                                    gameDetails += '<p><input type="radio" name="response" value="' + response.Reponse3 + '">' + response.Reponse3 + '</p>';
+                                    gameDetails += '<button type="button" class="form-control" id="verifyBtn">Vérifier</button>';
                                     gameDetails += '</form>';
                                     $('#gameDetails').html(gameDetails);
                                     $('#jeuxModal').modal('show');
-
-                                    // Add event listener for the verification button
+    
                                     $('#verifyBtn').click(function() {
-                                        // Check if a response is selected
-                                        if (!$(
-                                                'input[name="response"]:checked'
-                                            )
-                                            .val()) {
-                                            toastr.error(
-                                                'Please select a response.',
-                                                'Error', {
-                                                    timeOut: 5000
-                                                });
-                                            return; // Exit function if no response is selected
+                                        if (!$('input[name="response"]:checked').val()) {
+                                            toastr.error('Veuillez sélectionner une réponse.', 'Erreur', { timeOut: 5000 });
+                                            return;
                                         }
-
-                                        // Serialize the form data
-                                        var formData = $('#quizForm')
-                                            .serialize();
-                                        console.log(formData)
-                                        // Perform verification logic here
-                                        // For example, you can use another AJAX request to send the form data to the server for verification
-                                        var csrfToken = $(
-                                                'meta[name="csrf-token"]')
-                                            .attr(
-                                                'content');
-
+    
+                                        var formData = $('#quizForm').serialize();
                                         $.ajax({
                                             type: 'POST',
                                             url: '/verify-response',
-                                            data: formData, // Send the serialized form data
-                                            headers: {
-                                                'X-CSRF-TOKEN': csrfToken
-                                            },
-                                            success: function(
-                                                response) {
-                                                // Handle the success response from the server
-                                                console.log(
-                                                    response
-                                                )
-                                                toastr.success(
-                                                    response
-                                                    .message,
-                                                    'Success', {
-                                                        timeOut: 5000
-                                                    });
-                                                    $('#jeuxModal').modal('hide');
-
+                                            data: formData,
+                                            headers: { 'X-CSRF-TOKEN': csrfToken },
+                                            success: function(response) {
+                                                toastr.success(response.message, 'Succès', { timeOut: 5000 });
+                                                $('#jeuxModal').modal('hide');
                                             },
                                             error: function(error) {
-                                                if (error
-                                                    .status ===
-                                                    422) {
-                                                    var errors =
-                                                        error
-                                                        .responseJSON
-                                                        .errors;
-                                                    // Loop through the validation errors and display them
-                                                    for (var key in
-                                                            errors) {
-                                                        if (errors
-                                                            .hasOwnProperty(
-                                                                key
-                                                            )
-                                                        ) {
-                                                            toastr
-                                                                .error(
-                                                                    errors[
-                                                                        key
-                                                                    ]
-                                                                    [
-                                                                        0
-                                                                    ],
-                                                                    'Error', {
-                                                                        timeOut: 5000
-                                                                    }
-                                                                );
+                                                if (error.status === 422) {
+                                                    var errors = error.responseJSON.errors;
+                                                    for (var key in errors) {
+                                                        if (errors.hasOwnProperty(key)) {
+                                                            toastr.error(errors[key][0], 'Erreur', { timeOut: 5000 });
                                                         }
                                                     }
                                                 } else {
-                                                    toastr
-                                                        .error(
-                                                            'An error occurred while processing your request.',
-                                                            'Error', {
-                                                                timeOut: 5000
-                                                            });
+                                                    toastr.error('Une erreur s\'est produite lors du traitement de votre demande.', 'Erreur', { timeOut: 5000 });
                                                 }
                                             }
                                         });
                                     });
-
+    
                                 },
                                 error: function(error) {
-                                    console.log(error);
+                                    if (error.status === 401) {
+                                        toastr.error('Vous devez être connecté pour jouer au quiz.', 'Erreur', { timeOut: 5000 });
+                                        setTimeout(function() {
+                                            window.location.href = '/login';
+                                        }, 2000); // Redirection après 2 secondes
+                                    } else {
+                                        console.log(error);
+                                    }
                                 }
                             });
                         }
                     },
                     error: function(error) {
-                        console.log(error);
+                        if (error.status === 401) {
+                            toastr.error('Vous devez être connecté pour jouer au quiz.', 'Erreur', { timeOut: 5000 });
+                            setTimeout(function() {
+                                window.location.href = '/login';
+                            }, 2000); // Redirection après 2 secondes
+                        } else {
+                            console.log(error);
+                        }
                     }
                 });
-
-
-
-
             });
         });
     </script>
+    
+    
+    
+    
 
 
 @endsection
