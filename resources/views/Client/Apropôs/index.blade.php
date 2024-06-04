@@ -92,26 +92,20 @@
              </div>
           </div>
           <div class="row">
-           <div class="col-lg-12">
+            <div class="col-lg-12">
                <div class="tpvideo__bg p-relative mb-25">
                    <img src="assets/img/banner/video-bg-1.jpg" alt="Video Background">
                    <div class="tpvideo__video-btn">
-                       <video width="100%" controls>
-                           <source src="{{ asset('ICE VEGAS FLOWER-1.mp4') }}" type="video/mp4">
-                           Your browser does not support the video tag.
-                       </video>
+                     <video width="100%" controls autoplay muted>
+                        <source src="{{ asset('ICE VEGAS FLOWER-1.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
                    </div>
                </div>
            </div>
-       </div>
-       
-       <style>
-       .tpvideo__video-btn video {
-           width: 76%;
-           border-radius: 10px; /* Add border radius if needed */
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow if needed */
-       }
-       </style>
+           
+           
        
           </div>
         
