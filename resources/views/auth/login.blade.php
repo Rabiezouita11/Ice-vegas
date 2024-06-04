@@ -76,7 +76,7 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-lg-3">
                     <div class="fxt-header">
-                        <a href="login-24.html" class="fxt-logo"><img src="LoginRegister/img/image.png" alt="Logo"></a>
+                        <a href="{{route('home')}}" class="fxt-logo"><img src="LoginRegister/img/image.png" alt="Logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
