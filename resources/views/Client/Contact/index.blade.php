@@ -33,7 +33,7 @@
      
                 <div class="tpmap__wrapper">
                 <iframe src="https://maps.google.com/maps?q=benarous&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-       allowfullscreen></iframe>                     
+    ></iframe>                     
                    </div>
              </div>
              <div class="col-lg-6 col-md-6 order-1 order-md-2">
@@ -88,6 +88,8 @@
                                   </div>
                                   <button>Send message</button>
                                </div>
+                               <br>
+         
                             </div>
                          </div>
                       </form>

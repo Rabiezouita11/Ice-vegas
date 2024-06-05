@@ -13,7 +13,11 @@
                 <div class="tpabout__inner text-center">
                
                    <h3 class="tpabout__inner-title mb-35"></h3>
-                   <p>Over 25 years of experience, we have crafted thousands of strategic discovery process that <br> enables us to peel back the layers which enable us to understand, connect.</p>
+                   <p >Ice Vegas, Depuis 2019, est l'aboutissement d'une passion dévorante pour les glaces. 
+                     Nous sommes une équipe d'artisans glaciers animés par l'envie de vous faire partager notre amour pour ces créations fraîches et gourmandes.
+
+                     <br> 
+                     offrir des glaces d'exception à tous les gourmands </p>
                    
                 </div>
              </div>
@@ -81,6 +85,7 @@
     <!-- img-box-area-end -->
 
     <!-- video-area-start -->
+    <br>
     <section class="video-area pt-80 pb-50">
        <div class="container">
           <div class="row">
@@ -110,6 +115,7 @@
           </div>
         
        </div>
+       <br>
     </section>
     <!-- video-area-end -->
 
@@ -119,9 +125,12 @@
           <div class="row">
              <div class="col-lg-12 text-center">
                 <div class="tpsection mb-35 pt-75">
-                   <h4 class="tpsection__sub-title">~ Why choose us? ~</h4>
-                   <h4 class="tpsection__title">What makes us different</h4>
-                   <p>The liber tempor cum soluta nobis eleifend option congue doming quod mazim.</p>
+                   <h4 class="tpsection__sub-title" style="color: black" >~ Pourquoi nous choisir ? ~</h4>
+                   <br>
+                   <h4 class="tpsection__title" style="color: black">
+                     
+                     Ce qui nous rend différents </h4>
+                   <p></p>
                 </div>
              </div>
           </div>
@@ -132,8 +141,9 @@
                       <img src="assets/img/icon/choose-icon1.svg" alt="">
                    </div>
                    <div class="tpchoose__content">
-                      <h4 class="tpchoose__title">100% Fresh Food</h4>
-                      <p>Adjust global theme options and see design changes in real-time.</p>
+                      <h4 class="tpchoose__title" style="color: black" >CONVIENT AUX VÉGÉTARIENS
+                     </h4>
+                      <p></p>
                       <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
@@ -144,8 +154,8 @@
                       <img src="assets/img/icon/choose-icon2.svg" alt="">
                    </div>
                    <div class="tpchoose__content">
-                      <h4 class="tpchoose__title">Premium Quality</h4>
-                      <p>Adjust global theme options and see design changes in real-time.</p>
+                      <h4 class="tpchoose__title" style="color: black" >Qualité supérieure</h4>
+                      <p></p>
                       <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
@@ -156,8 +166,9 @@
                       <img src="assets/img/icon/choose-icon3.svg" alt="">
                    </div>
                    <div class="tpchoose__content">
-                      <h4 class="tpchoose__title">100% Natural</h4>
-                      <p>Adjust global theme options and see design changes in real-time.</p>
+                      <h4 class="tpchoose__title" style="color: black" >BÂTONNETS EN BOIS ISSUS DE SOURCE RESPONSABLE
+                     </h4>
+                      <p>.</p>
                       <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>
@@ -168,8 +179,8 @@
                       <img src="assets/img/icon/choose-icon4.svg" alt="">
                    </div>
                    <div class="tpchoose__content">
-                      <h4 class="tpchoose__title">100% Organic Goods</h4>
-                      <p>Adjust global theme options and see design changes in real-time.</p>
+                      <h4 class="tpchoose__title" style="color: black" >Produits 100 % Bio</h4>
+                      <p></p>
                       <a href="#" class="tpchoose__details d-flex align-items-center justify-content-center"><i class="icon-chevrons-right"></i></a>
                    </div>
                 </div>

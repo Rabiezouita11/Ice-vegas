@@ -17,7 +17,7 @@
                                         <p style="color: black">Un duel de saveurs délicieusement intense :
                                             pistache vs chocolat !<br> Quel sera votre coup de cœur?</p>
                                         <div class="tpslider__btn">
-                                            <a class="tp-btn" href="shop-2.html">Nos Collection</a>
+                                            <a class="tp-btn" href="#">Nos Collection</a>
                                         </div>
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-lg-12 text-center">
                     <div class="tpsection mb-35">
 
-                        <h4 class="tpsection__title" style="color: black">Produits Ice Vegas </h4>
+                        <h4 class="tpsection__title" style="color: black"> Produits Ice Vegas </h4>
                         <p style="color: black">"Découvrez notre sélection exclusive de produits pour répondre à
                             tous vos besoins"</p>
                     </div>
@@ -204,23 +204,18 @@
 
     <!-- product-coundown-area-start -->
     <section class="product-coundown-area tpcoundown__bg grey-bg pb-25"
-        data-background="assets/img/banner/coundpwn-bg-1.png">
+        data-background="ban2.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="tpcoundown p-relative ml-175">
                         <div class="section__content mb-35">
                             <span class="section__sub-title mb-10">~ Deals Of The Day ~</span>
-                            <h2 class="section__title mb-25">Premium Drinks <br> Fresh Farm Product</h2>
-                            <p>The liber tempor cum soluta nobis eleifend option congue <br>
-                                doming quod mazim placerat facere possum assam going through.</p>
                         </div>
                         <div class="tpcoundown__count">
-                            <h4 class="tpcoundown__count-title">hurry up! Offer End In:</h4>
                             <div class="tpcoundown__countdown" data-countdown="2022/11/11"></div>
                             <div class="tpcoundown__btn mt-50">
-                                <a class="whight-btn" href="shop-details-grid.html">Shop Now</a>
-                                <a class="whight-btn border-btn ml-15" href="shop-list-view.html">View Menu</a>
+                                <a class="whight-btn" href="shop-details-grid.html"> jouez </a>
                             </div>
                         </div>
                         <div class="tpcoundown__shape d-none d-lg-block">

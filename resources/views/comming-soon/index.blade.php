@@ -50,7 +50,7 @@
                                 @csrf
                               <div class="tpsoon__submit-wrapper">
                                  <div class="tpsoon__input mb-10 mr-10">
-                                    <input type="email" required  name="email" placeholder="contactez nous">
+                                    <input type="email" required  name="email" placeholder="s'inscrire ">
                                  </div>
                                  <div class="tpsoon__submit">
                                     <br>
@@ -62,10 +62,9 @@
                            </form>
                         </div>   
                         <div class="rainbow__social mb-15">
-                           <a class="rainbow__facebook" href="#"><i class="fab fa-facebook-f"></i></a>
                         </div>
                         <div class="tpsoon__copyright">
-                           <span>Copyright <a href="index.html">© Ice Vegas</a> <a href="#"></a>.</span>
+                           <span style="color: black">Copyright <a href="index.html">© Ice Vegas</a> <a href="#"></a>.</span>
                         </div>
                      </div>
                   </div>
