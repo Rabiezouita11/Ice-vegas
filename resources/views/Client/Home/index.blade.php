@@ -203,32 +203,7 @@
     <!-- product-area-end -->
 
     <!-- product-coundown-area-start -->
-    <section class="product-coundown-area tpcoundown__bg grey-bg pb-25"
-        data-background="ban2.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="tpcoundown p-relative ml-175">
-                        <div class="section__content mb-35">
-                            <span class="section__sub-title mb-10">~ Deals Of The Day ~</span>
-                        </div>
-                        <div class="tpcoundown__count">
-                            <div class="tpcoundown__countdown" data-countdown="2022/11/11"></div>
-                            <div class="tpcoundown__btn mt-50">
-                                <a class="whight-btn" href="shop-details-grid.html"> jouez </a>
-                            </div>
-                        </div>
-                        <div class="tpcoundown__shape d-none d-lg-block">
-                            <img class="tpcoundown__shape-one" src="assets/img/shape/tree-leaf-1.svg" alt="">
-                            <img class="tpcoundown__shape-two" src="assets/img/shape/tree-leaf-2.svg" alt="">
-                            <img class="tpcoundown__shape-three" src="assets/img/shape/tree-leaf-3.svg" alt="">
-                            <img class="tpcoundown__shape-four" src="assets/img/shape/fresh-shape-1.svg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- product-coundown-area-end -->
 
  
