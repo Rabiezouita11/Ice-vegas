@@ -36,4 +36,5 @@
 
 ## Compétences :
 
-- Laravel · SQL
+- :gear: Laravel
+- :floppy_disk: SQL
